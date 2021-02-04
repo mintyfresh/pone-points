@@ -26,7 +26,7 @@ class Boon < ApplicationRecord
   attr_readonly :points_count
 
   belongs_to :pone, inverse_of: :boons
-  belongs_to :granted_by, class_name: 'Pone', inverse_of: false
+  belongs_to :granted_by, class_name: 'Pone', inverse_of: :granted_boons
 
   validates :granted_by, presence: true, length: { maximum: 50 }
   validates :reason, length: { maximum: 1000 }

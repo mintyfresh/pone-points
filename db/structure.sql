@@ -81,7 +81,6 @@ CREATE TABLE public.pones (
     id bigint NOT NULL,
     name public.citext NOT NULL,
     slug character varying NOT NULL,
-    discord_id character varying NOT NULL,
     points_count integer DEFAULT 0 NOT NULL,
     daily_points_budget integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
@@ -175,13 +174,6 @@ CREATE INDEX index_boons_on_granted_by_id ON public.boons USING btree (granted_b
 --
 
 CREATE INDEX index_boons_on_pone_id ON public.boons USING btree (pone_id);
-
-
---
--- Name: index_pones_on_discord_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE UNIQUE INDEX index_pones_on_discord_id ON public.pones USING btree (discord_id);
 
 
 --

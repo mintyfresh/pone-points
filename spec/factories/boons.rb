@@ -25,10 +25,9 @@
 FactoryBot.define do
   factory :boon do
     association :pone, strategy: :build
+    association :granted_by, factory: :pone, strategy: :build
 
-    granted_by { Faker::Internet.username }
-    message_link { Faker::Internet.url }
+    reason { Faker::Hipster.sentence }
     points_count { rand(1..3) }
-    occurred_at { Time.current }
   end
 end

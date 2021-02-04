@@ -7,7 +7,6 @@
 #  id                  :bigint           not null, primary key
 #  name                :citext           not null
 #  slug                :string           not null
-#  discord_id          :string           not null
 #  points_count        :integer          default(0), not null
 #  daily_points_budget :integer          default(0), not null
 #  created_at          :datetime         not null
@@ -15,9 +14,8 @@
 #
 # Indexes
 #
-#  index_pones_on_discord_id  (discord_id) UNIQUE
-#  index_pones_on_name        (name) UNIQUE
-#  index_pones_on_slug        (slug) UNIQUE
+#  index_pones_on_name  (name) UNIQUE
+#  index_pones_on_slug  (slug) UNIQUE
 #
 require 'rails_helper'
 
