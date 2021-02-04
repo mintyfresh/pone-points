@@ -74,6 +74,39 @@ ALTER SEQUENCE public.boons_id_seq OWNED BY public.boons.id;
 
 
 --
+-- Name: pone_credentials; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.pone_credentials (
+    id bigint NOT NULL,
+    type character varying NOT NULL,
+    pone_id bigint NOT NULL,
+    data jsonb DEFAULT '{}'::jsonb NOT NULL,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: pone_credentials_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.pone_credentials_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: pone_credentials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.pone_credentials_id_seq OWNED BY public.pone_credentials.id;
+
+
+--
 -- Name: pones; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -124,6 +157,13 @@ ALTER TABLE ONLY public.boons ALTER COLUMN id SET DEFAULT nextval('public.boons_
 
 
 --
+-- Name: pone_credentials id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.pone_credentials ALTER COLUMN id SET DEFAULT nextval('public.pone_credentials_id_seq'::regclass);
+
+
+--
 -- Name: pones id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -144,6 +184,14 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 ALTER TABLE ONLY public.boons
     ADD CONSTRAINT boons_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: pone_credentials pone_credentials_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.pone_credentials
+    ADD CONSTRAINT pone_credentials_pkey PRIMARY KEY (id);
 
 
 --
@@ -177,6 +225,13 @@ CREATE INDEX index_boons_on_pone_id ON public.boons USING btree (pone_id);
 
 
 --
+-- Name: index_pone_credentials_on_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_pone_credentials_on_pone_id ON public.pone_credentials USING btree (pone_id);
+
+
+--
 -- Name: index_pones_on_name; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -188,6 +243,14 @@ CREATE UNIQUE INDEX index_pones_on_name ON public.pones USING btree (name);
 --
 
 CREATE UNIQUE INDEX index_pones_on_slug ON public.pones USING btree (slug);
+
+
+--
+-- Name: pone_credentials fk_rails_11e792e613; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.pone_credentials
+    ADD CONSTRAINT fk_rails_11e792e613 FOREIGN KEY (pone_id) REFERENCES public.pones(id);
 
 
 --
@@ -214,6 +277,7 @@ SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
 ('20210204221112'),
-('20210204222146');
+('20210204222146'),
+('20210204231345');
 
 

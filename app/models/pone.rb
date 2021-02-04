@@ -18,6 +18,8 @@
 #  index_pones_on_slug  (slug) UNIQUE
 #
 class Pone < ApplicationRecord
+  has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
+
   has_many :boons, -> { order(created_at: :desc, id: :desc) }, dependent: :destroy, inverse_of: :pone
   has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error, inverse_of: :granted_by
 
