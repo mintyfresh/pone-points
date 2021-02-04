@@ -20,5 +20,15 @@ FactoryBot.define do
   factory :pone do
     sequence(:name) { |n| "#{Faker::Internet.username} #{n}" }
     sequence(:discord_id) { |n| "#{Faker::Internet.username}##{n}" }
+
+    trait :with_boons do
+      transient do
+        boons_count { 3 }
+      end
+
+      after(:build) do |pone, e|
+        pone.boons = build_list(:boon, e.boons_count, pone: pone)
+      end
+    end
   end
 end

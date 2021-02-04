@@ -40,6 +40,41 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
+-- Name: boons; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.boons (
+    id bigint NOT NULL,
+    pone_id bigint NOT NULL,
+    granted_by character varying NOT NULL,
+    message_link character varying,
+    points_count integer NOT NULL,
+    occurred_at timestamp without time zone NOT NULL,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: boons_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.boons_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: boons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.boons_id_seq OWNED BY public.boons.id;
+
+
+--
 -- Name: pones; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -82,6 +117,13 @@ CREATE TABLE public.schema_migrations (
 
 
 --
+-- Name: boons id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.boons ALTER COLUMN id SET DEFAULT nextval('public.boons_id_seq'::regclass);
+
+
+--
 -- Name: pones id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -94,6 +136,14 @@ ALTER TABLE ONLY public.pones ALTER COLUMN id SET DEFAULT nextval('public.pones_
 
 ALTER TABLE ONLY public.ar_internal_metadata
     ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
+-- Name: boons boons_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.boons
+    ADD CONSTRAINT boons_pkey PRIMARY KEY (id);
 
 
 --
@@ -113,6 +163,13 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
+-- Name: index_boons_on_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_boons_on_pone_id ON public.boons USING btree (pone_id);
+
+
+--
 -- Name: index_pones_on_discord_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -127,12 +184,21 @@ CREATE UNIQUE INDEX index_pones_on_name ON public.pones USING btree (name);
 
 
 --
+-- Name: boons fk_rails_6d75f2081e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.boons
+    ADD CONSTRAINT fk_rails_6d75f2081e FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
-('20210204221112');
+('20210204221112'),
+('20210204222146');
 
 

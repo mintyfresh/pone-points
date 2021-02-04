@@ -17,5 +17,7 @@
 #  index_pones_on_name        (name) UNIQUE
 #
 class Pone < ApplicationRecord
-  validates :name, :discord_id, presence: true, length: { maximum: 100 }
+  has_many :boons, -> { order(occurred_at: :desc, id: :desc) }, dependent: :destroy, inverse_of: :pone
+
+  validates :name, :discord_id, presence: true, length: { maximum: 50 }
 end
