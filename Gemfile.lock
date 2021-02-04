@@ -121,6 +121,8 @@ GEM
     pg (1.2.3)
     puma (5.2.0)
       nio4r (~> 2.0)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -253,6 +255,7 @@ DEPENDENCIES
   oj
   pg (~> 1.1)
   puma (~> 5.0)
+  pundit
   rails (~> 6.1.1)
   rspec-rails
   rubocop
