@@ -1,1 +1,11 @@
-<%= @pone.name %> has <%= number_to_human(@pone.points_count) %> good pone points.
+<div>
+  <%= @pone.name %> has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
+</div>
+<ul>
+  <% @pone.boons.first(25).each do |boon| %>
+    <li>
+      <%= boon.granted_by %> gave <%= number_to_human(boon.points_count) %> points to <%= @pone.name %> on <%= localize(boon.occurred_at) %>
+      (<%= link_to('Message Link', boon.message_link, target: '_blank') %>)
+    </li>
+  <% end %>
+</ul>
