@@ -28,6 +28,23 @@ class Pone < ApplicationRecord
 
   before_save :set_slug_from_name, if: :name_changed?
 
+  # @param credential_class [Class<PoneCredential>]
+  # @param credential [Object]
+  # @return [self, nil]
+  def authenticate(credential_class, credential)
+    credential(credential_class)&.authenticate(credential)
+  end
+
+  # @param credential_class [Class<PoneCredential>]
+  # @param build_if_missing [Boolean]
+  # @return [PoneCredential, nil]
+  def credential(credential_class, build_if_missing: false)
+    credential = credentials.find_by(type: credential_class.sti_name)
+    return credential if credential || build_if_missing
+
+    credentials.build(type: credential_class.sti_name)
+  end
+
 private
 
   # @return [void]
