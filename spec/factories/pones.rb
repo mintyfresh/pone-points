@@ -4,13 +4,14 @@
 #
 # Table name: pones
 #
-#  id           :bigint           not null, primary key
-#  name         :citext           not null
-#  slug         :string           not null
-#  discord_id   :string           not null
-#  points_count :integer          default(0), not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                  :bigint           not null, primary key
+#  name                :citext           not null
+#  slug                :string           not null
+#  discord_id          :string           not null
+#  points_count        :integer          default(0), not null
+#  daily_points_budget :integer          default(0), not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
 #
 # Indexes
 #

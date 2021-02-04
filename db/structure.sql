@@ -46,11 +46,9 @@ CREATE TABLE public.ar_internal_metadata (
 CREATE TABLE public.boons (
     id bigint NOT NULL,
     pone_id bigint NOT NULL,
-    granted_by character varying NOT NULL,
-    message_link character varying,
+    granted_by_id bigint NOT NULL,
     reason character varying,
     points_count integer NOT NULL,
-    occurred_at timestamp without time zone NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
 );
@@ -85,6 +83,7 @@ CREATE TABLE public.pones (
     slug character varying NOT NULL,
     discord_id character varying NOT NULL,
     points_count integer DEFAULT 0 NOT NULL,
+    daily_points_budget integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
 );
@@ -165,6 +164,13 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
+-- Name: index_boons_on_granted_by_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_boons_on_granted_by_id ON public.boons USING btree (granted_by_id);
+
+
+--
 -- Name: index_boons_on_pone_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -198,6 +204,14 @@ CREATE UNIQUE INDEX index_pones_on_slug ON public.pones USING btree (slug);
 
 ALTER TABLE ONLY public.boons
     ADD CONSTRAINT fk_rails_6d75f2081e FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+
+
+--
+-- Name: boons fk_rails_a46c897fdb; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.boons
+    ADD CONSTRAINT fk_rails_a46c897fdb FOREIGN KEY (granted_by_id) REFERENCES public.pones(id);
 
 
 --

@@ -4,11 +4,9 @@ class CreateBoons < ActiveRecord::Migration[6.1]
   def change
     create_table :boons do |t|
       t.belongs_to :pone, null: false, foreign_key: true
-      t.string     :granted_by, null: false
-      t.string     :message_link
+      t.belongs_to :granted_by, null: false, foreign_key: { to_table: :pones }
       t.string     :reason
       t.integer    :points_count, null: false
-      t.timestamp  :occurred_at, null: false
       t.timestamps default: -> { 'NOW()' }
     end
   end

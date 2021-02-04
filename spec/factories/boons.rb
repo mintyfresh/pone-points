@@ -4,22 +4,22 @@
 #
 # Table name: boons
 #
-#  id           :bigint           not null, primary key
-#  pone_id      :bigint           not null
-#  granted_by   :string           not null
-#  message_link :string
-#  reason       :string
-#  points_count :integer          not null
-#  occurred_at  :datetime         not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id            :bigint           not null, primary key
+#  pone_id       :bigint           not null
+#  granted_by_id :bigint           not null
+#  reason        :string
+#  points_count  :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
 #
 # Indexes
 #
-#  index_boons_on_pone_id  (pone_id)
+#  index_boons_on_granted_by_id  (granted_by_id)
+#  index_boons_on_pone_id        (pone_id)
 #
 # Foreign Keys
 #
+#  fk_rails_...  (granted_by_id => pones.id)
 #  fk_rails_...  (pone_id => pones.id)
 #
 FactoryBot.define do
