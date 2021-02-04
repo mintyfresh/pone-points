@@ -48,6 +48,7 @@ CREATE TABLE public.boons (
     pone_id bigint NOT NULL,
     granted_by character varying NOT NULL,
     message_link character varying,
+    reason character varying,
     points_count integer NOT NULL,
     occurred_at timestamp without time zone NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,

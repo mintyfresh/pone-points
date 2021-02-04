@@ -6,6 +6,7 @@ class CreateBoons < ActiveRecord::Migration[6.1]
       t.belongs_to :pone, null: false, foreign_key: true
       t.string     :granted_by, null: false
       t.string     :message_link
+      t.string     :reason
       t.integer    :points_count, null: false
       t.timestamp  :occurred_at, null: false
       t.timestamps default: -> { 'NOW()' }

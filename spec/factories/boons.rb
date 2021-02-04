@@ -8,6 +8,7 @@
 #  pone_id      :bigint           not null
 #  granted_by   :string           not null
 #  message_link :string
+#  reason       :string
 #  points_count :integer          not null
 #  occurred_at  :datetime         not null
 #  created_at   :datetime         not null
