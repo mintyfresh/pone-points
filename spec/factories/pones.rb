@@ -30,5 +30,15 @@ FactoryBot.define do
         pone.boons = build_list(:boon, e.boons_count, pone: pone)
       end
     end
+
+    trait :with_password do
+      transient do
+        password { Faker::Internet.password }
+      end
+
+      after(:build) do |pone, e|
+        pone.credentials << build(:pone_password_credential, password: e.password)
+      end
+    end
   end
 end
