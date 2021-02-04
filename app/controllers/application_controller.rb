@@ -14,4 +14,6 @@ class ApplicationController < ActionController::Base
     @current_pone     = value
     session[:pone_id] = value&.id
   end
+
+  helper_method :current_pone
 end

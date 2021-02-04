@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <div class="mb-2">
+      <%= render(AppNavbarComponent.new(current_pone: current_pone)) %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
