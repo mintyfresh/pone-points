@@ -1,0 +1,24 @@
+<%= form_with(model: @form, url: sign_up_path, method: :post) do |form| %>
+  <div class="mb-3">
+    <%= form.label(:name) %>
+    <%= form.text_field(:name, class: 'form-control') %>
+  </div>
+  <div class="mb-3">
+    <%= form.label(:password) %>
+    <%= form.password_field(:password, class: 'form-control') %>
+  </div>
+  <div class="mb-3">
+    <%= form.label(:password_confirmation) %>
+    <%= form.password_field(:password_confirmation, class: 'form-control') %>
+  </div>
+  <% if @form.errors[:base].any? %>
+    <div class="alert alert-danger" role="alert"> 
+      <% @form.errors[:base].each do |error| %>
+        <div><%= error %></div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="text-end">
+    <%= form.submit('Sign Up', class: 'btn btn-primary') %>
+  </div>
+<% end %>

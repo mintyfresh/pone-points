@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get  '/sign_in', to: 'auth#sign_in'
   post '/sign_in', to: 'auth#do_sign_in'
+  get  '/sign_up', to: 'auth#sign_up'
+  post '/sign_up', to: 'auth#do_sign_up'
 end
