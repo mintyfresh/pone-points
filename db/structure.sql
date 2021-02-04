@@ -82,6 +82,7 @@ ALTER SEQUENCE public.boons_id_seq OWNED BY public.boons.id;
 CREATE TABLE public.pones (
     id bigint NOT NULL,
     name public.citext NOT NULL,
+    slug character varying NOT NULL,
     discord_id character varying NOT NULL,
     points_count integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
@@ -182,6 +183,13 @@ CREATE UNIQUE INDEX index_pones_on_discord_id ON public.pones USING btree (disco
 --
 
 CREATE UNIQUE INDEX index_pones_on_name ON public.pones USING btree (name);
+
+
+--
+-- Name: index_pones_on_slug; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_pones_on_slug ON public.pones USING btree (slug);
 
 
 --

@@ -2,6 +2,6 @@
 
 class PonesController < ApplicationController
   def show
-    @pone = Pone.find(params[:id])
+    @pone = Pone.find_by!(slug: params[:id])
   end
 end
