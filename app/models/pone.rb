@@ -88,9 +88,9 @@ private
   # @return [void]
   def add_point_from_system_pone
     points.find_or_create_by!(
-      granted_by:   Pone.find_by!(name: 'System Pone'),
-      points_count: 1,
-      message:      'For being a good, verified pone, of course!'
+      granted_by: Pone.find_by!(name: 'System Pone'),
+      count:      1,
+      message:    'For being a good, verified pone, of course!'
     )
   end
 end
