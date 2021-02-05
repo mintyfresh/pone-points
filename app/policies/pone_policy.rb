@@ -3,6 +3,10 @@
 class PonePolicy < ApplicationPolicy
   alias pone record
 
+  def index?
+    true
+  end
+
   def show?
     true
   end

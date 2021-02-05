@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :pones, only: :show do
+  resources :pones, only: %i[index show] do
     resources :boons, only: %i[new create], controller: 'pones/boons'
   end
 
