@@ -2,7 +2,8 @@
   <div class="card mb-2">
     <div class="card-body">
       <div class="card-title fs-5">
-        <%= link_to(boon.granted_by.name, boon.granted_by.slug) %> gave <%= boon.pone.name %> <%= number_to_human(boon.points_count) %> good pone points!
+        <%= link_to_unless_current(boon.granted_by.name, boon.granted_by) %> gave
+        <%= link_to_unless_current(boon.pone.name, boon.pone) %> <%= number_to_human(boon.points_count) %> good pone points!
       </div>
       <%= boon.reason %>
     </div>

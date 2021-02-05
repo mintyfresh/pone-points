@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AppNavbarLinkComponent < ApplicationComponent
+class NavLinkComponent < ApplicationComponent
   # @param label [String]
   # @param link [String, Object]
   # @param options [Hash]

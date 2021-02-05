@@ -11,6 +11,6 @@ class AppNavbarComponent < ApplicationComponent
   # @param options [Hash]
   # @return [String]
   def nav_link(label, link, **options)
-    render(AppNavbarLinkComponent.new(label: label, link: link, **options))
+    render(NavLinkComponent.new(label: label, link: link, **options))
   end
 end
