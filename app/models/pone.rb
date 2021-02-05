@@ -67,6 +67,18 @@ class Pone < ApplicationRecord
     slug
   end
 
+  # @param achievement [Achievement]
+  # @return [Boolean]
+  def achievement_unlocked?(achievement)
+    achievements.include?(achievement)
+  end
+
+  # @param achievement [Achievement]
+  # @return [Boolean]
+  def unlock_achievement(achievement)
+    unlocked_achievements.create_or_find_by!(achievement: achievement) && true
+  end
+
   # @return [Boolean]
   def verified?
     verified_at.present?
