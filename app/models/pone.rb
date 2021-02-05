@@ -19,6 +19,8 @@
 #  index_pones_on_slug  (slug) UNIQUE
 #
 class Pone < ApplicationRecord
+  include Sluggable
+
   define_model_callbacks :verify
 
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
@@ -36,7 +38,7 @@ class Pone < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
 
-  before_save :set_slug_from_name, if: :name_changed?
+  generates_slug_from :name
 
   after_verify :add_boon_from_system_pone
 
@@ -60,11 +62,6 @@ class Pone < ApplicationRecord
   # @return [Integer]
   def giftable_points_count
     daily_giftable_points_count - granted_boons.today.sum(:points_count)
-  end
-
-  # @return [String, nil]
-  def to_param
-    slug
   end
 
   # @param achievement [Achievement]
@@ -99,11 +96,6 @@ class Pone < ApplicationRecord
   end
 
 private
-
-  # @return [void]
-  def set_slug_from_name
-    self.slug = name.parameterize
-  end
 
   # TODO: Remove me. Use pub/sub instead.
   # @return [void]
