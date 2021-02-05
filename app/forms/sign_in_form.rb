@@ -12,7 +12,7 @@ class SignInForm < ApplicationForm
       pone = Pone.find_by(name: name)
       errors.add(:base, :incorrect_credentials) && throw(:abort) if pone.nil?
 
-      pone.authenticate(PonePasswordCredential, password)
+      pone = pone.authenticate(PonePasswordCredential, password)
       errors.add(:base, :incorrect_credentials) && throw(:abort) if pone.nil?
 
       pone
