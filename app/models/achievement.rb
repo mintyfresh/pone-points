@@ -16,6 +16,8 @@
 #  index_achievements_on_name  (name) UNIQUE
 #
 class Achievement < ApplicationRecord
+  has_many :unlocked_achievements, dependent: :destroy, inverse_of: :achievement
+
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: { if: :name_changed? }
   validates :description, length: { maximum: 1000 }
 end

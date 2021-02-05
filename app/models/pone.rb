@@ -27,6 +27,9 @@ class Pone < ApplicationRecord
   has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error,
                            foreign_key: :granted_by_id, inverse_of: :granted_by
 
+  has_many :unlocked_achievements, dependent: :destroy, inverse_of: :pone
+  has_many :achievements, through: :unlocked_achievements
+
   has_unique_attribute :name
   has_unique_attribute :slug
 
