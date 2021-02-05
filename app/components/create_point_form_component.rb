@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class CreateBoonFormComponent < ApplicationComponent
+class CreatePointFormComponent < ApplicationComponent
   # @param pone [Pone]
-  # @param form [CreateBoonForm]
+  # @param form [CreatePointForm]
   # @param current_pone [Pone, nil]
   def initialize(pone:, form:, current_pone:)
     @pone         = pone

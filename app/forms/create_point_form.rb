@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-class CreateBoonForm < ApplicationForm
+class CreatePointForm < ApplicationForm
   # @return [Pone]
   attr_accessor :pone
   # @return [Pone]
   attr_accessor :granted_by
 
-  attribute :points_count, :integer
-  attribute :reason, :string
+  attribute :count, :integer
+  attribute :message, :string
 
-  validates :points_count, numericality: { greater_than: 0, less_than_or_equal_to: 3 }
-  validates :reason, presence: true, length: { maximum: 1000 }
+  validates :count, numericality: { greater_than: 0, less_than_or_equal_to: 3 }
+  validates :message, presence: true, length: { maximum: 1000 }
 
-  # @return [Boon]
+  # @return [Point]
   def perform
     super do
       granted_by.with_lock do
         ensure_sufficient_giftable_points_remaining!
 
-        pone.boons.create!(points_count: points_count, reason: reason, granted_by: granted_by)
+        pone.points.create!(count: count, message: message, granted_by: granted_by)
       end
     end
   end
@@ -28,7 +28,7 @@ private
   # @return [void]
   def ensure_sufficient_giftable_points_remaining!
     remaining = granted_by.giftable_points_count
-    return if remaining >= points_count
+    return if remaining >= count
 
     errors.add(:base, :not_enough_points, remaining: remaining)
     throw(:abort)

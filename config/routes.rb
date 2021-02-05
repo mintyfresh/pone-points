@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :boons, only: [] do
+  resources :points, only: [] do
     get :recent, on: :collection
   end
 
   resources :pones, only: %i[index show] do
-    resources :boons, only: %i[new create], controller: 'pones/boons'
+    resources :points, only: %i[create], controller: 'pones/points' do
+      get :give, on: :collection
+    end
   end
 
   get  '/change_password', to: 'profile#change_password'

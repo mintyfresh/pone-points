@@ -1,6 +1,6 @@
 <% if Pundit.policy(@current_pone, @pone).give_points? %>
   <% if giftable_points_count > 0 %>
-    <%= link_to('Give Points!', new_pone_boon_path(@pone), class: 'btn btn-success') %>
+    <%= link_to('Give Points!', give_pone_points_path(@pone), class: 'btn btn-success') %>
   <% end %>
   <div class="text-muted">
     You have <%= giftable_points_count %> points left to give today.

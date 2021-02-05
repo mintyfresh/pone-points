@@ -73,25 +73,25 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
--- Name: boons; Type: TABLE; Schema: public; Owner: -
+-- Name: points; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.boons (
+CREATE TABLE public.points (
     id bigint NOT NULL,
     pone_id bigint NOT NULL,
     granted_by_id bigint NOT NULL,
-    reason character varying,
-    points_count integer NOT NULL,
+    message character varying,
+    count integer NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
 );
 
 
 --
--- Name: boons_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: points_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE public.boons_id_seq
+CREATE SEQUENCE public.points_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -100,10 +100,10 @@ CREATE SEQUENCE public.boons_id_seq
 
 
 --
--- Name: boons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: points_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.boons_id_seq OWNED BY public.boons.id;
+ALTER SEQUENCE public.points_id_seq OWNED BY public.points.id;
 
 
 --
@@ -223,10 +223,10 @@ ALTER TABLE ONLY public.achievements ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
--- Name: boons id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: points id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.boons ALTER COLUMN id SET DEFAULT nextval('public.boons_id_seq'::regclass);
+ALTER TABLE ONLY public.points ALTER COLUMN id SET DEFAULT nextval('public.points_id_seq'::regclass);
 
 
 --
@@ -267,11 +267,11 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
--- Name: boons boons_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: points points_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.boons
-    ADD CONSTRAINT boons_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.points
+    ADD CONSTRAINT points_pkey PRIMARY KEY (id);
 
 
 --
@@ -314,17 +314,17 @@ CREATE UNIQUE INDEX index_achievements_on_name ON public.achievements USING btre
 
 
 --
--- Name: index_boons_on_granted_by_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_points_on_granted_by_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_boons_on_granted_by_id ON public.boons USING btree (granted_by_id);
+CREATE INDEX index_points_on_granted_by_id ON public.points USING btree (granted_by_id);
 
 
 --
--- Name: index_boons_on_pone_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_points_on_pone_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_boons_on_pone_id ON public.boons USING btree (pone_id);
+CREATE INDEX index_points_on_pone_id ON public.points USING btree (pone_id);
 
 
 --
@@ -378,18 +378,18 @@ ALTER TABLE ONLY public.pone_credentials
 
 
 --
--- Name: boons fk_rails_6d75f2081e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: points fk_rails_6d75f2081e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.boons
+ALTER TABLE ONLY public.points
     ADD CONSTRAINT fk_rails_6d75f2081e FOREIGN KEY (pone_id) REFERENCES public.pones(id);
 
 
 --
--- Name: boons fk_rails_a46c897fdb; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: points fk_rails_a46c897fdb; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.boons
+ALTER TABLE ONLY public.points
     ADD CONSTRAINT fk_rails_a46c897fdb FOREIGN KEY (granted_by_id) REFERENCES public.pones(id);
 
 
@@ -420,6 +420,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210204222146'),
 ('20210204231345'),
 ('20210205035320'),
-('20210205035907');
+('20210205035907'),
+('20210205230501');
 
 

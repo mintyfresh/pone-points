@@ -2,36 +2,36 @@
 
 # == Schema Information
 #
-# Table name: boons
+# Table name: points
 #
 #  id            :bigint           not null, primary key
 #  pone_id       :bigint           not null
 #  granted_by_id :bigint           not null
-#  reason        :string
-#  points_count  :integer          not null
+#  message       :string
+#  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
 # Indexes
 #
-#  index_boons_on_granted_by_id  (granted_by_id)
-#  index_boons_on_pone_id        (pone_id)
+#  index_points_on_granted_by_id  (granted_by_id)
+#  index_points_on_pone_id        (pone_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (granted_by_id => pones.id)
 #  fk_rails_...  (pone_id => pones.id)
 #
-class Boon < ApplicationRecord
+class Point < ApplicationRecord
   include Publishable
 
-  attr_readonly :points_count
+  attr_readonly :count
 
-  belongs_to :pone, inverse_of: :boons
-  belongs_to :granted_by, class_name: 'Pone', inverse_of: :granted_boons
+  belongs_to :pone, inverse_of: :points
+  belongs_to :granted_by, class_name: 'Pone', inverse_of: :granted_points
 
-  validates :reason, length: { maximum: 1000 }
-  validates :points_count, numericality: { other_than: 0 }
+  validates :message, length: { maximum: 1000 }
+  validates :count, numericality: { other_than: 0 }
 
   after_create :increment_pone_points_count
   after_destroy :decrement_pone_points_count
@@ -45,11 +45,11 @@ private
 
   # @return [void]
   def increment_pone_points_count
-    pone.increment!(:points_count, points_count, touch: true)
+    pone.increment!(:points_count, count, touch: true)
   end
 
   # @return [void]
   def decrement_pone_points_count
-    pone.decrement!(:points_count, points_count, touch: true)
+    pone.decrement!(:points_count, count, touch: true)
   end
 end

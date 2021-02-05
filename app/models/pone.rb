@@ -24,9 +24,9 @@ class Pone < ApplicationRecord
 
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
-  has_many :boons, dependent: :destroy, inverse_of: :pone
-  has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error,
-                           foreign_key: :granted_by_id, inverse_of: :granted_by
+  has_many :points, dependent: :destroy, inverse_of: :pone
+  has_many :granted_points, class_name: 'Point', dependent: :restrict_with_error,
+                            foreign_key: :granted_by_id, inverse_of: :granted_by
 
   has_many :unlocked_achievements, dependent: :destroy, inverse_of: :pone
   has_many :achievements, through: :unlocked_achievements
@@ -41,7 +41,7 @@ class Pone < ApplicationRecord
 
   before_verify :set_daily_giftable_points_count
 
-  after_verify :add_boon_from_system_pone
+  after_verify :add_point_from_system_pone
 
   # @param credential_class [Class<PoneCredential>]
   # @param credential [Object]
@@ -62,7 +62,7 @@ class Pone < ApplicationRecord
 
   # @return [Integer]
   def giftable_points_count
-    daily_giftable_points_count - granted_boons.today.sum(:points_count)
+    daily_giftable_points_count - granted_points.today.sum(:count)
   end
 
   # @param achievement [Achievement]
@@ -86,11 +86,11 @@ private
 
   # TODO: Remove me. Use pub/sub instead.
   # @return [void]
-  def add_boon_from_system_pone
-    boons.find_or_create_by!(
+  def add_point_from_system_pone
+    points.find_or_create_by!(
       granted_by:   Pone.find_by!(name: 'System Pone'),
       points_count: 1,
-      reason:       'For being a good, verified pone, of course!'
+      message:      'For being a good, verified pone, of course!'
     )
   end
 end

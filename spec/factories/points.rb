@@ -2,20 +2,20 @@
 
 # == Schema Information
 #
-# Table name: boons
+# Table name: points
 #
 #  id            :bigint           not null, primary key
 #  pone_id       :bigint           not null
 #  granted_by_id :bigint           not null
-#  reason        :string
-#  points_count  :integer          not null
+#  message       :string
+#  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
 # Indexes
 #
-#  index_boons_on_granted_by_id  (granted_by_id)
-#  index_boons_on_pone_id        (pone_id)
+#  index_points_on_granted_by_id  (granted_by_id)
+#  index_points_on_pone_id        (pone_id)
 #
 # Foreign Keys
 #
@@ -23,11 +23,11 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 FactoryBot.define do
-  factory :boon do
+  factory :point do
     association :pone, strategy: :build
     association :granted_by, factory: :pone, strategy: :build
 
-    reason { Faker::Hipster.sentence }
-    points_count { rand(1..3) }
+    message { Faker::Hipster.sentence }
+    count { rand(1..3) }
   end
 end

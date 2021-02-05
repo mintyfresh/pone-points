@@ -26,13 +26,13 @@ FactoryBot.define do
       verified_at { 5.minutes.ago }
     end
 
-    trait :with_boons do
+    trait :with_points do
       transient do
-        boons_count { 3 }
+        points_count { 3 }
       end
 
       after(:build) do |pone, e|
-        pone.boons = build_list(:boon, e.boons_count, pone: pone)
+        pone.points = build_list(:point, e.points_count, pone: pone)
       end
     end
 

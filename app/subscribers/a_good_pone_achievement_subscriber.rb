@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 class AGoodPoneAchievementSubscriber
-  # @param boon [Boon]
-  def initialize(boon)
-    @boon = boon
+  # @param point [Point]
+  def initialize(point)
+    @point = point
   end
 
   # @return [void]
   def perform
-    @boon.granted_by.unlock_achievement(achievement)
+    @point.granted_by.unlock_achievement(achievement)
   end
 
 private
