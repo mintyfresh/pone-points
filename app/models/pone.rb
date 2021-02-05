@@ -20,8 +20,7 @@
 #
 class Pone < ApplicationRecord
   include Sluggable
-
-  define_model_callbacks :verify
+  include Verifyable
 
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
@@ -39,6 +38,8 @@ class Pone < ApplicationRecord
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
 
   generates_slug_from :name
+
+  before_verify :set_daily_giftable_points_count
 
   after_verify :add_boon_from_system_pone
 
@@ -76,26 +77,12 @@ class Pone < ApplicationRecord
     unlocked_achievements.create_or_find_by!(achievement: achievement) && true
   end
 
-  # @return [Boolean]
-  def verified?
-    verified_at.present?
-  end
-
-  # @return [Boolean]
-  def verified!
-    with_lock do
-      return true if verified?
-
-      run_callbacks(:verify) do
-        update!(
-          daily_giftable_points_count: 3,
-          verified_at:                 Time.current
-        )
-      end
-    end
-  end
-
 private
+
+  # @return [void]
+  def set_daily_giftable_points_count
+    self.daily_giftable_points_count = 3
+  end
 
   # TODO: Remove me. Use pub/sub instead.
   # @return [void]
