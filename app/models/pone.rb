@@ -59,7 +59,7 @@ class Pone < ApplicationRecord
 
   # @return [Boolean]
   def verified?
-    verified.present?
+    verified_at.present?
   end
 
   # @return [Boolean]

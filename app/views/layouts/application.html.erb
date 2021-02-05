@@ -17,6 +17,16 @@
       <%= render(AppNavbarComponent.new(current_pone: current_pone)) %>
     </div>
     <div class="container">
+      <% if @current_pone && !@current_pone.verified? %>
+        <div class="alert alert-warning" role="alert">
+          <p>
+            You're currently an unverified pone. You can receive still good pone points, but you will not be able to give any to other pones.
+          </p>
+          <p class="mb-0">
+            Contact Minty to verify your account so that you can tell other pones how good they are!
+          </p>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
