@@ -28,12 +28,13 @@ class Boon < ApplicationRecord
   belongs_to :pone, inverse_of: :boons
   belongs_to :granted_by, class_name: 'Pone', inverse_of: :granted_boons
 
-  validates :granted_by, presence: true, length: { maximum: 50 }
   validates :reason, length: { maximum: 1000 }
   validates :points_count, numericality: { other_than: 0 }
 
   after_create :increment_pone_points_count
   after_destroy :decrement_pone_points_count
+
+  scope :today, -> { where(created_at: Date.current..) }
 
 private
 

@@ -21,7 +21,8 @@ class Pone < ApplicationRecord
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
   has_many :boons, -> { order(created_at: :desc, id: :desc) }, dependent: :destroy, inverse_of: :pone
-  has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error, inverse_of: :granted_by
+  has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error,
+                           foreign_key: :granted_by_id, inverse_of: :granted_by
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :daily_points_budget, numericality: { greater_than_or_equal_to: 0 }
@@ -43,6 +44,11 @@ class Pone < ApplicationRecord
     return credential if credential || build_if_missing
 
     credentials.build(type: credential_class.sti_name)
+  end
+
+  # @return [Integer]
+  def remaining_points_budget
+    daily_points_budget - granted_boons.today.sum(:points_count)
   end
 
 private

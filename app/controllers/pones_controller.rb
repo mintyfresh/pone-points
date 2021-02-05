@@ -3,5 +3,6 @@
 class PonesController < ApplicationController
   def show
     @pone = Pone.find_by!(slug: params[:id])
+    authorize(@pone)
   end
 end

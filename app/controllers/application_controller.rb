@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include Pundit
+
   # @return [Pone, nil]
   def current_pone
     return @current_pone if defined?(@current_pone)
@@ -16,4 +18,8 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_pone
+
+  def pundit_user
+    current_pone
+  end
 end

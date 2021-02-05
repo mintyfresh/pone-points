@@ -2,22 +2,19 @@
   <div class="mb-3">
     <%= form.label(:name) %>
     <%= form.text_field(:name, class: 'form-control') %>
+    <%= render(FormControlErrorsComponent.new(key: 'name', errors: @form.errors)) %>
   </div>
   <div class="mb-3">
     <%= form.label(:password) %>
     <%= form.password_field(:password, class: 'form-control') %>
+    <%= render(FormControlErrorsComponent.new(key: 'password', errors: @form.errors)) %>
   </div>
   <div class="mb-3">
     <%= form.label(:password_confirmation) %>
     <%= form.password_field(:password_confirmation, class: 'form-control') %>
+    <%= render(FormControlErrorsComponent.new(key: 'password_confirmation', errors: @form.errors)) %>
   </div>
-  <% if @form.errors[:base].any? %>
-    <div class="alert alert-danger" role="alert"> 
-      <% @form.errors[:base].each do |error| %>
-        <div><%= error %></div>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
   <div class="text-end">
     <%= form.submit('Sign Up', class: 'btn btn-primary') %>
   </div>

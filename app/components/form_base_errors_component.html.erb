@@ -1,0 +1,7 @@
+<% if @errors && @errors[:base].any? %>
+  <div class="alert alert-danger" role="alert"> 
+    <% @errors[:base].each do |error| %>
+      <div><%= error %></div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,5 +1,8 @@
 <h1><%= @pone.name %></h1>
 <p><%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.</p>
 <% if Pundit.policy(@current_pone, @pone).give_points? %>
-  <%= link_to('Give Points!', '#', class: 'btn btn-success') %>
+  <%= link_to('Give Points!', new_pone_boon_path(@pone.slug), class: 'btn btn-success') %>
+  <div class="text-muted">
+    You have <%= remaining_points_count %> points left to give today.
+  </div>
 <% end %>

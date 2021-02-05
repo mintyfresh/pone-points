@@ -1,0 +1,7 @@
+<% if @errors && @errors[@key].any? %>
+  <div> 
+    <% @errors[@key].each do |error| %>
+      <div class="text-danger"><%= error %></div>
+    <% end %>
+  </div>
+<% end %>

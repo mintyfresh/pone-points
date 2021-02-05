@@ -1,0 +1,17 @@
+<%= form_with(model: @form, url: pone_boons_path(@pone.slug), method: :post) do |form| %>
+  <div class="mb-3">
+    <%= form.label(:points_count) %>
+    <%= form.number_field(:points_count, class: 'form-control') %>
+    <%= render(FormControlErrorsComponent.new(key: 'points_count', errors: @form.errors)) %>
+  </div>
+  <div class="mb-3">
+    <%= form.label(:reason) %>
+    <%= form.text_area(:reason, class: 'form-control', placeholder: "Tell them how they've been such a good pone~!") %>
+    <%= render(FormControlErrorsComponent.new(key: 'reason', errors: @form.errors)) %>
+  </div>
+  <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
+  <div class="text-end">
+    <%= link_to('Nevermind', pone_path(@pone.slug), class: 'btn btn-secondary float-start') %>
+    <%= form.submit('Give Points!', class: 'btn btn-success') %>
+  </div>
+<% end %>
