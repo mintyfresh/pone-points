@@ -9,6 +9,7 @@
 #  slug                        :string           not null
 #  points_count                :integer          default(0), not null
 #  daily_giftable_points_count :integer          default(0), not null
+#  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
 #
@@ -20,6 +21,10 @@
 FactoryBot.define do
   factory :pone do
     sequence(:name) { |n| "#{Faker::Internet.username} #{n}" }
+
+    trait :verified do
+      verified_at { 5.minutes.ago }
+    end
 
     trait :with_boons do
       transient do

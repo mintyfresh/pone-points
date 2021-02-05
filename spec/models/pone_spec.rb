@@ -9,6 +9,7 @@
 #  slug                        :string           not null
 #  points_count                :integer          default(0), not null
 #  daily_giftable_points_count :integer          default(0), not null
+#  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
 #

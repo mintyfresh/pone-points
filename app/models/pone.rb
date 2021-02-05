@@ -9,6 +9,7 @@
 #  slug                        :string           not null
 #  points_count                :integer          default(0), not null
 #  daily_giftable_points_count :integer          default(0), not null
+#  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
 #
@@ -54,6 +55,23 @@ class Pone < ApplicationRecord
   # @return [String, nil]
   def to_param
     slug
+  end
+
+  # @return [Boolean]
+  def verified?
+    verified.present?
+  end
+
+  # @return [Boolean]
+  def verified!
+    with_lock do
+      return true if verified?
+
+      update!(
+        daily_giftable_points_count: 3,
+        verified_at:                 Time.current
+      )
+    end
   end
 
 private
