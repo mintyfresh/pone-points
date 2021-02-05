@@ -6,27 +6,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to('Pones', pones_path, class: 'nav-link') %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Recent</a>
-        </li>
-        <% if @current_pone %>
-          <li class="nav-item">
-            <%= link_to(@current_pone.name, @current_pone, class: 'nav-link') %>
-          </li>
+        <%= nav_link('Pones', pones_path) %>
+        <%= nav_link('Recent', '#') %>
+        <%= nav_link(@current_pone.name, @current_pone) if @current_pone %>
+      </ul>
+      <ul class="navbar-nav">
+        <% if @current_pone.nil? %>
+          <%= nav_link('Sign In', sign_in_path) %>
+          <%= nav_link('Sign Up', sign_up_path) %>
+        <% else %>
+          <%= nav_link('Sign Out', sign_out_path, method: :post) %>
         <% end %>
       </ul>
-      <% if @current_pone.nil? %>
-        <%= link_to('Sign In', sign_in_path, class: 'btn btn-link text-secondary text-decoration-none') %>
-        <%= link_to('Sign Up', sign_up_path, class: 'btn btn-link text-secondary text-decoration-none') %>
-      <% else %>
-        <%= link_to('Sign Out', sign_out_path, class: 'btn btn-link text-secondary text-decoration-none', method: :post) %>
-      <% end %>
     </div>
   </div>
 </nav>
