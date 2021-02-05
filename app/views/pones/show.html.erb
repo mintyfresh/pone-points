@@ -12,8 +12,8 @@
 <div class="mb-2">
   <% case @mode %>
   <% when 'activity' %>
-    <%= render(BoonListComponent.new(boons: @pone.granted_boons.first(25))) %>
+    <%= render(BoonListComponent.new(boons: @pone.granted_boons.preload(:pone).first(25))) %>
   <% else %>
-    <%= render(BoonListComponent.new(boons: @pone.boons.first(25))) %>
+    <%= render(BoonListComponent.new(boons: @pone.boons.preload(:granted_by).first(25))) %>
   <% end %>
 </div>
