@@ -1,4 +1,11 @@
 <% content_for(:title, t('.title', name: @pone.name)) %>
+<% content_for(:open_graph) do %>
+  <%= tag.meta(property: 'og:title', content: @pone.name) %>
+  <%= tag.meta(property: 'og:description', content: "#{@pone.name} is a good pone") %>
+  <%= tag.meta(property: 'og:type', content: 'profile') %>
+  <%= tag.meta(property: 'og:url', content: pone_url(@pone)) %>
+  <%= tag.meta(property: 'og:profile:username', content: @pone.name) %>
+<% end %>
 <div class="row">
   <div class="col-sm-12 col-md-7 col-lg-8 mb-2">
     <%= render(PoneProfileComponent.new(pone: @pone)) %>
