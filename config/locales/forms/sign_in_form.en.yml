@@ -1,0 +1,9 @@
+---
+en:
+  activemodel:
+    errors:
+      models:
+        sign_in_form:
+          attributes:
+            base:
+              incorrect_credentials: Name or password is incorrect.

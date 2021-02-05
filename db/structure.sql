@@ -115,7 +115,7 @@ CREATE TABLE public.pones (
     name public.citext NOT NULL,
     slug character varying NOT NULL,
     points_count integer DEFAULT 0 NOT NULL,
-    daily_points_budget integer DEFAULT 0 NOT NULL,
+    daily_giftable_points_count integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
 );

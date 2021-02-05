@@ -16,7 +16,7 @@ class CreateBoonForm < ApplicationForm
   def perform
     super do
       granted_by.with_lock do
-        ensure_sufficient_grantable_points_remaining!
+        ensure_sufficient_giftable_points_remaining!
 
         pone.boons.create!(points_count: points_count, reason: reason, granted_by: granted_by)
       end
@@ -26,8 +26,8 @@ class CreateBoonForm < ApplicationForm
 private
 
   # @return [void]
-  def ensure_sufficient_grantable_points_remaining!
-    remaining = granted_by.remaining_points_budget
+  def ensure_sufficient_giftable_points_remaining!
+    remaining = granted_by.giftable_points_count
     return if remaining >= points_count
 
     errors.add(:base, :not_enough_points, remaining: remaining)

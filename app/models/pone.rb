@@ -4,13 +4,13 @@
 #
 # Table name: pones
 #
-#  id                  :bigint           not null, primary key
-#  name                :citext           not null
-#  slug                :string           not null
-#  points_count        :integer          default(0), not null
-#  daily_points_budget :integer          default(0), not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
+#  id                          :bigint           not null, primary key
+#  name                        :citext           not null
+#  slug                        :string           not null
+#  points_count                :integer          default(0), not null
+#  daily_giftable_points_count :integer          default(0), not null
+#  created_at                  :datetime         not null
+#  updated_at                  :datetime         not null
 #
 # Indexes
 #
@@ -25,7 +25,7 @@ class Pone < ApplicationRecord
                            foreign_key: :granted_by_id, inverse_of: :granted_by
 
   validates :name, presence: true, length: { maximum: 50 }
-  validates :daily_points_budget, numericality: { greater_than_or_equal_to: 0 }
+  validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
 
   before_save :set_slug_from_name, if: :name_changed?
 
@@ -47,8 +47,8 @@ class Pone < ApplicationRecord
   end
 
   # @return [Integer]
-  def remaining_points_budget
-    daily_points_budget - granted_boons.today.sum(:points_count)
+  def giftable_points_count
+    daily_giftable_points_count - granted_boons.today.sum(:points_count)
   end
 
   # @return [String, nil]

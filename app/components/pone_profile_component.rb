@@ -9,9 +9,9 @@ class PoneProfileComponent < ApplicationComponent
   end
 
   # @return [Integer]
-  def remaining_points_count
+  def giftable_points_count
     return 0 if @current_pone.nil?
 
-    @remaining_points_count ||= @current_pone.remaining_points_budget
+    @giftable_points_count ||= @current_pone.giftable_points_count
   end
 end
