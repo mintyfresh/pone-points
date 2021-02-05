@@ -1,12 +1,4 @@
 <%= render(PoneProfileComponent.new(pone: @pone, current_pone: current_pone)) %>
-<ul>
-  <% @pone.boons.first(25).each do |boon| %>
-    <li>
-      <%= boon.granted_by %> gave <%= number_to_human(boon.points_count) %> points to <%= @pone.name %> on <%= localize(boon.occurred_at) %>
-      (<%= link_to('Message Link', boon.message_link, target: '_blank') %>)
-      <% if boon.reason.present? %>
-        <div class="text-muted">Reason: <%= boon.reason %></div>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<div class="mt-3">
+  <%= render(BoonListComponent.new(boons: @pone.boons.first(25))) %>
+</div>
