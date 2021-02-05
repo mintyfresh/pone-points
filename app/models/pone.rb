@@ -19,6 +19,8 @@
 #  index_pones_on_slug  (slug) UNIQUE
 #
 class Pone < ApplicationRecord
+  define_model_callbacks :verify
+
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
   has_many :boons, -> { order(created_at: :desc, id: :desc) }, dependent: :destroy, inverse_of: :pone
@@ -32,6 +34,8 @@ class Pone < ApplicationRecord
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
 
   before_save :set_slug_from_name, if: :name_changed?
+
+  after_verify :add_boon_from_system_pone
 
   # @param credential_class [Class<PoneCredential>]
   # @param credential [Object]
@@ -70,10 +74,12 @@ class Pone < ApplicationRecord
     with_lock do
       return true if verified?
 
-      update!(
-        daily_giftable_points_count: 3,
-        verified_at:                 Time.current
-      )
+      run_callbacks(:verify) do
+        update!(
+          daily_giftable_points_count: 3,
+          verified_at:                 Time.current
+        )
+      end
     end
   end
 
@@ -82,5 +88,15 @@ private
   # @return [void]
   def set_slug_from_name
     self.slug = name.parameterize
+  end
+
+  # TODO: Remove me. Use pub/sub instead.
+  # @return [void]
+  def add_boon_from_system_pone
+    boons.find_or_create_by!(
+      granted_by:   Pone.find_by!(name: 'System Pone'),
+      points_count: 1,
+      reason:       'For being a good, verified pone, of course!'
+    )
   end
 end

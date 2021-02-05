@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+Pone.find_or_create_by!(name: 'System Pone')
 Pone.find_or_create_by!(name: 'Minty Fresh')
 Pone.find_or_create_by!(name: 'Bytewave')
 
