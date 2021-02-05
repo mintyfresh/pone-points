@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError do
     if current_pone.nil?
-      redirect_to sign_in_path
+      redirect_to sign_in_path(return_path: request.path)
     else
       redirect_to '404.html'
     end

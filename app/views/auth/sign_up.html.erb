@@ -1,5 +1,6 @@
 <%= render(CardFrameComponent.new(title: 'Sign Up')) do %>
   <%= form_with(model: @form, url: sign_up_path, method: :post) do |form| %>
+    <%= hidden_field_tag(:return_path, @return_path) if @return_path.present? %>
     <div class="mb-3">
       <%= form.label(:name) %>
       <%= form.text_field(:name, class: 'form-control', autocomplete: 'username') %>
@@ -17,6 +18,7 @@
     </div>
     <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
     <div class="text-end">
+      <%= link_to('Sign In', sign_in_path(return_path: @return_path), class: 'btn btn-outline-secondary float-start') %>
       <%= form.submit('Sign Up', class: 'btn btn-primary') %>
     </div>
   <% end %>
