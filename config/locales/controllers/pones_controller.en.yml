@@ -1,0 +1,6 @@
+en:
+  pones:
+    index:
+      title: All the Pones - Good Pone Points
+    show:
+      title: '%{name} is a Good Pone - Good Pone Points'
