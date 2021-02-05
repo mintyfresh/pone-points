@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :boons, only: [] do
+    get :recent, on: :collection
+  end
+
   resources :pones, only: %i[index show] do
     resources :boons, only: %i[new create], controller: 'pones/boons'
   end

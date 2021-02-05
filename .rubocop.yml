@@ -11,6 +11,7 @@ AllCops:
   TargetRubyVersion: 3.0
   Exclude:
     - 'bin/*'
+    - 'node_modules/**/*'
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
