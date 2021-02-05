@@ -3,6 +3,14 @@
 class ApplicationController < ActionController::Base
   include Pundit
 
+  rescue_from Pundit::NotAuthorizedError do
+    if current_pone.nil?
+      redirect_to sign_in_path
+    else
+      redirect_to '404.html'
+    end
+  end
+
   # @return [Pone, nil]
   def current_pone
     return @current_pone if defined?(@current_pone)
