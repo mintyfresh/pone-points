@@ -10,6 +10,7 @@ gem 'amazing_print'
 gem 'argon2'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker'
+gem 'has_unique_attribute'
 gem 'oj'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'

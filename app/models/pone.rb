@@ -25,6 +25,9 @@ class Pone < ApplicationRecord
   has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error,
                            foreign_key: :granted_by_id, inverse_of: :granted_by
 
+  has_unique_attribute :name
+  has_unique_attribute :slug
+
   validates :name, presence: true, length: { maximum: 50 }
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
 
