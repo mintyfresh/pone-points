@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+    <div class="card">
+      <% if @title.present? %>
+        <div class="card-header"><%= @title %></div>
+      <% end %>
+      <div class="card-body">
+        <%= content %>
+      </div>
+    </div>
+  </div>
+</div>
