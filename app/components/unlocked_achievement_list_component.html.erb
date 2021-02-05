@@ -1,0 +1,18 @@
+<% @unlocked_achievements.each do |unlocked_achievement| %>
+  <div class="card mb-2">
+    <div class="card-body">
+      <div class="card-title fs-5">
+        <%= link_to_unless_current(unlocked_achievement.pone.name, unlocked_achievement.pone) %> unlocked:
+        <%= unlocked_achievement.achievement.name %>
+      </div>
+      <%= unlocked_achievement.achievement.description %>
+    </div>
+  </div>
+<% end %>
+<% if @unlocked_achievements.none? %>
+  <div class="card">
+    <div class="card-body text-center">
+      No achievements unlocked yet.
+    </div>
+  </div>
+<% end %>
