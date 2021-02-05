@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     resources :boons, only: %i[new create], controller: 'pones/boons'
   end
 
+  get  '/change_password', to: 'profile#change_password'
+  post '/change_password', to: 'profile#do_change_password'
+
   get  '/sign_in',  to: 'auth#sign_in'
   post '/sign_in',  to: 'auth#do_sign_in'
   get  '/sign_up',  to: 'auth#sign_up'
