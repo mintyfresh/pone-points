@@ -20,7 +20,8 @@
 <div class="mb-2">
   <% case @mode %>
   <% when 'achievements' %>
-    <%= render(UnlockedAchievementListComponent.new(unlocked_achievements: @pone.unlocked_achievements.preload(:achievement).first(25))) %>
+    <%= render(UnlockedAchievementListComponent.new(unlocked_achievements: @pone.unlocked_achievements
+      .order(created_at: :desc, id: :desc).preload(:achievement).first(25))) %>
   <% when 'activity' %>
     <%= render(BoonListComponent.new(boons: @pone.granted_boons.preload(:pone).first(25))) %>
   <% else %>
