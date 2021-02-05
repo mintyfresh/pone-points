@@ -24,7 +24,7 @@ class Pone < ApplicationRecord
 
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
-  has_many :boons, -> { order(created_at: :desc, id: :desc) }, dependent: :destroy, inverse_of: :pone
+  has_many :boons, dependent: :destroy, inverse_of: :pone
   has_many :granted_boons, class_name: 'Boon', dependent: :restrict_with_error,
                            foreign_key: :granted_by_id, inverse_of: :granted_by
 

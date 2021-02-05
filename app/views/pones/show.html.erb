@@ -23,8 +23,10 @@
     <%= render(UnlockedAchievementListComponent.new(unlocked_achievements: @pone.unlocked_achievements
       .order(created_at: :desc, id: :desc).preload(:achievement).first(25))) %>
   <% when 'activity' %>
-    <%= render(BoonListComponent.new(boons: @pone.granted_boons.preload(:pone).first(25))) %>
+    <%= render(BoonListComponent.new(boons: @pone.granted_boons
+      .order(created_at: :desc, id: :desc).preload(:pone).first(25))) %>
   <% else %>
-    <%= render(BoonListComponent.new(boons: @pone.boons.preload(:granted_by).first(25))) %>
+    <%= render(BoonListComponent.new(boons: @pone.boons
+      .order(created_at: :desc, id: :desc).preload(:granted_by).first(25))) %>
   <% end %>
 </div>
