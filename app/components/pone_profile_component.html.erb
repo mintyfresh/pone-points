@@ -4,12 +4,6 @@
     is a good pone
   </small>
 </h1>
-<p><%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.</p>
-<% if Pundit.policy(@current_pone, @pone).give_points? %>
-  <% if giftable_points_count > 0 %>
-    <%= link_to('Give Points!', new_pone_boon_path(@pone.slug), class: 'btn btn-success') %>
-  <% end %>
-  <div class="text-muted">
-    You have <%= giftable_points_count %> points left to give today.
-  </div>
-<% end %>
+<p class="mb-0">
+  <%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
+</p>
