@@ -51,6 +51,11 @@ class Pone < ApplicationRecord
     daily_points_budget - granted_boons.today.sum(:points_count)
   end
 
+  # @return [String, nil]
+  def to_param
+    slug
+  end
+
 private
 
   # @return [void]

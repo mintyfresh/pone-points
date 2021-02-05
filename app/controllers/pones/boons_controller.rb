@@ -14,7 +14,7 @@ module Pones
       @form = CreateBoonForm.new(create_boon_params)
 
       if @form.perform
-        redirect_to pone_path(@pone.slug)
+        redirect_to @pone
       else
         render 'new'
       end

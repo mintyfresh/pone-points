@@ -15,12 +15,17 @@
         <li class="nav-item">
           <a class="nav-link">Recent</a>
         </li>
+        <% if @current_pone %>
+          <li class="nav-item">
+            <%= link_to(@current_pone.name, @current_pone, class: 'nav-link') %>
+          </li>
+        <% end %>
       </ul>
       <% if @current_pone.nil? %>
         <%= link_to('Sign In', sign_in_path, class: 'btn btn-link text-secondary text-decoration-none') %>
         <%= link_to('Sign Up', sign_up_path, class: 'btn btn-link text-secondary text-decoration-none') %>
       <% else %>
-        <%= link_to('Sign Out', '#', class: 'btn btn-link text-secondary text-decoration-none') %>
+        <%= link_to('Sign Out', sign_out_path, class: 'btn btn-link text-secondary text-decoration-none', method: :post) %>
       <% end %>
     </div>
   </div>

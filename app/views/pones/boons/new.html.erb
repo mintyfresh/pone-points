@@ -1,4 +1,4 @@
-<%= form_with(model: @form, url: pone_boons_path(@pone.slug), method: :post) do |form| %>
+<%= form_with(model: @form, url: pone_boons_path(@pone), method: :post) do |form| %>
   <div class="mb-3">
     <%= form.label(:points_count) %>
     <%= form.number_field(:points_count, class: 'form-control') %>
@@ -11,7 +11,7 @@
   </div>
   <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
   <div class="text-end">
-    <%= link_to('Nevermind', pone_path(@pone.slug), class: 'btn btn-secondary float-start') %>
+    <%= link_to('Nevermind', @pone, class: 'btn btn-secondary float-start') %>
     <%= form.submit('Give Points!', class: 'btn btn-success') %>
   </div>
 <% end %>

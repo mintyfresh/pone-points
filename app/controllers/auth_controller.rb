@@ -11,7 +11,7 @@ class AuthController < ApplicationController
     if (pone = @form.perform)
       self.current_pone = pone
 
-      redirect_to pone_path(pone.slug)
+      redirect_to pone
     else
       render 'sign_in'
     end
@@ -27,10 +27,15 @@ class AuthController < ApplicationController
     if (pone = @form.perform)
       self.current_pone = pone
 
-      redirect_to pone_path(pone.slug)
+      redirect_to pone
     else
       render 'sign_up'
     end
+  end
+
+  def sign_out
+    self.current_pone = nil
+    redirect_to pones_path
   end
 
 private

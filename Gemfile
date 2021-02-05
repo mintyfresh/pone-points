@@ -19,6 +19,7 @@ gem 'sass-rails', '>= 6'
 gem 'seedbank'
 gem 'turbolinks', '~> 5'
 gem 'view_component'
+gem 'webpacker'
 
 group :development do
   gem 'annotate'
