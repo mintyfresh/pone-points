@@ -1,6 +1,4 @@
-<div>
-  <%= @pone.name %> has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
-</div>
+<%= render(PoneProfileComponent.new(pone: @pone, current_pone: current_pone)) %>
 <ul>
   <% @pone.boons.first(25).each do |boon| %>
     <li>
