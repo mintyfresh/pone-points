@@ -1,3 +1,4 @@
+<% content_for(:title, t('.title', name: @api_key.name)) %>
 <%= render(AccountPanelComponent.new) do %>
   <h1>
     <%= tag.span(@api_key.name, class: @api_key.revoked? ? 'text-decoration-line-through' : '') %>

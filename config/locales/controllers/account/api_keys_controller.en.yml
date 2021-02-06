@@ -1,0 +1,11 @@
+en:
+  account:
+    api_keys:
+      index:
+        title: API Keys - Good Pone Points
+      show:
+        title: '%{name} - API Keys - Good Pone Points'
+      new: &new
+        title: Create new API Key - Good Pone Points
+      create:
+        <<: *new

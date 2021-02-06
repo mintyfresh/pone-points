@@ -1,0 +1,8 @@
+en:
+  account:
+    change_password: &change_password
+      title: Change Password - Good Pone Points
+    do_change_password:
+      <<: *change_password
+    integrations:
+      title: External Accounts - Good Pone Points
