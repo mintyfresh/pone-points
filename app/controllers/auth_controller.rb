@@ -43,7 +43,11 @@ class AuthController < ApplicationController
   end
 
   def external
-    self.current_pone = authenticate_external_pone
+    if current_pone.nil?
+      self.current_pone = fetch_pone_from_external_account!
+    else
+      link_current_pone_to_external_account!
+    end
 
     redirect_to current_pone
   end
@@ -68,7 +72,7 @@ private
   end
 
   # @return [Pone]
-  def authenticate_external_pone
+  def fetch_pone_from_external_account!
     params = external_auth_params
 
     Pone.find_or_create_pone_by_external_id!(external_credential_class, params.uid) do |pone|
@@ -76,11 +80,20 @@ private
     end
   end
 
+  # @return [void]
+  def link_current_pone_to_external_account!
+    current_pone
+      .credential(external_credential_class, build_if_missing: true)
+      .update!(external_id: external_auth_params.uid)
+  end
+
   # @return [Class<PoneCredential>]
   def external_credential_class
     case external_auth_params.provider
     when 'discord'
       PoneDiscordCredential
+    when 'github'
+      PoneGithubCredential
     else
       raise ArgumentError, "Unsupported OAuth provider: #{external_auth_params.provider}"
     end

@@ -1,0 +1,12 @@
+<div>
+  <% if current_pone.credentials.none? { |credential| credential.is_a?(PoneDiscordCredential) } %>
+    <div><%= link_to('Link Account with Discord', '/auth/discord', method: :post) %></div>
+  <% else %>
+    <div>Linked to Discord</div>
+  <% end %>
+  <% if current_pone.credentials.none? { |credential| credential.is_a?(PoneGithubCredential) } %>
+    <div><%= link_to('Link Account with Github', '/auth/github', method: :post) %></div>
+  <% else %>
+    <div>Linked to Github</div>
+  <% end %>
+</div>

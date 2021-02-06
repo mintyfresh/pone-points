@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get  '/integrations', to: 'profile#integrations'
   get  '/change_password', to: 'profile#change_password'
   post '/change_password', to: 'profile#do_change_password'
 

@@ -65,7 +65,7 @@ class Pone < ApplicationRecord
   # @return [PoneCredential, nil]
   def credential(credential_class, build_if_missing: false)
     credential = credentials.find_by(type: credential_class.sti_name)
-    return credential if credential || build_if_missing
+    return credential if credential || !build_if_missing
 
     credentials.build(type: credential_class.sti_name)
   end

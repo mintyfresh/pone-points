@@ -3,6 +3,10 @@
 class ProfileController < ApplicationController
   before_action :verify_current_pone
 
+  def integrations
+    # Nothing to do.
+  end
+
   def change_password
     @form = ChangePasswordForm.new
   end
