@@ -1,5 +1,5 @@
 <%= render(CardFrameComponent.new(title: 'Sign In')) do %>
-  <%= form_with(model: @form, url: sign_in_path, method: :post) do |form| %>
+  <%= form_with(model: @form, url: sign_in_path, method: :post, id: 'sign_in_form') do |form| %>
     <%= hidden_field_tag(:return_path, @return_path) if @return_path.present? %>
     <div class="mb-3">
       <%= form.label(:name) %>
