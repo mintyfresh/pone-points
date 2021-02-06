@@ -51,3 +51,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers', '~> 4.0'
 end
+
+group :production do
+  gem 'redis'
+  gem 'resque'
+  gem 'resque-heroku-signals'
+end

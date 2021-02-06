@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get  '/sign_in',  to: 'auth#sign_in'
+  post '/sign_in',  to: 'auth#do_sign_in'
+  get  '/sign_up',  to: 'auth#sign_up'
+  post '/sign_up',  to: 'auth#do_sign_up'
+  post '/sign_out', to: 'auth#sign_out'
+
+  # External OAuth callback route.
+  match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
+
   resources :points, only: [] do
     get :recent, on: :collection
   end
@@ -22,14 +31,6 @@ Rails.application.routes.draw do
     post :change_password, action: :do_change_password
   end
 
-  get  '/sign_in',  to: 'auth#sign_in'
-  post '/sign_in',  to: 'auth#do_sign_in'
-  get  '/sign_up',  to: 'auth#sign_up'
-  post '/sign_up',  to: 'auth#do_sign_up'
-  post '/sign_out', to: 'auth#sign_out'
-
-  match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
-
   namespace :api do
     namespace :v1 do
       resources :pones, only: %i[index show], param: :slug do
@@ -38,6 +39,24 @@ Rails.application.routes.draw do
           post :give, on: :collection
         end
       end
+    end
+  end
+
+  if defined?(Resque)
+    require 'resque/server'
+
+    admin_session_constraint = lambda { |request|
+      request.session.send(:load!) unless request.session.loaded?
+
+      result   = request.session[:pone_id]
+      result &&= Pone.find_by(id: result)
+      result &&= result.name == 'Minty Fresh' # TODO
+
+      result
+    }
+
+    constraints(admin_session_constraint) do
+      mount Resque::Server.new, at: '/admin/resque'
     end
   end
 end
