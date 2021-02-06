@@ -8,9 +8,9 @@ RSpec.describe 'SignIn', type: :feature do
   # @return [void]
   def fill_in_sign_in_form(input)
     within('#sign_in_form') do
-      fill_in 'Name', with: input[:name]
-      fill_in 'Password', with: input[:password]
-      click_button 'Sign In'
+      fill_in('Name', with: input[:name])
+      fill_in('Password', with: input[:password])
+      click_button('Sign In')
     end
   end
 
