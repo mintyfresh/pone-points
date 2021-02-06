@@ -1,0 +1,11 @@
+<%= render(AccountPanelComponent.new) do %>
+  <div class="row">
+    <h1 class="col">
+      API Keys
+    </h1>
+    <div class="col-auto text-end">
+      <%= link_to('Create API Key', '#', class: 'btn btn-primary mt-auto') %>
+    </div>
+  </div>
+  <%= render(ApiKeyListComponent.new(api_keys: @api_keys)) %>
+<% end %>

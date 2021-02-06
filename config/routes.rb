@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :api_keys, only: %i[index show]
-
   resources :points, only: [] do
     get :recent, on: :collection
   end
@@ -13,9 +11,14 @@ Rails.application.routes.draw do
     end
   end
 
-  get  '/integrations', to: 'profile#integrations'
-  get  '/change_password', to: 'profile#change_password'
-  post '/change_password', to: 'profile#do_change_password'
+  namespace :account, only: [] do
+    resources :api_keys, only: %i[index show]
+
+    get  :integrations
+    get  :change_password
+    post :change_password, action: :do_change_password
+  end
+
 
   get  '/sign_in',  to: 'auth#sign_in'
   post '/sign_in',  to: 'auth#do_sign_in'

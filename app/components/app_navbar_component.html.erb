@@ -15,9 +15,9 @@
           <%= nav_link('Sign In', sign_in_path) %>
           <%= nav_link('Sign Up', sign_up_path) %>
         <% else %>
-          <%= nav_link('API Keys', api_keys_path) %>
-          <%= nav_link('Integrations', integrations_path) %>
-          <%= nav_link('Change Password', change_password_path) %>
+          <%= nav_link('API Keys', account_api_keys_path) %>
+          <%= nav_link('Integrations', account_integrations_path) %>
+          <%= nav_link('Change Password', account_change_password_path) %>
           <%= nav_link('Sign Out', sign_out_path, method: :post) %>
         <% end %>
       </ul>

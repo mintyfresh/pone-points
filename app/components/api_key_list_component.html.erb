@@ -1,0 +1,12 @@
+<% @api_keys.each do |api_key| %>
+  <div>
+    <%= link_to(api_key.name, api_key) %>
+  </div>
+<% end %>
+<% if @api_keys.none? %>
+  <div class="card">
+    <div class="card-body text-center">
+      You don't have any API keys yet.
+    </div>
+  </div>
+<% end %>

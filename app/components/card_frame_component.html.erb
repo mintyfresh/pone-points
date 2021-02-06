@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+  <%= tag.div(class: alignment_class) do %>
     <div class="card">
       <% if @title.present? %>
         <div class="card-header"><%= @title %></div>
@@ -8,5 +8,5 @@
         <%= content %>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
