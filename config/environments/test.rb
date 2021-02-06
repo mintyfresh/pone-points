@@ -29,6 +29,9 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
+  # Collect enqueued jobs in an in-memory array for testing.
+  config.active_job.queue_adapter = :test
+
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
 

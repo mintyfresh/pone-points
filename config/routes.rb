@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'welcome#index'
+
   get  '/sign_in',  to: 'auth#sign_in'
   post '/sign_in',  to: 'auth#do_sign_in'
   get  '/sign_up',  to: 'auth#sign_up'
