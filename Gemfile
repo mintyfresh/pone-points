@@ -8,6 +8,7 @@ ruby '3.0.0'
 
 gem 'amazing_print'
 gem 'argon2'
+gem 'blueprinter'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker'
 gem 'has_unique_attribute'
@@ -44,5 +45,6 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rspec-json_expectations'
   gem 'rspec-rails'
 end

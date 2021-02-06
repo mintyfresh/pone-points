@@ -22,4 +22,15 @@ Rails.application.routes.draw do
   post '/sign_out', to: 'auth#sign_out'
 
   match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
+
+  namespace :api do
+    namespace :v1 do
+      resources :pones, only: %i[index show], param: :slug do
+        resources :achievements, only: :index, controller: 'pones/achievements'
+        resources :points, only: %i[index show], controller: 'pones/points' do
+          post :give, on: :collection
+        end
+      end
+    end
+  end
 end

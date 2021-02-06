@@ -27,7 +27,7 @@
 #
 FactoryBot.define do
   factory :api_key do
-    association :pone, strategy: :build
+    association :pone, :verified, strategy: :build
 
     name { Faker::Book.title }
     description { Faker::Hipster.sentence }

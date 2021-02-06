@@ -24,6 +24,7 @@ FactoryBot.define do
 
     trait :verified do
       verified_at { 5.minutes.ago }
+      daily_giftable_points_count { 3 }
     end
 
     trait :with_points do
