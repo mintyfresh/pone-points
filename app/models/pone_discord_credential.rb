@@ -22,14 +22,6 @@
 #
 #  fk_rails_...  (pone_id => pones.id)
 #
-class PoneCredential < ApplicationRecord
-  belongs_to :pone, inverse_of: :credentials
-
-  validates :type, presence: true
-
-  # @abstract
-  # @return [Pone, nil]
-  def authenticate(*)
-    raise NotImplementedError, "#{self.class.name} does not implement `#{__method__}`."
-  end
+class PoneDiscordCredential < PoneCredential
+  validates :external_id, presence: true
 end

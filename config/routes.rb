@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get  '/sign_up',  to: 'auth#sign_up'
   post '/sign_up',  to: 'auth#do_sign_up'
   post '/sign_out', to: 'auth#sign_out'
+
+  match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
 end

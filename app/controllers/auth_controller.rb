@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class AuthController < ApplicationController
-  before_action :set_return_path
+  skip_before_action :verify_authenticity_token, only: :external
+
+  before_action :set_return_path, except: :external
 
   def sign_in
     @form = SignInForm.new
@@ -40,6 +42,12 @@ class AuthController < ApplicationController
     redirect_to pones_path
   end
 
+  def external
+    self.current_pone = authenticate_external_pone
+
+    redirect_to current_pone
+  end
+
 private
 
   def set_return_path
@@ -57,5 +65,28 @@ private
 
   def sign_up_params
     params.require(:sign_up_form).permit(:name, :password, :password_confirmation)
+  end
+
+  # @return [Pone]
+  def authenticate_external_pone
+    params = external_auth_params
+
+    Pone.find_or_create_pone_by_external_id!(external_credential_class, params.uid) do |pone|
+      pone.name = params.info.name
+    end
+  end
+
+  # @return [Class<PoneCredential>]
+  def external_credential_class
+    case external_auth_params.provider
+    when 'discord'
+      PoneDiscordCredential
+    else
+      raise ArgumentError, "Unsupported OAuth provider: #{external_auth_params.provider}"
+    end
+  end
+
+  def external_auth_params
+    @external_auth_params ||= request.env['omniauth.auth']
   end
 end

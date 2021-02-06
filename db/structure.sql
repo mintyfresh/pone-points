@@ -116,7 +116,8 @@ CREATE TABLE public.pone_credentials (
     pone_id bigint NOT NULL,
     data jsonb DEFAULT '{}'::jsonb NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    external_id character varying
 );
 
 
@@ -335,6 +336,20 @@ CREATE INDEX index_pone_credentials_on_pone_id ON public.pone_credentials USING 
 
 
 --
+-- Name: index_pone_credentials_on_type_and_external_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_pone_credentials_on_type_and_external_id ON public.pone_credentials USING btree (type, external_id);
+
+
+--
+-- Name: index_pone_credentials_on_type_and_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_pone_credentials_on_type_and_pone_id ON public.pone_credentials USING btree (type, pone_id);
+
+
+--
 -- Name: index_pones_on_name; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -421,6 +436,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210204231345'),
 ('20210205035320'),
 ('20210205035907'),
-('20210205230501');
+('20210205230501'),
+('20210206011739');
 
 

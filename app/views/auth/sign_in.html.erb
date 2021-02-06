@@ -16,5 +16,7 @@
       <%= link_to('Sign Up', sign_up_path(return_path: @return_path), class: 'btn btn-outline-secondary float-start') %>
       <%= form.submit('Sign In', class: 'btn btn-primary') %>
     </div>
+    <hr />
+    <%= link_to('Sign In with Discord', '/auth/discord', method: :post) %>
   <% end %>
 <% end %>

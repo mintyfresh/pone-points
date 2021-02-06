@@ -43,6 +43,16 @@ class Pone < ApplicationRecord
 
   after_verify :add_point_from_system_pone
 
+  # @parma credential_class [Class<PoneCredential>]
+  # @param external_id [String]
+  # @return [Pone]
+  def self.find_or_create_pone_by_external_id!(credential_class, external_id)
+    credential_class.find_by(external_id: external_id)&.pone || Pone.create! do |pone|
+      pone.credentials << credential_class.new(external_id: external_id)
+      yield(pone)
+    end
+  end
+
   # @param credential_class [Class<PoneCredential>]
   # @param credential [Object]
   # @return [self, nil]
