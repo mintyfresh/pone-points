@@ -24,4 +24,9 @@
 #
 class PoneDiscordCredential < PoneCredential
   validates :external_id, presence: true
+
+  # @return [String]
+  def self.auth_path
+    '/auth/discord'
+  end
 end

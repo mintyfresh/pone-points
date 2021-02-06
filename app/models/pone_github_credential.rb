@@ -24,4 +24,9 @@
 #
 class PoneGithubCredential < PoneCredential
   validates :external_id, presence: true
+
+  # @return [String]
+  def self.auth_path
+    '/auth/github'
+  end
 end

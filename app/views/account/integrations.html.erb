@@ -1,14 +1,11 @@
 <%= render(AccountPanelComponent.new) do %>
-  <div>
-    <% if current_pone.credentials.none? { |credential| credential.is_a?(PoneDiscordCredential) } %>
-      <div><%= link_to('Link Account with Discord', '/auth/discord', method: :post) %></div>
-    <% else %>
-      <div>Linked to Discord</div>
-    <% end %>
-    <% if current_pone.credentials.none? { |credential| credential.is_a?(PoneGithubCredential) } %>
-      <div><%= link_to('Link Account with Github', '/auth/github', method: :post) %></div>
-    <% else %>
-      <div>Linked to Github</div>
-    <% end %>
+  <div class="row">
+    <div class="col-sm-6 col-lg-4 pb-3">
+      <%= render(ExternalCredentialCardComponent.new(icon: 'bi-discord', name: 'Discord', credential_class: PoneDiscordCredential, current_pone: current_pone)) %>
+    </div>
+    <div class="col-sm-6 col-lg-4 pb-3">
+      <%= render(ExternalCredentialCardComponent.new(icon: 'bi-github', name: 'Github', credential_class: PoneGithubCredential, current_pone: current_pone)) %>
+    </div>
   </div>
+  <div>
 <% end %>
