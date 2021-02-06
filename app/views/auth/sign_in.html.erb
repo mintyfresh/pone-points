@@ -17,7 +17,6 @@
       <%= form.submit('Sign In', class: 'btn btn-primary') %>
     </div>
     <hr />
-    <div><%= link_to('Sign In with Discord', '/auth/discord', method: :post) %></div>
-    <div><%= link_to('Sign In with Github', '/auth/github', method: :post) %></div>
+    <%= render(ExternalAuthComponent.new) %>
   <% end %>
 <% end %>

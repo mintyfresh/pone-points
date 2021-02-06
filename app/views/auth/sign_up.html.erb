@@ -21,5 +21,7 @@
       <%= link_to('Sign In', sign_in_path(return_path: @return_path), class: 'btn btn-outline-secondary float-start') %>
       <%= form.submit('Sign Up', class: 'btn btn-primary') %>
     </div>
+    <hr />
+    <%= render(ExternalAuthComponent.new) %>
   <% end %>
 <% end %>
