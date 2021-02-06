@@ -15,7 +15,7 @@
 
   <body>
     <div class="mb-3">
-      <%= render(AppNavbarComponent.new(current_pone: current_pone)) %>
+      <%= render(NavbarComponent.new(current_pone: current_pone)) %>
     </div>
     <div class="container">
       <% if @current_pone && !@current_pone.verified? %>

@@ -17,7 +17,13 @@ class NavLinkComponent < ApplicationComponent
 
   # @return [String]
   def nav_link_class
-    "nav-link#{' active' if current?}"
+    html_class = []
+
+    html_class << 'nav-link'
+    html_class << 'active' if current?
+    html_class << @options[:class] if @options[:class]
+
+    html_class.join(' ')
   end
 
   # @return [Hash]

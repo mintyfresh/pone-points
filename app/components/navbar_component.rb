@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AppNavbarComponent < ApplicationComponent
+class NavbarComponent < ApplicationComponent
   include NavLink
 
   # @param current_pone [Pone, nil]

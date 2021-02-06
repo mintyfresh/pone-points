@@ -1,0 +1,14 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar_account_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Account
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar_account_dropdown">
+    <li><%= link_to('Change Password', account_change_password_path, class: 'dropdown-item') %></li>
+    <li><%= link_to('Linked Accounts', account_integrations_path, class: 'dropdown-item') %></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><%= link_to('API Keys', account_api_keys_path, class: 'dropdown-item') %></li>
+    <li><%= link_to('Webhooks', '#', class: 'dropdown-item disabled', disabled: true) %></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><%= link_to('Sign Out', sign_out_path, class: 'dropdown-item text-danger', method: :post) %></li>
+  </ul>
+</li>

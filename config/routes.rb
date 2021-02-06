@@ -19,7 +19,6 @@ Rails.application.routes.draw do
     post :change_password, action: :do_change_password
   end
 
-
   get  '/sign_in',  to: 'auth#sign_in'
   post '/sign_in',  to: 'auth#do_sign_in'
   get  '/sign_up',  to: 'auth#sign_up'
