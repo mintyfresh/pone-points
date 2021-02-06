@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :api_keys, only: %i[index show]
+
   resources :points, only: [] do
     get :recent, on: :collection
   end
