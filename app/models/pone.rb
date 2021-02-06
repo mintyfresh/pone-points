@@ -22,6 +22,7 @@ class Pone < ApplicationRecord
   include Sluggable
   include Verifyable
 
+  has_many :api_keys, dependent: :destroy, inverse_of: :pone
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
   has_many :points, dependent: :destroy, inverse_of: :pone

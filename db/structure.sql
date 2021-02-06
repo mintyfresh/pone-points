@@ -23,6 +23,20 @@ CREATE EXTENSION IF NOT EXISTS citext WITH SCHEMA public;
 COMMENT ON EXTENSION citext IS 'data type for case-insensitive character strings';
 
 
+--
+-- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -58,6 +72,43 @@ CREATE SEQUENCE public.achievements_id_seq
 --
 
 ALTER SEQUENCE public.achievements_id_seq OWNED BY public.achievements.id;
+
+
+--
+-- Name: api_keys; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.api_keys (
+    id bigint NOT NULL,
+    pone_id bigint NOT NULL,
+    token character varying NOT NULL,
+    name character varying NOT NULL,
+    description character varying,
+    requests_count integer DEFAULT 0 NOT NULL,
+    last_request_at timestamp without time zone,
+    revoked_at timestamp without time zone,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: api_keys_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.api_keys_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: api_keys_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.api_keys_id_seq OWNED BY public.api_keys.id;
 
 
 --
@@ -224,6 +275,13 @@ ALTER TABLE ONLY public.achievements ALTER COLUMN id SET DEFAULT nextval('public
 
 
 --
+-- Name: api_keys id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.api_keys ALTER COLUMN id SET DEFAULT nextval('public.api_keys_id_seq'::regclass);
+
+
+--
 -- Name: points id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -257,6 +315,14 @@ ALTER TABLE ONLY public.unlocked_achievements ALTER COLUMN id SET DEFAULT nextva
 
 ALTER TABLE ONLY public.achievements
     ADD CONSTRAINT achievements_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: api_keys api_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.api_keys
+    ADD CONSTRAINT api_keys_pkey PRIMARY KEY (id);
 
 
 --
@@ -312,6 +378,27 @@ ALTER TABLE ONLY public.unlocked_achievements
 --
 
 CREATE UNIQUE INDEX index_achievements_on_name ON public.achievements USING btree (name);
+
+
+--
+-- Name: index_api_keys_on_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_api_keys_on_pone_id ON public.api_keys USING btree (pone_id);
+
+
+--
+-- Name: index_api_keys_on_token; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_api_keys_on_token ON public.api_keys USING btree (token);
+
+
+--
+-- Name: index_api_keys_on_token_hexdigest; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_api_keys_on_token_hexdigest ON public.api_keys USING hash (encode(public.digest((token)::text, 'sha256'::text), 'hex'::text));
 
 
 --
@@ -393,6 +480,14 @@ ALTER TABLE ONLY public.pone_credentials
 
 
 --
+-- Name: api_keys fk_rails_65658346aa; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.api_keys
+    ADD CONSTRAINT fk_rails_65658346aa FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+
+
+--
 -- Name: points fk_rails_6d75f2081e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -437,6 +532,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210205035320'),
 ('20210205035907'),
 ('20210205230501'),
-('20210206011739');
+('20210206011739'),
+('20210206041844');
 
 
