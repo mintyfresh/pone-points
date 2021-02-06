@@ -1,0 +1,9 @@
+---
+en:
+  activemodel:
+    errors:
+      models:
+        create_point_form:
+          attributes:
+            base:
+              not_enough_points: You cannot give that many points. (You have %{remaining} left to give today.)
