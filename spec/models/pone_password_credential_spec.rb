@@ -25,22 +25,27 @@
 require 'rails_helper'
 
 RSpec.describe PonePasswordCredential, type: :model do
-  subject(:pone_password_credential) { build(:pone_password_credential) }
+  subject(:credential) { build(:pone_password_credential) }
 
   it 'has a valid factory' do
-    expect(pone_password_credential).to be_valid
+    expect(credential).to be_valid
       .and be_a(described_class)
   end
 
+  it 'is invalid with an external ID' do
+    credential.external_id = '12345'
+    expect(credential).to be_invalid
+  end
+
   describe '#authenticate' do
-    subject(:authenticate) { pone_password_credential.authenticate(input) }
+    subject(:authenticate) { credential.authenticate(input) }
 
     let(:input) { password }
-    let(:pone_password_credential) { build(:pone_password_credential, password: password) }
+    let(:credential) { build(:pone_password_credential, password: password) }
     let(:password) { Faker::Internet.password }
 
     it 'returns the associated pone when the input password is correct' do
-      expect(authenticate).to eq(pone_password_credential.pone)
+      expect(authenticate).to eq(credential.pone)
     end
 
     context 'when the input password is incorrect' do
@@ -69,27 +74,27 @@ RSpec.describe PonePasswordCredential, type: :model do
   end
 
   describe '#password=' do
-    subject(:assign_password) { pone_password_credential.password = password }
+    subject(:assign_password) { credential.password = password }
 
     let(:password) { Faker::Internet.password }
 
     it 'updates the stored password digest' do
-      expect { assign_password }.to change { pone_password_credential.password_digest }
+      expect { assign_password }.to change { credential.password_digest }
     end
 
     it 'updates the timestamp of when the password was last changed' do
-      expect { assign_password }.to change { pone_password_credential.last_changed_at }
+      expect { assign_password }.to change { credential.last_changed_at }
     end
 
     context 'when the input password is blank' do
       let(:password) { nil }
 
       it 'clears the stored password digest' do
-        expect { assign_password }.to change { pone_password_credential.password_digest }.to(nil)
+        expect { assign_password }.to change { credential.password_digest }.to(nil)
       end
 
       it 'updates the timestamp of when the password was last changed' do
-        expect { assign_password }.to change { pone_password_credential.last_changed_at }
+        expect { assign_password }.to change { credential.last_changed_at }
       end
     end
   end

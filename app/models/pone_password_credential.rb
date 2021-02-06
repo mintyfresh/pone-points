@@ -29,6 +29,8 @@ class PonePasswordCredential < PoneCredential
 
   store_accessor :data, :password_digest, :last_changed_at
 
+  validates :external_id, absence: true
+
   # @param password [String, nil]
   # @return [Pone, nil]
   def authenticate(password)
