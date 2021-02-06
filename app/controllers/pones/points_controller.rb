@@ -16,7 +16,7 @@ module Pones
       if @form.perform
         redirect_to @pone
       else
-        render 'give'
+        render 'give', status: :unprocessable_entity
       end
     end
 

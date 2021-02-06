@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   end
 
   namespace :account, only: [] do
-    resources :api_keys, only: %i[index show]
+    resources :api_keys, only: %i[index show new create] do
+      post :regenerate, on: :member
+      post :revoke, on: :member
+    end
 
     get  :integrations
     get  :change_password

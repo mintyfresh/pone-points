@@ -17,7 +17,7 @@ class AccountController < ApplicationController
     if @form.perform
       redirect_to current_pone
     else
-      render 'change_password'
+      render 'change_password', status: :unprocessable_entity
     end
   end
 

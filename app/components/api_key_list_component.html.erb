@@ -1,6 +1,6 @@
 <% @api_keys.each do |api_key| %>
   <div>
-    <%= link_to(api_key.name, api_key) %>
+    <%= link_to(api_key.name, account_api_key_path(api_key), class: api_key.revoked? ? 'text-decoration-line-through' : '') %>
   </div>
 <% end %>
 <% if @api_keys.none? %>

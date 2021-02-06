@@ -9,7 +9,7 @@ RSpec.describe ApiKeyPolicy, type: :policy do
   let(:pone) { api_key.pone }
   let(:other_pone) { build(:pone) }
 
-  permissions :index? do
+  permissions :index?, :create? do
     it 'does not permit guests' do
       expect(policy).not_to permit(nil, ApiKey)
     end
@@ -19,7 +19,7 @@ RSpec.describe ApiKeyPolicy, type: :policy do
     end
   end
 
-  permissions :show? do
+  permissions :show?, :regenerate?, :revoke? do
     it 'does not permit guests' do
       expect(policy).not_to permit(nil, api_key)
     end

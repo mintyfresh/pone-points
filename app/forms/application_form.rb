@@ -5,6 +5,12 @@ class ApplicationForm
   include ActiveModel::Attributes
   include ActiveModel::Validations
 
+  def self.new(*args, **options)
+    super.tap do |form|
+      yield(form) if block_given?
+    end
+  end
+
   def perform(&block)
     return false if invalid?
 

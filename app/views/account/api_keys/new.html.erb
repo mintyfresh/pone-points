@@ -1,0 +1,18 @@
+<%= render(AccountPanelComponent.new) do %>
+  <%= form_with(model: @form, url: account_api_keys_path, method: :post) do |form| %>
+    <div class="mb-3">
+      <%= form.label(:name) %>
+      <%= form.text_field(:name, class: 'form-control') %>
+      <%= render(FormControlErrorsComponent.new(key: 'name', errors: @form.errors)) %>
+    </div>
+    <div class="mb-3">
+      <%= form.label(:description) %>
+      <%= form.text_area(:description, class: 'form-control') %>
+      <%= render(FormControlErrorsComponent.new(key: 'description', errors: @form.errors)) %>
+    </div>
+    <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
+    <div class="text-end">
+      <%= form.submit('Create API Key', class: 'btn btn-primary') %>
+    </div>
+  <% end %>
+<% end %>

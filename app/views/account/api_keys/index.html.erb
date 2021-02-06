@@ -4,7 +4,7 @@
       API Keys
     </h1>
     <div class="col-auto text-end">
-      <%= link_to('Create API Key', '#', class: 'btn btn-primary mt-auto') %>
+      <%= link_to('Create API Key', new_account_api_key_path, class: 'btn btn-primary mt-auto') %>
     </div>
   </div>
   <%= render(ApiKeyListComponent.new(api_keys: @api_keys)) %>

@@ -11,6 +11,18 @@ class ApiKeyPolicy < ApplicationPolicy
     current_pone.present? && current_pone == api_key.pone
   end
 
+  def create?
+    current_pone.present?
+  end
+
+  def regenerate?
+    current_pone.present? && current_pone == api_key.pone
+  end
+
+  def revoke?
+    current_pone.present? && current_pone == api_key.pone
+  end
+
   class Scope < Scope
     def resolve
       return scope.none if current_pone.nil?
