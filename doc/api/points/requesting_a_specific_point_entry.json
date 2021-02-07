@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/mariano-spinka-13/points/127.json",
+      "request_path": "/api/v1/pones/keila-13/points/159.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key gnKe3Se42TnrW5FENyLmv2jaSt2UsnzEXjaSk1pkgDzQZEdFFck2StBRyQ5fUs9k2cP5AMiJUQ3aMWZ6",
+        "Authorization": "Api-Key 3Q17nHD8e2RsR1QbV2hG3vaRgJordCN6jUy61JeyjMVYKLVoA8nNhwGBDBnKJJC9b4Vo19dA1xpTPcyb",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 127,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-07T17:37:58.210Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/mariano-spinka-13/points/127.json\",\n      \"pone\": \"/api/v1/pones/mariano-spinka-13.json\",\n      \"granted_by\": \"/api/v1/pones/erin_murazik-14.json\"\n    },\n    \"message\": \"Fixie yr chillwave direct trade kogi godard vice cray viral.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 159,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-07T17:42:42.549Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/keila-13/points/159.json\",\n      \"pone\": \"/api/v1/pones/keila-13.json\",\n      \"granted_by\": \"/api/v1/pones/earl_cruickshank-14.json\"\n    },\n    \"message\": \"Everyday lumbersexual flexitarian biodiesel swag pop-up wayfarers loko.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "306"
+        "Content-Length": "303"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

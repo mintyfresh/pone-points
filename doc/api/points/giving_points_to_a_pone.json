@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/tracy-16/points/give.html",
+      "request_path": "/api/v1/pones/velma-carroll-16/points/give.html",
       "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key TrMyotS98LSzH6qyXuobJrXxc7mnXokkrGKQyq7UGy1Zmcoz3U48vn4woXFrHJD781s2Q8uXvU39yyAc",
+        "Authorization": "Api-Key uwHtgxBkvNc9nZhoL7F4bZtvTkGstyKV36d3nUVToChnEFDP3U41ojXZSHFmwyMs72HKAh2JCCrwf5PS",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 128,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:37:58.235Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/tracy-16/points/128.json\",\n      \"pone\": \"/api/v1/pones/tracy-16.json\",\n      \"granted_by\": \"/api/v1/pones/brenton-johnson-17.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 160,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:42:42.573Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/velma-carroll-16/points/160.json\",\n      \"pone\": \"/api/v1/pones/velma-carroll-16.json\",\n      \"granted_by\": \"/api/v1/pones/ariana-homenick-17.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "234"
+        "Content-Length": "250"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

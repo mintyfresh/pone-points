@@ -26,7 +26,7 @@
       "request_path": "/api/v1/pones/me.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key jZMaQPbaVR98ifnLJdb9uRyJ8JePh1UhK7Q4LLUm9fpd82dBqSjDxKuei9EPnYi9BFAHzUVYcx6RZT54",
+        "Authorization": "Api-Key yPbuHymYLYf6HBgEpVCxupwZgUmcFfwKEaUK8iXnMFc1U3kCwnNx8c39guk6twMJvBnb3qbTM9WdCrn7",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"emilia-26\",\n    \"avatar_url\": null,\n    \"daily_giftable_points_count\": 3,\n    \"giftable_points_count\": 3,\n    \"joined_at\": \"2021-02-07T17:37:58.272Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/emilia-26.json\",\n      \"page\": \"/pones/emilia-26\",\n      \"achievements\": \"/api/v1/pones/emilia-26/achievements.json\",\n      \"points\": \"/api/v1/pones/emilia-26/points.json\",\n      \"granted_points\": \"/api/v1/pones/emilia-26/points/granted.json\"\n    },\n    \"name\": \"emilia 26\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"maile-mccullough-26\",\n    \"avatar_url\": null,\n    \"daily_giftable_points_count\": 3,\n    \"giftable_points_count\": 3,\n    \"joined_at\": \"2021-02-07T17:42:42.642Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/maile-mccullough-26.json\",\n      \"page\": \"/pones/maile-mccullough-26\",\n      \"achievements\": \"/api/v1/pones/maile-mccullough-26/achievements.json\",\n      \"points\": \"/api/v1/pones/maile-mccullough-26/points.json\",\n      \"granted_points\": \"/api/v1/pones/maile-mccullough-26/points/granted.json\"\n    },\n    \"name\": \"maile.mccullough 26\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "423"
+        "Content-Length": "493"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

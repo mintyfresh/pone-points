@@ -25,7 +25,7 @@ RSpec.resource 'Pones', type: :acceptance do
 
   get '/api/v1/pones/:slug.json' do
     let(:slug) { pone.slug }
-    let(:pone) { create(:pone) }
+    let(:pone) { create(:pone, :with_avatar) }
 
     parameter :slug, required: true
 

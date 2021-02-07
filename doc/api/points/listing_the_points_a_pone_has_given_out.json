@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/nathaniel-lehner-8/points/granted.json",
+      "request_path": "/api/v1/pones/grover-8/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key F9Afp7eMVb8EaFBNAjezHHQD1mpMPLbHoSGB5cToD6QkLh1MNf15PcHUd3jPRvEvkQEQpwFQDtGYgDhS",
+        "Authorization": "Api-Key tURFwhJMwaXbGP4CAXcT8BTnNKDPKsZtLLtsqxKpomG3RvR7xCgHsFATfgy2XphMkR6LULFX12DHwvN6",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 124,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:37:58.174Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/yevette-bahringer-9/points/124.json\",\n        \"pone\": \"/api/v1/pones/yevette-bahringer-9.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Literally sriracha keffiyeh readymade letterpress health.\"\n    },\n    {\n      \"id\": 125,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.176Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/chris-10/points/125.json\",\n        \"pone\": \"/api/v1/pones/chris-10.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Taxidermy mumblecore pabst semiotics.\"\n    },\n    {\n      \"id\": 126,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.178Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/reda-11/points/126.json\",\n        \"pone\": \"/api/v1/pones/reda-11.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Jean shorts roof drinking post-ironic flexitarian fanny pack selvage venmo viral.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/nathaniel-lehner-8.json\",\n      \"give_points\": \"/api/v1/pones/nathaniel-lehner-8/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 156,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:42:42.514Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kittie-9/points/156.json\",\n        \"pone\": \"/api/v1/pones/kittie-9.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Humblebrag post-ironic pinterest sustainable cred listicle.\"\n    },\n    {\n      \"id\": 157,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.517Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/eliseo-walker-10/points/157.json\",\n        \"pone\": \"/api/v1/pones/eliseo-walker-10.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Migas pabst meggings cold-pressed everyday iphone readymade fanny pack.\"\n    },\n    {\n      \"id\": 158,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.519Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lyle-hirthe-11/points/158.json\",\n        \"pone\": \"/api/v1/pones/lyle-hirthe-11.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Carry jean shorts farm-to-table wayfarers.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/grover-8.json\",\n      \"give_points\": \"/api/v1/pones/grover-8/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1005"
+        "Content-Length": "960"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

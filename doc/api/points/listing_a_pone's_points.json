@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/santos_bartoletti-3/points.json",
+      "request_path": "/api/v1/pones/brenda-3/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key xoMHUsEfohaBb3tqFSurvKhYQajRn1Vjymdmow96UGXD7u7axqpLsZCTpg5SNsWwKaNK9xwTXGsZX9YF",
+        "Authorization": "Api-Key EHQfvpvBmUgQeW7pYUS5RgXREjuZz1BvVTBHz4EYt6uTz13ER5PDUSt5xyjpL7X4CbfGq3GMNJJvBb7R",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 121,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:37:58.136Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/121.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/dorene-4.json\"\n      },\n      \"message\": \"Gentrify pbr&b bushwick chillwave tousled tilde everyday blog taxidermy.\"\n    },\n    {\n      \"id\": 122,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.138Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/122.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/kayla-5.json\"\n      },\n      \"message\": \"Literally five dollar toast fanny pack cleanse poutine.\"\n    },\n    {\n      \"id\": 123,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:37:58.141Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/123.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/lauren-dicki-6.json\"\n      },\n      \"message\": \"Portland brooklyn kinfolk intelligentsia.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n      \"give_points\": \"/api/v1/pones/santos_bartoletti-3/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 153,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:42:42.477Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/153.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/angele-4.json\"\n      },\n      \"message\": \"Mustache vegan flannel truffaut 90's put a bird on it wes anderson everyday vice.\"\n    },\n    {\n      \"id\": 154,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.480Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/154.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/willene-5.json\"\n      },\n      \"message\": \"Meditation tacos +1 park.\"\n    },\n    {\n      \"id\": 155,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.482Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/155.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/angelo-6.json\"\n      },\n      \"message\": \"Muggle magic umami celiac hashtag.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/brenda-3.json\",\n      \"give_points\": \"/api/v1/pones/brenda-3/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1026"
+        "Content-Length": "901"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

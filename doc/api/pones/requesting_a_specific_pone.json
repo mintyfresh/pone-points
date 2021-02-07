@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/dusty-24.json",
+      "request_path": "/api/v1/pones/elayne-24.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key qWwhZznN5NaANMQfApgDDay6DEABDxVFTDFYs6TW86TDd1WqQTcC8rZdRnTQdmbanbsHccS4P8AKYHdd",
+        "Authorization": "Api-Key or56FpGCWsQvSKF9z2R4M8oE4spNm9AYQUjWCPCK6du6ZwX64n3yRQ8qW9XFp8XH6Un26dDw3PtieEhT",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"dusty-24\",\n    \"avatar_url\": null,\n    \"joined_at\": \"2021-02-07T17:37:58.262Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/dusty-24.json\",\n      \"page\": \"/pones/dusty-24\",\n      \"achievements\": \"/api/v1/pones/dusty-24/achievements.json\",\n      \"points\": \"/api/v1/pones/dusty-24/points.json\",\n      \"granted_points\": \"/api/v1/pones/dusty-24/points/granted.json\"\n    },\n    \"name\": \"dusty 24\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"elayne-24\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c922d5bce3ce8f4c2b31af67ff2c2058de16ffa/avatar.png\",\n    \"joined_at\": \"2021-02-07T17:42:42.627Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/elayne-24.json\",\n      \"page\": \"/pones/elayne-24\",\n      \"achievements\": \"/api/v1/pones/elayne-24/achievements.json\",\n      \"points\": \"/api/v1/pones/elayne-24/points.json\",\n      \"granted_points\": \"/api/v1/pones/elayne-24/points/granted.json\"\n    },\n    \"name\": \"elayne 24\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "358"
+        "Content-Length": "533"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
