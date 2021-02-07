@@ -43,13 +43,41 @@ class AuthController < ApplicationController
   end
 
   def external
-    if current_pone.nil?
-      self.current_pone = fetch_pone_from_external_account!
+    if current_pone
+      # Sign-in user completed OAuth, link accounts.
+      external_auth_service.link_account(external_auth_hash, current_pone)
+    elsif (pone = external_auth_service.sign_in(external_auth_hash))
+      # Existing user completed OAuth, sign them in.
+      self.current_pone = pone
     else
-      link_current_pone_to_external_account!
+      # New user completed OAuth, start sign-up flow.
+      sign_up_token = external_auth_service.generate_sign_up_token(external_auth_hash)
+      return redirect_to external_sign_up_path(sign_up_token: sign_up_token)
     end
 
     redirect_to current_pone
+  end
+
+  def external_sign_up
+    payload = external_auth_service.parse_sign_up_token(params[:sign_up_token])
+    return redirect_to('/404.html') if payload.blank?
+
+    @form = ExternalSignUpForm.new do |form|
+      form.sign_up_token = params[:sign_up_token]
+      form.name          = payload[:account_name]
+    end
+  end
+
+  def do_external_sign_up
+    @form = ExternalSignUpForm.new(external_sign_up_params)
+
+    if (pone = @form.perform)
+      self.current_pone = pone
+
+      redirect_to current_pone
+    else
+      render 'external_sign_up', status: :unprocessable_entity
+    end
   end
 
 private
@@ -71,35 +99,17 @@ private
     params.require(:sign_up_form).permit(:name, :password, :password_confirmation)
   end
 
-  # @return [Pone]
-  def fetch_pone_from_external_account!
-    params = external_auth_params
-
-    Pone.find_or_create_pone_by_external_id!(external_credential_class, params.uid) do |pone|
-      pone.name = params.info.name
-    end
+  def external_sign_up_params
+    params.require(:external_sign_up_form).permit(:sign_up_token, :name)
   end
 
-  # @return [void]
-  def link_current_pone_to_external_account!
-    current_pone
-      .credential(external_credential_class, build_if_missing: true)
-      .update!(external_id: external_auth_params.uid)
+  # @return [ExternalAuthService]
+  def external_auth_service
+    @external_auth_service ||= ExternalAuthService.new
   end
 
-  # @return [Class<PoneCredential>]
-  def external_credential_class
-    case external_auth_params.provider
-    when 'discord'
-      PoneDiscordCredential
-    when 'github'
-      PoneGithubCredential
-    else
-      raise ArgumentError, "Unsupported OAuth provider: #{external_auth_params.provider}"
-    end
-  end
-
-  def external_auth_params
-    @external_auth_params ||= request.env['omniauth.auth']
+  # @return [Hash]
+  def external_auth_hash
+    @external_auth_hash ||= request.env['omniauth.auth']
   end
 end

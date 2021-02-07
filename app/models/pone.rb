@@ -49,12 +49,9 @@ class Pone < ApplicationRecord
 
   # @parma credential_class [Class<PoneCredential>]
   # @param external_id [String]
-  # @return [Pone]
-  def self.find_or_create_pone_by_external_id!(credential_class, external_id)
-    credential_class.find_by(external_id: external_id)&.pone || Pone.create! do |pone|
-      pone.credentials << credential_class.new(external_id: external_id)
-      yield(pone)
-    end
+  # @return [Pone, nil]
+  def self.find_by_external_id(credential_class, external_id)
+    credential_class.find_by(external_id: external_id)&.pone
   end
 
   # @param credential_class [Class<PoneCredential>]

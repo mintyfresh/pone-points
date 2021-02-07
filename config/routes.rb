@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post '/sign_up',  to: 'auth#do_sign_up'
   post '/sign_out', to: 'auth#sign_out'
 
+  get  '/external/sign_up', to: 'auth#external_sign_up', as: :external_sign_up
+  post '/external/sign_up', to: 'auth#do_external_sign_up', as: nil
+
   # External OAuth callback route.
   match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
 

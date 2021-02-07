@@ -1,0 +1,14 @@
+<%= render(CardFrameComponent.new(title: 'Complete Sign Up')) do %>
+  <%= form_with(model: @form, url: external_sign_up_path(sign_up_token: @form.sign_up_token), method: :post) do |form| %>
+    <%= form.hidden_field(:sign_up_token) %>
+    <div class="mb-3">
+      <%= form.label(:name) %>
+      <%= form.text_field(:name, class: 'form-control', autocomplete: 'username') %>
+      <%= render(FormControlErrorsComponent.new(key: 'name', errors: @form.errors)) %>
+    </div>
+    <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
+    <div class="text-end">
+      <%= form.submit('Sign Up', class: 'btn btn-primary') %>
+    </div>
+  <% end %>
+<% end %>
