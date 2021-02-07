@@ -6,6 +6,11 @@
         <%= link_to_unless_current(point.pone.name, point.pone) %> <%= number_to_human(point.count) %> good pone points!
       </div>
       <%= point.message %>
+      <div class="text-end w-100">
+        <i class="text-muted small">
+          <%= time_ago_in_words(point.created_at) %> ago
+        </i>
+      </div>
     </div>
   </div>
 <% end %>
