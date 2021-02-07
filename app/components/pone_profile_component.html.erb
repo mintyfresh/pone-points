@@ -1,9 +1,18 @@
-<h1>
-  <%= @pone.name %>
-  <small class="text-muted fs-6">
-    is a good pone
-  </small>
-</h1>
-<p class="mb-0">
-  <%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
-</p>
+<div class="row">
+  <% if @pone.avatar.attached? %>
+    <div class="col-12 col-sm-auto">
+      <%= image_tag(@pone.avatar, alt: @pone.name, class: 'img-thumbnail', width: '150px', height: '150px') %>
+    </div>
+  <% end %>
+  <div class="col">
+    <h1>
+      <%= @pone.name %>
+      <small class="text-muted fs-6">
+        is a good pone
+      </small>
+    </h1>
+    <p class="mb-0">
+      <%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
+    </p>
+  </div>
+</div>

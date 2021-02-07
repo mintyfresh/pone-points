@@ -5,6 +5,12 @@
   <%= tag.meta(property: 'og:type', content: 'profile') %>
   <%= tag.meta(property: 'og:url', content: pone_url(@pone)) %>
   <%= tag.meta(property: 'og:profile:username', content: @pone.name) %>
+  <% if @pone.avatar.attached? %>
+    <%= tag.meta(property: 'og:image', content: rails_blob_url(@pone.avatar)) %>
+    <%= tag.meta(property: 'og:image:type', content: @pone.avatar.content_type) %>
+    <%= tag.meta(property: 'og:image:height', content: @pone.avatar.metadata[:height]) %>
+    <%= tag.meta(property: 'og:image:width', content: @pone.avatar.metadata[:width]) %>
+  <% end %>
 <% end %>
 <div class="row">
   <div class="col-sm-12 col-md-7 col-lg-8 mb-2">

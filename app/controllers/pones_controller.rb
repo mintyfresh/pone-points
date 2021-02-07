@@ -7,7 +7,7 @@ class PonesController < ApplicationController
 
   def index
     authorize(Pone)
-    @pones = policy_scope(Pone).order(:id)
+    @pones = policy_scope(Pone).order(:id).preload(avatar_attachment: :blob)
   end
 
   def show
