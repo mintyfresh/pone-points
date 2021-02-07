@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/carol_rempel-8/points/53.json",
+      "request_path": "/api/v1/pones/mariano-spinka-13/points/127.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key i6eNrd4DKwWzKo7JvFcE4UfchXJBoPE2SoZ6X1p4vAYXvFG83dMSZQPhr6y2yTxjSuLuxDuEbPWz2v3U",
+        "Authorization": "Api-Key gnKe3Se42TnrW5FENyLmv2jaSt2UsnzEXjaSk1pkgDzQZEdFFck2StBRyQ5fUs9k2cP5AMiJUQ3aMWZ6",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 53,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-07T17:30:45.438Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/carol_rempel-8/points/53.json\",\n      \"pone\": \"/api/v1/pones/carol_rempel-8.json\",\n      \"granted_by\": \"/api/v1/pones/leif_bergstrom-9.json\"\n    },\n    \"message\": \"Deep v beard organic cronut vinyl.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 127,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-07T17:37:58.210Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/mariano-spinka-13/points/127.json\",\n      \"pone\": \"/api/v1/pones/mariano-spinka-13.json\",\n      \"granted_by\": \"/api/v1/pones/erin_murazik-14.json\"\n    },\n    \"message\": \"Fixie yr chillwave direct trade kogi godard vice cray viral.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "273"
+        "Content-Length": "306"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

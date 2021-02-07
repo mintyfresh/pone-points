@@ -24,6 +24,18 @@ RSpec.resource 'Points', type: :acceptance do
     end
   end
 
+  get '/api/v1/pones/:pone_slug/points/granted.json' do
+    let(:pone_slug) { pone.slug }
+    let(:pone) { create(:pone, :with_granted_points) }
+
+    example_request 'Listing the points a pone has given out' do
+      expect(response_status).to eq(200)
+      expect(response_body).to include_json(
+        points: pone.granted_points.first(25).map { |point| { id: point.id } }
+      )
+    end
+  end
+
   get '/api/v1/pones/:pone_slug/points/:id.json' do
     let(:pone_slug) { pone.slug }
     let(:id) { point.id }

@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/darryl-jaskolski-11/points/give.html",
+      "request_path": "/api/v1/pones/tracy-16/points/give.html",
       "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key BDtBTrf3y3P4FYBQoBxoMWu2vS6xArTis3E3zBVk4qvR9CFDaXvy7hPwWkyoYzCgFYwx1s5KsHCqP5Jw",
+        "Authorization": "Api-Key TrMyotS98LSzH6qyXuobJrXxc7mnXokkrGKQyq7UGy1Zmcoz3U48vn4woXFrHJD781s2Q8uXvU39yyAc",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 54,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:30:45.464Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/darryl-jaskolski-11/points/54.json\",\n      \"pone\": \"/api/v1/pones/darryl-jaskolski-11.json\",\n      \"granted_by\": \"/api/v1/pones/kent-cartwright-12.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 128,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:37:58.235Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/tracy-16/points/128.json\",\n      \"pone\": \"/api/v1/pones/tracy-16.json\",\n      \"granted_by\": \"/api/v1/pones/brenton-johnson-17.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "254"
+        "Content-Length": "234"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

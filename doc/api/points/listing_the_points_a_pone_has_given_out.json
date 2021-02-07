@@ -1,0 +1,41 @@
+{
+  "resource": "Points",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pones/:pone_slug/points/granted.json",
+  "description": "Listing the points a pone has given out",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "pone_slug",
+      "description": "The pone's slug"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pones/nathaniel-lehner-8/points/granted.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key F9Afp7eMVb8EaFBNAjezHHQD1mpMPLbHoSGB5cToD6QkLh1MNf15PcHUd3jPRvEvkQEQpwFQDtGYgDhS",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 124,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:37:58.174Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/yevette-bahringer-9/points/124.json\",\n        \"pone\": \"/api/v1/pones/yevette-bahringer-9.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Literally sriracha keffiyeh readymade letterpress health.\"\n    },\n    {\n      \"id\": 125,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.176Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/chris-10/points/125.json\",\n        \"pone\": \"/api/v1/pones/chris-10.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Taxidermy mumblecore pabst semiotics.\"\n    },\n    {\n      \"id\": 126,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.178Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/reda-11/points/126.json\",\n        \"pone\": \"/api/v1/pones/reda-11.json\",\n        \"granted_by\": \"/api/v1/pones/nathaniel-lehner-8.json\"\n      },\n      \"message\": \"Jean shorts roof drinking post-ironic flexitarian fanny pack selvage venmo viral.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/nathaniel-lehner-8.json\",\n      \"give_points\": \"/api/v1/pones/nathaniel-lehner-8/points/give.json\"\n    }\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "1005"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

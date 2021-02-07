@@ -25,6 +25,13 @@
           "method": "get"
         },
         {
+          "description": "Listing the points a pone has given out",
+          "link": "points/listing_the_points_a_pone_has_given_out.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/points/granted.json",
+          "method": "get"
+        },
+        {
           "description": "Requesting a specific point entry",
           "link": "points/requesting_a_specific_point_entry.json",
           "groups": "all",

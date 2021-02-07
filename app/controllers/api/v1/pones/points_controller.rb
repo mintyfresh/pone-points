@@ -13,6 +13,13 @@ module Api
           render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta)
         end
 
+        def granted
+          authorize(Point, :index?)
+          @points = policy_scope(@pone.granted_points).order(:id).preload(:pone)
+
+          render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta)
+        end
+
         def show
           @point = @pone.points.find(params[:id])
           authorize(@point)

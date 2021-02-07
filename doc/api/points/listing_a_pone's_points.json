@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/nu_mclaughlin-3/points.json",
+      "request_path": "/api/v1/pones/santos_bartoletti-3/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 1KNLAbaav2G6wsXPkSfr562mTWoM1ve6WdwAsMRhN9QQvmVVRJqHUtrQng6sCZAwhzfqf3ak3auhGpVw",
+        "Authorization": "Api-Key xoMHUsEfohaBb3tqFSurvKhYQajRn1Vjymdmow96UGXD7u7axqpLsZCTpg5SNsWwKaNK9xwTXGsZX9YF",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 50,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:30:45.401Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/nu_mclaughlin-3/points/50.json\",\n        \"pone\": \"/api/v1/pones/nu_mclaughlin-3.json\",\n        \"granted_by\": \"/api/v1/pones/branden-wintheiser-4.json\"\n      },\n      \"message\": \"Taxidermy thundercats kitsch diy carry.\"\n    },\n    {\n      \"id\": 51,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:30:45.403Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/nu_mclaughlin-3/points/51.json\",\n        \"pone\": \"/api/v1/pones/nu_mclaughlin-3.json\",\n        \"granted_by\": \"/api/v1/pones/rocky_lind-5.json\"\n      },\n      \"message\": \"Tumblr squid etsy yr dreamcatcher pour-over gastropub.\"\n    },\n    {\n      \"id\": 52,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:30:45.406Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/nu_mclaughlin-3/points/52.json\",\n        \"pone\": \"/api/v1/pones/nu_mclaughlin-3.json\",\n        \"granted_by\": \"/api/v1/pones/hanh_harber-6.json\"\n      },\n      \"message\": \"Goth ramps tattooed mumblecore vhs fanny pack truffaut bicycle rights pork belly.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/nu_mclaughlin-3.json\",\n      \"give_points\": \"/api/v1/pones/nu_mclaughlin-3/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 121,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:37:58.136Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/121.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/dorene-4.json\"\n      },\n      \"message\": \"Gentrify pbr&b bushwick chillwave tousled tilde everyday blog taxidermy.\"\n    },\n    {\n      \"id\": 122,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:37:58.138Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/122.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/kayla-5.json\"\n      },\n      \"message\": \"Literally five dollar toast fanny pack cleanse poutine.\"\n    },\n    {\n      \"id\": 123,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:37:58.141Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santos_bartoletti-3/points/123.json\",\n        \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n        \"granted_by\": \"/api/v1/pones/lauren-dicki-6.json\"\n      },\n      \"message\": \"Portland brooklyn kinfolk intelligentsia.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/santos_bartoletti-3.json\",\n      \"give_points\": \"/api/v1/pones/santos_bartoletti-3/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1005"
+        "Content-Length": "1026"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -47,6 +47,16 @@ FactoryBot.define do
       end
     end
 
+    trait :with_granted_points do
+      transient do
+        granted_points_count { 3 }
+      end
+
+      after(:build) do |pone, e|
+        pone.granted_points = build_list(:point, e.granted_points_count, granted_by: pone)
+      end
+    end
+
     trait :with_achievements do
       transient do
         achievements_count { 3 }

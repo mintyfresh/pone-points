@@ -45,6 +45,7 @@ Rails.application.routes.draw do
       resources :pones, only: %i[index show], param: :slug do
         resources :achievements, only: :index, controller: 'pones/achievements'
         resources :points, only: %i[index show], controller: 'pones/points' do
+          get :granted, on: :collection
           post :give, on: :collection
         end
 
