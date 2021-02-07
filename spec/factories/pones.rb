@@ -27,6 +27,16 @@ FactoryBot.define do
       daily_giftable_points_count { 3 }
     end
 
+    trait :with_avatar do
+      after(:build) do |pone|
+        pone.avatar.attach(
+          io:           File.open(Rails.root.join('spec', 'support', 'avatar.png')),
+          filename:     'avatar.png',
+          content_type: 'image/png'
+        )
+      end
+    end
+
     trait :with_points do
       transient do
         points_count { 3 }

@@ -27,6 +27,18 @@ RSpec.describe Pone, type: :model do
     expect(pone).to be_valid
   end
 
+  context 'with an avatar' do
+    subject(:pone) { build(:pone, :with_avatar) }
+
+    it 'has a valid factory' do
+      expect(pone).to be_valid
+    end
+
+    it 'has an avatar' do
+      expect(pone.avatar).to be_attached
+    end
+  end
+
   describe '#verified!' do
     subject(:verified!) { pone.verified! }
 
