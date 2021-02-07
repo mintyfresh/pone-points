@@ -47,6 +47,16 @@ FactoryBot.define do
       end
     end
 
+    trait :with_achievements do
+      transient do
+        achievements_count { 3 }
+      end
+
+      after(:build) do |pone, e|
+        pone.achievements = Achievement.all.to_a.sample(e.achievements_count)
+      end
+    end
+
     trait :with_password do
       transient do
         password { Faker::Internet.password }

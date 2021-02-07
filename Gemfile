@@ -7,6 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 gem 'amazing_print'
+gem 'apitome', github: 'mintyfresh/apitome'
 gem 'argon2'
 gem 'blueprinter'
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -40,14 +41,15 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
-  gem 'rubocop'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
   gem 'capybara'
+  gem 'rspec_api_documentation'
   gem 'rspec-json_expectations'
   gem 'rspec-rails'
   gem 'selenium-webdriver'

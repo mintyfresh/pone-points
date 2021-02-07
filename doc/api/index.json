@@ -1,0 +1,64 @@
+{
+  "resources": [
+    {
+      "name": "Achievements",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Listing a pone's achievements",
+          "link": "achievements/listing_a_pone's_achievements.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/achievements.json",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Points",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Listing a pone's points",
+          "link": "points/listing_a_pone's_points.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/points.json",
+          "method": "get"
+        },
+        {
+          "description": "Requesting a specific point entry",
+          "link": "points/requesting_a_specific_point_entry.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/points/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Giving points to a pone",
+          "link": "points/giving_points_to_a_pone.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/points/give.html",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Pones",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Listing pones",
+          "link": "pones/listing_pones.json",
+          "groups": "all",
+          "route": "/api/v1/pones.json",
+          "method": "get"
+        },
+        {
+          "description": "Requesting a specific pone",
+          "link": "pones/requesting_a_specific_pone.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:slug.json",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

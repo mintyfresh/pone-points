@@ -29,6 +29,7 @@ RSpec.configure do |config|
   config.include ActiveSupport::Testing::TimeHelpers
   config.include FactoryBot::Syntax::Methods
 
+  config.include Rails.application.routes.url_helpers, type: :acceptance
   config.include SignInHelper, type: :feature
   config.include Rails.application.routes.url_helpers, type: :request
 

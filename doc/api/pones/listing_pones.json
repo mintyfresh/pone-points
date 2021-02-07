@@ -1,0 +1,37 @@
+{
+  "resource": "Pones",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pones.json",
+  "description": "Listing pones",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pones.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key JiSYnonvyuJoFjottT6KPT9i6HEMgojR5hAEGp1rccFai34Ss9ujoQN4kvLwtaw1SMAkkXfJ4PWxVw1K",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"pones\": [\n    {\n      \"slug\": \"system-pone\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T04:45:15.491Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/system-pone.json\",\n        \"page\": \"/pones/system-pone\",\n        \"achievements\": \"/api/v1/pones/system-pone/achievements.json\",\n        \"points\": \"/api/v1/pones/system-pone/points.json\"\n      },\n      \"name\": \"System Pone\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"bert-collins-13\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.330Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/bert-collins-13.json\",\n        \"page\": \"/pones/bert-collins-13\",\n        \"achievements\": \"/api/v1/pones/bert-collins-13/achievements.json\",\n        \"points\": \"/api/v1/pones/bert-collins-13/points.json\"\n      },\n      \"name\": \"bert.collins 13\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"francesco-reichert-14\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.331Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/francesco-reichert-14.json\",\n        \"page\": \"/pones/francesco-reichert-14\",\n        \"achievements\": \"/api/v1/pones/francesco-reichert-14/achievements.json\",\n        \"points\": \"/api/v1/pones/francesco-reichert-14/points.json\"\n      },\n      \"name\": \"francesco.reichert 14\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"caron-15\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.332Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/caron-15.json\",\n        \"page\": \"/pones/caron-15\",\n        \"achievements\": \"/api/v1/pones/caron-15/achievements.json\",\n        \"points\": \"/api/v1/pones/caron-15/points.json\"\n      },\n      \"name\": \"caron 15\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"alexander-16\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.333Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/alexander-16.json\",\n        \"page\": \"/pones/alexander-16\",\n        \"achievements\": \"/api/v1/pones/alexander-16/achievements.json\",\n        \"points\": \"/api/v1/pones/alexander-16/points.json\"\n      },\n      \"name\": \"alexander 16\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"lilla_balistreri-17\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.334Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lilla_balistreri-17.json\",\n        \"page\": \"/pones/lilla_balistreri-17\",\n        \"achievements\": \"/api/v1/pones/lilla_balistreri-17/achievements.json\",\n        \"points\": \"/api/v1/pones/lilla_balistreri-17/points.json\"\n      },\n      \"name\": \"lilla_balistreri 17\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"kenneth-18\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-07T06:06:02.335Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kenneth-18.json\",\n        \"page\": \"/pones/kenneth-18\",\n        \"achievements\": \"/api/v1/pones/kenneth-18/achievements.json\",\n        \"points\": \"/api/v1/pones/kenneth-18/points.json\"\n      },\n      \"name\": \"kenneth 18\",\n      \"points_count\": 0\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "2267"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

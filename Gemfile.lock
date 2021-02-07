@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mintyfresh/apitome.git
+  revision: 13630cfdf60ea003360476ed477e04df1d211311
+  specs:
+    apitome (0.3.0)
+      faraday
+      kramdown
+      railties
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -136,6 +145,8 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     jmespath (1.4.0)
     jwt (2.2.2)
+    kramdown (2.3.0)
+      rexml
     listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -156,6 +167,7 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
+    mustache (1.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.5)
@@ -245,6 +257,10 @@ GEM
     resque-heroku-signals (2.0.0)
       resque (= 2.0.0)
     rexml (3.2.4)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -263,6 +279,10 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    rspec_api_documentation (6.1.0)
+      activesupport (>= 3.0.0)
+      mustache (~> 1.0, >= 0.99.4)
+      rspec (~> 3.0)
     rubocop (1.9.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -357,6 +377,7 @@ PLATFORMS
 DEPENDENCIES
   amazing_print
   annotate
+  apitome!
   argon2
   aws-sdk-s3
   blueprinter
@@ -384,6 +405,7 @@ DEPENDENCIES
   resque-heroku-signals
   rspec-json_expectations
   rspec-rails
+  rspec_api_documentation
   rubocop
   rubocop-performance
   rubocop-rails

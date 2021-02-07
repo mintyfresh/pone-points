@@ -1,0 +1,41 @@
+{
+  "resource": "Pones",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pones/:slug.json",
+  "description": "Requesting a specific pone",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "slug",
+      "description": " slug"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pones/chester-19.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key aSaAZ7oRfew2uY5zL9NKzitfz3pZJY3Q4zbxqDbNC6Ssf4NwARQxjqvvNtvA5FpXJv6QXwdWyFzqHf4R",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"chester-19\",\n    \"avatar_url\": null,\n    \"joined_at\": \"2021-02-07T06:06:02.347Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/chester-19.json\",\n      \"page\": \"/pones/chester-19\",\n      \"achievements\": \"/api/v1/pones/chester-19/achievements.json\",\n      \"points\": \"/api/v1/pones/chester-19/points.json\"\n    },\n    \"name\": \"chester 19\",\n    \"points_count\": 0\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "308"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
