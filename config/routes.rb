@@ -47,6 +47,8 @@ Rails.application.routes.draw do
         resources :points, only: %i[index show], controller: 'pones/points' do
           post :give, on: :collection
         end
+
+        get :me, on: :collection
       end
     end
   end

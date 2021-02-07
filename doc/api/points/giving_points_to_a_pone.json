@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/elton_morar-11/points/give.html",
-      "request_body": "{\"point\":{\"count\":3,\"message\":\"foo\"}}",
+      "request_path": "/api/v1/pones/nelia-11/points/give.html",
+      "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key HvT7avb8GZqkKfKVd4uyV9q4EEmHtxkjxaLKh9t474jzPfLXYu5Thd2PFYsxMhWAM8Q1KPGRLUsaMsVU",
+        "Authorization": "Api-Key wWmdSSyZPp38mgHMSLtDexGxMTcwswRjeGs1fCrr396vPKdmmpPtvn1GyosajvPNERoRP6tT6r7EWTZT",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 106,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-07T06:06:02.320Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/elton_morar-11/points/106.json\",\n      \"pone\": \"/api/v1/pones/elton_morar-11.json\",\n      \"granted_by\": \"/api/v1/pones/zachary_pouros-12.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 49,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:24:31.617Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/nelia-11/points/49.json\",\n      \"pone\": \"/api/v1/pones/nelia-11.json\",\n      \"granted_by\": \"/api/v1/pones/lino-12.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "245"
+        "Content-Length": "221"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

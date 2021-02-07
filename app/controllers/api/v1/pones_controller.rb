@@ -16,6 +16,13 @@ module Api
 
         render json: PoneBlueprint.render_as_json(@pone, root: :pone)
       end
+
+      def me
+        @pone = api_key.pone
+        authorize(@pone, :show?)
+
+        render json: PoneBlueprint.render_as_json(@pone, root: :pone, view: :me)
+      end
     end
   end
 end

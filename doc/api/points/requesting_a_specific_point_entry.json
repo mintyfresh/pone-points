@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/ricarda-8/points/105.json",
+      "request_path": "/api/v1/pones/lucile-8/points/48.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key Uoo4WznQwjMgV3ZZCxkNoRfFNyv2zrjYoUCwAYZ8CojbujmDNUEQwUEmMWRjiqhosFgzbY6Hy5xVX4Dk",
+        "Authorization": "Api-Key TdTM9t5cpg5D2TtDtqAhtSwywDRWbWPnkagXEzHUMqFJ6zDVWhUhAznsDYjwDzKECx4F9pYnUz1jULVa",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 105,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-07T06:06:02.294Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/ricarda-8/points/105.json\",\n      \"pone\": \"/api/v1/pones/ricarda-8.json\",\n      \"granted_by\": \"/api/v1/pones/john_jacobs-9.json\"\n    },\n    \"message\": \"Scenester fixie venmo small batch kitsch intelligentsia you probably haven't heard of them.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 48,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:24:31.592Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/lucile-8/points/48.json\",\n      \"pone\": \"/api/v1/pones/lucile-8.json\",\n      \"granted_by\": \"/api/v1/pones/hayden-9.json\"\n    },\n    \"message\": \"Vhs vice distillery direct trade.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "319"
+        "Content-Length": "252"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

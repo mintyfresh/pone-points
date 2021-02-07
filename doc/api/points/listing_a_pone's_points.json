@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/lia-3/points.json",
+      "request_path": "/api/v1/pones/royal-3/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key SCAoZX33A9PcueqR5WiyxnJ3fUpQ5FCvAigMz6WgLrmgNwMA2vELuih8c3gRACenXnj7KsTwAJ4dgPLf",
+        "Authorization": "Api-Key bXwoDtzr4Acy4YjxwJfAzSQ1maJRFcTngtVg3oemVTwuCM7n6gyzJx5bRx1WjDNJpMaNgReXR5LwtgyU",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 102,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T06:06:02.254Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lia-3/points/102.json\",\n        \"pone\": \"/api/v1/pones/lia-3.json\",\n        \"granted_by\": \"/api/v1/pones/arthur-4.json\"\n      },\n      \"message\": \"Readymade chambray stumptown brunch.\"\n    },\n    {\n      \"id\": 103,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T06:06:02.257Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lia-3/points/103.json\",\n        \"pone\": \"/api/v1/pones/lia-3.json\",\n        \"granted_by\": \"/api/v1/pones/odell-5.json\"\n      },\n      \"message\": \"Kombucha freegan retro portland keytar squid salvia.\"\n    },\n    {\n      \"id\": 104,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T06:06:02.259Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lia-3/points/104.json\",\n        \"pone\": \"/api/v1/pones/lia-3.json\",\n        \"granted_by\": \"/api/v1/pones/carl_nader-6.json\"\n      },\n      \"message\": \"Twee small batch etsy biodiesel chia.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/lia-3.json\",\n      \"give_points\": \"/api/v1/pones/lia-3/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 45,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:24:31.556Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/royal-3/points/45.json\",\n        \"pone\": \"/api/v1/pones/royal-3.json\",\n        \"granted_by\": \"/api/v1/pones/robbie-4.json\"\n      },\n      \"message\": \"Microdosing blog polaroid try-hard salvia artisan loko green juice.\"\n    },\n    {\n      \"id\": 46,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:24:31.558Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/royal-3/points/46.json\",\n        \"pone\": \"/api/v1/pones/royal-3.json\",\n        \"granted_by\": \"/api/v1/pones/soo_thompson-5.json\"\n      },\n      \"message\": \"Normcore chicharrones occupy echo.\"\n    },\n    {\n      \"id\": 47,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:24:31.561Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/royal-3/points/47.json\",\n        \"pone\": \"/api/v1/pones/royal-3.json\",\n        \"granted_by\": \"/api/v1/pones/jay_gleason-6.json\"\n      },\n      \"message\": \"Forage pabst neutra chartreuse muggle magic flannel.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/royal-3.json\",\n      \"give_points\": \"/api/v1/pones/royal-3/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "864"
+        "Content-Length": "910"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

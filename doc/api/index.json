@@ -57,6 +57,13 @@
           "groups": "all",
           "route": "/api/v1/pones/:slug.json",
           "method": "get"
+        },
+        {
+          "description": "Requesting additional information about your own pone",
+          "link": "pones/requesting_additional_information_about_your_own_pone.json",
+          "groups": "all",
+          "route": "/api/v1/pones/me.json",
+          "method": "get"
         }
       ]
     }

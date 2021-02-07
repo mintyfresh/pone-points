@@ -19,4 +19,8 @@ class PoneBlueprint < ApplicationBlueprint
       points:       helpers.api_v1_pone_points_path(pone, format: :json)
     }
   end
+
+  view :me do
+    fields :giftable_points_count, :daily_giftable_points_count
+  end
 end

@@ -19,7 +19,7 @@ RSpec.resource 'Achievements', type: :acceptance do
     example_request "Listing a pone's achievements" do
       expect(response_status).to eq(200)
       expect(response_body).to include_json(
-        achievements: pone.achievements.first(25).map { |achievement| { id: achievement.id } }
+        achievements: pone.achievements.order(:id).first(25).map { |achievement| { id: achievement.id } }
       )
     end
   end

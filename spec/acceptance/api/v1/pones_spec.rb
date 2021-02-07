@@ -36,4 +36,17 @@ RSpec.resource 'Pones', type: :acceptance do
       )
     end
   end
+
+  get '/api/v1/pones/me.json' do
+    example_request 'Requesting additional information about your own pone' do
+      expect(response_status).to eq(200)
+      expect(response_body).to include_json(
+        pone: {
+          slug:                        api_key.pone.slug,
+          giftable_points_count:       api_key.pone.giftable_points_count,
+          daily_giftable_points_count: api_key.pone.daily_giftable_points_count
+        }
+      )
+    end
+  end
 end

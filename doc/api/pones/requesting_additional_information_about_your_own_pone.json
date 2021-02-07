@@ -1,0 +1,37 @@
+{
+  "resource": "Pones",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pones/me.json",
+  "description": "Requesting additional information about your own pone",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pones/me.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key LWfA6YgDGxx7jRHLxf2NB5j6YURxPzcRku7iKVHgL228GQzXkh2yVDhq7MydHXXqvYNhwsbtJ2ds52Sj",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"millicent_stehr-21\",\n    \"avatar_url\": null,\n    \"daily_giftable_points_count\": 3,\n    \"giftable_points_count\": 3,\n    \"joined_at\": \"2021-02-07T17:24:31.652Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/millicent_stehr-21.json\",\n      \"page\": \"/pones/millicent_stehr-21\",\n      \"achievements\": \"/api/v1/pones/millicent_stehr-21/achievements.json\",\n      \"points\": \"/api/v1/pones/millicent_stehr-21/points.json\"\n    },\n    \"name\": \"millicent_stehr 21\",\n    \"points_count\": 0\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "414"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
