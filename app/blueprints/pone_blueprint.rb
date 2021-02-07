@@ -7,6 +7,10 @@ class PoneBlueprint < ApplicationBlueprint
 
   field :created_at, name: :joined_at
 
+  field :avatar_url do |pone|
+    helpers.rails_blob_path(pone.avatar) if pone.avatar.attached?
+  end
+
   field :links do |pone|
     {
       self:         helpers.api_v1_pone_path(pone, format: :json),
