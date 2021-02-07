@@ -11,7 +11,7 @@
   </div>
   <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
   <div class="text-end">
-    <%= link_to('Nevermind', @pone, class: 'btn btn-secondary float-start') %>
+    <%= link_to('Nevermind', @pone, class: 'btn btn-secondary float-start') unless current_page?(@pone) %>
     <%= form.submit('Give Points!', class: 'btn btn-success') %>
   </div>
 <% end %>

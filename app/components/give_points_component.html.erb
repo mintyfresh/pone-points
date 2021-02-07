@@ -1,8 +1,23 @@
 <% if Pundit.policy(@current_pone, @pone).give_points? %>
   <% if giftable_points_count > 0 %>
-    <%= link_to('Give Points!', give_pone_points_path(@pone), class: 'btn btn-success') %>
+    <%= link_to('Give Points!', give_pone_points_path(@pone),
+                class: 'btn btn-success', data: { 'bs-toggle' => 'modal', 'bs-target' => '#give_points_modal' }) %>
   <% end %>
   <div class="text-muted">
     You have <%= giftable_points_count %> points left to give today.
   </div>
 <% end %>
+
+<div class="modal fade text-start" id="give_points_modal" tabindex="-1" aria-labelledby="give_points_modal_title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="give_points_modal_title">Give <%= @pone.name %> good pone points</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render(CreatePointFormComponent.new(pone: @pone, form: CreatePointForm.new, current_pone: @current_pone)) %>
+      </div>
+    </div>
+  </div>
+</div>
