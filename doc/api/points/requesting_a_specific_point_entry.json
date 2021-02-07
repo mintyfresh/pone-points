@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/lucile-8/points/48.json",
+      "request_path": "/api/v1/pones/carol_rempel-8/points/53.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key TdTM9t5cpg5D2TtDtqAhtSwywDRWbWPnkagXEzHUMqFJ6zDVWhUhAznsDYjwDzKECx4F9pYnUz1jULVa",
+        "Authorization": "Api-Key i6eNrd4DKwWzKo7JvFcE4UfchXJBoPE2SoZ6X1p4vAYXvFG83dMSZQPhr6y2yTxjSuLuxDuEbPWz2v3U",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 48,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-07T17:24:31.592Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/lucile-8/points/48.json\",\n      \"pone\": \"/api/v1/pones/lucile-8.json\",\n      \"granted_by\": \"/api/v1/pones/hayden-9.json\"\n    },\n    \"message\": \"Vhs vice distillery direct trade.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 53,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-07T17:30:45.438Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/carol_rempel-8/points/53.json\",\n      \"pone\": \"/api/v1/pones/carol_rempel-8.json\",\n      \"granted_by\": \"/api/v1/pones/leif_bergstrom-9.json\"\n    },\n    \"message\": \"Deep v beard organic cronut vinyl.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "252"
+        "Content-Length": "273"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

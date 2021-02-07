@@ -38,6 +38,11 @@ RSpec.resource 'Pones', type: :acceptance do
   end
 
   get '/api/v1/pones/me.json' do
+    with_options scope: :pone do
+      response_field :giftable_points_count, 'The remaining number of points left to give out today'
+      response_field :daily_giftable_points_count, 'The total number of points you can give out each day'
+    end
+
     example_request 'Requesting additional information about your own pone' do
       expect(response_status).to eq(200)
       expect(response_body).to include_json(
