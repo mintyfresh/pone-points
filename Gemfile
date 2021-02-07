@@ -12,6 +12,8 @@ gem 'blueprinter'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker'
 gem 'has_unique_attribute'
+gem 'image_processing'
+gem 'mini_magick'
 gem 'oj'
 gem 'omniauth'
 gem 'omniauth-discord'
@@ -53,6 +55,7 @@ group :test do
 end
 
 group :production do
+  gem 'aws-sdk-s3', require: false
   gem 'redis'
   gem 'resque'
   gem 'resque-heroku-signals'

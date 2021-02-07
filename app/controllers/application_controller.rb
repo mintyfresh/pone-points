@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if current_pone.nil?
       redirect_to sign_in_path(return_path: request.path)
     else
-      redirect_to '404.html'
+      redirect_to '/404.html'
     end
   end
 

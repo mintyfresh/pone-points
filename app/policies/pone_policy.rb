@@ -22,4 +22,8 @@ class PonePolicy < ApplicationPolicy
   def change_password?
     current_pone.present? && current_pone == pone
   end
+
+  def update?
+    current_pone.present? && current_pone == pone
+  end
 end

@@ -22,6 +22,8 @@ class Pone < ApplicationRecord
   include Sluggable
   include Verifyable
 
+  has_one_attached :avatar
+
   has_many :api_keys, dependent: :destroy, inverse_of: :pone
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
 
@@ -37,6 +39,7 @@ class Pone < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50 }
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
+  validates :avatar, avatar: true
 
   generates_slug_from :name
 

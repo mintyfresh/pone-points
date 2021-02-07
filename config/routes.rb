@@ -28,6 +28,10 @@ Rails.application.routes.draw do
       post :revoke, on: :member
     end
 
+    get   '/avatar', to: 'avatar#edit'
+    patch '/avatar', to: 'avatar#update'
+    post  '/avatar/remove', to: 'avatar#remove'
+
     get  :integrations
     get  :change_password
     post :change_password, action: :do_change_password

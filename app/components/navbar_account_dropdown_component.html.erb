@@ -4,6 +4,7 @@
   </a>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar_account_dropdown">
     <li><h6 class="dropdown-header">Settings</h6></li>
+    <li><%= link_to('Avatar', account_avatar_path, class: 'dropdown-item') %></li>
     <li><%= link_to('Change Password', account_change_password_path, class: 'dropdown-item') %></li>
     <li><%= link_to('Linked Accounts', account_integrations_path, class: 'dropdown-item') %></li>
     <li><hr class="dropdown-divider"></li>

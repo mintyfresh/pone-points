@@ -68,4 +68,9 @@ RSpec.configure do |config|
 
     Rake::Task['db:seed'].invoke
   end
+
+  config.after(:suite) do
+    # Discard files stored during test runs.
+    FileUtils.rm_rf(Rails.root.join('tmp', 'storage'))
+  end
 end
