@@ -2,6 +2,8 @@
 
 module Webhooks
   class PointCreateWebhookSubscriber < BaseWebhookSubscriber
+    subscribe_to 'app.points.create'
+
     payload_field :point
 
   protected

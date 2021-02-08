@@ -28,6 +28,17 @@ class ApplicationSubscriber
     end
   end
 
+  # @param pattern [String, Regexp]
+  # @return [void]
+  def self.subscribe_to(pattern)
+    subscribed_patterns << pattern
+  end
+
+  # @return [Array<String | Symbol>]
+  def self.subscribed_patterns
+    @subscribed_patterns ||= []
+  end
+
   # @param event [String]
   # @param payload [Hash]
   def initialize(event, payload)

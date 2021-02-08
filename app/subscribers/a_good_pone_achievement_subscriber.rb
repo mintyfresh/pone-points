@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class AGoodPoneAchievementSubscriber < ApplicationSubscriber
+  subscribe_to 'app.points.create'
+
   process_in_background
 
   payload_field :point
