@@ -23,8 +23,6 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 class Point < ApplicationRecord
-  include Publishable
-
   attr_readonly :count
 
   belongs_to :pone, inverse_of: :points
@@ -35,8 +33,6 @@ class Point < ApplicationRecord
 
   after_create :increment_pone_points_count
   after_destroy :decrement_pone_points_count
-
-  publishes_notifications_on :create
 
   scope :today,  -> { on_day(Date.current) }
   scope :on_day, -> (date) { where(created_at: date.beginning_of_day..date.end_of_day) }
