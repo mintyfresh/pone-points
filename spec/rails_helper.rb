@@ -12,6 +12,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'pundit/rspec'
+require 'webmock/rspec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |filename| require(filename) }

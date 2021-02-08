@@ -16,4 +16,3 @@ class UrlValidator < ActiveModel::EachValidator
     record.errors.add(attribute, :invalid_url)
   end
 end
-

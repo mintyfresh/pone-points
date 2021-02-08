@@ -12,6 +12,7 @@ gem 'argon2'
 gem 'blueprinter'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker'
+gem 'faraday'
 gem 'has_unique_attribute'
 gem 'image_processing'
 gem 'mini_magick'
@@ -54,6 +55,7 @@ group :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'webdrivers', '~> 4.0'
+  gem 'webmock'
 end
 
 group :production do

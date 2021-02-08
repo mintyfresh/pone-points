@@ -111,6 +111,8 @@ GEM
       xpath (~> 3.2)
     childprocess (3.0.0)
     concurrent-ruby (1.1.8)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
@@ -137,6 +139,7 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     has_unique_attribute (0.1.2)
+    hashdiff (1.0.1)
     hashie (4.1.0)
     i18n (1.8.8)
       concurrent-ruby (~> 1.0)
@@ -359,6 +362,10 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
+    webmock (3.11.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     webpacker (5.2.1)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -387,6 +394,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   faker
+  faraday
   has_unique_attribute
   image_processing
   listen (~> 3.3)
@@ -418,6 +426,7 @@ DEPENDENCIES
   view_component
   web-console (>= 4.1.0)
   webdrivers (~> 4.0)
+  webmock
   webpacker
 
 RUBY VERSION

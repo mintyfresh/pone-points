@@ -4,12 +4,13 @@
 #
 # Table name: webhooks
 #
-#  id         :bigint           not null, primary key
-#  pone_id    :bigint           not null
-#  events     :string           not null, is an Array
-#  url        :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint           not null, primary key
+#  pone_id     :bigint           not null
+#  signing_key :string           not null
+#  events      :string           not null, is an Array
+#  url         :string           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 # Indexes
 #
@@ -24,10 +25,14 @@ class Webhook < ApplicationRecord
 
   belongs_to :pone, inverse_of: :webhooks
 
+  has_secure_token :signing_key, length: 80
+
   validates :url, presence: true, url: true
   validate :events_are_supported
 
   before_save :remove_duplicate_events, if: :events_changed?
+
+  scope :where_event, -> (event) { where(%{? = ANY(#{quoted_table_name}."events")}, event) }
 
 private
 

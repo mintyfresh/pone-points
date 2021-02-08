@@ -373,6 +373,7 @@ ALTER SEQUENCE public.unlocked_achievements_id_seq OWNED BY public.unlocked_achi
 CREATE TABLE public.webhooks (
     id bigint NOT NULL,
     pone_id bigint NOT NULL,
+    signing_key character varying NOT NULL,
     events character varying[] NOT NULL,
     url character varying NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,

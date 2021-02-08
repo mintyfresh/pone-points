@@ -4,12 +4,13 @@
 #
 # Table name: webhooks
 #
-#  id         :bigint           not null, primary key
-#  pone_id    :bigint           not null
-#  events     :string           not null, is an Array
-#  url        :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint           not null, primary key
+#  pone_id     :bigint           not null
+#  signing_key :string           not null
+#  events      :string           not null, is an Array
+#  url         :string           not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 # Indexes
 #
