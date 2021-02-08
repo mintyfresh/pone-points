@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
-class AGoodPoneAchievementSubscriber
-  # @param point [Point]
-  def initialize(point)
-    @point = point
-  end
+class AGoodPoneAchievementSubscriber < ApplicationSubscriber
+  process_in_background
+
+  payload_field :point
 
   # @return [void]
   def perform
-    @point.granted_by.unlock_achievement(achievement)
+    point.granted_by.unlock_achievement(achievement)
   end
 
 private
