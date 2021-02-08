@@ -367,6 +367,39 @@ ALTER SEQUENCE public.unlocked_achievements_id_seq OWNED BY public.unlocked_achi
 
 
 --
+-- Name: webhooks; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.webhooks (
+    id bigint NOT NULL,
+    pone_id bigint NOT NULL,
+    events character varying[] NOT NULL,
+    url character varying NOT NULL,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: webhooks_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.webhooks_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: webhooks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.webhooks_id_seq OWNED BY public.webhooks.id;
+
+
+--
 -- Name: achievements id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -427,6 +460,13 @@ ALTER TABLE ONLY public.pones ALTER COLUMN id SET DEFAULT nextval('public.pones_
 --
 
 ALTER TABLE ONLY public.unlocked_achievements ALTER COLUMN id SET DEFAULT nextval('public.unlocked_achievements_id_seq'::regclass);
+
+
+--
+-- Name: webhooks id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.webhooks ALTER COLUMN id SET DEFAULT nextval('public.webhooks_id_seq'::regclass);
 
 
 --
@@ -515,6 +555,14 @@ ALTER TABLE ONLY public.schema_migrations
 
 ALTER TABLE ONLY public.unlocked_achievements
     ADD CONSTRAINT unlocked_achievements_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: webhooks webhooks_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.webhooks
+    ADD CONSTRAINT webhooks_pkey PRIMARY KEY (id);
 
 
 --
@@ -644,6 +692,13 @@ CREATE UNIQUE INDEX index_unlocked_achievements_on_pone_id_and_achievement_id ON
 
 
 --
+-- Name: index_webhooks_on_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_webhooks_on_pone_id ON public.webhooks USING btree (pone_id);
+
+
+--
 -- Name: pone_credentials fk_rails_11e792e613; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -665,6 +720,14 @@ ALTER TABLE ONLY public.api_keys
 
 ALTER TABLE ONLY public.points
     ADD CONSTRAINT fk_rails_6d75f2081e FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+
+
+--
+-- Name: webhooks fk_rails_722c3a6266; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.webhooks
+    ADD CONSTRAINT fk_rails_722c3a6266 FOREIGN KEY (pone_id) REFERENCES public.pones(id);
 
 
 --
@@ -722,6 +785,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210205230501'),
 ('20210206011739'),
 ('20210206041844'),
-('20210206223810');
+('20210206223810'),
+('20210208205331');
 
 

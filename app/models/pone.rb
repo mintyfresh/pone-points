@@ -26,6 +26,7 @@ class Pone < ApplicationRecord
 
   has_many :api_keys, dependent: :destroy, inverse_of: :pone
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
+  has_many :webhooks, dependent: :destroy, inverse_of: :pone
 
   has_many :points, dependent: :destroy, inverse_of: :pone
   has_many :granted_points, class_name: 'Point', dependent: :restrict_with_error,
