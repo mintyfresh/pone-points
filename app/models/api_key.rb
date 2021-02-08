@@ -26,14 +26,17 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 class ApiKey < ApplicationRecord
+  NAME_MAX_LENGTH        = 50
+  DESCRIPTION_MAX_LENGTH = 1000
+
   extend HasGeneratedToken
 
   belongs_to :pone, inverse_of: :api_keys
 
   has_generated_token :token
 
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :description, length: { maximum: 1000 }
+  validates :name, presence: true, length: { maximum: NAME_MAX_LENGTH }
+  validates :description, length: { maximum: DESCRIPTION_MAX_LENGTH }
 
   scope :active, -> { where(revoked_at: nil) }
 

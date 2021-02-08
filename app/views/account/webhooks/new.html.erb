@@ -1,0 +1,32 @@
+<%= render(AccountPanelComponent.new) do %>
+  <%= form_with(model: @form, url: account_webhooks_path, method: :post) do |form| %>
+    <div class="mb-3">
+      <%= form.label(:name) %>
+      <%= form.text_field(:name, class: 'form-control') %>
+      <%= render(FormControlErrorsComponent.new(key: 'name', errors: @form.errors)) %>
+    </div>
+    <div class="mb-3">
+      <%= form.label(:url, 'Webhook URL') %>
+      <%= form.url_field(:url, class: 'form-control') %>
+      <%= render(FormControlErrorsComponent.new(key: 'url', errors: @form.errors)) %>
+    </div>
+    <div class="mb-3">
+      <%= form.label(:events) %>
+      <div class="row">
+        <% Webhook::SUPPORTED_EVENTS.each do |event| %>
+          <div class="col-4">
+            <div class="form-check">
+              <%= check_box_tag('create_webhook_form[events][]', event, {}, id: event, class: 'form-check-input') %>
+              <%= label_tag(event, event, class: 'form-check-label') %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <%= render(FormControlErrorsComponent.new(key: 'events', errors: @form.errors)) %>
+    </div>
+    <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
+    <div class="text-end">
+      <%= form.submit('Create Webhook', class: 'btn btn-primary') %>
+    </div>
+  <% end %>
+<% end %>

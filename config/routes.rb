@@ -31,6 +31,10 @@ Rails.application.routes.draw do
       post :revoke, on: :member
     end
 
+    resources :webhooks, only: %i[index show new create destroy] do
+      post :regenerate, on: :member
+    end
+
     get   '/avatar', to: 'avatar#edit'
     patch '/avatar', to: 'avatar#update'
     post  '/avatar/remove', to: 'avatar#remove'

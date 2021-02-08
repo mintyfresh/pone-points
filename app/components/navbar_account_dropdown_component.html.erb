@@ -11,7 +11,7 @@
     <li><h6 class="dropdown-header">Developer</h6></li>
     <li><%= link_to('API Keys', account_api_keys_path, class: 'dropdown-item') %></li>
     <li><%= link_to('API Docs', '/api/docs', class: 'dropdown-item', target: '_blank') %></li>
-    <li><%= link_to('Webhooks', '#', class: 'dropdown-item disabled', disabled: true) %></li>
+    <li><%= link_to('Webhooks', account_webhooks_path, class: 'dropdown-item') %></li>
     <li><hr class="dropdown-divider"></li>
     <li><%= link_to('Sign Out', sign_out_path, class: 'dropdown-item text-danger', method: :post) %></li>
   </ul>

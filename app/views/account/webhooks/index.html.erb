@@ -1,0 +1,13 @@
+<%= render(AccountPanelComponent.new) do %>
+  <div class="row">
+    <h1 class="col">
+      Webhooks
+    </h1>
+    <div class="col-auto text-end">
+      <%= link_to('Create Webhook', new_account_webhook_path, class: 'btn btn-primary mt-auto') %>
+    </div>
+  </div>
+  <% @webhooks.each do |webhook| %>
+    <div><%= link_to(webhook.name, account_webhook_path(webhook)) %></div>
+  <% end %>
+<% end %>

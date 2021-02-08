@@ -1,0 +1,31 @@
+<% content_for(:title, t('.title', name: @webhook.name)) %>
+<%= render(AccountPanelComponent.new) do %>
+  <h1><%= @webhook.name %></h1>
+  <p>
+    <strong>URL:</strong>
+    <%= @webhook.url %>
+  </p>
+  <hr>
+  <h2>Signing Key</h2>
+  <div class="mb-3">
+    <% if flash[:show_signing_key] %>
+      <div class="alert alert-warning mb-1" role="alert">
+        <strong>Heads up!</strong>
+        Copy and save your webhook signing key now, as you won't be able to view it after leaving this page.
+      </div>
+    <% end %>
+    <%= label_tag(:signing_key, 'Signing Key') %>
+    <%= text_field_tag(:signing_key, flash[:show_signing_key] ? @webhook.signing_key : ('*' * 80), class: 'form-control', readonly: true) %>
+    <div class="text-muted small mb-2">
+      If you've lost your webhook signing key, you can generate a new one now.
+      Doing so will invalidate the existing key.
+    </div>
+    <div class="text-end">
+      <%= button_to('Regenerate Signing Key', regenerate_account_webhook_path(@webhook), class: 'btn btn-danger', method: :post) %>
+    </div>
+  </div>
+  <hr>
+  <div class="text-end">
+    <%= button_to('Delete Webhook', account_webhook_path(@webhook), class: 'btn btn-danger', method: :destroy) %>
+  </div>
+<% end %>

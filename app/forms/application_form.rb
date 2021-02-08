@@ -5,6 +5,16 @@ class ApplicationForm
   include ActiveModel::Attributes
   include ActiveModel::Validations
 
+  # @param name [Symbol]
+  # @param type [Symbol, ActiveModel::Type]
+  # @param array [Boolean]
+  # @return [void]
+  def self.attribute(name, type, array: false, **options)
+    type = ActiveRecord::Type.lookup(type, array: true) if array
+
+    super(name, type, **options)
+  end
+
   def self.new(*args, **options)
     super.tap do |form|
       yield(form) if block_given?

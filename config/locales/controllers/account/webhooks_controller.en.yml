@@ -1,0 +1,11 @@
+en:
+  account:
+    webhooks:
+      index:
+        title: Webhooks - Good Pone Points
+      show:
+        title: '%{name} - Webhooks - Good Pone Points'
+      new: &new
+        title: Create new Webhook - Good Pone Points
+      create:
+        <<: *new

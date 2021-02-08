@@ -6,6 +6,7 @@
 #
 #  id          :bigint           not null, primary key
 #  pone_id     :bigint           not null
+#  name        :string           not null
 #  signing_key :string           not null
 #  events      :string           not null, is an Array
 #  url         :string           not null

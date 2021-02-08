@@ -7,10 +7,10 @@ class CreateApiKeyForm < ApplicationForm
   attribute :name, :string
   attribute :description, :string
 
-  validates :name, presence: true, length: { maximum: 50 }
-  validates :description, length: { maximum: 1000 }
+  validates :name, presence: true, length: { maximum: ApiKey::NAME_MAX_LENGTH }
+  validates :description, length: { maximum: ApiKey::DESCRIPTION_MAX_LENGTH }
 
-  # @return [Point]
+  # @return [ApiKey]
   def perform
     super do
       pone.api_keys.create!(name: name, description: description)
