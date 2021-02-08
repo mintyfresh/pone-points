@@ -17,7 +17,7 @@
           <div class="col-4">
             <div class="form-check">
               <%= check_box_tag('create_webhook_form[events][]', event, {}, id: event, class: 'form-check-input') %>
-              <%= label_tag(event, event, class: 'form-check-label') %>
+              <%= label_tag(event, Webhook.name_for_event(event), class: 'form-check-label') %>
             </div>
           </div>
         <% end %>

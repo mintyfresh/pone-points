@@ -1,0 +1,5 @@
+---
+en:
+  webhooks:
+    events:
+      app/points/create: Point Created

@@ -3,27 +3,33 @@
 require 'rails_helper'
 
 RSpec.describe WebhookPolicy, type: :policy do
-  subject { described_class }
+  subject(:policy) { described_class }
 
-  let(:user) { User.new }
+  let(:webhook) { build(:webhook) }
+  let(:pone) { webhook.pone }
+  let(:other_pone) { build(:pone) }
 
-  permissions '.scope' do
-    pending "add some examples to (or delete) #{__FILE__}"
+  permissions :index?, :create? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(nil, Webhook)
+    end
+
+    it 'permits authenticated pones' do
+      expect(policy).to permit(pone, Webhook)
+    end
   end
 
-  permissions :show? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
+  permissions :show?, :regenerate?, :destroy? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(nil, webhook)
+    end
 
-  permissions :create? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
+    it 'permits the owner of the webhook' do
+      expect(policy).to permit(pone, webhook)
+    end
 
-  permissions :update? do
-    pending "add some examples to (or delete) #{__FILE__}"
-  end
-
-  permissions :destroy? do
-    pending "add some examples to (or delete) #{__FILE__}"
+    it 'does not permit other pones' do
+      expect(policy).not_to permit(other_pone, webhook)
+    end
   end
 end

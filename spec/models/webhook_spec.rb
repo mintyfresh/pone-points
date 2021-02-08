@@ -35,6 +35,11 @@ RSpec.describe Webhook, type: :model do
     expect(webhook).to be_invalid
   end
 
+  it 'is invalid without a name' do
+    webhook.name = nil
+    expect(webhook).to be_invalid
+  end
+
   it 'is valid without any events' do
     webhook.events = []
     expect(webhook).to be_valid

@@ -25,6 +25,7 @@ FactoryBot.define do
   factory :webhook do
     association :pone, strategy: :build
 
+    name { Faker::Book.title }
     events { Webhook::SUPPORTED_EVENTS.sample(3) }
     url { Faker::Internet.url }
   end

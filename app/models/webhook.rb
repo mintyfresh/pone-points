@@ -22,8 +22,9 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 class Webhook < ApplicationRecord
-  NAME_MAX_LENGTH  = 50
-  SUPPORTED_EVENTS = %w[app.points.create].freeze
+  NAME_MAX_LENGTH   = 50
+  SUPPORTED_EVENTS  = %w[app.points.create].freeze
+  EVENTS_I18N_SCOPE = 'webhooks.events'
 
   belongs_to :pone, inverse_of: :webhooks
 
@@ -36,6 +37,12 @@ class Webhook < ApplicationRecord
   before_save :remove_duplicate_events, if: :events_changed?
 
   scope :where_event, -> (event) { where(%{? = ANY(#{quoted_table_name}."events")}, event) }
+
+  # @param event [String]
+  # @return [String]
+  def self.name_for_event(event)
+    I18n.t(event.tr('.', '/'), scope: EVENTS_I18N_SCOPE)
+  end
 
 private
 
