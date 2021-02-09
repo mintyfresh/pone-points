@@ -3,3 +3,5 @@ en:
   webhooks:
     events:
       app/points/create: Point Created
+      app/memberships/create: Member Joined
+      app/memberships/destroy: Member Left

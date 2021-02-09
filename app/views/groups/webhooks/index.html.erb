@@ -1,0 +1,13 @@
+<div class="row">
+  <h1 class="col">
+    Webhooks for <%= @group.name %>
+  </h1>
+  <div class="col-auto text-end">
+    <%= link_to('Create Webhook', new_group_webhook_path(@group), class: 'btn btn-primary mt-auto') %>
+  </div>
+</div>
+<%= render(WebhookListComponent.new(
+  webhooks:    @webhooks,
+  webhook_url: -> (webhook) { group_webhook_path(@group, webhook) },
+  placeholder: "You haven't created any webhooks yet."
+)) %>

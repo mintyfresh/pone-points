@@ -28,6 +28,6 @@
 class GroupWebhook < Webhook
   # @return [Array<String>]
   def self.supported_events
-    %w[app.memberships.create app.memberships.destroy]
+    %w[app.memberships.create app.memberships.destroy app.points.create]
   end
 end

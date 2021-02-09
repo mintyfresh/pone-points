@@ -9,6 +9,12 @@ class WebhookEventsSelectComponent < ApplicationComponent
   end
 
   # @param event [String]
+  # @return [Boolean]
+  def enabled?(event)
+    @webhook.events&.include?(event)
+  end
+
+  # @param event [String]
   # @return [String]
   def element_id(event)
     "webhook_event_#{event.tr('.', '_')}"

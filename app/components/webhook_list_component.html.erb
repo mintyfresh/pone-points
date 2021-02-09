@@ -1,0 +1,10 @@
+<% @webhooks.each do |webhook| %>
+  <div><%= link_to(webhook.name, webhook_url_for(webhook)) %></div>
+<% end %>
+<% if @webhooks.none? && @placeholder.present? %>
+  <div class="card">
+    <div class="card-body text-center">
+      <%= @placeholder %>
+    </div>
+  </div>
+<% end %>

@@ -1,8 +1,8 @@
 <div class="row">
   <% @webhook.supported_events.each do |event| %>
-    <div class="col-4">
+    <div class="col-auto">
       <div class="form-check">
-        <%= check_box_tag(field_name, event, {}, id: element_id(event), class: 'form-check-input', disabled: @readonly) %>
+        <%= check_box_tag(field_name, event, enabled?(event), id: element_id(event), class: 'form-check-input', disabled: @readonly) %>
         <%= label_tag(element_id(event), Webhook.name_for_event(event), class: 'form-check-label') %>
       </div>
     </div>
