@@ -9,7 +9,7 @@
           <% if pone.avatar.attached? %>
             <%= image_tag(pone.avatar, alt: pone.name, class: 'img-fluid mb-2 d-block mx-auto', style: 'max-height: 200px') %>
           <% end %>
-          <%= number_to_human(pone.points_count) %> good pone points
+          <%= number_to_human(pone.points_count) %> good pone <%= 'point'.pluralize(pone.points_count) %>
         </div>
       </div>
     </div>
