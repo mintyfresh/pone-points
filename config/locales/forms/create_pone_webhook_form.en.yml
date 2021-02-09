@@ -1,0 +1,9 @@
+---
+en:
+  activemodel:
+    errors:
+      models:
+        create_pone_webhook_form:
+          attributes:
+            base:
+              too_many_webhooks: You have reached the maximum number of webhooks on your account. (You can have up to %{count})

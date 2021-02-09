@@ -6,7 +6,11 @@ class SubsetValidator < ActiveModel::EachValidator
   # @param value [Array, Enumerable, nil]
   # @return [void]
   def validate_each(record, attribute, value)
-    return if value.blank?
+    if value.nil?
+      options[:allow_nil] or record.errors.add(attribute, :blank)
+
+      return
+    end
 
     supported = supported_values(record)
     return if value.all? { |element| element.in?(supported) }
