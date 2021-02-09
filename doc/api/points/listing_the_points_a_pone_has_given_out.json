@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/grover-8/points/granted.json",
+      "request_path": "/api/v1/pones/trinidad-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key tURFwhJMwaXbGP4CAXcT8BTnNKDPKsZtLLtsqxKpomG3RvR7xCgHsFATfgy2XphMkR6LULFX12DHwvN6",
+        "Authorization": "Api-Key P8aGt6sb6S2d7RXNjof1emQzuTbufRFcM4vVq67RHzw52tr4r85D325Ftc4uvym3ofTW84yfwzgeTqvC",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 156,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-07T17:42:42.514Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kittie-9/points/156.json\",\n        \"pone\": \"/api/v1/pones/kittie-9.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Humblebrag post-ironic pinterest sustainable cred listicle.\"\n    },\n    {\n      \"id\": 157,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.517Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/eliseo-walker-10/points/157.json\",\n        \"pone\": \"/api/v1/pones/eliseo-walker-10.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Migas pabst meggings cold-pressed everyday iphone readymade fanny pack.\"\n    },\n    {\n      \"id\": 158,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.519Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lyle-hirthe-11/points/158.json\",\n        \"pone\": \"/api/v1/pones/lyle-hirthe-11.json\",\n        \"granted_by\": \"/api/v1/pones/grover-8.json\"\n      },\n      \"message\": \"Carry jean shorts farm-to-table wayfarers.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/grover-8.json\",\n      \"give_points\": \"/api/v1/pones/grover-8/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 209,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-09T05:49:15.928Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/carey-20/points/209.json\",\n        \"pone\": \"/api/v1/pones/carey-20.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Cornhole vinegar tumblr art party banh mi cred 8-bit vinyl pop-up.\"\n    },\n    {\n      \"id\": 210,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.931Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/tory-21/points/210.json\",\n        \"pone\": \"/api/v1/pones/tory-21.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Narwhal roof tousled banjo fixie shoreditch echo.\"\n    },\n    {\n      \"id\": 211,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.933Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/pattie-22/points/211.json\",\n        \"pone\": \"/api/v1/pones/pattie-22.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Humblebrag irony master hoodie selfies you probably haven't heard of them schlitz.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/trinidad-19.json\",\n      \"give_points\": \"/api/v1/pones/trinidad-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "960"
+        "Content-Length": "972"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -55,6 +55,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :groups, only: %i[index show], param: :slug do
+        get :members, on: :member
+      end
       resources :pones, only: %i[index show], param: :slug do
         resources :achievements, only: :index, controller: 'pones/achievements'
         resources :points, only: %i[index show], controller: 'pones/points' do
@@ -63,6 +66,7 @@ Rails.application.routes.draw do
         end
 
         get :me, on: :collection
+        get :groups, on: :member
       end
     end
   end

@@ -29,5 +29,15 @@ FactoryBot.define do
 
     name { Faker::Book.title }
     description { Faker::Hipster.sentence }
+
+    trait :with_members do
+      transient do
+        members_count { 3 }
+      end
+
+      after(:build) do |group, e|
+        group.members = build_list(:pone, e.members_count)
+      end
+    end
   end
 end

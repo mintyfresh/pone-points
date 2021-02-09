@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/keila-13/points/159.json",
+      "request_path": "/api/v1/pones/lorri-schaefer-24/points/212.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 3Q17nHD8e2RsR1QbV2hG3vaRgJordCN6jUy61JeyjMVYKLVoA8nNhwGBDBnKJJC9b4Vo19dA1xpTPcyb",
+        "Authorization": "Api-Key oECG5kmgwqPLNWrnoZaLeYNFpKHzNoBWJCgC5e1nAP5VS61VMUBg6k6urmB32mGiswGhTaV3743gvLak",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 159,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-07T17:42:42.549Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/keila-13/points/159.json\",\n      \"pone\": \"/api/v1/pones/keila-13.json\",\n      \"granted_by\": \"/api/v1/pones/earl_cruickshank-14.json\"\n    },\n    \"message\": \"Everyday lumbersexual flexitarian biodiesel swag pop-up wayfarers loko.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 212,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-09T05:49:15.957Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/lorri-schaefer-24/points/212.json\",\n      \"pone\": \"/api/v1/pones/lorri-schaefer-24.json\",\n      \"granted_by\": \"/api/v1/pones/stanford-25.json\"\n    },\n    \"message\": \"Marfa listicle shoreditch loko.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "303"
+        "Content-Length": "273"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

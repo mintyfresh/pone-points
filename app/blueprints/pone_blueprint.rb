@@ -17,7 +17,8 @@ class PoneBlueprint < ApplicationBlueprint
       page:           helpers.pone_path(pone),
       achievements:   helpers.api_v1_pone_achievements_path(pone, format: :json),
       points:         helpers.api_v1_pone_points_path(pone, format: :json),
-      granted_points: helpers.granted_api_v1_pone_points_path(pone, format: :json)
+      granted_points: helpers.granted_api_v1_pone_points_path(pone, format: :json),
+      groups:         helpers.groups_api_v1_pone_path(pone, format: :json)
     }
   end
 

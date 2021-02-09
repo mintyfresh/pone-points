@@ -1,0 +1,37 @@
+{
+  "resource": "Groups",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/groups.json",
+  "description": "Listing groups",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/groups.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key yNamiLwmJFjRMB5TpfCpUipGKcnKCtqyg7NZiWzwHh5249dZdq69vdNDtwApU1xHJUdjUcQktBrDjgbm",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"to-your-scattered-bodies-go\",\n      \"created_at\": \"2021-02-09T05:49:15.813Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-your-scattered-bodies-go.json\",\n        \"page\": \"/groups/to-your-scattered-bodies-go\",\n        \"owner\": \"/api/v1/pones/ivana-boyer-3.json\",\n        \"members\": \"/api/v1/groups/to-your-scattered-bodies-go/members.json\"\n      },\n      \"name\": \"To Your Scattered Bodies Go\"\n    },\n    {\n      \"slug\": \"absalom-absalom\",\n      \"created_at\": \"2021-02-09T05:49:15.825Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/absalom-absalom.json\",\n        \"page\": \"/groups/absalom-absalom\",\n        \"owner\": \"/api/v1/pones/karl-4.json\",\n        \"members\": \"/api/v1/groups/absalom-absalom/members.json\"\n      },\n      \"name\": \"Absalom, Absalom!\"\n    },\n    {\n      \"slug\": \"a-time-of-gifts\",\n      \"created_at\": \"2021-02-09T05:49:15.830Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-time-of-gifts.json\",\n        \"page\": \"/groups/a-time-of-gifts\",\n        \"owner\": \"/api/v1/pones/dominick-littel-5.json\",\n        \"members\": \"/api/v1/groups/a-time-of-gifts/members.json\"\n      },\n      \"name\": \"A Time of Gifts\"\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "908"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/brenda-3/points.json",
+      "request_path": "/api/v1/pones/charlette-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key EHQfvpvBmUgQeW7pYUS5RgXREjuZz1BvVTBHz4EYt6uTz13ER5PDUSt5xyjpL7X4CbfGq3GMNJJvBb7R",
+        "Authorization": "Api-Key 9MhfCCP9JzdPVdCRp2GpiZzgw3gwRJ7SSZDVjPmxh33T5a48M4tyh6MQ43pKkT3hkn9GXWFW1oKwRsXV",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 153,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-07T17:42:42.477Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/153.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/angele-4.json\"\n      },\n      \"message\": \"Mustache vegan flannel truffaut 90's put a bird on it wes anderson everyday vice.\"\n    },\n    {\n      \"id\": 154,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.480Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/154.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/willene-5.json\"\n      },\n      \"message\": \"Meditation tacos +1 park.\"\n    },\n    {\n      \"id\": 155,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-07T17:42:42.482Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brenda-3/points/155.json\",\n        \"pone\": \"/api/v1/pones/brenda-3.json\",\n        \"granted_by\": \"/api/v1/pones/angelo-6.json\"\n      },\n      \"message\": \"Muggle magic umami celiac hashtag.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/brenda-3.json\",\n      \"give_points\": \"/api/v1/pones/brenda-3/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 206,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.895Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/206.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/jere_stehr-15.json\"\n      },\n      \"message\": \"Poutine thundercats meggings flexitarian migas stumptown mlkshk.\"\n    },\n    {\n      \"id\": 207,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.898Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/207.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/kurtis-16.json\"\n      },\n      \"message\": \"Sartorial vegan small batch schlitz.\"\n    },\n    {\n      \"id\": 208,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.901Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/208.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/tiesha-17.json\"\n      },\n      \"message\": \"Squid deep v tousled master tumblr.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/charlette-14.json\",\n      \"give_points\": \"/api/v1/pones/charlette-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "901"
+        "Content-Length": "934"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

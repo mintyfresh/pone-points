@@ -1,0 +1,41 @@
+{
+  "resource": "Pones",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/pones/:slug/groups.json",
+  "description": "Requesting all of a pone's groups",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "slug",
+      "description": " slug"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/pones/barbara-38/groups.json",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Api-Key 1zZ9AetsjNV2KGjATDRvN1ZDHbfFBxd923wkZLTUMfC6iaYtpV46wzRutKU1WAca9rZUYWZcz5JbczRF",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"to-your-scattered-bodies-go\",\n      \"created_at\": \"2021-02-09T05:49:16.076Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-your-scattered-bodies-go.json\",\n        \"page\": \"/groups/to-your-scattered-bodies-go\",\n        \"owner\": \"/api/v1/pones/millie-39.json\",\n        \"members\": \"/api/v1/groups/to-your-scattered-bodies-go/members.json\"\n      },\n      \"name\": \"To Your Scattered Bodies Go\"\n    },\n    {\n      \"slug\": \"recalled-to-life\",\n      \"created_at\": \"2021-02-09T05:49:16.082Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/recalled-to-life.json\",\n        \"page\": \"/groups/recalled-to-life\",\n        \"owner\": \"/api/v1/pones/calvin_wuckert-40.json\",\n        \"members\": \"/api/v1/groups/recalled-to-life/members.json\"\n      },\n      \"name\": \"Recalled to Life\"\n    },\n    {\n      \"slug\": \"the-skull-beneath-the-skin\",\n      \"created_at\": \"2021-02-09T05:49:16.086Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-skull-beneath-the-skin.json\",\n        \"page\": \"/groups/the-skull-beneath-the-skin\",\n        \"owner\": \"/api/v1/pones/cleo_zulauf-41.json\",\n        \"members\": \"/api/v1/groups/the-skull-beneath-the-skin/members.json\"\n      },\n      \"name\": \"The Skull Beneath the Skin\"\n    }\n  ]\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "970"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

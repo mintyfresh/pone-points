@@ -14,6 +14,33 @@
       ]
     },
     {
+      "name": "Groups",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Listing groups",
+          "link": "groups/listing_groups.json",
+          "groups": "all",
+          "route": "/api/v1/groups.json",
+          "method": "get"
+        },
+        {
+          "description": "Requesting a specific group",
+          "link": "groups/requesting_a_specific_group.json",
+          "groups": "all",
+          "route": "/api/v1/groups/:slug.json",
+          "method": "get"
+        },
+        {
+          "description": "Requesting all of the members of a group",
+          "link": "groups/requesting_all_of_the_members_of_a_group.json",
+          "groups": "all",
+          "route": "/api/v1/groups/:slug/members.json",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Points",
       "explanation": null,
       "examples": [
@@ -70,6 +97,13 @@
           "link": "pones/requesting_additional_information_about_your_own_pone.json",
           "groups": "all",
           "route": "/api/v1/pones/me.json",
+          "method": "get"
+        },
+        {
+          "description": "Requesting all of a pone's groups",
+          "link": "pones/requesting_all_of_a_pone's_groups.json",
+          "groups": "all",
+          "route": "/api/v1/pones/:slug/groups.json",
           "method": "get"
         }
       ]

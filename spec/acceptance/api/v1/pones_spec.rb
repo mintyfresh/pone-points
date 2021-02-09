@@ -54,4 +54,18 @@ RSpec.resource 'Pones', type: :acceptance do
       )
     end
   end
+
+  get '/api/v1/pones/:slug/groups.json' do
+    let(:slug) { pone.slug }
+    let(:pone) { create(:pone, :with_groups) }
+
+    parameter :slug, required: true
+
+    example_request "Requesting all of a pone's groups" do
+      expect(response_status).to eq(200)
+      expect(response_body).to include_json(
+        groups: pone.groups.order(:id).first(25).map { |group| { slug: group.slug } }
+      )
+    end
+  end
 end

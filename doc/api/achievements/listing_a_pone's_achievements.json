@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/jeffry_powlowski-1/achievements.json",
+      "request_path": "/api/v1/pones/granville_welch-1/achievements.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 4kUpaNKv5RYVZg87Yb15i9xQtjzvWFrFU7ZSektkjMCnpoC4gEWaMcXQx8BmLZp2wyaZH9JJmWBS5b1T",
+        "Authorization": "Api-Key W3xaafsGZ9YnjGixe8xHoSN7q86fvkdFisZBPkKqJqRfFQVksPRnaF5bnPRdUW8Kdq3AYtzVA3mzH9BS",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"achievements\": [\n    {\n      \"id\": 2,\n      \"description\": \"Receive points from the same pone at least 3 days in a row.\",\n      \"name\": \"Somepone Likes You!\"\n    },\n    {\n      \"id\": 3,\n      \"description\": \"Give out points at least 3 days in a row.\",\n      \"name\": \"The Regular\"\n    },\n    {\n      \"id\": 4,\n      \"description\": \"Give a pone a point immediately after you've received one from them.\",\n      \"name\": \"Counterpoint\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/jeffry_powlowski-1.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"achievements\": [\n    {\n      \"id\": 1,\n      \"description\": \"Give somepone a point!\",\n      \"name\": \"A Good Pone\"\n    },\n    {\n      \"id\": 2,\n      \"description\": \"Receive points from the same pone at least 3 days in a row.\",\n      \"name\": \"Somepone Likes You!\"\n    },\n    {\n      \"id\": 4,\n      \"description\": \"Give a pone a point immediately after you've received one from them.\",\n      \"name\": \"Counterpoint\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/granville_welch-1.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "402"
+        "Content-Length": "382"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
