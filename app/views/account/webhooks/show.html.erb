@@ -9,16 +9,7 @@
   </div>
   <div class="mb-3">
     <%= label_tag(:events) %>
-    <div class="row">
-      <% @webhook.supported_events.each do |event| %>
-        <div class="col-4">
-          <div class="form-check">
-            <%= check_box_tag('create_webhook_form[events][]', event, {}, id: event, class: 'form-check-input', disabled: true) %>
-            <%= label_tag(event, Webhook.name_for_event(event), class: 'form-check-label') %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <%= render(WebhookEventsSelectComponent.new(webhook: @webhook, readonly: true)) %>
   </div>
   <hr>
   <h2>Signing Key</h2>

@@ -15,14 +15,16 @@ module Account
 
     def new
       authorize(Webhook)
-      @form = CreateWebhookForm.new
+
+      @form = CreatePoneWebhookForm.new
     end
 
     def create
       authorize(Webhook)
-      @form = CreateWebhookForm.new(create_webhooks_params) do |form|
-        form.pone = current_pone
-      end
+
+      @form = CreatePoneWebhookForm.new(create_webhooks_params)
+      @form.owner        = current_pone
+      @form.event_source = current_pone
 
       if (webhook = @form.perform)
         flash[:show_signing_key] = true
@@ -51,11 +53,11 @@ module Account
   private
 
     def set_webhook
-      @webhook = Webhook.find(params[:id])
+      @webhook = PoneWebhook.find(params[:id])
     end
 
     def create_webhooks_params
-      params.require(:create_webhook_form).permit(:name, :url, :events, events: [])
+      params.require(:create_pone_webhook_form).permit(:name, :url, :events, events: [])
     end
   end
 end
