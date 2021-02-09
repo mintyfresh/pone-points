@@ -42,15 +42,24 @@ class Group < ApplicationRecord
 
   generates_slug_from :name
 
-  # @param pone [Pone]
+  after_create :add_owner_as_group_member
+
+  # @param member [Pone]
   # @return [Membership]
-  def add_member(pone)
-    memberships.find_or_create_by!(pone: pone)
+  def add_member(member)
+    memberships.find_or_create_by!(member: member)
   end
 
-  # @param pone [Pone]
+  # @param member [Pone]
   # @return [Membership, nil]
-  def remove_member(pone)
-    memberships.find_by(pone: pone)&.destroy!
+  def remove_member(member)
+    memberships.find_by(member: member)&.destroy!
+  end
+
+private
+
+  # @return [void]
+  def add_owner_as_group_member
+    add_member(owner)
   end
 end

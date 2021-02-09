@@ -51,4 +51,8 @@ RSpec.describe Group, type: :model do
     group.description = 'a' * (described_class::DESCRIPTION_MAX_LENGTH + 1)
     expect(group).to be_invalid
   end
+
+  it 'adds the owner as a group member upon creation' do
+    expect { group.save! }.to change { group.members.include?(group.owner) }.to(true)
+  end
 end
