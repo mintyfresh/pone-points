@@ -8,7 +8,7 @@ module Webhooks
 
   protected
 
-    # @return [Array<Pone>]
+    # @return [Group]
     def event_source
       membership.group
     end
