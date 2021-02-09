@@ -12,4 +12,3 @@ class SubsetValidator < ActiveModel::EachValidator
     record.errors.add(attribute, :unsupported)
   end
 end
-

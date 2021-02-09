@@ -223,6 +223,41 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
+-- Name: groups; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.groups (
+    id bigint NOT NULL,
+    owner_id bigint NOT NULL,
+    name public.citext NOT NULL,
+    slug character varying NOT NULL,
+    description character varying,
+    members_count integer DEFAULT 0 NOT NULL,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: groups_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.groups_id_seq OWNED BY public.groups.id;
+
+
+--
 -- Name: points; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -437,6 +472,13 @@ ALTER TABLE ONLY public.api_keys ALTER COLUMN id SET DEFAULT nextval('public.api
 
 
 --
+-- Name: groups id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.groups ALTER COLUMN id SET DEFAULT nextval('public.groups_id_seq'::regclass);
+
+
+--
 -- Name: points id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -517,6 +559,14 @@ ALTER TABLE ONLY public.api_keys
 
 ALTER TABLE ONLY public.ar_internal_metadata
     ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
+-- Name: groups groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.groups
+    ADD CONSTRAINT groups_pkey PRIMARY KEY (id);
 
 
 --
@@ -624,6 +674,27 @@ CREATE INDEX index_api_keys_on_token_hexdigest ON public.api_keys USING hash (en
 
 
 --
+-- Name: index_groups_on_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_groups_on_name ON public.groups USING btree (name);
+
+
+--
+-- Name: index_groups_on_owner_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_groups_on_owner_id ON public.groups USING btree (owner_id);
+
+
+--
+-- Name: index_groups_on_slug; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_groups_on_slug ON public.groups USING btree (slug);
+
+
+--
 -- Name: index_points_on_granted_by_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -709,6 +780,14 @@ ALTER TABLE ONLY public.pone_credentials
 
 
 --
+-- Name: groups fk_rails_5447bdb9c5; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.groups
+    ADD CONSTRAINT fk_rails_5447bdb9c5 FOREIGN KEY (owner_id) REFERENCES public.pones(id);
+
+
+--
 -- Name: api_keys fk_rails_65658346aa; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -788,6 +867,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210206011739'),
 ('20210206041844'),
 ('20210206223810'),
-('20210208205331');
+('20210208205331'),
+('20210209004912');
 
 
