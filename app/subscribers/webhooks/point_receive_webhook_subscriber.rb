@@ -18,13 +18,10 @@ module Webhooks
       'app.points.receive'
     end
 
+    # @param webhook [Webhook]
     # @return [String]
-    def webhook_json
-      JSON.dump(
-        event:       webhook_event,
-        occurred_at: occurred_at,
-        point:       PointBlueprint.render_as_json(point)
-      )
+    def render_webhook(webhook)
+      super(webhook, point: PointBlueprint.render_as_json(point))
     end
   end
 end

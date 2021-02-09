@@ -11,7 +11,7 @@ class SubsetValidator < ActiveModel::EachValidator
     supported = supported_values(record)
     return if value.all? { |element| element.in?(supported) }
 
-    record.errors.add(attribute, :unsupported)
+    record.errors.add(attribute, :subset)
   end
 
 private

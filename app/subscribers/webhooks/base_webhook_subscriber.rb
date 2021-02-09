@@ -8,7 +8,7 @@ module Webhooks
     # @return [void]
     def perform
       webhooks.each do |webhook|
-        DeliverWebhookJob.perform_later(webhook, webhook_json)
+        DeliverWebhookJob.perform_later(webhook, render_webhook(webhook))
       end
     end
 
@@ -31,9 +31,16 @@ module Webhooks
     end
 
     # @abstract
+    # @param webhook [Webhook]
+    # @param attributes [Hash]
     # @return [String]
-    def webhook_json
-      raise NotImplementedError, "#{self.class.name} does not implement `#{__method__}`."
+    def render_webhook(webhook, **attributes)
+      JSON.dump(
+        event:       webhook_event,
+        occurred_at: occurred_at.as_json,
+        webhook_id:  webhook.id,
+        **attributes
+      )
     end
   end
 end

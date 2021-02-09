@@ -23,7 +23,8 @@ RSpec.describe 'GivePoints', type: :feature do
     fill_in_create_point_form input
 
     expect(page).to have_current_path(pone_path(pone, mode: 'points'))
-      .and have_content("#{granted_by.name} gave #{pone.name} #{input[:count]} good pone points!")
+      .and have_content("#{granted_by.name} gave #{pone.name} #{input[:count]}" \
+        " good pone #{'point'.pluralize(input[:count])}!")
       .and have_content(input[:message])
   end
 

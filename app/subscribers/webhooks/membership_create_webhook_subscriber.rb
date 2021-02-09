@@ -13,13 +13,13 @@ module Webhooks
       membership.group
     end
 
+    # @param webhook [Webhook]
     # @return [String]
-    def webhook_json
-      JSON.dump(
-        event:       event,
-        occurred_at: occurred_at,
-        group:       GroupBlueprint.render_as_json(membership.group),
-        member:      PoneBlueprint.render_as_json(membership.member)
+    def render_webhook(webhook)
+      super(
+        webhook,
+        group:  GroupBlueprint.render_as_json(membership.group),
+        member: PoneBlueprint.render_as_json(membership.member)
       )
     end
   end
