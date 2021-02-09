@@ -1,5 +1,5 @@
 <h1>Create New Group</h1>
-<%= form_with(model: @form, url: groups_path, method: :post) do |form| %>
+<%= form_with(model: @form, url: groups_path, method: :post, id: 'create_group_form') do |form| %>
   <div class="mb-3">
     <%= form.label(:name) %>
     <%= form.text_field(:name, class: 'form-control', maxlength: Group::NAME_MAX_LENGTH, required: true) %>
