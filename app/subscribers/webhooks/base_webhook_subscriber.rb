@@ -14,6 +14,11 @@ module Webhooks
 
   protected
 
+    # @return [String]
+    def webhook_event
+      event
+    end
+
     # @abstract
     # @return [Webhookable, Array<Webhookable>]
     def event_source
@@ -22,7 +27,7 @@ module Webhooks
 
     # @return [Enumerable<Webhook>]
     def webhooks
-      Webhook.where(event_source: event_source).where_event(event)
+      Webhook.where(event_source: event_source).where_event(webhook_event)
     end
 
     # @abstract

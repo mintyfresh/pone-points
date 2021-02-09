@@ -2,6 +2,7 @@
 en:
   webhooks:
     events:
-      app/points/create: Point Created
+      app/points/give: Point Given
+      app/points/receive: Point Received
       app/memberships/create: Member Joined
       app/memberships/destroy: Member Left

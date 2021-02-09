@@ -28,6 +28,6 @@
 class PoneWebhook < Webhook
   # @return [Array<String>]
   def self.supported_events
-    %w[app.points.create]
+    %w[app.points.give app.points.receive]
   end
 end
