@@ -10,3 +10,10 @@
     </div>
   </div>
 <% end %>
+<% if @groups.none? && @placeholder.present? %>
+  <div class="card">
+    <div class="card-body text-center">
+      <%= @placeholder %>
+    </div>
+  </div>
+<% end %>

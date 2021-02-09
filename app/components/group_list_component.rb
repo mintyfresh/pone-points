@@ -2,7 +2,9 @@
 
 class GroupListComponent < ApplicationComponent
   # @param groups [Array<Group>]
-  def initialize(groups:)
-    @groups = groups
+  # @param placeholder [String, nil]
+  def initialize(groups:, placeholder: nil)
+    @groups      = groups
+    @placeholder = placeholder
   end
 end

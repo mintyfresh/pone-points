@@ -26,8 +26,10 @@
 <div class="mb-2">
   <% case @mode %>
   <% when 'groups' %>
-    <%= render(GroupListComponent.new(groups: @pone.groups
-      .order(:id).preload(:owner).first(25))) %>
+    <%= render(GroupListComponent.new(
+          groups:      @pone.groups.order(:id).preload(:owner).first(25),
+          placeholder: 'Not a member of any groups yet.'
+        )) %>
   <% when 'achievements' %>
     <%= render(UnlockedAchievementListComponent.new(unlocked_achievements: @pone.unlocked_achievements
       .order(created_at: :desc, id: :desc).preload(:achievement).first(25))) %>
