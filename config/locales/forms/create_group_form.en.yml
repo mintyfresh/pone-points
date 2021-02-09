@@ -1,0 +1,9 @@
+---
+en:
+  activemodel:
+    errors:
+      models:
+        create_group_form:
+          attributes:
+            base:
+              must_be_verified: You must be verified to create groups.

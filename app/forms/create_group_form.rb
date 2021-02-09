@@ -10,6 +10,7 @@ class CreateGroupForm < ApplicationForm
   validates :owner, presence: true
   validates :name, presence: true, length: { maximum: Group::NAME_MAX_LENGTH }
   validates :description, length: { maximum: Group::DESCRIPTION_MAX_LENGTH }
+  validate  :must_be_verified_to_create_groups
 
   # @return [Group]
   def perform
@@ -23,6 +24,11 @@ class CreateGroupForm < ApplicationForm
   end
 
 private
+
+  # @return [void]
+  def must_be_verified_to_create_groups
+    errors.add(:base, :must_be_verified) unless owner.verified?
+  end
 
   # @return [void]
   def enforce_maximum_owned_groups_limit!
