@@ -23,7 +23,7 @@ module Webhooks
       JSON.dump(
         event:       webhook_event,
         occurred_at: occurred_at,
-        point:       PointBlueprint.render(point)
+        point:       PointBlueprint.render_as_json(point)
       )
     end
   end

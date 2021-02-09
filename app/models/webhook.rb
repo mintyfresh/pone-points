@@ -34,6 +34,7 @@ class Webhook < ApplicationRecord
 
   has_secure_token :signing_key, length: 80
 
+  validates :type, presence: true
   validates :name, presence: true, length: { maximum: NAME_MAX_LENGTH }
   validates :url, presence: true, url: true
   validates :events, subset: { of: :supported_events }

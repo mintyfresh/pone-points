@@ -26,6 +26,8 @@
 #  fk_rails_...  (owner_id => pones.id)
 #
 class PoneWebhook < Webhook
+  validates :event_source, type: { name: 'Pone' }
+
   # @return [Array<String>]
   def self.supported_events
     %w[app.points.give app.points.receive]

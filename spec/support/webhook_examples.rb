@@ -38,6 +38,11 @@ RSpec.shared_examples_for Webhook, type: :model do
     expect(webhook).to be_invalid
   end
 
+  it 'is invalid without a type' do
+    webhook.type = nil
+    expect(webhook).to be_invalid
+  end
+
   it 'is invalid without a name' do
     webhook.name = nil
     expect(webhook).to be_invalid

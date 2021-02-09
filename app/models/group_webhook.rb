@@ -26,6 +26,8 @@
 #  fk_rails_...  (owner_id => pones.id)
 #
 class GroupWebhook < Webhook
+  validates :event_source, type: { name: 'Group' }
+
   # @return [Array<String>]
   def self.supported_events
     %w[app.memberships.create app.memberships.destroy app.points.give app.points.receive]
