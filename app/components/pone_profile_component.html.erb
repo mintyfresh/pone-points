@@ -12,7 +12,7 @@
       </small>
     </h1>
     <p class="mb-0">
-      <%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone points.
+      <%= @pone.name %> currently has <strong><%= number_to_human(@pone.points_count) %></strong> good pone <%= 'point'.pluralize(@pone.points_count) %>.
     </p>
   </div>
 </div>
