@@ -1,0 +1,29 @@
+<% content_for(:title, t('.title', name: @group.name)) %>
+<% content_for(:open_graph) do %>
+  <%= tag.meta(property: 'og:title', content: "#{@group.name} is full of good pones") %>
+  <%= tag.meta(property: 'og:description', content: "#{@group.name} has #{number_to_human(@group.members_count)} good #{'pone'.pluralize(@group.members_count)}") %>
+  <%= tag.meta(property: 'og:url', content: group_url(@group)) %>
+<% end %>
+<h1><%= @group.name %></h1>
+<% if @group.description.present? %>
+  <p>
+    <%= @group.description %>
+  </p>
+<% end %>
+<div class="mb-3">
+  <% if Pundit.policy(current_pone, @group).join? %>
+    <% if @group.member?(current_pone) %>
+      <%= button_to('Leave Group', leave_group_path(@group), class: 'btn btn-danger', method: :post, disabled: @group.owner == current_pone) %>
+    <% else %>
+      <%= button_to('Join Group', join_group_path(@group), class: 'btn btn-primary', method: :post) %>
+    <% end %>
+  <% end %>
+</div>
+<h2>Members</h2>
+<% @group.members.each do |member| %>
+  <div class="card mb-2">
+    <div class="card-body">
+      <%= link_to(member.name, member) %>
+    </div>
+  </div>
+<% end %>

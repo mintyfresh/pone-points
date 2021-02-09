@@ -13,7 +13,7 @@ gem 'blueprinter'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'faker'
 gem 'faraday'
-gem 'has_unique_attribute'
+gem 'has_unique_attribute', '~> 0.1.3'
 gem 'image_processing'
 gem 'mini_magick'
 gem 'oj'

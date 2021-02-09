@@ -51,6 +51,12 @@ class Group < ApplicationRecord
   end
 
   # @param member [Pone]
+  # @return [Boolean]
+  def member?(member)
+    memberships.exists?(member: member)
+  end
+
+  # @param member [Pone]
   # @return [Membership, nil]
   def remove_member(member)
     memberships.find_by(member: member)&.destroy!

@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   # External OAuth callback route.
   match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
 
+  resources :groups, only: %i[index show new create], param: :slug do
+    post :join, on: :member
+    post :leave, on: :member
+  end
+
   resources :points, only: [] do
     get :recent, on: :collection
   end

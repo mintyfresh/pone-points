@@ -1,0 +1,8 @@
+en:
+  groups:
+    index:
+      title: Groups - Good Pone Points
+    show:
+      title: '%{name} is full of Good Pones - Good Pone Points'
+    new:
+      title: Create New Group - Good Pone Points
