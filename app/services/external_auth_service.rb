@@ -6,7 +6,7 @@ class ExternalAuthService
     'github'  => 'PoneGithubCredential'
   }.freeze
 
-  TOKEN_ENCRYPTOR = ActiveSupport::MessageEncryptor.new(ENV['EXTERNAL_AUTH_KEY']).freeze
+  TOKEN_ENCRYPTOR = ActiveSupport::MessageEncryptor.new(ENV['EXTERNAL_AUTH_KEY'])
 
   # @param external_auth_hash [Hash]
   # @param current_pone [Pone]
