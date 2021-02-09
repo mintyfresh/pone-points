@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PonesController < ApplicationController
-  SUPPORTED_MODES = %w[points activity achievements].freeze
+  SUPPORTED_MODES = %w[points activity achievements groups].freeze
 
   before_action :set_mode, only: :show
 

@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   def index
     authorize(Group)
-    @groups = policy_scope(Group).order(:id)
+    @groups = policy_scope(Group).order(:id).preload(:owner)
   end
 
   def show
