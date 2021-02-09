@@ -4,21 +4,34 @@
   <%= tag.meta(property: 'og:description', content: "#{@group.name} has #{number_to_human(@group.members_count)} good #{'pone'.pluralize(@group.members_count)}") %>
   <%= tag.meta(property: 'og:url', content: group_url(@group)) %>
 <% end %>
-<h1><%= @group.name %></h1>
+<div class="row">
+  <div class="col-auto">
+    <h1><%= @group.name %></h1>
+  </div>
+  <% if Pundit.policy(current_pone, @group).join? %>
+    <div class="col text-end mt-auto">
+      <% if @group.member?(current_pone) %>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="group_controls_dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Controls
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="group_controls_dropdown">
+            <li><%= link_to('Webhooks', group_webhooks_path(@group), class: 'dropdown-item') %></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><%= link_to('Leave Group', leave_group_path(@group), class: 'dropdown-item text-danger', method: :post, disabled: @group.owner == current_pone) %></li>
+          </ul>
+        </div>
+      <% else %>
+        <%= button_to('Join Group', join_group_path(@group), class: 'btn btn-primary', method: :post) %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 <% if @group.description.present? %>
   <p>
     <%= @group.description %>
   </p>
 <% end %>
-<div class="mb-3">
-  <% if Pundit.policy(current_pone, @group).join? %>
-    <% if @group.member?(current_pone) %>
-      <%= button_to('Leave Group', leave_group_path(@group), class: 'btn btn-danger', method: :post, disabled: @group.owner == current_pone) %>
-    <% else %>
-      <%= button_to('Join Group', join_group_path(@group), class: 'btn btn-primary', method: :post) %>
-    <% end %>
-  <% end %>
-</div>
 <h2>Members</h2>
 <% @group.members.each do |member| %>
   <div class="card mb-2">
