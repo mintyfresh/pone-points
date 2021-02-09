@@ -26,10 +26,10 @@
 #  fk_rails_...  (owner_id => pones.id)
 #
 FactoryBot.define do
-  factory :webhook do
-    association :owner, factory: :pone, strategy: :build
+  factory :pone_webhook, class: 'PoneWebhook', parent: :webhook do
+    association :event_source, factory: :pone, strategy: :build
 
-    name { Faker::Book.title }
-    url { Faker::Internet.url }
+    type { 'PoneWebhook' }
+    events { PoneWebhook.supported_events.sample(3) }
   end
 end

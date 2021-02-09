@@ -6,7 +6,7 @@ RSpec.describe WebhookPolicy, type: :policy do
   subject(:policy) { described_class }
 
   let(:webhook) { build(:webhook) }
-  let(:pone) { webhook.pone }
+  let(:owner) { webhook.owner }
   let(:other_pone) { build(:pone) }
 
   permissions :index?, :create? do
@@ -15,7 +15,7 @@ RSpec.describe WebhookPolicy, type: :policy do
     end
 
     it 'permits authenticated pones' do
-      expect(policy).to permit(pone, Webhook)
+      expect(policy).to permit(other_pone, Webhook)
     end
   end
 
@@ -25,7 +25,7 @@ RSpec.describe WebhookPolicy, type: :policy do
     end
 
     it 'permits the owner of the webhook' do
-      expect(policy).to permit(pone, webhook)
+      expect(policy).to permit(owner, webhook)
     end
 
     it 'does not permit other pones' do

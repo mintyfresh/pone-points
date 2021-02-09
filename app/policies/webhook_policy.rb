@@ -8,7 +8,7 @@ class WebhookPolicy < ApplicationPolicy
   end
 
   def show?
-    current_pone.present? && current_pone == webhook.pone
+    current_pone.present? && current_pone == webhook.owner
   end
 
   def create?
@@ -16,18 +16,18 @@ class WebhookPolicy < ApplicationPolicy
   end
 
   def regenerate?
-    current_pone.present? && current_pone == webhook.pone
+    current_pone.present? && current_pone == webhook.owner
   end
 
   def destroy?
-    current_pone.present? && current_pone == webhook.pone
+    current_pone.present? && current_pone == webhook.owner
   end
 
   class Scope < Scope
     def resolve
       return scope.none if current_pone.nil?
 
-      scope.where(pone: current_pone)
+      scope.where(owner: current_pone)
     end
   end
 end

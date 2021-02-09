@@ -21,12 +21,13 @@
 class Pone < ApplicationRecord
   include Sluggable
   include Verifyable
+  include Webhookable
 
   has_one_attached :avatar
 
   has_many :api_keys, dependent: :destroy, inverse_of: :pone
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
-  has_many :webhooks, dependent: :destroy, inverse_of: :pone
+  has_many :owned_webhooks, class_name: 'Webhook', dependent: :destroy, foreign_key: :owner_id, inverse_of: :owner
 
   has_many :owned_groups, class_name: 'Group', dependent: :restrict_with_error,
                           foreign_key: :owner_id, inverse_of: :owner

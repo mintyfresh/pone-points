@@ -37,6 +37,16 @@ FactoryBot.define do
       end
     end
 
+    trait :with_groups do
+      transient do
+        groups_count { 3 }
+      end
+
+      after(:build) do |pone, e|
+        pone.groups = build_list(:group, e.groups_count)
+      end
+    end
+
     trait :with_points do
       transient do
         points_count { 3 }

@@ -25,6 +25,7 @@
 #
 class Group < ApplicationRecord
   include Sluggable
+  include Webhookable
 
   NAME_MAX_LENGTH        = 50
   DESCRIPTION_MAX_LENGTH = 1000

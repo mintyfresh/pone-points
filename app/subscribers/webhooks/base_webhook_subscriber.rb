@@ -15,14 +15,14 @@ module Webhooks
   protected
 
     # @abstract
-    # @return [Pone, Array<Pone>]
-    def pones
+    # @return [Webhookable, Array<Webhookable>]
+    def event_source
       raise NotImplementedError, "#{self.class.name} does not implement `#{__method__}`."
     end
 
     # @return [Enumerable<Webhook>]
     def webhooks
-      Webhook.where(pone: pones).where_event(event)
+      Webhook.where(event_source: event_source).where_event(event)
     end
 
     # @abstract

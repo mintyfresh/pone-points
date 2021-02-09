@@ -439,13 +439,16 @@ ALTER SEQUENCE public.unlocked_achievements_id_seq OWNED BY public.unlocked_achi
 
 CREATE TABLE public.webhooks (
     id bigint NOT NULL,
-    pone_id bigint NOT NULL,
+    owner_id bigint NOT NULL,
     name character varying NOT NULL,
     signing_key character varying NOT NULL,
     events character varying[] NOT NULL,
     url character varying NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    type character varying NOT NULL,
+    event_source_type character varying NOT NULL,
+    event_source_id bigint NOT NULL
 );
 
 
@@ -833,10 +836,17 @@ CREATE UNIQUE INDEX index_unlocked_achievements_on_pone_id_and_achievement_id ON
 
 
 --
--- Name: index_webhooks_on_pone_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_webhooks_on_event_source; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_webhooks_on_pone_id ON public.webhooks USING btree (pone_id);
+CREATE INDEX index_webhooks_on_event_source ON public.webhooks USING btree (event_source_type, event_source_id);
+
+
+--
+-- Name: index_webhooks_on_owner_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_webhooks_on_owner_id ON public.webhooks USING btree (owner_id);
 
 
 --
@@ -876,7 +886,7 @@ ALTER TABLE ONLY public.points
 --
 
 ALTER TABLE ONLY public.webhooks
-    ADD CONSTRAINT fk_rails_722c3a6266 FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+    ADD CONSTRAINT fk_rails_722c3a6266 FOREIGN KEY (owner_id) REFERENCES public.pones(id);
 
 
 --
@@ -953,6 +963,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210206223810'),
 ('20210208205331'),
 ('20210209004912'),
-('20210209005853');
+('20210209005853'),
+('20210209025300');
 
 

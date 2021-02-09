@@ -8,9 +8,9 @@ module Webhooks
 
   protected
 
-    # @return [Array<Pone>]
-    def pones
-      [point.pone, point.granted_by]
+    # @return [Array<Pone, Group>]
+    def event_source
+      [point.pone, point.granted_by, *point.pone.groups, *point.granted_by.groups]
     end
 
     # @return [String]

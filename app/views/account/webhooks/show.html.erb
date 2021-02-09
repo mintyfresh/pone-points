@@ -10,7 +10,7 @@
   <div class="mb-3">
     <%= label_tag(:events) %>
     <div class="row">
-      <% Webhook::SUPPORTED_EVENTS.each do |event| %>
+      <% @webhook.supported_events.each do |event| %>
         <div class="col-4">
           <div class="form-check">
             <%= check_box_tag('create_webhook_form[events][]', event, {}, id: event, class: 'form-check-input', disabled: true) %>

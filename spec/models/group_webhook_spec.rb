@@ -25,11 +25,16 @@
 #
 #  fk_rails_...  (owner_id => pones.id)
 #
-FactoryBot.define do
-  factory :webhook do
-    association :owner, factory: :pone, strategy: :build
+require 'rails_helper'
 
-    name { Faker::Book.title }
-    url { Faker::Internet.url }
+RSpec.describe GroupWebhook, type: :model do
+  subject(:webhook) { build(:group_webhook) }
+
+  it 'has a valid factory' do
+    expect(webhook).to be_valid
+      .and be_a(described_class)
+      .and have_attributes(type: described_class.sti_name)
   end
+
+  it_behaves_like Webhook
 end

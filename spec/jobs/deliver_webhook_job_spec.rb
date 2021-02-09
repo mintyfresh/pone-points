@@ -8,7 +8,7 @@ RSpec.describe DeliverWebhookJob, type: :job do
   describe '#perform' do
     subject(:perform) { job.perform(webhook, webhook_json) }
 
-    let(:webhook) { create(:webhook) }
+    let(:webhook) { create(:pone_webhook) }
     let(:webhook_json) { '{"event":"app.mock.event"}' }
 
     before(:each) do

@@ -4,34 +4,37 @@
 #
 # Table name: webhooks
 #
-#  id          :bigint           not null, primary key
-#  pone_id     :bigint           not null
-#  name        :string           not null
-#  signing_key :string           not null
-#  events      :string           not null, is an Array
-#  url         :string           not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id                :bigint           not null, primary key
+#  owner_id          :bigint           not null
+#  name              :string           not null
+#  signing_key       :string           not null
+#  events            :string           not null, is an Array
+#  url               :string           not null
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  type              :string           not null
+#  event_source_type :string           not null
+#  event_source_id   :bigint           not null
 #
 # Indexes
 #
-#  index_webhooks_on_pone_id  (pone_id)
+#  index_webhooks_on_event_source  (event_source_type,event_source_id)
+#  index_webhooks_on_owner_id      (owner_id)
 #
 # Foreign Keys
 #
-#  fk_rails_...  (pone_id => pones.id)
+#  fk_rails_...  (owner_id => pones.id)
 #
 require 'rails_helper'
 
-RSpec.describe Webhook, type: :model do
-  subject(:webhook) { build(:webhook) }
-
-  it 'has a valid factory' do
-    expect(webhook).to be_valid
+RSpec.shared_examples_for Webhook, type: :model do
+  it 'is invalid without an owner' do
+    webhook.owner = nil
+    expect(webhook).to be_invalid
   end
 
-  it 'is invalid without a pone' do
-    webhook.pone = nil
+  it 'is invalid without an event source' do
+    webhook.event_source = nil
     expect(webhook).to be_invalid
   end
 
