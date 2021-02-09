@@ -31,6 +31,9 @@ class Pone < ApplicationRecord
   has_many :owned_groups, class_name: 'Group', dependent: :restrict_with_error,
                           foreign_key: :owner_id, inverse_of: :owner
 
+  has_many :memberships, dependent: :destroy, foreign_key: :member_id, inverse_of: :member
+  has_many :groups, through: :memberships
+
   has_many :points, dependent: :destroy, inverse_of: :pone
   has_many :granted_points, class_name: 'Point', dependent: :restrict_with_error,
                             foreign_key: :granted_by_id, inverse_of: :granted_by

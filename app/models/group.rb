@@ -31,6 +31,9 @@ class Group < ApplicationRecord
 
   belongs_to :owner, class_name: 'Pone', inverse_of: :owned_groups
 
+  has_many :memberships, dependent: :destroy, inverse_of: :group
+  has_many :members, through: :memberships
+
   has_unique_attribute :name
   has_unique_attribute :slug
 
@@ -38,4 +41,16 @@ class Group < ApplicationRecord
   validates :description, length: { maximum: DESCRIPTION_MAX_LENGTH }
 
   generates_slug_from :name
+
+  # @param pone [Pone]
+  # @return [Membership]
+  def add_member(pone)
+    memberships.find_or_create_by!(pone: pone)
+  end
+
+  # @param pone [Pone]
+  # @return [Membership, nil]
+  def remove_member(pone)
+    memberships.find_by(pone: pone)&.destroy!
+  end
 end

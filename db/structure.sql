@@ -258,6 +258,38 @@ ALTER SEQUENCE public.groups_id_seq OWNED BY public.groups.id;
 
 
 --
+-- Name: memberships; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.memberships (
+    id bigint NOT NULL,
+    group_id bigint NOT NULL,
+    member_id bigint NOT NULL,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: memberships_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.memberships_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: memberships_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.memberships_id_seq OWNED BY public.memberships.id;
+
+
+--
 -- Name: points; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -479,6 +511,13 @@ ALTER TABLE ONLY public.groups ALTER COLUMN id SET DEFAULT nextval('public.group
 
 
 --
+-- Name: memberships id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.memberships ALTER COLUMN id SET DEFAULT nextval('public.memberships_id_seq'::regclass);
+
+
+--
 -- Name: points id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -567,6 +606,14 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 ALTER TABLE ONLY public.groups
     ADD CONSTRAINT groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: memberships memberships_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.memberships
+    ADD CONSTRAINT memberships_pkey PRIMARY KEY (id);
 
 
 --
@@ -692,6 +739,27 @@ CREATE INDEX index_groups_on_owner_id ON public.groups USING btree (owner_id);
 --
 
 CREATE UNIQUE INDEX index_groups_on_slug ON public.groups USING btree (slug);
+
+
+--
+-- Name: index_memberships_on_group_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_memberships_on_group_id ON public.memberships USING btree (group_id);
+
+
+--
+-- Name: index_memberships_on_group_id_and_member_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_memberships_on_group_id_and_member_id ON public.memberships USING btree (group_id, member_id);
+
+
+--
+-- Name: index_memberships_on_member_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_memberships_on_member_id ON public.memberships USING btree (member_id);
 
 
 --
@@ -828,6 +896,14 @@ ALTER TABLE ONLY public.points
 
 
 --
+-- Name: memberships fk_rails_aaf389f138; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.memberships
+    ADD CONSTRAINT fk_rails_aaf389f138 FOREIGN KEY (group_id) REFERENCES public.groups(id);
+
+
+--
 -- Name: unlocked_achievements fk_rails_b38a46bfcf; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -852,6 +928,14 @@ ALTER TABLE ONLY public.unlocked_achievements
 
 
 --
+-- Name: memberships fk_rails_d50c4f4a6c; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.memberships
+    ADD CONSTRAINT fk_rails_d50c4f4a6c FOREIGN KEY (member_id) REFERENCES public.pones(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -868,6 +952,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210206041844'),
 ('20210206223810'),
 ('20210208205331'),
-('20210209004912');
+('20210209004912'),
+('20210209005853');
 
 
