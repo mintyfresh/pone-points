@@ -54,8 +54,11 @@ Metrics/MethodLength:
 
 Naming/MethodParameterName:
   AllowedNames:
-    - dn
-    - id
+    - xl
+    - lg
+    - md
+    - sm
+    - xs
 
 Naming/RescuedExceptionsVariableName:
   PreferredName: error

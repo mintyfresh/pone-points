@@ -27,7 +27,7 @@ FactoryBot.define do
   factory :group do
     association :owner, factory: :pone, strategy: :build
 
-    sequence(:name) { |n| "#{Faker::Book.title} #{n}" }
+    name { generate(:group_name) }
     description { Faker::Hipster.sentence }
 
     trait :with_members do

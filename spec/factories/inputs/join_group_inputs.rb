@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :create_group_input, class: 'Hash' do
+  factory :join_group_input, class: 'Hash' do
     skip_create
     initialize_with { attributes }
 
-    name { generate(:group_name) }
-    description { Faker::Hipster.sentence }
+    # TODO: Define attributes.
 
     trait :invalid do
-      count { 0 }
+      # TODO: Define invalid input.
     end
   end
 end
