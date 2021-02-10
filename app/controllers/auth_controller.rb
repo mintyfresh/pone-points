@@ -58,6 +58,15 @@ class AuthController < ApplicationController
     redirect_to current_pone
   end
 
+  def external_failure
+    flash[:external_auth_error] = ExternalAuthError.new(
+      code:    params[:error],
+      message: params[:error_description]
+    )
+
+    redirect_to sign_in_path
+  end
+
   def external_sign_up
     payload = external_auth_service.parse_sign_up_token(params[:sign_up_token])
     return redirect_to('/404.html') if payload.blank?

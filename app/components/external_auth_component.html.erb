@@ -1,3 +1,9 @@
+<% if external_auth_error.present? %>
+  <div class="alert alert-danger" role="alert">
+    <%= external_auth_error.message %>
+    <i class="d-block small pt-1">Error Code: <%= external_auth_error.code %></i>
+  </div>
+<% end %>
 <div class="text-center">
   <%= link_to('/auth/discord', class: 'btn btn-outline-secondary', method: :post) do %>
     <i class="bi-discord"></i>
