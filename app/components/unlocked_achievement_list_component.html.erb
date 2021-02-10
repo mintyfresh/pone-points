@@ -6,6 +6,11 @@
         <%= unlocked_achievement.achievement.name %>
       </div>
       <%= unlocked_achievement.achievement.description %>
+      <div class="text-end w-100">
+        <i class="text-muted small">
+          <%= time_ago_in_words(unlocked_achievement.created_at) %> ago
+        </i>
+      </div>
     </div>
   </div>
 <% end %>
