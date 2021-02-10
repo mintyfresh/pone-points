@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "webhook": {
+      "title": "Webhook",
+      "type": "object",
+      "properties": {
+        "webhook_id": {
+          "type": "integer"
+        },
+        "event": {
+          "type": "string"
+        },
+        "occurred_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "webhook_id",
+        "event",
+        "occurred_at"
+      ]
+    }
+  }
+}

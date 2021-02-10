@@ -1,0 +1,11 @@
+<h1>V1 API JSON Schema</h1>
+<% @files.each do |category, files| %>
+  <div class="mb-3">
+    <h2 class="text-capitalize"><%= category.join(' ').presence || 'API' %></h2>
+    <% files.each do |file| %>
+      <div>
+        <%= link_to(file, api_v1_schema_file_path(file)) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

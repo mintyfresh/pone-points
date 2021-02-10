@@ -26,5 +26,11 @@ RSpec.describe Webhooks::MembershipCreateWebhookSubscriber, type: :subscriber do
       expect { perform }.to have_enqueued_job(DeliverWebhookJob).once
         .with(webhook, include_json(group: { slug: membership.group.slug }, member: { slug: membership.member.slug }))
     end
+
+    it 'matches the webhook JSON schema' do
+      expect { perform }.to have_enqueued_job(DeliverWebhookJob).once.with(
+        webhook, match_schema('webhooks/app.memberships.create')
+      )
+    end
   end
 end

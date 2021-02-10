@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Member Left Group Webhook",
+  "type": "object",
+  "allOf": [
+    { "$ref": "webhook.schema.json#/definitions/webhook" },
+    {
+      "properties": {
+        "event": {
+          "type": "string",
+          "enum": ["app.memberships.destroy"]
+        },
+        "member": {
+          "$ref": "../pone.schema.json#/definitions/pone"
+        },
+        "group": {
+          "$ref": "../group.schema.json#/definitions/group"
+        }
+      }
+    }
+  ]
+}

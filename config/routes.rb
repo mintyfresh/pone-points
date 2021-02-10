@@ -68,6 +68,9 @@ Rails.application.routes.draw do
         get :me, on: :collection
         get :groups, on: :member
       end
+
+      get '/schema', to: 'schema#index'
+      get '/schema/*file', to: 'schema#show', constraints: { file: /.+\.schema\.json/ }, as: :schema_file
     end
   end
 

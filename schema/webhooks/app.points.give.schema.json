@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Point Given Webhook",
+  "type": "object",
+  "allOf": [
+    { "$ref": "webhook.schema.json#/definitions/webhook" },
+    {
+      "properties": {
+        "event": {
+          "type": "string",
+          "enum": ["app.points.give"]
+        },
+        "pone": {
+          "$ref": "../pone.schema.json#/definitions/pone"
+        }
+      }
+    }
+  ]
+}

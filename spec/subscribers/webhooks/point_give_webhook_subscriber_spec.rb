@@ -22,6 +22,12 @@ RSpec.describe Webhooks::PointGiveWebhookSubscriber, type: :subscriber do
       )
     end
 
+    it 'matches the webhook JSON schema' do
+      expect { perform }.to have_enqueued_job(DeliverWebhookJob).once.with(
+        webhook, match_schema('webhooks/app.points.give')
+      )
+    end
+
     it 'includes information about the point in the webhook' do
       expect { perform }.to have_enqueued_job(DeliverWebhookJob).once
         .with(webhook, include_json(point: { id: point.id }))
