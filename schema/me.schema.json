@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "me": {
+      "title": "Me",
+      "allOf": [
+        {
+          "$ref": "pone.schema.json#/definitions/pone"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "giftable_points_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "daily_giftable_points_count": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "giftable_points_count",
+            "daily_giftable_points_count"
+          ]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "pone": { "$ref": "#/definitions/me" }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pone"
+  ]
+}

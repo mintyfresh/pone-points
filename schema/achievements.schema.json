@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "achievements": {
+      "type": "array",
+      "items": {
+        "$ref": "achievement.schema.json#/definitions/achievement"
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "type": "object",
+          "properties": {
+            "pone": {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          },
+          "additionalProperties": false,
+          "required": ["pone"]
+        }
+      },
+      "additionalProperties": false,
+      "required": ["links"]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "achievements",
+    "meta"
+  ]
+}

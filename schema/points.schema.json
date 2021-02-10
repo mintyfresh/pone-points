@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "links": {
+      "type": "object",
+      "properties": {
+        "pone": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "give_points": {
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "pone",
+        "give_points"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["links"]
+    }
+  },
+  "properties": {
+    "points": {
+      "type": "array",
+      "items": {
+        "$ref": "point.schema.json#/definitions/point"
+      }
+    },
+    "meta": {
+      "$ref": "#/definitions/meta"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "points",
+    "meta"
+  ]
+}

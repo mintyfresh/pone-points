@@ -17,6 +17,7 @@ RSpec.resource 'Pones', type: :acceptance do
 
     example_request 'Listing pones' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:pones)
       expect(response_body).to include_json(
         pones: Pone.first(25).map { |pone| { slug: pone.slug } }
       )
@@ -31,6 +32,7 @@ RSpec.resource 'Pones', type: :acceptance do
 
     example_request 'Requesting a specific pone' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:pone)
       expect(response_body).to include_json(
         pone: { slug: slug }
       )
@@ -45,6 +47,7 @@ RSpec.resource 'Pones', type: :acceptance do
 
     example_request 'Requesting additional information about your own pone' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:me)
       expect(response_body).to include_json(
         pone: {
           slug:                        api_key.pone.slug,
@@ -63,6 +66,7 @@ RSpec.resource 'Pones', type: :acceptance do
 
     example_request "Requesting all of a pone's groups" do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:groups)
       expect(response_body).to include_json(
         groups: pone.groups.order(:id).first(25).map { |group| { slug: group.slug } }
       )

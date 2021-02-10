@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "point": {
+      "title": "Point",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "granted_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "pone": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "granted_by": {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self",
+            "pone",
+            "granted_by"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "message",
+        "count",
+        "granted_at",
+        "links"
+      ]
+    }
+  },
+  "properties": {
+    "point": { "$ref": "#/definitions/point" }
+  },
+  "additionalProperties": false,
+  "required": [
+    "point"
+  ]
+}

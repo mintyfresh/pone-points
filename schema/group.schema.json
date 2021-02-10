@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "group": {
+      "title": "Group",
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "page": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "owner": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "members": {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self",
+            "page",
+            "owner",
+            "members"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "name",
+        "created_at",
+        "links"
+      ]
+    }
+  },
+  "properties": {
+    "group": { "$ref": "#/definitions/group" }
+  },
+  "additionalProperties": false,
+  "required": [
+    "group"
+  ]
+}

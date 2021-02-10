@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "group.schema.json#/definitions/group"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "groups"
+  ]
+}

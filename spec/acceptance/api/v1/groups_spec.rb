@@ -17,6 +17,7 @@ RSpec.resource 'Groups', type: :acceptance do
 
     example_request 'Listing groups' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:groups)
       expect(response_body).to include_json(
         groups: Group.first(25).map { |group| { slug: group.slug } }
       )
@@ -31,6 +32,7 @@ RSpec.resource 'Groups', type: :acceptance do
 
     example_request 'Requesting a specific group' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:group)
       expect(response_body).to include_json(
         group: { slug: slug, description: group.description }
       )
@@ -45,6 +47,7 @@ RSpec.resource 'Groups', type: :acceptance do
 
     example_request 'Requesting all of the members of a group' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:members)
       expect(response_body).to include_json(
         members: group.members.order(:id).first(25).map { |member| { slug: member.slug } }
       )

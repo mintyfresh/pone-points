@@ -18,6 +18,7 @@ RSpec.resource 'Points', type: :acceptance do
 
     example_request "Listing a pone's points" do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:points)
       expect(response_body).to include_json(
         points: pone.points.first(25).map { |point| { id: point.id } }
       )
@@ -30,6 +31,7 @@ RSpec.resource 'Points', type: :acceptance do
 
     example_request 'Listing the points a pone has given out' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:points)
       expect(response_body).to include_json(
         points: pone.granted_points.first(25).map { |point| { id: point.id } }
       )
@@ -46,6 +48,7 @@ RSpec.resource 'Points', type: :acceptance do
 
     example_request 'Requesting a specific point entry' do
       expect(response_status).to eq(200)
+      expect(response_body).to match_schema(:point)
       expect(response_body).to include_json(
         point: { id: id }
       )
@@ -67,6 +70,7 @@ RSpec.resource 'Points', type: :acceptance do
 
     example_request 'Giving points to a pone' do
       expect(response_status).to eq(201)
+      expect(response_body).to match_schema(:point)
       expect(response_body).to include_json(
         point: {
           count:   count,

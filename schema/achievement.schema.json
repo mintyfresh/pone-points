@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "achievement": {
+      "title": "Achievement",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description"
+      ]
+    }
+  },
+  "properties": {
+    "achievement": { "$ref": "#/definitions/achievement" }
+  },
+  "additionalProperties": false,
+  "required": [
+    "achievement"
+  ]
+}

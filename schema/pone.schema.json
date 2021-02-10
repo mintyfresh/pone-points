@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "pone": {
+      "title": "Pone",
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "points_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "joined_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "avatar_url": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          ]
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "page": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "achievements": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "points": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "granted_points": {
+              "type": "string",
+              "format": "uri-reference"
+            },
+            "groups": {
+              "type": "string",
+              "format": "uri-reference"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "self",
+            "page",
+            "achievements",
+            "points",
+            "granted_points",
+            "groups"
+          ]
+        }
+      },
+      "required": [
+        "slug",
+        "name",
+        "points_count",
+        "joined_at",
+        "avatar_url",
+        "links"
+      ]
+    }
+  },
+  "properties": {
+    "pone": {
+      "$ref": "#/definitions/pone"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pone"
+  ]
+}
