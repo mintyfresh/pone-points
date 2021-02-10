@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+require 'rails_helper'
+
+RSpec.describe <%= subscriber_class_name %>, type: :subscriber do
+  subject(:subscriber) { described_class.new(event, payload) }
+
+  let(:event) { 'app.things.happened' }
+  let(:payload) { { occurred_at: Time.current } }
+
+  describe '#perform' do
+    subject(:perform) { subscriber.perform }
+
+    it 'does something useful' do
+      perform
+      pending("Add examples for #{__FILE__}")
+    end
+  end
+end
