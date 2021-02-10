@@ -19,12 +19,17 @@
 #  index_pones_on_slug  (slug) UNIQUE
 #
 require 'rails_helper'
+require_relative 'concerns/verifyable'
 
 RSpec.describe Pone, type: :model do
   subject(:pone) { build(:pone) }
 
   it 'has a valid factory' do
     expect(pone).to be_valid
+  end
+
+  it_behaves_like Verifyable do
+    subject(:pone) { create(:pone) }
   end
 
   context 'with an avatar' do

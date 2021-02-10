@@ -53,8 +53,6 @@ class Pone < ApplicationRecord
 
   before_verify :set_daily_giftable_points_count
 
-  after_verify :add_point_from_system_pone
-
   # @parma credential_class [Class<PoneCredential>]
   # @param external_id [String]
   # @return [Pone, nil]
@@ -101,15 +99,5 @@ private
   # @return [void]
   def set_daily_giftable_points_count
     self.daily_giftable_points_count = 3
-  end
-
-  # TODO: Remove me. Use pub/sub instead.
-  # @return [void]
-  def add_point_from_system_pone
-    points.find_or_create_by!(
-      granted_by: Pone.find_by!(name: 'System Pone'),
-      count:      1,
-      message:    'For being a good, verified pone, of course!'
-    )
   end
 end

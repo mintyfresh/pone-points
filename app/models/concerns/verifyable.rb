@@ -8,6 +8,13 @@ module Verifyable
 
     scope :verified,   -> { where.not(verified_at: nil) }
     scope :unverified, -> { where(verified_at: nil)     }
+
+    after_commit :publish_record_verified, if: :saved_change_to_verified_at?
+  end
+
+  # @return [Boolean]
+  def verified_before_last_save?
+    verified_at_before_last_save.present?
   end
 
   # @return [Boolean]
@@ -24,5 +31,12 @@ module Verifyable
         update!(verified_at: Time.current)
       end
     end
+  end
+
+private
+
+  # @return [void]
+  def publish_record_verified
+    publish(:verify) if verified? && !verified_before_last_save?
   end
 end

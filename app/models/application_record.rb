@@ -7,8 +7,8 @@ class ApplicationRecord < ActiveRecord::Base
 
   self.abstract_class = true
 
-  after_commit :publish_record_created,   on: :create
-  after_commit :publish_record_updated,   on: :update
+  after_commit :publish_record_created, on: :create
+  after_commit :publish_record_updated, on: :update, if: :saved_changes?
   after_commit :publish_record_destroyed, on: :destroy
 
 protected
@@ -27,7 +27,7 @@ protected
 
   # @return [void]
   def publish_record_updated
-    publish(:update)
+    publish(:update, changes: saved_changes.dup)
   end
 
   # @return [void]
