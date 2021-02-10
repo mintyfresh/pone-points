@@ -18,9 +18,10 @@ RSpec.describe 'GivePoints', type: :feature do
   end
 
   it 'gives the pone some points' do
-    sign_in_to_pone granted_by
+    sign_in_to_pone(granted_by)
+
     visit give_pone_points_path(pone)
-    fill_in_create_point_form input
+    fill_in_create_point_form(input)
 
     expect(page).to have_current_path(pone_path(pone, mode: 'points'))
       .and have_content("#{granted_by.name} gave #{pone.name} #{input[:count]}" \
@@ -38,9 +39,10 @@ RSpec.describe 'GivePoints', type: :feature do
     let(:input) { build(:create_point_input, message: '') }
 
     it 'displays an error message' do
-      sign_in_to_pone granted_by
+      sign_in_to_pone(granted_by)
+
       visit give_pone_points_path(pone)
-      fill_in_create_point_form input
+      fill_in_create_point_form(input)
 
       expect(page).to have_current_path(pone_points_path(pone))
         .and have_content("can't be blank")

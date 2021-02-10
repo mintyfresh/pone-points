@@ -35,6 +35,6 @@ RSpec::Matchers.define :have_published do |message|
   def satisfy?(payload)
     return true unless defined?(@expected_payload)
 
-    payload == @expected_payload || @expected_payload === payload
+    payload == @expected_payload || @expected_payload === payload # rubocop:disable Style/CaseEquality
   end
 end

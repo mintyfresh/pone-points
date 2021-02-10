@@ -54,6 +54,7 @@ Metrics/MethodLength:
 
 Naming/MethodParameterName:
   AllowedNames:
+    - as
     - xl
     - lg
     - md
