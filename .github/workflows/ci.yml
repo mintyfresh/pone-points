@@ -16,9 +16,10 @@ on:
       - master
 
 env:
+  RAILS_ENV: test
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
-  POSTGRES_DB: postgres
+  POSTGRES_DB: pone_points_test
 
 jobs:
   Rubocop:
