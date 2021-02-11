@@ -10,6 +10,11 @@ class CreateApiKeyForm < ApplicationForm
   validates :name, presence: true, length: { maximum: ApiKey::NAME_MAX_LENGTH }
   validates :description, length: { maximum: ApiKey::DESCRIPTION_MAX_LENGTH }
 
+  # @return [Class]
+  def self.policy_class
+    ApiKeyPolicy
+  end
+
   # @return [ApiKey]
   def perform
     super do

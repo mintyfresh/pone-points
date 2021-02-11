@@ -20,9 +20,9 @@ module Account
 
     def create
       authorize(ApiKey)
-      @form = CreateApiKeyForm.new(create_api_key_params) do |form|
-        form.pone = current_pone
-      end
+
+      @form = CreateApiKeyForm.new(permitted_attributes(CreateApiKeyForm))
+      @form.pone = current_pone
 
       if (api_key = @form.perform)
         flash[:show_token] = true
@@ -52,10 +52,6 @@ module Account
 
     def set_api_key
       @api_key = ApiKey.find(params[:id])
-    end
-
-    def create_api_key_params
-      params.require(:create_api_key_form).permit(:name, :description)
     end
   end
 end

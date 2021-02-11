@@ -23,6 +23,10 @@ class WebhookPolicy < ApplicationPolicy
     current_pone.present? && current_pone == webhook.owner
   end
 
+  def permitted_attributes_for_create
+    [:name, :url, :events, { events: [] }]
+  end
+
   class Scope < Scope
     def resolve
       return scope.none if current_pone.nil?

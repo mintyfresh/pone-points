@@ -22,7 +22,7 @@ module Account
     def create
       authorize(Webhook)
 
-      @form = CreatePoneWebhookForm.new(create_webhooks_params)
+      @form = CreatePoneWebhookForm.new(permitted_attributes(CreatePoneWebhookForm))
       @form.owner        = current_pone
       @form.event_source = current_pone
 
@@ -54,10 +54,6 @@ module Account
 
     def set_webhook
       @webhook = PoneWebhook.find(params[:id])
-    end
-
-    def create_webhooks_params
-      params.require(:create_pone_webhook_form).permit(:name, :url, :events, events: [])
     end
   end
 end

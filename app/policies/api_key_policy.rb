@@ -23,6 +23,11 @@ class ApiKeyPolicy < ApplicationPolicy
     current_pone.present? && current_pone == api_key.pone
   end
 
+  # @return [Array]
+  def permitted_attributes_for_create
+    %i[name description]
+  end
+
   class Scope < Scope
     def resolve
       return scope.none if current_pone.nil?

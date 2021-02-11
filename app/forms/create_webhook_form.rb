@@ -16,6 +16,11 @@ class CreateWebhookForm < ApplicationForm
   validates :url, presence: true, url: true
   validates :events, subset: { of: :supported_events }
 
+  # @return [Class]
+  def self.policy_class
+    WebhookPolicy
+  end
+
   # @return [Webhook]
   def perform
     super do
