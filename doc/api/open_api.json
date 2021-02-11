@@ -76,16 +76,16 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "400"
+                "x-example-value": "354"
               }
             },
             "examples": {
               "application/json": {
                 "achievements": [
                   {
-                    "id": 2,
-                    "description": "Receive points from the same pone at least 3 days in a row.",
-                    "name": "Somepone Likes You!"
+                    "id": 1,
+                    "description": "Give somepone a point!",
+                    "name": "A Good Pone"
                   },
                   {
                     "id": 3,
@@ -100,7 +100,7 @@
                 ],
                 "meta": {
                   "links": {
-                    "pone": "/api/v1/pones/jana_wilderman-1.json"
+                    "pone": "/api/v1/pones/rosario_braun-1.json"
                   }
                 }
               }
@@ -109,7 +109,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -127,7 +131,20 @@
           "application/json"
         ],
         "parameters": [
-
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page number",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of groups to show per page",
+            "required": false,
+            "type": "integer"
+          }
         ],
         "responses": {
           "200": {
@@ -147,44 +164,44 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "914"
+                "x-example-value": "1016"
               }
             },
             "examples": {
               "application/json": {
                 "groups": [
                   {
-                    "slug": "o-jerusalem-1",
-                    "created_at": "2021-02-11T05:57:27.047Z",
+                    "slug": "the-proper-study-1",
+                    "created_at": "2021-02-11T06:20:34.061Z",
                     "links": {
-                      "self": "/api/v1/groups/o-jerusalem-1.json",
-                      "page": "/groups/o-jerusalem-1",
-                      "owner": "/api/v1/pones/doreen-conroy-3.json",
-                      "members": "/api/v1/groups/o-jerusalem-1/members.json"
+                      "self": "/api/v1/groups/the-proper-study-1.json",
+                      "page": "/groups/the-proper-study-1",
+                      "owner": "/api/v1/pones/roberto-hand-3.json",
+                      "members": "/api/v1/groups/the-proper-study-1/members.json"
                     },
-                    "name": "O Jerusalem! 1"
+                    "name": "The Proper Study 1"
                   },
                   {
-                    "slug": "mr-standfast-2",
-                    "created_at": "2021-02-11T05:57:27.055Z",
+                    "slug": "infinite-jest-2",
+                    "created_at": "2021-02-11T06:20:34.069Z",
                     "links": {
-                      "self": "/api/v1/groups/mr-standfast-2.json",
-                      "page": "/groups/mr-standfast-2",
-                      "owner": "/api/v1/pones/nilsa-rodriguez-4.json",
-                      "members": "/api/v1/groups/mr-standfast-2/members.json"
+                      "self": "/api/v1/groups/infinite-jest-2.json",
+                      "page": "/groups/infinite-jest-2",
+                      "owner": "/api/v1/pones/muoi-4.json",
+                      "members": "/api/v1/groups/infinite-jest-2/members.json"
                     },
-                    "name": "Mr Standfast 2"
+                    "name": "Infinite Jest 2"
                   },
                   {
-                    "slug": "number-the-stars-3",
-                    "created_at": "2021-02-11T05:57:27.061Z",
+                    "slug": "the-world-the-flesh-and-the-devil-3",
+                    "created_at": "2021-02-11T06:20:34.073Z",
                     "links": {
-                      "self": "/api/v1/groups/number-the-stars-3.json",
-                      "page": "/groups/number-the-stars-3",
-                      "owner": "/api/v1/pones/kelvin-5.json",
-                      "members": "/api/v1/groups/number-the-stars-3/members.json"
+                      "self": "/api/v1/groups/the-world-the-flesh-and-the-devil-3.json",
+                      "page": "/groups/the-world-the-flesh-and-the-devil-3",
+                      "owner": "/api/v1/pones/derek-5.json",
+                      "members": "/api/v1/groups/the-world-the-flesh-and-the-devil-3/members.json"
                     },
-                    "name": "Number the Stars 3"
+                    "name": "The World, the Flesh and the Devil 3"
                   }
                 ],
                 "meta": {
@@ -201,7 +218,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -252,22 +273,22 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "355"
+                "x-example-value": "388"
               }
             },
             "examples": {
               "application/json": {
                 "group": {
-                  "slug": "of-mice-and-men-4",
-                  "created_at": "2021-02-11T05:57:27.089Z",
-                  "description": "Farm-to-table direct trade pitchfork goth squid.",
+                  "slug": "arms-and-the-man-4",
+                  "created_at": "2021-02-11T06:20:34.100Z",
+                  "description": "Heirloom +1 helvetica cliche diy wayfarers cardigan chambray.",
                   "links": {
-                    "self": "/api/v1/groups/of-mice-and-men-4.json",
-                    "page": "/groups/of-mice-and-men-4",
-                    "owner": "/api/v1/pones/sau-7.json",
-                    "members": "/api/v1/groups/of-mice-and-men-4/members.json"
+                    "self": "/api/v1/groups/arms-and-the-man-4.json",
+                    "page": "/groups/arms-and-the-man-4",
+                    "owner": "/api/v1/pones/wendell-mccullough-7.json",
+                    "members": "/api/v1/groups/arms-and-the-man-4/members.json"
                   },
-                  "name": "Of Mice and Men 4"
+                  "name": "Arms and the Man 4"
                 }
               }
             }
@@ -275,7 +296,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -306,6 +331,20 @@
             "description": " slug",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page number",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of members to show per page",
+            "required": false,
+            "type": "integer"
           }
         ],
         "responses": {
@@ -326,70 +365,70 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "1780"
+                "x-example-value": "1916"
               }
             },
             "examples": {
               "application/json": {
                 "members": [
                   {
-                    "slug": "kelvin-9",
+                    "slug": "chauncey-labadie-9",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.113Z",
+                    "joined_at": "2021-02-11T06:20:34.122Z",
                     "links": {
-                      "self": "/api/v1/pones/kelvin-9.json",
-                      "page": "/pones/kelvin-9",
-                      "achievements": "/api/v1/pones/kelvin-9/achievements.json",
-                      "points": "/api/v1/pones/kelvin-9/points.json",
-                      "granted_points": "/api/v1/pones/kelvin-9/points/granted.json",
-                      "groups": "/api/v1/pones/kelvin-9/groups.json"
+                      "self": "/api/v1/pones/chauncey-labadie-9.json",
+                      "page": "/pones/chauncey-labadie-9",
+                      "achievements": "/api/v1/pones/chauncey-labadie-9/achievements.json",
+                      "points": "/api/v1/pones/chauncey-labadie-9/points.json",
+                      "granted_points": "/api/v1/pones/chauncey-labadie-9/points/granted.json",
+                      "groups": "/api/v1/pones/chauncey-labadie-9/groups.json"
                     },
-                    "name": "kelvin 9",
+                    "name": "chauncey.labadie 9",
                     "points_count": 0
                   },
                   {
-                    "slug": "rossana-morar-10",
+                    "slug": "mariella_mueller-10",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.115Z",
+                    "joined_at": "2021-02-11T06:20:34.124Z",
                     "links": {
-                      "self": "/api/v1/pones/rossana-morar-10.json",
-                      "page": "/pones/rossana-morar-10",
-                      "achievements": "/api/v1/pones/rossana-morar-10/achievements.json",
-                      "points": "/api/v1/pones/rossana-morar-10/points.json",
-                      "granted_points": "/api/v1/pones/rossana-morar-10/points/granted.json",
-                      "groups": "/api/v1/pones/rossana-morar-10/groups.json"
+                      "self": "/api/v1/pones/mariella_mueller-10.json",
+                      "page": "/pones/mariella_mueller-10",
+                      "achievements": "/api/v1/pones/mariella_mueller-10/achievements.json",
+                      "points": "/api/v1/pones/mariella_mueller-10/points.json",
+                      "granted_points": "/api/v1/pones/mariella_mueller-10/points/granted.json",
+                      "groups": "/api/v1/pones/mariella_mueller-10/groups.json"
                     },
-                    "name": "rossana.morar 10",
+                    "name": "mariella_mueller 10",
                     "points_count": 0
                   },
                   {
-                    "slug": "sydney-11",
+                    "slug": "belva-11",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.117Z",
+                    "joined_at": "2021-02-11T06:20:34.126Z",
                     "links": {
-                      "self": "/api/v1/pones/sydney-11.json",
-                      "page": "/pones/sydney-11",
-                      "achievements": "/api/v1/pones/sydney-11/achievements.json",
-                      "points": "/api/v1/pones/sydney-11/points.json",
-                      "granted_points": "/api/v1/pones/sydney-11/points/granted.json",
-                      "groups": "/api/v1/pones/sydney-11/groups.json"
+                      "self": "/api/v1/pones/belva-11.json",
+                      "page": "/pones/belva-11",
+                      "achievements": "/api/v1/pones/belva-11/achievements.json",
+                      "points": "/api/v1/pones/belva-11/points.json",
+                      "granted_points": "/api/v1/pones/belva-11/points/granted.json",
+                      "groups": "/api/v1/pones/belva-11/groups.json"
                     },
-                    "name": "sydney 11",
+                    "name": "belva 11",
                     "points_count": 0
                   },
                   {
-                    "slug": "foster-kris-12",
+                    "slug": "georgiana-rogahn-12",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.119Z",
+                    "joined_at": "2021-02-11T06:20:34.128Z",
                     "links": {
-                      "self": "/api/v1/pones/foster-kris-12.json",
-                      "page": "/pones/foster-kris-12",
-                      "achievements": "/api/v1/pones/foster-kris-12/achievements.json",
-                      "points": "/api/v1/pones/foster-kris-12/points.json",
-                      "granted_points": "/api/v1/pones/foster-kris-12/points/granted.json",
-                      "groups": "/api/v1/pones/foster-kris-12/groups.json"
+                      "self": "/api/v1/pones/georgiana-rogahn-12.json",
+                      "page": "/pones/georgiana-rogahn-12",
+                      "achievements": "/api/v1/pones/georgiana-rogahn-12/achievements.json",
+                      "points": "/api/v1/pones/georgiana-rogahn-12/points.json",
+                      "granted_points": "/api/v1/pones/georgiana-rogahn-12/points/granted.json",
+                      "groups": "/api/v1/pones/georgiana-rogahn-12/groups.json"
                     },
-                    "name": "foster.kris 12",
+                    "name": "georgiana.rogahn 12",
                     "points_count": 0
                   }
                 ],
@@ -407,7 +446,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -438,6 +481,20 @@
             "description": "The pone's slug",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page number",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of points to show per page",
+            "required": false,
+            "type": "integer"
           }
         ],
         "responses": {
@@ -458,44 +515,44 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "976"
+                "x-example-value": "1119"
               }
             },
             "examples": {
               "application/json": {
                 "points": [
                   {
-                    "id": 3646,
+                    "id": 3826,
                     "count": 3,
-                    "granted_at": "2021-02-11T05:57:27.155Z",
+                    "granted_at": "2021-02-11T06:20:34.162Z",
                     "links": {
-                      "self": "/api/v1/pones/bridget-14/points/3646.json",
-                      "pone": "/api/v1/pones/bridget-14.json",
-                      "granted_by": "/api/v1/pones/palmer-15.json"
+                      "self": "/api/v1/pones/kindra_powlowski-14/points/3826.json",
+                      "pone": "/api/v1/pones/kindra_powlowski-14.json",
+                      "granted_by": "/api/v1/pones/alina-baumbach-15.json"
                     },
-                    "message": "Small batch narwhal aesthetic etsy vhs listicle."
+                    "message": "Mixtape pbr&b 90's aesthetic cliche yuccie farm-to-table quinoa stumptown."
                   },
                   {
-                    "id": 3647,
-                    "count": 1,
-                    "granted_at": "2021-02-11T05:57:27.158Z",
-                    "links": {
-                      "self": "/api/v1/pones/bridget-14/points/3647.json",
-                      "pone": "/api/v1/pones/bridget-14.json",
-                      "granted_by": "/api/v1/pones/ava-16.json"
-                    },
-                    "message": "Paleo selvage kale chips schlitz chambray kitsch wolf kinfolk lomo."
-                  },
-                  {
-                    "id": 3648,
+                    "id": 3827,
                     "count": 2,
-                    "granted_at": "2021-02-11T05:57:27.160Z",
+                    "granted_at": "2021-02-11T06:20:34.165Z",
                     "links": {
-                      "self": "/api/v1/pones/bridget-14/points/3648.json",
-                      "pone": "/api/v1/pones/bridget-14.json",
-                      "granted_by": "/api/v1/pones/juan-17.json"
+                      "self": "/api/v1/pones/kindra_powlowski-14/points/3827.json",
+                      "pone": "/api/v1/pones/kindra_powlowski-14.json",
+                      "granted_by": "/api/v1/pones/marge-graham-16.json"
                     },
-                    "message": "Waistcoat food truck tacos art party."
+                    "message": "Letterpress leggings bicycle rights diy fashion axe quinoa cornhole cronut wayfarers."
+                  },
+                  {
+                    "id": 3828,
+                    "count": 2,
+                    "granted_at": "2021-02-11T06:20:34.167Z",
+                    "links": {
+                      "self": "/api/v1/pones/kindra_powlowski-14/points/3828.json",
+                      "pone": "/api/v1/pones/kindra_powlowski-14.json",
+                      "granted_by": "/api/v1/pones/janyce-17.json"
+                    },
+                    "message": "Meggings muggle magic trust fund brunch."
                   }
                 ],
                 "meta": {
@@ -504,8 +561,8 @@
                   "links": {
                     "next": null,
                     "prev": null,
-                    "pone": "/api/v1/pones/bridget-14.json",
-                    "give_points": "/api/v1/pones/bridget-14/points/give.json"
+                    "pone": "/api/v1/pones/kindra_powlowski-14.json",
+                    "give_points": "/api/v1/pones/kindra_powlowski-14/points/give.json"
                   }
                 }
               }
@@ -514,7 +571,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -565,44 +626,44 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "1037"
+                "x-example-value": "1050"
               }
             },
             "examples": {
               "application/json": {
                 "points": [
                   {
-                    "id": 3650,
-                    "count": 2,
-                    "granted_at": "2021-02-11T05:57:27.195Z",
-                    "links": {
-                      "self": "/api/v1/pones/britta-20/points/3650.json",
-                      "pone": "/api/v1/pones/britta-20.json",
-                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
-                    },
-                    "message": "Diy waistcoat scenester sriracha shoreditch asymmetrical chambray."
-                  },
-                  {
-                    "id": 3651,
-                    "count": 3,
-                    "granted_at": "2021-02-11T05:57:27.198Z",
-                    "links": {
-                      "self": "/api/v1/pones/lou-rau-21/points/3651.json",
-                      "pone": "/api/v1/pones/lou-rau-21.json",
-                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
-                    },
-                    "message": "Brooklyn cliche synth marfa pbr&b post-ironic tumblr tousled."
-                  },
-                  {
-                    "id": 3652,
+                    "id": 3830,
                     "count": 1,
-                    "granted_at": "2021-02-11T05:57:27.201Z",
+                    "granted_at": "2021-02-11T06:20:34.201Z",
                     "links": {
-                      "self": "/api/v1/pones/casey_renner-22/points/3652.json",
-                      "pone": "/api/v1/pones/casey_renner-22.json",
-                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
+                      "self": "/api/v1/pones/marcela-yost-20/points/3830.json",
+                      "pone": "/api/v1/pones/marcela-yost-20.json",
+                      "granted_by": "/api/v1/pones/yuko-bauch-19.json"
                     },
-                    "message": "Vhs banjo typewriter skateboard street hella."
+                    "message": "Literally swag park hashtag single-origin coffee cred ennui."
+                  },
+                  {
+                    "id": 3831,
+                    "count": 1,
+                    "granted_at": "2021-02-11T06:20:34.204Z",
+                    "links": {
+                      "self": "/api/v1/pones/renita_sipes-21/points/3831.json",
+                      "pone": "/api/v1/pones/renita_sipes-21.json",
+                      "granted_by": "/api/v1/pones/yuko-bauch-19.json"
+                    },
+                    "message": "Pug mixtape drinking yuccie phlogiston skateboard neutra dreamcatcher."
+                  },
+                  {
+                    "id": 3832,
+                    "count": 2,
+                    "granted_at": "2021-02-11T06:20:34.206Z",
+                    "links": {
+                      "self": "/api/v1/pones/chang-satterfield-22/points/3832.json",
+                      "pone": "/api/v1/pones/chang-satterfield-22.json",
+                      "granted_by": "/api/v1/pones/yuko-bauch-19.json"
+                    },
+                    "message": "Fingerstache listicle lomo venmo."
                   }
                 ],
                 "meta": {
@@ -611,8 +672,8 @@
                   "links": {
                     "next": null,
                     "prev": null,
-                    "pone": "/api/v1/pones/galen_mertz-19.json",
-                    "give_points": "/api/v1/pones/galen_mertz-19/points/give.json"
+                    "pone": "/api/v1/pones/yuko-bauch-19.json",
+                    "give_points": "/api/v1/pones/yuko-bauch-19/points/give.json"
                   }
                 }
               }
@@ -621,7 +682,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -686,21 +751,21 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "305"
+                "x-example-value": "281"
               }
             },
             "examples": {
               "application/json": {
                 "point": {
-                  "id": 3654,
-                  "count": 3,
-                  "granted_at": "2021-02-11T05:57:27.232Z",
+                  "id": 3834,
+                  "count": 1,
+                  "granted_at": "2021-02-11T06:20:34.236Z",
                   "links": {
-                    "self": "/api/v1/pones/greg-weimann-24/points/3654.json",
-                    "pone": "/api/v1/pones/greg-weimann-24.json",
-                    "granted_by": "/api/v1/pones/sandi-maggio-25.json"
+                    "self": "/api/v1/pones/federico-shanahan-24/points/3834.json",
+                    "pone": "/api/v1/pones/federico-shanahan-24.json",
+                    "granted_by": "/api/v1/pones/calandra-25.json"
                   },
-                  "message": "Phlogiston photo booth asymmetrical paleo sartorial drinking."
+                  "message": "Bushwick 90's plaid skateboard."
                 }
               }
             }
@@ -708,7 +773,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -754,7 +823,9 @@
                   "properties": {
                     "count": {
                       "type": "integer",
-                      "description": "The number of points to give"
+                      "description": "The number of points to give",
+                      "minimum": 1,
+                      "maximum": 5
                     },
                     "message": {
                       "type": "string",
@@ -787,21 +858,21 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "296"
+                "x-example-value": "293"
               }
             },
             "examples": {
               "application/json": {
                 "point": {
-                  "id": 3657,
+                  "id": 3837,
                   "count": 2,
-                  "granted_at": "2021-02-11T05:57:27.271Z",
+                  "granted_at": "2021-02-11T06:20:34.273Z",
                   "links": {
-                    "self": "/api/v1/pones/romaine_bartell-27/points/3657.json",
-                    "pone": "/api/v1/pones/romaine_bartell-27.json",
-                    "granted_by": "/api/v1/pones/zachary_rippin-28.json"
+                    "self": "/api/v1/pones/abraham-27/points/3837.json",
+                    "pone": "/api/v1/pones/abraham-27.json",
+                    "granted_by": "/api/v1/pones/jackson_morar-28.json"
                   },
-                  "message": "Dreamcatcher wayfarers taxidermy beard lomo."
+                  "message": "Listicle pop-up irony waistcoat cred cornhole photo booth."
                 }
               }
             }
@@ -839,7 +910,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -862,14 +937,14 @@
             "in": "query",
             "description": "The page number",
             "required": false,
-            "type": "string"
+            "type": "integer"
           },
           {
             "name": "count",
             "in": "query",
             "description": "The number of pones to show per page",
             "required": false,
-            "type": "string"
+            "type": "integer"
           }
         ],
         "responses": {
@@ -890,7 +965,7 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "3294"
+                "x-example-value": "2990"
               }
             },
             "examples": {
@@ -912,93 +987,93 @@
                     "points_count": 0
                   },
                   {
-                    "slug": "genoveva-31",
+                    "slug": "rueben-31",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.296Z",
+                    "joined_at": "2021-02-11T06:20:34.297Z",
                     "links": {
-                      "self": "/api/v1/pones/genoveva-31.json",
-                      "page": "/pones/genoveva-31",
-                      "achievements": "/api/v1/pones/genoveva-31/achievements.json",
-                      "points": "/api/v1/pones/genoveva-31/points.json",
-                      "granted_points": "/api/v1/pones/genoveva-31/points/granted.json",
-                      "groups": "/api/v1/pones/genoveva-31/groups.json"
+                      "self": "/api/v1/pones/rueben-31.json",
+                      "page": "/pones/rueben-31",
+                      "achievements": "/api/v1/pones/rueben-31/achievements.json",
+                      "points": "/api/v1/pones/rueben-31/points.json",
+                      "granted_points": "/api/v1/pones/rueben-31/points/granted.json",
+                      "groups": "/api/v1/pones/rueben-31/groups.json"
                     },
-                    "name": "genoveva 31",
+                    "name": "rueben 31",
                     "points_count": 0
                   },
                   {
-                    "slug": "delinda-32",
+                    "slug": "ranee-32",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.297Z",
+                    "joined_at": "2021-02-11T06:20:34.298Z",
                     "links": {
-                      "self": "/api/v1/pones/delinda-32.json",
-                      "page": "/pones/delinda-32",
-                      "achievements": "/api/v1/pones/delinda-32/achievements.json",
-                      "points": "/api/v1/pones/delinda-32/points.json",
-                      "granted_points": "/api/v1/pones/delinda-32/points/granted.json",
-                      "groups": "/api/v1/pones/delinda-32/groups.json"
+                      "self": "/api/v1/pones/ranee-32.json",
+                      "page": "/pones/ranee-32",
+                      "achievements": "/api/v1/pones/ranee-32/achievements.json",
+                      "points": "/api/v1/pones/ranee-32/points.json",
+                      "granted_points": "/api/v1/pones/ranee-32/points/granted.json",
+                      "groups": "/api/v1/pones/ranee-32/groups.json"
                     },
-                    "name": "delinda 32",
+                    "name": "ranee 32",
                     "points_count": 0
                   },
                   {
-                    "slug": "forrest_frami-33",
+                    "slug": "rodrigo-schulist-33",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.298Z",
+                    "joined_at": "2021-02-11T06:20:34.299Z",
                     "links": {
-                      "self": "/api/v1/pones/forrest_frami-33.json",
-                      "page": "/pones/forrest_frami-33",
-                      "achievements": "/api/v1/pones/forrest_frami-33/achievements.json",
-                      "points": "/api/v1/pones/forrest_frami-33/points.json",
-                      "granted_points": "/api/v1/pones/forrest_frami-33/points/granted.json",
-                      "groups": "/api/v1/pones/forrest_frami-33/groups.json"
+                      "self": "/api/v1/pones/rodrigo-schulist-33.json",
+                      "page": "/pones/rodrigo-schulist-33",
+                      "achievements": "/api/v1/pones/rodrigo-schulist-33/achievements.json",
+                      "points": "/api/v1/pones/rodrigo-schulist-33/points.json",
+                      "granted_points": "/api/v1/pones/rodrigo-schulist-33/points/granted.json",
+                      "groups": "/api/v1/pones/rodrigo-schulist-33/groups.json"
                     },
-                    "name": "forrest_frami 33",
+                    "name": "rodrigo.schulist 33",
                     "points_count": 0
                   },
                   {
-                    "slug": "tierra-runolfsdottir-34",
+                    "slug": "bernie-34",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.300Z",
+                    "joined_at": "2021-02-11T06:20:34.300Z",
                     "links": {
-                      "self": "/api/v1/pones/tierra-runolfsdottir-34.json",
-                      "page": "/pones/tierra-runolfsdottir-34",
-                      "achievements": "/api/v1/pones/tierra-runolfsdottir-34/achievements.json",
-                      "points": "/api/v1/pones/tierra-runolfsdottir-34/points.json",
-                      "granted_points": "/api/v1/pones/tierra-runolfsdottir-34/points/granted.json",
-                      "groups": "/api/v1/pones/tierra-runolfsdottir-34/groups.json"
+                      "self": "/api/v1/pones/bernie-34.json",
+                      "page": "/pones/bernie-34",
+                      "achievements": "/api/v1/pones/bernie-34/achievements.json",
+                      "points": "/api/v1/pones/bernie-34/points.json",
+                      "granted_points": "/api/v1/pones/bernie-34/points/granted.json",
+                      "groups": "/api/v1/pones/bernie-34/groups.json"
                     },
-                    "name": "tierra.runolfsdottir 34",
+                    "name": "bernie 34",
                     "points_count": 0
                   },
                   {
-                    "slug": "freddy-abernathy-35",
+                    "slug": "maynard-35",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.301Z",
+                    "joined_at": "2021-02-11T06:20:34.302Z",
                     "links": {
-                      "self": "/api/v1/pones/freddy-abernathy-35.json",
-                      "page": "/pones/freddy-abernathy-35",
-                      "achievements": "/api/v1/pones/freddy-abernathy-35/achievements.json",
-                      "points": "/api/v1/pones/freddy-abernathy-35/points.json",
-                      "granted_points": "/api/v1/pones/freddy-abernathy-35/points/granted.json",
-                      "groups": "/api/v1/pones/freddy-abernathy-35/groups.json"
+                      "self": "/api/v1/pones/maynard-35.json",
+                      "page": "/pones/maynard-35",
+                      "achievements": "/api/v1/pones/maynard-35/achievements.json",
+                      "points": "/api/v1/pones/maynard-35/points.json",
+                      "granted_points": "/api/v1/pones/maynard-35/points/granted.json",
+                      "groups": "/api/v1/pones/maynard-35/groups.json"
                     },
-                    "name": "freddy.abernathy 35",
+                    "name": "maynard 35",
                     "points_count": 0
                   },
                   {
-                    "slug": "laquanda-macejkovic-36",
+                    "slug": "rayna-36",
                     "avatar_url": null,
-                    "joined_at": "2021-02-11T05:57:27.303Z",
+                    "joined_at": "2021-02-11T06:20:34.312Z",
                     "links": {
-                      "self": "/api/v1/pones/laquanda-macejkovic-36.json",
-                      "page": "/pones/laquanda-macejkovic-36",
-                      "achievements": "/api/v1/pones/laquanda-macejkovic-36/achievements.json",
-                      "points": "/api/v1/pones/laquanda-macejkovic-36/points.json",
-                      "granted_points": "/api/v1/pones/laquanda-macejkovic-36/points/granted.json",
-                      "groups": "/api/v1/pones/laquanda-macejkovic-36/groups.json"
+                      "self": "/api/v1/pones/rayna-36.json",
+                      "page": "/pones/rayna-36",
+                      "achievements": "/api/v1/pones/rayna-36/achievements.json",
+                      "points": "/api/v1/pones/rayna-36/points.json",
+                      "granted_points": "/api/v1/pones/rayna-36/points/granted.json",
+                      "groups": "/api/v1/pones/rayna-36/groups.json"
                     },
-                    "name": "laquanda.macejkovic 36",
+                    "name": "rayna 36",
                     "points_count": 1
                   }
                 ],
@@ -1016,7 +1091,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -1067,24 +1146,24 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "612"
+                "x-example-value": "580"
               }
             },
             "examples": {
               "application/json": {
                 "pone": {
-                  "slug": "marguerite-37",
-                  "avatar_url": "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99ee487fc520bfebf2ea197a8ca4aff160bc3620/avatar.png",
-                  "joined_at": "2021-02-11T05:57:27.366Z",
+                  "slug": "roland-37",
+                  "avatar_url": "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d94685cf67db470cab1bf26e2bcc543a5feecf0e/avatar.png",
+                  "joined_at": "2021-02-11T06:20:34.366Z",
                   "links": {
-                    "self": "/api/v1/pones/marguerite-37.json",
-                    "page": "/pones/marguerite-37",
-                    "achievements": "/api/v1/pones/marguerite-37/achievements.json",
-                    "points": "/api/v1/pones/marguerite-37/points.json",
-                    "granted_points": "/api/v1/pones/marguerite-37/points/granted.json",
-                    "groups": "/api/v1/pones/marguerite-37/groups.json"
+                    "self": "/api/v1/pones/roland-37.json",
+                    "page": "/pones/roland-37",
+                    "achievements": "/api/v1/pones/roland-37/achievements.json",
+                    "points": "/api/v1/pones/roland-37/points.json",
+                    "granted_points": "/api/v1/pones/roland-37/points/granted.json",
+                    "groups": "/api/v1/pones/roland-37/groups.json"
                   },
-                  "name": "marguerite 37",
+                  "name": "roland 37",
                   "points_count": 0
                 }
               }
@@ -1093,7 +1172,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -1148,27 +1231,27 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "549"
+                "x-example-value": "557"
               }
             },
             "examples": {
               "application/json": {
                 "pone": {
-                  "slug": "winston_grant-39",
+                  "slug": "marvis-wiegand-39",
                   "avatar_url": null,
                   "bonus_points_count": 0,
                   "daily_giftable_points_count": 3,
                   "giftable_points_count": 3,
-                  "joined_at": "2021-02-11T05:57:27.392Z",
+                  "joined_at": "2021-02-11T06:20:34.392Z",
                   "links": {
-                    "self": "/api/v1/pones/winston_grant-39.json",
-                    "page": "/pones/winston_grant-39",
-                    "achievements": "/api/v1/pones/winston_grant-39/achievements.json",
-                    "points": "/api/v1/pones/winston_grant-39/points.json",
-                    "granted_points": "/api/v1/pones/winston_grant-39/points/granted.json",
-                    "groups": "/api/v1/pones/winston_grant-39/groups.json"
+                    "self": "/api/v1/pones/marvis-wiegand-39.json",
+                    "page": "/pones/marvis-wiegand-39",
+                    "achievements": "/api/v1/pones/marvis-wiegand-39/achievements.json",
+                    "points": "/api/v1/pones/marvis-wiegand-39/points.json",
+                    "granted_points": "/api/v1/pones/marvis-wiegand-39/points/granted.json",
+                    "groups": "/api/v1/pones/marvis-wiegand-39/groups.json"
                   },
-                  "name": "winston_grant 39",
+                  "name": "marvis.wiegand 39",
                   "points_count": 1
                 }
               }
@@ -1177,7 +1260,11 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
     },
@@ -1208,6 +1295,20 @@
             "description": " slug",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page number",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of groups to show per page",
+            "required": false,
+            "type": "integer"
           }
         ],
         "responses": {
@@ -1228,44 +1329,44 @@
               "Content-Length": {
                 "description": "",
                 "type": "string",
-                "x-example-value": "939"
+                "x-example-value": "971"
               }
             },
             "examples": {
               "application/json": {
                 "groups": [
                   {
-                    "slug": "cover-her-face-6",
-                    "created_at": "2021-02-11T05:57:27.414Z",
+                    "slug": "down-to-a-sunless-sea-6",
+                    "created_at": "2021-02-11T06:20:34.412Z",
                     "links": {
-                      "self": "/api/v1/groups/cover-her-face-6.json",
-                      "page": "/groups/cover-her-face-6",
-                      "owner": "/api/v1/pones/ira-41.json",
-                      "members": "/api/v1/groups/cover-her-face-6/members.json"
+                      "self": "/api/v1/groups/down-to-a-sunless-sea-6.json",
+                      "page": "/groups/down-to-a-sunless-sea-6",
+                      "owner": "/api/v1/pones/fredrick-41.json",
+                      "members": "/api/v1/groups/down-to-a-sunless-sea-6/members.json"
                     },
-                    "name": "Cover Her Face 6"
+                    "name": "Down to a Sunless Sea 6"
                   },
                   {
-                    "slug": "if-not-now-when-7",
-                    "created_at": "2021-02-11T05:57:27.419Z",
+                    "slug": "ego-dominus-tuus-7",
+                    "created_at": "2021-02-11T06:20:34.417Z",
                     "links": {
-                      "self": "/api/v1/groups/if-not-now-when-7.json",
-                      "page": "/groups/if-not-now-when-7",
-                      "owner": "/api/v1/pones/qiana-42.json",
-                      "members": "/api/v1/groups/if-not-now-when-7/members.json"
+                      "self": "/api/v1/groups/ego-dominus-tuus-7.json",
+                      "page": "/groups/ego-dominus-tuus-7",
+                      "owner": "/api/v1/pones/shiela-willms-42.json",
+                      "members": "/api/v1/groups/ego-dominus-tuus-7/members.json"
                     },
-                    "name": "If Not Now, When? 7"
+                    "name": "Ego Dominus Tuus 7"
                   },
                   {
-                    "slug": "fear-and-trembling-8",
-                    "created_at": "2021-02-11T05:57:27.424Z",
+                    "slug": "infinite-jest-8",
+                    "created_at": "2021-02-11T06:20:34.422Z",
                     "links": {
-                      "self": "/api/v1/groups/fear-and-trembling-8.json",
-                      "page": "/groups/fear-and-trembling-8",
-                      "owner": "/api/v1/pones/renaldo-43.json",
-                      "members": "/api/v1/groups/fear-and-trembling-8/members.json"
+                      "self": "/api/v1/groups/infinite-jest-8.json",
+                      "page": "/groups/infinite-jest-8",
+                      "owner": "/api/v1/pones/tyisha-gibson-43.json",
+                      "members": "/api/v1/groups/infinite-jest-8/members.json"
                     },
-                    "name": "Fear and Trembling 8"
+                    "name": "Infinite Jest 8"
                   }
                 ],
                 "meta": {
@@ -1282,9 +1383,21 @@
         },
         "deprecated": false,
         "security": [
+          {
+            "Authorization": [
 
+            ]
+          }
         ]
       }
+    }
+  },
+  "securityDefinitions": {
+    "Authorization": {
+      "type": "apiKey",
+      "description": "",
+      "name": "Authorization",
+      "in": "header"
     }
   },
   "tags": [

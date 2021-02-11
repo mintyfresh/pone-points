@@ -8,6 +8,7 @@
   "parameters": [
     {
       "required": true,
+      "type": "string",
       "name": "slug",
       "description": " slug"
     }
@@ -18,10 +19,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/groups/of-mice-and-men-4.json",
+      "request_path": "/api/v1/groups/arms-and-the-man-4.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key jPgYf7wuMHPopqXbJXqiuiUQFKBVdPNxWJQuSthQcg1YYb7zg1a9y2Di2p2LjBaZFzYMxuqbTwMpYibf",
+        "Authorization": "Api-Key 3ZhhPnJPSk7e8quKYWMZqQ5pAV7mS7B6BJoySJ11vv8FVeBdU5GpQ6G88enrkNeJY8jthETfgTmgmzS6",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +30,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"group\": {\n    \"slug\": \"of-mice-and-men-4\",\n    \"created_at\": \"2021-02-11T05:57:27.089Z\",\n    \"description\": \"Farm-to-table direct trade pitchfork goth squid.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/of-mice-and-men-4.json\",\n      \"page\": \"/groups/of-mice-and-men-4\",\n      \"owner\": \"/api/v1/pones/sau-7.json\",\n      \"members\": \"/api/v1/groups/of-mice-and-men-4/members.json\"\n    },\n    \"name\": \"Of Mice and Men 4\"\n  }\n}",
+      "response_body": "{\n  \"group\": {\n    \"slug\": \"arms-and-the-man-4\",\n    \"created_at\": \"2021-02-11T06:20:34.100Z\",\n    \"description\": \"Heirloom +1 helvetica cliche diy wayfarers cardigan chambray.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/arms-and-the-man-4.json\",\n      \"page\": \"/groups/arms-and-the-man-4\",\n      \"owner\": \"/api/v1/pones/wendell-mccullough-7.json\",\n      \"members\": \"/api/v1/groups/arms-and-the-man-4/members.json\"\n    },\n    \"name\": \"Arms and the Man 4\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "355"
+        "Content-Length": "388"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

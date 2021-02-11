@@ -8,8 +8,19 @@
   "parameters": [
     {
       "required": true,
+      "type": "string",
       "name": "slug",
       "description": " slug"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "The page number"
+    },
+    {
+      "type": "integer",
+      "name": "count",
+      "description": "The number of groups to show per page"
     }
   ],
   "response_fields": [
@@ -18,10 +29,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/ligia-konopelski-40/groups.json",
+      "request_path": "/api/v1/pones/jeremiah-40/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 4fPX6voj3o9oi7BHH16NJ5dtdHvW9omz9KGGq8yFs4EC5gr6HVpGQDMgRjhCQWFEoinbPxpdoAvfkbyk",
+        "Authorization": "Api-Key xpva99MFuBkr5iwKLWFkvTW6u64LxB8WSxQMMoFqGs3TswssVS9vxxcwaBe1BR3s11vErdvMdpgRjtpZ",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +40,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"cover-her-face-6\",\n      \"created_at\": \"2021-02-11T05:57:27.414Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/cover-her-face-6.json\",\n        \"page\": \"/groups/cover-her-face-6\",\n        \"owner\": \"/api/v1/pones/ira-41.json\",\n        \"members\": \"/api/v1/groups/cover-her-face-6/members.json\"\n      },\n      \"name\": \"Cover Her Face 6\"\n    },\n    {\n      \"slug\": \"if-not-now-when-7\",\n      \"created_at\": \"2021-02-11T05:57:27.419Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/if-not-now-when-7.json\",\n        \"page\": \"/groups/if-not-now-when-7\",\n        \"owner\": \"/api/v1/pones/qiana-42.json\",\n        \"members\": \"/api/v1/groups/if-not-now-when-7/members.json\"\n      },\n      \"name\": \"If Not Now, When? 7\"\n    },\n    {\n      \"slug\": \"fear-and-trembling-8\",\n      \"created_at\": \"2021-02-11T05:57:27.424Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/fear-and-trembling-8.json\",\n        \"page\": \"/groups/fear-and-trembling-8\",\n        \"owner\": \"/api/v1/pones/renaldo-43.json\",\n        \"members\": \"/api/v1/groups/fear-and-trembling-8/members.json\"\n      },\n      \"name\": \"Fear and Trembling 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"down-to-a-sunless-sea-6\",\n      \"created_at\": \"2021-02-11T06:20:34.412Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/down-to-a-sunless-sea-6.json\",\n        \"page\": \"/groups/down-to-a-sunless-sea-6\",\n        \"owner\": \"/api/v1/pones/fredrick-41.json\",\n        \"members\": \"/api/v1/groups/down-to-a-sunless-sea-6/members.json\"\n      },\n      \"name\": \"Down to a Sunless Sea 6\"\n    },\n    {\n      \"slug\": \"ego-dominus-tuus-7\",\n      \"created_at\": \"2021-02-11T06:20:34.417Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/ego-dominus-tuus-7.json\",\n        \"page\": \"/groups/ego-dominus-tuus-7\",\n        \"owner\": \"/api/v1/pones/shiela-willms-42.json\",\n        \"members\": \"/api/v1/groups/ego-dominus-tuus-7/members.json\"\n      },\n      \"name\": \"Ego Dominus Tuus 7\"\n    },\n    {\n      \"slug\": \"infinite-jest-8\",\n      \"created_at\": \"2021-02-11T06:20:34.422Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/infinite-jest-8.json\",\n        \"page\": \"/groups/infinite-jest-8\",\n        \"owner\": \"/api/v1/pones/tyisha-gibson-43.json\",\n        \"members\": \"/api/v1/groups/infinite-jest-8/members.json\"\n      },\n      \"name\": \"Infinite Jest 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "939"
+        "Content-Length": "971"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

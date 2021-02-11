@@ -8,18 +8,22 @@
   "parameters": [
     {
       "required": true,
+      "type": "string",
       "name": "pone_slug",
       "description": "The pone's slug"
     },
     {
       "scope": "point",
       "required": true,
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
       "name": "count",
       "description": "The number of points to give"
     },
     {
       "scope": "point",
-      "required": true,
+      "type": "string",
       "name": "message",
       "description": "A nice message for the pone"
     }
@@ -30,10 +34,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/huey-29/points/give.json",
-      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Wayfarers cronut chambray jean shorts direct trade polaroid.\"}}",
+      "request_path": "/api/v1/pones/tonda-29/points/give.json",
+      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Organic pitchfork distillery hammock goth.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key AGjvSNV28go5GDoXaJEx8em4u8RWxxB61EbNhTb6ECKWszfvMudzqn3KHNmK349cv38rqszv9cpyShRd",
+        "Authorization": "Api-Key dSY5tXdVBH6PYdXyrK4yaHk5Nza36vhm4EyH8Y98Z1iXKdpp8eemoHBTHeSPgrATywsESzrukrQumu99",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {

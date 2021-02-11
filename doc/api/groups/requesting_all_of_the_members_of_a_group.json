@@ -8,8 +8,19 @@
   "parameters": [
     {
       "required": true,
+      "type": "string",
       "name": "slug",
       "description": " slug"
+    },
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "The page number"
+    },
+    {
+      "type": "integer",
+      "name": "count",
+      "description": "The number of members to show per page"
     }
   ],
   "response_fields": [
@@ -18,10 +29,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/groups/the-far-distant-oxus-5/members.json",
+      "request_path": "/api/v1/groups/beyond-the-mexique-bay-5/members.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key fDT99n1Qv1bqvS7FoQbJCMEdbfNS2nUhbGYgvMNgMSjaYjde1sGetxfaSMFytVvSe51mgAjnZuCjVBTg",
+        "Authorization": "Api-Key 8LQqv9ESqBxsMRJ8oRxZNsgqFcFytach7fPqFzBdupRnsqj5x18vSbWH2R9CrCLBzn5ThCYk57xjE4sS",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +40,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"members\": [\n    {\n      \"slug\": \"kelvin-9\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T05:57:27.113Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kelvin-9.json\",\n        \"page\": \"/pones/kelvin-9\",\n        \"achievements\": \"/api/v1/pones/kelvin-9/achievements.json\",\n        \"points\": \"/api/v1/pones/kelvin-9/points.json\",\n        \"granted_points\": \"/api/v1/pones/kelvin-9/points/granted.json\",\n        \"groups\": \"/api/v1/pones/kelvin-9/groups.json\"\n      },\n      \"name\": \"kelvin 9\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"rossana-morar-10\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T05:57:27.115Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/rossana-morar-10.json\",\n        \"page\": \"/pones/rossana-morar-10\",\n        \"achievements\": \"/api/v1/pones/rossana-morar-10/achievements.json\",\n        \"points\": \"/api/v1/pones/rossana-morar-10/points.json\",\n        \"granted_points\": \"/api/v1/pones/rossana-morar-10/points/granted.json\",\n        \"groups\": \"/api/v1/pones/rossana-morar-10/groups.json\"\n      },\n      \"name\": \"rossana.morar 10\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"sydney-11\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T05:57:27.117Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/sydney-11.json\",\n        \"page\": \"/pones/sydney-11\",\n        \"achievements\": \"/api/v1/pones/sydney-11/achievements.json\",\n        \"points\": \"/api/v1/pones/sydney-11/points.json\",\n        \"granted_points\": \"/api/v1/pones/sydney-11/points/granted.json\",\n        \"groups\": \"/api/v1/pones/sydney-11/groups.json\"\n      },\n      \"name\": \"sydney 11\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"foster-kris-12\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T05:57:27.119Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/foster-kris-12.json\",\n        \"page\": \"/pones/foster-kris-12\",\n        \"achievements\": \"/api/v1/pones/foster-kris-12/achievements.json\",\n        \"points\": \"/api/v1/pones/foster-kris-12/points.json\",\n        \"granted_points\": \"/api/v1/pones/foster-kris-12/points/granted.json\",\n        \"groups\": \"/api/v1/pones/foster-kris-12/groups.json\"\n      },\n      \"name\": \"foster.kris 12\",\n      \"points_count\": 0\n    }\n  ],\n  \"meta\": {\n    \"count\": 4,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"members\": [\n    {\n      \"slug\": \"chauncey-labadie-9\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T06:20:34.122Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/chauncey-labadie-9.json\",\n        \"page\": \"/pones/chauncey-labadie-9\",\n        \"achievements\": \"/api/v1/pones/chauncey-labadie-9/achievements.json\",\n        \"points\": \"/api/v1/pones/chauncey-labadie-9/points.json\",\n        \"granted_points\": \"/api/v1/pones/chauncey-labadie-9/points/granted.json\",\n        \"groups\": \"/api/v1/pones/chauncey-labadie-9/groups.json\"\n      },\n      \"name\": \"chauncey.labadie 9\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"mariella_mueller-10\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T06:20:34.124Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/mariella_mueller-10.json\",\n        \"page\": \"/pones/mariella_mueller-10\",\n        \"achievements\": \"/api/v1/pones/mariella_mueller-10/achievements.json\",\n        \"points\": \"/api/v1/pones/mariella_mueller-10/points.json\",\n        \"granted_points\": \"/api/v1/pones/mariella_mueller-10/points/granted.json\",\n        \"groups\": \"/api/v1/pones/mariella_mueller-10/groups.json\"\n      },\n      \"name\": \"mariella_mueller 10\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"belva-11\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T06:20:34.126Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/belva-11.json\",\n        \"page\": \"/pones/belva-11\",\n        \"achievements\": \"/api/v1/pones/belva-11/achievements.json\",\n        \"points\": \"/api/v1/pones/belva-11/points.json\",\n        \"granted_points\": \"/api/v1/pones/belva-11/points/granted.json\",\n        \"groups\": \"/api/v1/pones/belva-11/groups.json\"\n      },\n      \"name\": \"belva 11\",\n      \"points_count\": 0\n    },\n    {\n      \"slug\": \"georgiana-rogahn-12\",\n      \"avatar_url\": null,\n      \"joined_at\": \"2021-02-11T06:20:34.128Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/georgiana-rogahn-12.json\",\n        \"page\": \"/pones/georgiana-rogahn-12\",\n        \"achievements\": \"/api/v1/pones/georgiana-rogahn-12/achievements.json\",\n        \"points\": \"/api/v1/pones/georgiana-rogahn-12/points.json\",\n        \"granted_points\": \"/api/v1/pones/georgiana-rogahn-12/points/granted.json\",\n        \"groups\": \"/api/v1/pones/georgiana-rogahn-12/groups.json\"\n      },\n      \"name\": \"georgiana.rogahn 12\",\n      \"points_count\": 0\n    }\n  ],\n  \"meta\": {\n    \"count\": 4,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1780"
+        "Content-Length": "1916"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

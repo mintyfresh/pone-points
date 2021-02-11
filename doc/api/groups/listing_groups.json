@@ -6,7 +6,16 @@
   "description": "Listing groups",
   "explanation": null,
   "parameters": [
-
+    {
+      "type": "integer",
+      "name": "page",
+      "description": "The page number"
+    },
+    {
+      "type": "integer",
+      "name": "count",
+      "description": "The number of groups to show per page"
+    }
   ],
   "response_fields": [
 
@@ -17,7 +26,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key iYmVMSzpYiCuq9FfR7UMUW6Zw4ZwQacc8U5Uor35ugpDK8Wao5UhGBGisvfWyuq3A9U37Xszb8z1bXkm",
+        "Authorization": "Api-Key HzBNW5LWQBKXquK48qqWufxghEiMA1im7RhAj6dtXqFQG5km3e13ewE8b9xNa4UVoCicELhnZySEhjd7",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"o-jerusalem-1\",\n      \"created_at\": \"2021-02-11T05:57:27.047Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/o-jerusalem-1.json\",\n        \"page\": \"/groups/o-jerusalem-1\",\n        \"owner\": \"/api/v1/pones/doreen-conroy-3.json\",\n        \"members\": \"/api/v1/groups/o-jerusalem-1/members.json\"\n      },\n      \"name\": \"O Jerusalem! 1\"\n    },\n    {\n      \"slug\": \"mr-standfast-2\",\n      \"created_at\": \"2021-02-11T05:57:27.055Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/mr-standfast-2.json\",\n        \"page\": \"/groups/mr-standfast-2\",\n        \"owner\": \"/api/v1/pones/nilsa-rodriguez-4.json\",\n        \"members\": \"/api/v1/groups/mr-standfast-2/members.json\"\n      },\n      \"name\": \"Mr Standfast 2\"\n    },\n    {\n      \"slug\": \"number-the-stars-3\",\n      \"created_at\": \"2021-02-11T05:57:27.061Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/number-the-stars-3.json\",\n        \"page\": \"/groups/number-the-stars-3\",\n        \"owner\": \"/api/v1/pones/kelvin-5.json\",\n        \"members\": \"/api/v1/groups/number-the-stars-3/members.json\"\n      },\n      \"name\": \"Number the Stars 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-proper-study-1\",\n      \"created_at\": \"2021-02-11T06:20:34.061Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-proper-study-1.json\",\n        \"page\": \"/groups/the-proper-study-1\",\n        \"owner\": \"/api/v1/pones/roberto-hand-3.json\",\n        \"members\": \"/api/v1/groups/the-proper-study-1/members.json\"\n      },\n      \"name\": \"The Proper Study 1\"\n    },\n    {\n      \"slug\": \"infinite-jest-2\",\n      \"created_at\": \"2021-02-11T06:20:34.069Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/infinite-jest-2.json\",\n        \"page\": \"/groups/infinite-jest-2\",\n        \"owner\": \"/api/v1/pones/muoi-4.json\",\n        \"members\": \"/api/v1/groups/infinite-jest-2/members.json\"\n      },\n      \"name\": \"Infinite Jest 2\"\n    },\n    {\n      \"slug\": \"the-world-the-flesh-and-the-devil-3\",\n      \"created_at\": \"2021-02-11T06:20:34.073Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-world-the-flesh-and-the-devil-3.json\",\n        \"page\": \"/groups/the-world-the-flesh-and-the-devil-3\",\n        \"owner\": \"/api/v1/pones/derek-5.json\",\n        \"members\": \"/api/v1/groups/the-world-the-flesh-and-the-devil-3/members.json\"\n      },\n      \"name\": \"The World, the Flesh and the Devil 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "914"
+        "Content-Length": "1016"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

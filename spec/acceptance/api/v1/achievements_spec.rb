@@ -7,10 +7,10 @@ RSpec.resource 'Achievements', type: :acceptance do
   let(:token) { api_key.token }
   let(:api_key) { create(:api_key) }
 
-  header 'Authorization', :authorization_header
+  authentication :apiKey, :authorization_header, name: 'Authorization'
   header 'Content-Type', 'application/json'
 
-  parameter :pone_slug, "The pone's slug", required: true
+  parameter :pone_slug, "The pone's slug", required: true, type: :string
 
   get '/api/v1/pones/:pone_slug/achievements.json' do
     let(:pone_slug) { pone.slug }
