@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key yNamiLwmJFjRMB5TpfCpUipGKcnKCtqyg7NZiWzwHh5249dZdq69vdNDtwApU1xHJUdjUcQktBrDjgbm",
+        "Authorization": "Api-Key 11YkUVPNXoRbKtBc9rL3nMBBBFybfyyeyp62dLUGmLaDyEtXrpcRta9hmtzZ5B1PU39H151L7BmYZP7F",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"to-your-scattered-bodies-go\",\n      \"created_at\": \"2021-02-09T05:49:15.813Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-your-scattered-bodies-go.json\",\n        \"page\": \"/groups/to-your-scattered-bodies-go\",\n        \"owner\": \"/api/v1/pones/ivana-boyer-3.json\",\n        \"members\": \"/api/v1/groups/to-your-scattered-bodies-go/members.json\"\n      },\n      \"name\": \"To Your Scattered Bodies Go\"\n    },\n    {\n      \"slug\": \"absalom-absalom\",\n      \"created_at\": \"2021-02-09T05:49:15.825Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/absalom-absalom.json\",\n        \"page\": \"/groups/absalom-absalom\",\n        \"owner\": \"/api/v1/pones/karl-4.json\",\n        \"members\": \"/api/v1/groups/absalom-absalom/members.json\"\n      },\n      \"name\": \"Absalom, Absalom!\"\n    },\n    {\n      \"slug\": \"a-time-of-gifts\",\n      \"created_at\": \"2021-02-09T05:49:15.830Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-time-of-gifts.json\",\n        \"page\": \"/groups/a-time-of-gifts\",\n        \"owner\": \"/api/v1/pones/dominick-littel-5.json\",\n        \"members\": \"/api/v1/groups/a-time-of-gifts/members.json\"\n      },\n      \"name\": \"A Time of Gifts\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"his-dark-materials-1\",\n      \"created_at\": \"2021-02-11T01:08:26.161Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/his-dark-materials-1.json\",\n        \"page\": \"/groups/his-dark-materials-1\",\n        \"owner\": \"/api/v1/pones/ian-3.json\",\n        \"members\": \"/api/v1/groups/his-dark-materials-1/members.json\"\n      },\n      \"name\": \"His Dark Materials 1\"\n    },\n    {\n      \"slug\": \"a-summer-bird-cage-2\",\n      \"created_at\": \"2021-02-11T01:08:26.168Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-summer-bird-cage-2.json\",\n        \"page\": \"/groups/a-summer-bird-cage-2\",\n        \"owner\": \"/api/v1/pones/cecilia-4.json\",\n        \"members\": \"/api/v1/groups/a-summer-bird-cage-2/members.json\"\n      },\n      \"name\": \"A Summer Bird-Cage 2\"\n    },\n    {\n      \"slug\": \"a-passage-to-india-3\",\n      \"created_at\": \"2021-02-11T01:08:26.173Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-passage-to-india-3.json\",\n        \"page\": \"/groups/a-passage-to-india-3\",\n        \"owner\": \"/api/v1/pones/terese-5.json\",\n        \"members\": \"/api/v1/groups/a-passage-to-india-3/members.json\"\n      },\n      \"name\": \"A Passage to India 3\"\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "908"
+        "Content-Length": "907"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

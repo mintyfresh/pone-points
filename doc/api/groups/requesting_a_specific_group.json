@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/groups/behold-the-man.json",
+      "request_path": "/api/v1/groups/far-from-the-madding-crowd-4.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key BsHU3QzCn29J85zrVaAzyz4gnbRex7u5YdvN2Wramp4Pi1EDXMFEyJrpeGWuUBuPThajjCS6xy524v4S",
+        "Authorization": "Api-Key wnHpxMZSfgMgajaKKJ7PrE5EyaTbBPR3gt6jjNyEdMeGPoqxVqgTLE946ScrDNK99rvpvvM141CmRnoV",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"group\": {\n    \"slug\": \"behold-the-man\",\n    \"created_at\": \"2021-02-09T05:49:15.847Z\",\n    \"description\": \"Tilde yr locavore typewriter.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/behold-the-man.json\",\n      \"page\": \"/groups/behold-the-man\",\n      \"owner\": \"/api/v1/pones/mariann-7.json\",\n      \"members\": \"/api/v1/groups/behold-the-man/members.json\"\n    },\n    \"name\": \"Behold the Man\"\n  }\n}",
+      "response_body": "{\n  \"group\": {\n    \"slug\": \"far-from-the-madding-crowd-4\",\n    \"created_at\": \"2021-02-11T01:08:26.197Z\",\n    \"description\": \"Leggings offal dreamcatcher narwhal mustache art party.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/far-from-the-madding-crowd-4.json\",\n      \"page\": \"/groups/far-from-the-madding-crowd-4\",\n      \"owner\": \"/api/v1/pones/larae-7.json\",\n      \"members\": \"/api/v1/groups/far-from-the-madding-crowd-4/members.json\"\n    },\n    \"name\": \"Far From the Madding Crowd 4\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "325"
+        "Content-Length": "419"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

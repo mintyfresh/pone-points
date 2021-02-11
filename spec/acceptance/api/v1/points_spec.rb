@@ -55,7 +55,7 @@ RSpec.resource 'Points', type: :acceptance do
     end
   end
 
-  post '/api/v1/pones/:pone_slug/points/give.html' do
+  post '/api/v1/pones/:pone_slug/points/give.json' do
     let(:count) { rand(1..3) }
     let(:message) { 'foo' }
     let(:pone_slug) { pone.slug }

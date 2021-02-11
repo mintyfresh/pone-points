@@ -19,6 +19,6 @@ class CreatePointFormComponent < ApplicationComponent
 
   # @return [Integer]
   def maximum_points_count
-    [@current_pone.giftable_points_count + @current_pone.bonus_points, 5].min
+    [@current_pone.total_giftable_points_count, 5].min
   end
 end

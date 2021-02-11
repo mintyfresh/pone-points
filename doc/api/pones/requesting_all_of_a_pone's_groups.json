@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/barbara-38/groups.json",
+      "request_path": "/api/v1/pones/chong-ziemann-38/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 1zZ9AetsjNV2KGjATDRvN1ZDHbfFBxd923wkZLTUMfC6iaYtpV46wzRutKU1WAca9rZUYWZcz5JbczRF",
+        "Authorization": "Api-Key 7WFyJ96BKsnwy9cGs3yveNQ3uUhbiJxqLQq7UZzPBmg68wEauUVuBT58Qf6zjXTQK7LQSg3RYP32aFEx",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"to-your-scattered-bodies-go\",\n      \"created_at\": \"2021-02-09T05:49:16.076Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-your-scattered-bodies-go.json\",\n        \"page\": \"/groups/to-your-scattered-bodies-go\",\n        \"owner\": \"/api/v1/pones/millie-39.json\",\n        \"members\": \"/api/v1/groups/to-your-scattered-bodies-go/members.json\"\n      },\n      \"name\": \"To Your Scattered Bodies Go\"\n    },\n    {\n      \"slug\": \"recalled-to-life\",\n      \"created_at\": \"2021-02-09T05:49:16.082Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/recalled-to-life.json\",\n        \"page\": \"/groups/recalled-to-life\",\n        \"owner\": \"/api/v1/pones/calvin_wuckert-40.json\",\n        \"members\": \"/api/v1/groups/recalled-to-life/members.json\"\n      },\n      \"name\": \"Recalled to Life\"\n    },\n    {\n      \"slug\": \"the-skull-beneath-the-skin\",\n      \"created_at\": \"2021-02-09T05:49:16.086Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-skull-beneath-the-skin.json\",\n        \"page\": \"/groups/the-skull-beneath-the-skin\",\n        \"owner\": \"/api/v1/pones/cleo_zulauf-41.json\",\n        \"members\": \"/api/v1/groups/the-skull-beneath-the-skin/members.json\"\n      },\n      \"name\": \"The Skull Beneath the Skin\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"far-from-the-madding-crowd-6\",\n      \"created_at\": \"2021-02-11T01:08:26.479Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/far-from-the-madding-crowd-6.json\",\n        \"page\": \"/groups/far-from-the-madding-crowd-6\",\n        \"owner\": \"/api/v1/pones/lisandra_mitchell-39.json\",\n        \"members\": \"/api/v1/groups/far-from-the-madding-crowd-6/members.json\"\n      },\n      \"name\": \"Far From the Madding Crowd 6\"\n    },\n    {\n      \"slug\": \"for-a-breath-i-tarry-7\",\n      \"created_at\": \"2021-02-11T01:08:26.484Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/for-a-breath-i-tarry-7.json\",\n        \"page\": \"/groups/for-a-breath-i-tarry-7\",\n        \"owner\": \"/api/v1/pones/luciano-kutch-40.json\",\n        \"members\": \"/api/v1/groups/for-a-breath-i-tarry-7/members.json\"\n      },\n      \"name\": \"For a Breath I Tarry 7\"\n    },\n    {\n      \"slug\": \"time-to-murder-and-create-8\",\n      \"created_at\": \"2021-02-11T01:08:26.488Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/time-to-murder-and-create-8.json\",\n        \"page\": \"/groups/time-to-murder-and-create-8\",\n        \"owner\": \"/api/v1/pones/edwardo-41.json\",\n        \"members\": \"/api/v1/groups/time-to-murder-and-create-8/members.json\"\n      },\n      \"name\": \"Time To Murder And Create 8\"\n    }\n  ]\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "970"
+        "Content-Length": "1016"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

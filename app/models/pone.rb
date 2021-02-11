@@ -12,7 +12,8 @@
 #  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
-#  bonus_points                :integer          default(0), not null
+#  bonus_points_count          :integer          default(0), not null
+#  giftable_points_count       :integer          default(0), not null
 #
 # Indexes
 #
@@ -47,9 +48,9 @@ class Pone < ApplicationRecord
   has_unique_attribute :slug
 
   validates :name, presence: true, length: { maximum: 50 }
-  validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
+  validates :giftable_points_count, :daily_giftable_points_count, :bonus_points_count,
+            numericality: { greater_than_or_equal_to: 0 }
   validates :avatar, avatar: true
-  validates :bonus_points, numericality: { greater_than_or_equal_to: 0 }
 
   generates_slug_from :name
 
@@ -79,11 +80,6 @@ class Pone < ApplicationRecord
     credentials.build(type: credential_class.sti_name)
   end
 
-  # @return [Integer]
-  def giftable_points_count
-    daily_giftable_points_count - granted_points.today.sum(:count)
-  end
-
   # @param achievement [Achievement]
   # @return [Boolean]
   def achievement_unlocked?(achievement)
@@ -96,22 +92,24 @@ class Pone < ApplicationRecord
     unlocked_achievements.create_or_find_by!(achievement: achievement) && true
   end
 
-  # @param count [Integer]
-  # @return [self]
-  def add_bonus_points(count)
-    increment!(:bonus_points, count, touch: true) && reload
+  # Giftable points, including both daily and bonus points.
+  #
+  # @return [Integer]
+  def total_giftable_points_count
+    giftable_points_count + bonus_points_count
   end
 
   # @param count [Integer]
-  # @return [self, nil]
-  def remove_bonus_points(count)
+  # @return [Boolean]
+  def spend_points(count)
     with_lock do
-      return if count > bonus_points
-
-      self.bonus_points -= count
-      save!
-
-      self
+      if giftable_points_count >= count
+        update!(giftable_points_count: giftable_points_count - count)
+      elsif total_giftable_points_count >= count
+        update!(giftable_points_count: 0, bonus_points_count: bonus_points_count - (count - giftable_points_count))
+      else
+        false
+      end
     end
   end
 
@@ -119,6 +117,7 @@ private
 
   # @return [void]
   def set_daily_giftable_points_count
+    self.giftable_points_count       = 3
     self.daily_giftable_points_count = 3
   end
 end

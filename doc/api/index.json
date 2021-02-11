@@ -69,7 +69,7 @@
           "description": "Giving points to a pone",
           "link": "points/giving_points_to_a_pone.json",
           "groups": "all",
-          "route": "/api/v1/pones/:pone_slug/points/give.html",
+          "route": "/api/v1/pones/:pone_slug/points/give.json",
           "method": "post"
         }
       ]

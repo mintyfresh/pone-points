@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/charlette-14/points.json",
+      "request_path": "/api/v1/pones/lon_schumm-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 9MhfCCP9JzdPVdCRp2GpiZzgw3gwRJ7SSZDVjPmxh33T5a48M4tyh6MQ43pKkT3hkn9GXWFW1oKwRsXV",
+        "Authorization": "Api-Key AzFsXsponXX3CCReuZ1dLKNXL7rABmGU4S9ai9KXdFYakSWMyuZRcvzCcMEpgvb4UodQxUy6mrB9vAjv",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 206,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.895Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/206.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/jere_stehr-15.json\"\n      },\n      \"message\": \"Poutine thundercats meggings flexitarian migas stumptown mlkshk.\"\n    },\n    {\n      \"id\": 207,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.898Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/207.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/kurtis-16.json\"\n      },\n      \"message\": \"Sartorial vegan small batch schlitz.\"\n    },\n    {\n      \"id\": 208,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.901Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/charlette-14/points/208.json\",\n        \"pone\": \"/api/v1/pones/charlette-14.json\",\n        \"granted_by\": \"/api/v1/pones/tiesha-17.json\"\n      },\n      \"message\": \"Squid deep v tousled master tumblr.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/charlette-14.json\",\n      \"give_points\": \"/api/v1/pones/charlette-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 909,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.253Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/909.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/frieda-15.json\"\n      },\n      \"message\": \"Plaid tilde loko vhs you probably haven't heard of them food truck keffiyeh.\"\n    },\n    {\n      \"id\": 910,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.255Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/910.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/lucy-16.json\"\n      },\n      \"message\": \"Kale chips scenester everyday pinterest polaroid franzen.\"\n    },\n    {\n      \"id\": 911,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.258Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/911.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/melonie-17.json\"\n      },\n      \"message\": \"Banjo williamsburg knausgaard street gluten-free church-key 8-bit.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n      \"give_points\": \"/api/v1/pones/lon_schumm-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "934"
+        "Content-Length": "1001"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

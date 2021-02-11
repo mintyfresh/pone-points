@@ -12,7 +12,8 @@
 #  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
-#  bonus_points                :integer          default(0), not null
+#  bonus_points_count          :integer          default(0), not null
+#  giftable_points_count       :integer          default(0), not null
 #
 # Indexes
 #

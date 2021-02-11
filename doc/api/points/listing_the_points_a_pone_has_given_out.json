@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/trinidad-19/points/granted.json",
+      "request_path": "/api/v1/pones/ollie_homenick-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key P8aGt6sb6S2d7RXNjof1emQzuTbufRFcM4vVq67RHzw52tr4r85D325Ftc4uvym3ofTW84yfwzgeTqvC",
+        "Authorization": "Api-Key x2Q7a856XkoW4ky3M1JQFKbA2vYE9gieDUSuLYvc5Pfbp7dQWQD8EPZjvDHQWRTF8iTcnf8iV3RhhpRE",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 209,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-09T05:49:15.928Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/carey-20/points/209.json\",\n        \"pone\": \"/api/v1/pones/carey-20.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Cornhole vinegar tumblr art party banh mi cred 8-bit vinyl pop-up.\"\n    },\n    {\n      \"id\": 210,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.931Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/tory-21/points/210.json\",\n        \"pone\": \"/api/v1/pones/tory-21.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Narwhal roof tousled banjo fixie shoreditch echo.\"\n    },\n    {\n      \"id\": 211,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-09T05:49:15.933Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/pattie-22/points/211.json\",\n        \"pone\": \"/api/v1/pones/pattie-22.json\",\n        \"granted_by\": \"/api/v1/pones/trinidad-19.json\"\n      },\n      \"message\": \"Humblebrag irony master hoodie selfies you probably haven't heard of them schlitz.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/trinidad-19.json\",\n      \"give_points\": \"/api/v1/pones/trinidad-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 913,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.291Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jackie-okuneva-20/points/913.json\",\n        \"pone\": \"/api/v1/pones/jackie-okuneva-20.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Neutra paleo mlkshk plaid try-hard brooklyn.\"\n    },\n    {\n      \"id\": 914,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.293Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/evelina-volkman-21/points/914.json\",\n        \"pone\": \"/api/v1/pones/evelina-volkman-21.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Listicle shoreditch photo booth flannel cliche gentrify.\"\n    },\n    {\n      \"id\": 915,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.295Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/perla-mayert-22/points/915.json\",\n        \"pone\": \"/api/v1/pones/perla-mayert-22.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Shoreditch whatever literally kinfolk ramps drinking.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/ollie_homenick-19.json\",\n      \"give_points\": \"/api/v1/pones/ollie_homenick-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "972"
+        "Content-Length": "1010"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

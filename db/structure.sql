@@ -370,8 +370,12 @@ CREATE TABLE public.pones (
     verified_at timestamp without time zone,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    bonus_points integer DEFAULT 0 NOT NULL,
-    CONSTRAINT chk_rails_3769fed490 CHECK ((bonus_points >= 0))
+    bonus_points_count integer DEFAULT 0 NOT NULL,
+    giftable_points_count integer DEFAULT 0 NOT NULL,
+    CONSTRAINT chk_rails_3769fed490 CHECK ((bonus_points_count >= 0)),
+    CONSTRAINT chk_rails_c7e7da4fe4 CHECK ((points_count >= 0)),
+    CONSTRAINT chk_rails_d45d00b7ca CHECK ((giftable_points_count >= 0)),
+    CONSTRAINT chk_rails_d652f1760d CHECK ((daily_giftable_points_count >= 0))
 );
 
 
@@ -968,6 +972,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210209005853'),
 ('20210209025300'),
 ('20210209045522'),
-('20210210225417');
+('20210210225417'),
+('20210211003542');
 
 

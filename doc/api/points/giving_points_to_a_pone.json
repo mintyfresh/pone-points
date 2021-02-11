@@ -2,7 +2,7 @@
   "resource": "Points",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "/api/v1/pones/:pone_slug/points/give.html",
+  "route": "/api/v1/pones/:pone_slug/points/give.json",
   "description": "Giving points to a pone",
   "explanation": null,
   "parameters": [
@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/leandro_gerlach-27/points/give.html",
-      "request_body": "{\"point\":{\"count\":3,\"message\":\"foo\"}}",
+      "request_path": "/api/v1/pones/elda-27/points/give.json",
+      "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key u2XjqPAacpU3uMiwEsKdruaHzf1zxK9KbH4CGwwr2AWAjeySxUFcbw4CnSAc9GEzE1JJUpzfzxAff6MM",
+        "Authorization": "Api-Key 3hfqE2KEpvUjAMeQ6x1UKuEfS7s1jDKYxjL9dRon7xb3aQ2SaMYZjZSzu4moG1trXUwmnDYq4G8mJwg8",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 213,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-09T05:49:15.987Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/leandro_gerlach-27/points/213.json\",\n      \"pone\": \"/api/v1/pones/leandro_gerlach-27.json\",\n      \"granted_by\": \"/api/v1/pones/karole-mccullough-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 920,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T01:08:26.362Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/elda-27/points/920.json\",\n      \"pone\": \"/api/v1/pones/elda-27.json\",\n      \"granted_by\": \"/api/v1/pones/leticia-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "256"
+        "Content-Length": "224"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

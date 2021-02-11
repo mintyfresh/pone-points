@@ -77,7 +77,7 @@ RSpec.describe CreatePointForm, type: :form do
 
       context 'when the granting pone has enough bonus points' do
         before(:each) do
-          granted_by.add_bonus_points(input[:count])
+          granted_by.update!(bonus_points_count: input[:count])
         end
 
         it 'creates the point successfully' do
@@ -85,12 +85,12 @@ RSpec.describe CreatePointForm, type: :form do
         end
 
         it 'spends available bonus points to cover the difference' do
-          expect { perform }.to change { granted_by.bonus_points }.by(-input[:count])
+          expect { perform }.to change { granted_by.bonus_points_count }.by(-input[:count])
         end
 
         it 'only spends as many bonus points as is necessary' do
-          granted_by.update!(daily_giftable_points_count: 1)
-          expect { perform }.to change { granted_by.bonus_points }.by(-(input[:count] - 1))
+          granted_by.update!(giftable_points_count: 1)
+          expect { perform }.to change { granted_by.bonus_points_count }.by(-(input[:count] - 1))
         end
       end
     end

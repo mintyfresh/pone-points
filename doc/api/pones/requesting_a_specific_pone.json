@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/kandi-lynch-35.json",
+      "request_path": "/api/v1/pones/francoise-35.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key mDtxK7mjzM8cCjh9rZcCYdV8XkazASdxE1dVvCoRgXpwj2RQdbUfXUYWeHL8zb7fJ8AL4jXbjcxwQ7PN",
+        "Authorization": "Api-Key 35rRwW1i16naPMPnrwH9SwCKZHvrmd6vXL3bBUSP1RARCMGJD9riCRoYqwqN9JZFGCaFUFczyjKj4sDQ",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"kandi-lynch-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--162c7a772d5f54b74b1e5ed7e4342f430a565bda/avatar.png\",\n    \"joined_at\": \"2021-02-09T05:49:16.043Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/kandi-lynch-35.json\",\n      \"page\": \"/pones/kandi-lynch-35\",\n      \"achievements\": \"/api/v1/pones/kandi-lynch-35/achievements.json\",\n      \"points\": \"/api/v1/pones/kandi-lynch-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/kandi-lynch-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/kandi-lynch-35/groups.json\"\n    },\n    \"name\": \"kandi.lynch 35\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"francoise-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e5128fc3486ad60a307306e6b898025631fb61e1/avatar.png\",\n    \"joined_at\": \"2021-02-11T01:08:26.436Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/francoise-35.json\",\n      \"page\": \"/pones/francoise-35\",\n      \"achievements\": \"/api/v1/pones/francoise-35/achievements.json\",\n      \"points\": \"/api/v1/pones/francoise-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/francoise-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/francoise-35/groups.json\"\n    },\n    \"name\": \"francoise 35\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "620"
+        "Content-Length": "604"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
