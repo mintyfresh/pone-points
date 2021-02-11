@@ -62,5 +62,11 @@ jobs:
           bundler-cache: true
       - name: Setup Database
         run: bin/rails db:create db:structure:load db:seed
+        env:
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
       - name: Run Specs
         run: bin/rspec
+        env:
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
