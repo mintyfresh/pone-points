@@ -17,6 +17,7 @@ on:
 
 env:
   RAILS_ENV: test
+  DB_HOST: localhost
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
   POSTGRES_DB: pone_points_test
