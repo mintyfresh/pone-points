@@ -11,11 +11,11 @@
   <% if Pundit.policy(current_pone, @group).join? %>
     <div class="col text-end mt-auto">
       <% if @group.member?(current_pone) %>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="group_controls_dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown" id="group_controls_dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="group_controls_dropdown_button" data-bs-toggle="dropdown" aria-expanded="false">
             Controls
           </button>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="group_controls_dropdown">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="group_controls_dropdown_button">
             <li><%= link_to('Webhooks', group_webhooks_path(@group), class: 'dropdown-item') %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to('Leave Group', leave_group_path(@group), class: 'dropdown-item text-danger', method: :post, disabled: @group.owner == current_pone) %></li>
