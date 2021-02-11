@@ -38,6 +38,13 @@ RSpec.describe 'SignIn', type: :feature do
     expect(page).to have_current_path(sign_up_path(return_path: account_integrations_path))
   end
 
+  it 'redirects already signed in pones to home' do
+    sign_in_to_pone(create(:pone))
+    visit sign_in_path
+
+    expect(page).to have_current_path(root_path)
+  end
+
   context 'when the credentials are invalid' do
     let(:input) { build(:sign_in_input, :incorrect_password) }
 

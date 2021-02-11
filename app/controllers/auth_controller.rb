@@ -4,6 +4,7 @@ class AuthController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :external
 
   before_action :set_return_path, except: :external
+  before_action :redirect_authenticated_pones, only: %i[sign_in do_sign_in sign_up do_sign_up]
 
   def sign_in
     @form = SignInForm.new
@@ -98,6 +99,10 @@ private
     @return_path = return_path
   rescue URI::InvalidURIError
     Rails.logger.warn("Invalid return path URI: #{path.inspect}")
+  end
+
+  def redirect_authenticated_pones
+    redirect_back(fallback_location: @return_path || root_path) if current_pone.present?
   end
 
   def sign_in_params
