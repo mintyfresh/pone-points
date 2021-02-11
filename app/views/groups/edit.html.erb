@@ -1,0 +1,20 @@
+<h1>Edit <%= @group.name %></h1>
+<%= form_with(model: @form, url: @group, method: :patch, id: 'edit_group_form') do |form| %>
+  <div class="mb-3">
+    <%= form.label(:name) %>
+    <%= form.text_field(:name, class: 'form-control', disabled: true, readonly: true, value: @group.name) %>
+    <div class="form-text">
+      Contact an administrator if you'd like to change the name of your group.
+    </div>
+  </div>
+  <div class="mb-3">
+    <%= form.label(:description) %>
+    <%= form.text_area(:description, class: 'form-control', maxlength: Group::DESCRIPTION_MAX_LENGTH) %>
+    <%= render(FormControlErrorsComponent.new(key: :description, errors: @form.errors)) %>
+  </div>
+  <%= render(FormBaseErrorsComponent.new(errors: @form.errors)) %>
+  <div class="text-end">
+    <%= link_to('Cancel', @group, class: 'btn btn-secondary float-start') %>
+    <%= form.submit('Save Changes', class: 'btn btn-primary') %>
+  </div>
+<% end %>

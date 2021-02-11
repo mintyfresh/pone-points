@@ -16,6 +16,9 @@
             Controls
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="group_controls_dropdown_button">
+            <% if Pundit.policy(current_pone, @group).update? %>
+              <li><%= link_to('Edit Group', edit_group_path(@group), class: 'dropdown-item') %></li>
+            <% end %>
             <li><%= link_to('Webhooks', group_webhooks_path(@group), class: 'dropdown-item') %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to('Leave Group', leave_group_path(@group), class: 'dropdown-item text-danger', method: :post, disabled: @group.owner == current_pone) %></li>

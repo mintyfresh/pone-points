@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show join leave]
+  before_action :set_group, only: %i[show join leave edit update]
 
   def index
     authorize(Group)
@@ -46,6 +46,24 @@ class GroupsController < ApplicationController
     @form.perform
 
     redirect_back(fallback_location: @group)
+  end
+
+  def edit
+    authorize(@group)
+    @form = UpdateGroupForm.build(@group)
+  end
+
+  def update
+    authorize(@group)
+
+    @form = UpdateGroupForm.build(@group)
+    @form.attributes = permitted_attributes(UpdateGroupForm)
+
+    if @form.perform
+      redirect_to @group
+    else
+      render 'edit', status: :unprocessable_entity
+    end
   end
 
 private

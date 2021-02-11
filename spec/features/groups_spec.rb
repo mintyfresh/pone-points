@@ -106,4 +106,32 @@ RSpec.describe 'Groups', type: :feature do
     visit '/groups/new'
     expect(page).to have_current_path(sign_in_path(return_path: '/groups/new'))
   end
+
+  it 'allows the owner to edit their groups' do
+    sign_in_to_pone(group.owner)
+    visit "/groups/#{group.slug}"
+
+    click_on 'Controls'
+    click_on 'Edit Group'
+
+    within '#edit_group_form' do
+      fill_in 'Description', with: 'A new description'
+      click_on 'Save Changes'
+    end
+
+    expect(page).to have_current_path("/groups/#{group.slug}")
+      .and have_content('A new description')
+  end
+
+  it "doesn't allow pones to edit groups they don't own" do
+    group.add_member(pone)
+    sign_in_to_pone(pone)
+    visit "/groups/#{group.slug}"
+
+    click_on 'Controls'
+    expect(page).not_to have_button('Edit Group')
+
+    visit "/groups/#{group.slug}/edit"
+    expect(page).to have_current_path('/404.html')
+  end
 end

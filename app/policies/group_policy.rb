@@ -20,4 +20,12 @@ class GroupPolicy < ApplicationPolicy
   end
 
   alias leave? join?
+
+  def update?
+    current_pone.present? && current_pone == group.owner
+  end
+
+  def permitted_attributes_for_update
+    %i[description]
+  end
 end

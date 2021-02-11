@@ -6,6 +6,7 @@ RSpec.describe GroupPolicy, type: :policy do
   subject(:policy) { described_class }
 
   let(:group) { build(:group) }
+  let(:owner) { group.owner }
   let(:pone) { build(:pone) }
 
   permissions :index?, :show? do
@@ -22,6 +23,20 @@ RSpec.describe GroupPolicy, type: :policy do
 
     it 'permits authenticated pones' do
       expect(policy).to permit(pone, group)
+    end
+  end
+
+  permissions :edit?, :update? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(nil, group)
+    end
+
+    it 'permits the owner' do
+      expect(policy).to permit(owner, group)
+    end
+
+    it 'does not permit other pones' do
+      expect(policy).not_to permit(pone, group)
     end
   end
 end
