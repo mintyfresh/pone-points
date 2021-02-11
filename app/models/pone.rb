@@ -21,6 +21,8 @@
 #  index_pones_on_slug  (slug) UNIQUE
 #
 class Pone < ApplicationRecord
+  DEFAULT_DAILY_GIFTABLE_POINTS_COUNT = 3
+
   include Sluggable
   include Verifyable
   include Webhookable
@@ -117,7 +119,7 @@ private
 
   # @return [void]
   def set_daily_giftable_points_count
-    self.giftable_points_count       = 3
-    self.daily_giftable_points_count = 3
+    self.giftable_points_count       = DEFAULT_DAILY_GIFTABLE_POINTS_COUNT
+    self.daily_giftable_points_count = DEFAULT_DAILY_GIFTABLE_POINTS_COUNT
   end
 end
