@@ -26,6 +26,8 @@ jobs:
           ruby-version: '3.0.0'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - name: Run Rubocop
-        run: bundle exec rubocop
+        run: bin/rubocop
+      - name: Setup Database
+        run: bin/rails db:create db:structure:load db:seed
       - name: Run Specs
-        run: bundle exec rspec
+        run: bin/rspec
