@@ -28,8 +28,8 @@ RSpec.describe CreatePointForm, type: :form do
     expect(form).to be_invalid
   end
 
-  it 'is invalid when the count is greater than 3' do
-    input[:count] = 4
+  it 'is invalid when the count is greater than 5' do
+    input[:count] = 6
     expect(form).to be_invalid
   end
 
