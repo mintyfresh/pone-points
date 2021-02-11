@@ -19,10 +19,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/roland-37.json",
+      "request_path": "/api/v1/pones/kendrick-heathcote-37.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 7HQtH5Ck1o28GCUqTcaCXh96g1p4LsnqfTu42QSps6RbKwpo5hK8iu6SnbuB2YEWzmpFchCUBApaWuv8",
+        "Authorization": "Api-Key LueqBg4MvK1kV2938qRAF9FdnEdNayZkeFmjxRbDdB4QoviJhYSkgVv4D9xgvk8tou7tKyViHBQFSrqH",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -30,10 +30,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"roland-37\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d94685cf67db470cab1bf26e2bcc543a5feecf0e/avatar.png\",\n    \"joined_at\": \"2021-02-11T06:20:34.366Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/roland-37.json\",\n      \"page\": \"/pones/roland-37\",\n      \"achievements\": \"/api/v1/pones/roland-37/achievements.json\",\n      \"points\": \"/api/v1/pones/roland-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/roland-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/roland-37/groups.json\"\n    },\n    \"name\": \"roland 37\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"kendrick-heathcote-37\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8215b121679cf0b3201998f030d19a569a1f676d/avatar.png\",\n    \"joined_at\": \"2021-02-11T06:29:20.148Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/kendrick-heathcote-37.json\",\n      \"page\": \"/pones/kendrick-heathcote-37\",\n      \"achievements\": \"/api/v1/pones/kendrick-heathcote-37/achievements.json\",\n      \"points\": \"/api/v1/pones/kendrick-heathcote-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/kendrick-heathcote-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/kendrick-heathcote-37/groups.json\"\n    },\n    \"name\": \"kendrick.heathcote 37\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "580"
+        "Content-Length": "676"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -12,6 +12,9 @@ module RspecApiDocumentation
 end
 
 RspecApiDocumentation.configure do |config|
+  config.api_name        = 'Good Pone Points'
+  config.api_explanation = 'The API for the Good Pone Points service.'
+
   config.format = %i[json open_api]
 
   config.keep_source_order = true

@@ -25,10 +25,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/federico-shanahan-24/points/3834.json",
+      "request_path": "/api/v1/pones/chang-24/points/4002.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key UZMfUmJitUFPJiVnm1qa95PYNmiXqaqtBan2x1Kr2t4USe9kNSi9ZfunGfooLe6QUyTmrmrBUvJ4rnBw",
+        "Authorization": "Api-Key mn4PJQ3gYn8hNkrVzvQD5JzPc15As8xSaN4r8Hn7ABjTJALhpp6mwbmcS13474kaP228nT7kxLPCRK9Z",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -36,10 +36,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 3834,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-11T06:20:34.236Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/federico-shanahan-24/points/3834.json\",\n      \"pone\": \"/api/v1/pones/federico-shanahan-24.json\",\n      \"granted_by\": \"/api/v1/pones/calandra-25.json\"\n    },\n    \"message\": \"Bushwick 90's plaid skateboard.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 4002,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T06:29:20.016Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/chang-24/points/4002.json\",\n      \"pone\": \"/api/v1/pones/chang-24.json\",\n      \"granted_by\": \"/api/v1/pones/nathanael-25.json\"\n    },\n    \"message\": \"Tacos cleanse 8-bit franzen thundercats.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "281"
+        "Content-Length": "267"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

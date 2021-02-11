@@ -29,10 +29,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/jeremiah-40/groups.json",
+      "request_path": "/api/v1/pones/ellyn_rohan-40/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key xpva99MFuBkr5iwKLWFkvTW6u64LxB8WSxQMMoFqGs3TswssVS9vxxcwaBe1BR3s11vErdvMdpgRjtpZ",
+        "Authorization": "Api-Key FqzTzggkvH4GMg6GKMnviaEYqcbRkVSJKdeufPRKCEL4kcMLYZnypMAaR2MiHucX2wMeWYdh9wUFvwK2",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -40,10 +40,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"down-to-a-sunless-sea-6\",\n      \"created_at\": \"2021-02-11T06:20:34.412Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/down-to-a-sunless-sea-6.json\",\n        \"page\": \"/groups/down-to-a-sunless-sea-6\",\n        \"owner\": \"/api/v1/pones/fredrick-41.json\",\n        \"members\": \"/api/v1/groups/down-to-a-sunless-sea-6/members.json\"\n      },\n      \"name\": \"Down to a Sunless Sea 6\"\n    },\n    {\n      \"slug\": \"ego-dominus-tuus-7\",\n      \"created_at\": \"2021-02-11T06:20:34.417Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/ego-dominus-tuus-7.json\",\n        \"page\": \"/groups/ego-dominus-tuus-7\",\n        \"owner\": \"/api/v1/pones/shiela-willms-42.json\",\n        \"members\": \"/api/v1/groups/ego-dominus-tuus-7/members.json\"\n      },\n      \"name\": \"Ego Dominus Tuus 7\"\n    },\n    {\n      \"slug\": \"infinite-jest-8\",\n      \"created_at\": \"2021-02-11T06:20:34.422Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/infinite-jest-8.json\",\n        \"page\": \"/groups/infinite-jest-8\",\n        \"owner\": \"/api/v1/pones/tyisha-gibson-43.json\",\n        \"members\": \"/api/v1/groups/infinite-jest-8/members.json\"\n      },\n      \"name\": \"Infinite Jest 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"far-from-the-madding-crowd-6\",\n      \"created_at\": \"2021-02-11T06:29:20.195Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/far-from-the-madding-crowd-6.json\",\n        \"page\": \"/groups/far-from-the-madding-crowd-6\",\n        \"owner\": \"/api/v1/pones/roland-kris-41.json\",\n        \"members\": \"/api/v1/groups/far-from-the-madding-crowd-6/members.json\"\n      },\n      \"name\": \"Far From the Madding Crowd 6\"\n    },\n    {\n      \"slug\": \"such-such-were-the-joys-7\",\n      \"created_at\": \"2021-02-11T06:29:20.200Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/such-such-were-the-joys-7.json\",\n        \"page\": \"/groups/such-such-were-the-joys-7\",\n        \"owner\": \"/api/v1/pones/julian-42.json\",\n        \"members\": \"/api/v1/groups/such-such-were-the-joys-7/members.json\"\n      },\n      \"name\": \"Such, Such Were the Joys 7\"\n    },\n    {\n      \"slug\": \"dulce-et-decorum-est-8\",\n      \"created_at\": \"2021-02-11T06:29:20.205Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/dulce-et-decorum-est-8.json\",\n        \"page\": \"/groups/dulce-et-decorum-est-8\",\n        \"owner\": \"/api/v1/pones/ma_abshire-43.json\",\n        \"members\": \"/api/v1/groups/dulce-et-decorum-est-8/members.json\"\n      },\n      \"name\": \"Dulce et Decorum Est 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "971"
+        "Content-Length": "1060"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

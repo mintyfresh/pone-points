@@ -19,10 +19,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/yuko-bauch-19/points/granted.json",
+      "request_path": "/api/v1/pones/tim-stark-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key KeyFoAxMAbbdAg1agZVxepqhNPJPNx6wYZPZpXPSrTibTSbZ2AH3CJHqKHrY47UgZpdjs7XoaucNW2xa",
+        "Authorization": "Api-Key pJpSbnyddSUWY1MRg9Xahrs9TDREC5rD4RP5hAN3mrkgHw3HiAQPq23cM4AB4xU26MdSnvWLpkRhr85a",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -30,10 +30,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3830,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T06:20:34.201Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/marcela-yost-20/points/3830.json\",\n        \"pone\": \"/api/v1/pones/marcela-yost-20.json\",\n        \"granted_by\": \"/api/v1/pones/yuko-bauch-19.json\"\n      },\n      \"message\": \"Literally swag park hashtag single-origin coffee cred ennui.\"\n    },\n    {\n      \"id\": 3831,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T06:20:34.204Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/renita_sipes-21/points/3831.json\",\n        \"pone\": \"/api/v1/pones/renita_sipes-21.json\",\n        \"granted_by\": \"/api/v1/pones/yuko-bauch-19.json\"\n      },\n      \"message\": \"Pug mixtape drinking yuccie phlogiston skateboard neutra dreamcatcher.\"\n    },\n    {\n      \"id\": 3832,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:20:34.206Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/chang-satterfield-22/points/3832.json\",\n        \"pone\": \"/api/v1/pones/chang-satterfield-22.json\",\n        \"granted_by\": \"/api/v1/pones/yuko-bauch-19.json\"\n      },\n      \"message\": \"Fingerstache listicle lomo venmo.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/yuko-bauch-19.json\",\n      \"give_points\": \"/api/v1/pones/yuko-bauch-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3998,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T06:29:19.981Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jessica-20/points/3998.json\",\n        \"pone\": \"/api/v1/pones/jessica-20.json\",\n        \"granted_by\": \"/api/v1/pones/tim-stark-19.json\"\n      },\n      \"message\": \"Scenester cray pabst pour-over readymade plaid fanny pack ramps tattooed.\"\n    },\n    {\n      \"id\": 3999,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:29:19.984Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/august-cole-21/points/3999.json\",\n        \"pone\": \"/api/v1/pones/august-cole-21.json\",\n        \"granted_by\": \"/api/v1/pones/tim-stark-19.json\"\n      },\n      \"message\": \"Wayfarers tumblr hammock thundercats tousled disrupt.\"\n    },\n    {\n      \"id\": 4000,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T06:29:19.986Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/erin-22/points/4000.json\",\n        \"pone\": \"/api/v1/pones/erin-22.json\",\n        \"granted_by\": \"/api/v1/pones/tim-stark-19.json\"\n      },\n      \"message\": \"Organic humblebrag bushwick shoreditch.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/tim-stark-19.json\",\n      \"give_points\": \"/api/v1/pones/tim-stark-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1050"
+        "Content-Length": "1009"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

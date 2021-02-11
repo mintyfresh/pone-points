@@ -34,10 +34,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/tonda-29/points/give.json",
-      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Organic pitchfork distillery hammock goth.\"}}",
+      "request_path": "/api/v1/pones/gale-29/points/give.json",
+      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Sriracha kogi jean shorts humblebrag.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key dSY5tXdVBH6PYdXyrK4yaHk5Nza36vhm4EyH8Y98Z1iXKdpp8eemoHBTHeSPgrATywsESzrukrQumu99",
+        "Authorization": "Api-Key He8SYAzyJSafiqXpo9PD2Jd4fBpeWk3pvPxMs5NCmr6KLp9egxwvTFgstdnPmKeBrKV7HEWzH8hgdk7q",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {

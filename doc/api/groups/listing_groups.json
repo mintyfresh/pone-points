@@ -26,7 +26,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key HzBNW5LWQBKXquK48qqWufxghEiMA1im7RhAj6dtXqFQG5km3e13ewE8b9xNa4UVoCicELhnZySEhjd7",
+        "Authorization": "Api-Key cmBoYY2hUz4q8bdpC4WrDCejta17YdL3LRznapwTtTbxffUPTUdjw9K9jtvTNbkEiY6X7FwnY6JLR6Ab",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-proper-study-1\",\n      \"created_at\": \"2021-02-11T06:20:34.061Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-proper-study-1.json\",\n        \"page\": \"/groups/the-proper-study-1\",\n        \"owner\": \"/api/v1/pones/roberto-hand-3.json\",\n        \"members\": \"/api/v1/groups/the-proper-study-1/members.json\"\n      },\n      \"name\": \"The Proper Study 1\"\n    },\n    {\n      \"slug\": \"infinite-jest-2\",\n      \"created_at\": \"2021-02-11T06:20:34.069Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/infinite-jest-2.json\",\n        \"page\": \"/groups/infinite-jest-2\",\n        \"owner\": \"/api/v1/pones/muoi-4.json\",\n        \"members\": \"/api/v1/groups/infinite-jest-2/members.json\"\n      },\n      \"name\": \"Infinite Jest 2\"\n    },\n    {\n      \"slug\": \"the-world-the-flesh-and-the-devil-3\",\n      \"created_at\": \"2021-02-11T06:20:34.073Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-world-the-flesh-and-the-devil-3.json\",\n        \"page\": \"/groups/the-world-the-flesh-and-the-devil-3\",\n        \"owner\": \"/api/v1/pones/derek-5.json\",\n        \"members\": \"/api/v1/groups/the-world-the-flesh-and-the-devil-3/members.json\"\n      },\n      \"name\": \"The World, the Flesh and the Devil 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-wings-of-the-dove-1\",\n      \"created_at\": \"2021-02-11T06:29:19.841Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-wings-of-the-dove-1.json\",\n        \"page\": \"/groups/the-wings-of-the-dove-1\",\n        \"owner\": \"/api/v1/pones/lilly-3.json\",\n        \"members\": \"/api/v1/groups/the-wings-of-the-dove-1/members.json\"\n      },\n      \"name\": \"The Wings of the Dove 1\"\n    },\n    {\n      \"slug\": \"no-country-for-old-men-2\",\n      \"created_at\": \"2021-02-11T06:29:19.849Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/no-country-for-old-men-2.json\",\n        \"page\": \"/groups/no-country-for-old-men-2\",\n        \"owner\": \"/api/v1/pones/kerrie-kertzmann-4.json\",\n        \"members\": \"/api/v1/groups/no-country-for-old-men-2/members.json\"\n      },\n      \"name\": \"No Country for Old Men 2\"\n    },\n    {\n      \"slug\": \"dance-dance-dance-3\",\n      \"created_at\": \"2021-02-11T06:29:19.853Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/dance-dance-dance-3.json\",\n        \"page\": \"/groups/dance-dance-dance-3\",\n        \"owner\": \"/api/v1/pones/brandi-5.json\",\n        \"members\": \"/api/v1/groups/dance-dance-dance-3/members.json\"\n      },\n      \"name\": \"Dance Dance Dance 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1016"
+        "Content-Length": "1011"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

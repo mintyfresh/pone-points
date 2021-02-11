@@ -29,10 +29,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/kindra_powlowski-14/points.json",
+      "request_path": "/api/v1/pones/mignon_kessler-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key VuBUrJ1ezgJjEye3RYgw4SKzVFoa5nmWLNc8zPRWzij4KayH4jjM9iWcJizNQnZwqBVsY5WE8naqGdLn",
+        "Authorization": "Api-Key BuaqeexXK1PEGTcM58eoNcKKRtCRqwv9kkETaxQnBgVkmHoH3Kgqj7LXG6xoPceZ1XGF9YKjGfkqZxo3",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -40,10 +40,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3826,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T06:20:34.162Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kindra_powlowski-14/points/3826.json\",\n        \"pone\": \"/api/v1/pones/kindra_powlowski-14.json\",\n        \"granted_by\": \"/api/v1/pones/alina-baumbach-15.json\"\n      },\n      \"message\": \"Mixtape pbr&b 90's aesthetic cliche yuccie farm-to-table quinoa stumptown.\"\n    },\n    {\n      \"id\": 3827,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:20:34.165Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kindra_powlowski-14/points/3827.json\",\n        \"pone\": \"/api/v1/pones/kindra_powlowski-14.json\",\n        \"granted_by\": \"/api/v1/pones/marge-graham-16.json\"\n      },\n      \"message\": \"Letterpress leggings bicycle rights diy fashion axe quinoa cornhole cronut wayfarers.\"\n    },\n    {\n      \"id\": 3828,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:20:34.167Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/kindra_powlowski-14/points/3828.json\",\n        \"pone\": \"/api/v1/pones/kindra_powlowski-14.json\",\n        \"granted_by\": \"/api/v1/pones/janyce-17.json\"\n      },\n      \"message\": \"Meggings muggle magic trust fund brunch.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/kindra_powlowski-14.json\",\n      \"give_points\": \"/api/v1/pones/kindra_powlowski-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3994,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:29:19.943Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/mignon_kessler-14/points/3994.json\",\n        \"pone\": \"/api/v1/pones/mignon_kessler-14.json\",\n        \"granted_by\": \"/api/v1/pones/sheryl-15.json\"\n      },\n      \"message\": \"Before they sold out next level lomo ramps vice single-origin coffee pork belly green juice synth.\"\n    },\n    {\n      \"id\": 3995,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:29:19.945Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/mignon_kessler-14/points/3995.json\",\n        \"pone\": \"/api/v1/pones/mignon_kessler-14.json\",\n        \"granted_by\": \"/api/v1/pones/jarrett-16.json\"\n      },\n      \"message\": \"Venmo paleo pbr&b organic irony carry.\"\n    },\n    {\n      \"id\": 3996,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T06:29:19.948Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/mignon_kessler-14/points/3996.json\",\n        \"pone\": \"/api/v1/pones/mignon_kessler-14.json\",\n        \"granted_by\": \"/api/v1/pones/sheldon-conroy-17.json\"\n      },\n      \"message\": \"Polaroid cronut pug crucifix tumblr keytar.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/mignon_kessler-14.json\",\n      \"give_points\": \"/api/v1/pones/mignon_kessler-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1119"
+        "Content-Length": "1078"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

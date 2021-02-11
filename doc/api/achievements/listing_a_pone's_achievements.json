@@ -19,10 +19,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/rosario_braun-1/achievements.json",
+      "request_path": "/api/v1/pones/heather-1/achievements.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key cMDfkofkr4iijo9ZQ54k3XFLk1uBPznsM2jjQii4X2nmbGAprFpmFRkG1dkVCNyxvthjFJkDo6GXq2Yt",
+        "Authorization": "Api-Key oM3W3746uYnxDmqsEWywMLWhtx6TCK92QWsd8BJRv47QjxYsBC7Y7dChNaYocbc1dMgAR14LvpYnMSzb",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -30,10 +30,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"achievements\": [\n    {\n      \"id\": 1,\n      \"description\": \"Give somepone a point!\",\n      \"name\": \"A Good Pone\"\n    },\n    {\n      \"id\": 3,\n      \"description\": \"Give out points at least 3 days in a row.\",\n      \"name\": \"The Regular\"\n    },\n    {\n      \"id\": 4,\n      \"description\": \"Give a pone a point immediately after you've received one from them.\",\n      \"name\": \"Counterpoint\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/rosario_braun-1.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"achievements\": [\n    {\n      \"id\": 2,\n      \"description\": \"Receive points from the same pone at least 3 days in a row.\",\n      \"name\": \"Somepone Likes You!\"\n    },\n    {\n      \"id\": 3,\n      \"description\": \"Give out points at least 3 days in a row.\",\n      \"name\": \"The Regular\"\n    },\n    {\n      \"id\": 4,\n      \"description\": \"Give a pone a point immediately after you've received one from them.\",\n      \"name\": \"Counterpoint\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/heather-1.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "354"
+        "Content-Length": "393"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

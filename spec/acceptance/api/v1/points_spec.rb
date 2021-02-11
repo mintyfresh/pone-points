@@ -69,7 +69,7 @@ RSpec.resource 'Points', type: :acceptance do
 
     let(:raw_post) { params.to_json }
 
-    context 'with valid input' do
+    context 'with valid input' do # rubocop:disable RSpec/EmptyExampleGroup, RSpec/MultipleMemoizedHelpers
       let(:count) { rand(1..3) }
       let(:message) { Faker::Hipster.sentence }
 
@@ -89,7 +89,7 @@ RSpec.resource 'Points', type: :acceptance do
       end
     end
 
-    context 'with invalid input' do
+    context 'with invalid input' do # rubocop:disable RSpec/EmptyExampleGroup, RSpec/MultipleMemoizedHelpers
       let(:count) { -1 }
       let(:message) { Faker::Hipster.sentence }
 

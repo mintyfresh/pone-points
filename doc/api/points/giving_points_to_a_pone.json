@@ -34,10 +34,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/abraham-27/points/give.json",
-      "request_body": "{\"point\":{\"count\":2,\"message\":\"Listicle pop-up irony waistcoat cred cornhole photo booth.\"}}",
+      "request_path": "/api/v1/pones/celsa-27/points/give.json",
+      "request_body": "{\"point\":{\"count\":1,\"message\":\"Cardigan farm-to-table ramps diy put a bird on it selvage hashtag celiac.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key 7D1LwVYMU6EDpW2MGzQ7wtJmJ7EYmmNR5dzGhm7zHRqAbsGq6KRsW1NiFkh9o6gYbmJP4SrsCddGvUPW",
+        "Authorization": "Api-Key ckoyJoKo2J7s1ybL5raV5jRENjA2pgdxTkpB7V9bbN9kUb6kKPVy3WtfKiAZThiMV4VNm3DsgVirdRcp",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -45,10 +45,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 3837,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T06:20:34.273Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/abraham-27/points/3837.json\",\n      \"pone\": \"/api/v1/pones/abraham-27.json\",\n      \"granted_by\": \"/api/v1/pones/jackson_morar-28.json\"\n    },\n    \"message\": \"Listicle pop-up irony waistcoat cred cornhole photo booth.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 4005,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-11T06:29:20.054Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/celsa-27/points/4005.json\",\n      \"pone\": \"/api/v1/pones/celsa-27.json\",\n      \"granted_by\": \"/api/v1/pones/doris-28.json\"\n    },\n    \"message\": \"Cardigan farm-to-table ramps diy put a bird on it selvage hashtag celiac.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "293"
+        "Content-Length": "296"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
