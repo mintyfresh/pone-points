@@ -12,6 +12,7 @@ AllCops:
   Exclude:
     - 'bin/*'
     - 'node_modules/**/*'
+    - 'vendor/bundle/**/*'
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
