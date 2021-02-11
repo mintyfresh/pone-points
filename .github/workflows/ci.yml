@@ -15,8 +15,14 @@ on:
     branches:
       - master
 
+env:
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_DB: postgres
+
 jobs:
-  RSpec:
+  Rubocop:
+    name: Rubocop
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,9 +30,27 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0.0'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
       - name: Run Rubocop
         run: bin/rubocop
+
+  RSpec:
+    name: RSpec
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Postgres Client
+        run: sudo apt install libpq-dev
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0.0'
+          bundler-cache: true
       - name: Setup Database
         run: bin/rails db:create db:structure:load db:seed
       - name: Run Specs
