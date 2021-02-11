@@ -41,6 +41,7 @@
   </p>
   <hr>
   <div class="text-end">
-    <%= button_to('Revoke API Key', revoke_account_api_key_path(@api_key), class: 'btn btn-danger', method: :post, disabled: @api_key.revoked?) %>
+    <%= button_to('Revoke API Key', revoke_account_api_key_path(@api_key), class: 'btn btn-danger', method: :post, disabled: @api_key.revoked?,
+                  data: { confirm: "Are you sure you want to revoked #{@api_key.name}?\nYou will no be able to undo this action." }) %>
   </div>
 <% end %>

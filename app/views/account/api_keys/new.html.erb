@@ -1,5 +1,5 @@
 <%= render(AccountPanelComponent.new) do %>
-  <%= form_with(model: @form, url: account_api_keys_path, method: :post) do |form| %>
+  <%= form_with(model: @form, url: account_api_keys_path, method: :post, id: 'new_api_key_form') do |form| %>
     <div class="mb-3">
       <%= form.label(:name) %>
       <%= form.text_field(:name, class: 'form-control') %>

@@ -45,7 +45,7 @@ module Account
     def revoke
       authorize(@api_key).revoked!
 
-      redirect_to account_api_keys_path
+      redirect_to account_api_key_path(@api_key)
     end
 
   private
