@@ -19,7 +19,7 @@
     <% end %>
   </div>
 <% end %>
-<% if @current_pone.unverified? %>
+<% if @current_pone.present? && @current_pone.unverified? %>
   <span class="text-muted">You must be verified to give good pone points.</span>
 <% end %>
 

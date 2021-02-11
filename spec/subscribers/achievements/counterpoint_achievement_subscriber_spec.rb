@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CounterpointAchievementSubscriber, type: :subscriber do
+RSpec.describe Achievements::CounterpointAchievementSubscriber, type: :subscriber do
   subject(:subscriber) { described_class.new(event, payload) }
 
   let(:event) { 'app.things.happened' }
