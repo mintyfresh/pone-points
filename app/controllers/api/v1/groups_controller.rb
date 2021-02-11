@@ -22,9 +22,11 @@ module Api
 
       def members
         authorize(@group, :show?) && authorize(Pone, :index?)
-        @members = policy_scope(@group.members).order(:id).preload(avatar_attachment: :blob)
 
-        render json: PoneBlueprint.render_as_json(@members, root: :members)
+        @members = policy_scope(@group.members).order(:id).preload(avatar_attachment: :blob)
+        @members = @members.page(params[:page]).per(params[:count])
+
+        render json: PoneBlueprint.render_as_json(@members, root: :members, meta: index_meta(@members))
       end
 
     private

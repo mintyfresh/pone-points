@@ -18,11 +18,16 @@
             "daily_giftable_points_count": {
               "type": "integer",
               "minimum": 0
+            },
+            "bonus_points_count": {
+              "type": "integer",
+              "minimum": 0
             }
           },
           "required": [
             "giftable_points_count",
-            "daily_giftable_points_count"
+            "daily_giftable_points_count",
+            "bonus_points_count"
           ]
         }
       ]

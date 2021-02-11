@@ -23,6 +23,6 @@ class PoneBlueprint < ApplicationBlueprint
   end
 
   view :me do
-    fields :giftable_points_count, :daily_giftable_points_count
+    fields :giftable_points_count, :daily_giftable_points_count, :bonus_points_count
   end
 end
