@@ -7,10 +7,14 @@
       "items": {
         "$ref": "group.schema.json#/definitions/group"
       }
+    },
+    "meta": {
+      "$ref": "pagination.schema.json#/definitions/meta"
     }
   },
   "additionalProperties": false,
   "required": [
-    "groups"
+    "groups",
+    "meta"
   ]
 }

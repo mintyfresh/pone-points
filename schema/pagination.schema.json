@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "next": {
+              "oneOf": [
+                { "type": "null" },
+                {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              ]
+            },
+            "prev": {
+              "oneOf": [
+                { "type": "null" },
+                {
+                  "type": "string",
+                  "format": "uri-reference"
+                }
+              ]
+            }
+          },
+          "required": [
+            "next",
+            "prev"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/robert-24/points/917.json",
+      "request_path": "/api/v1/pones/tracey_dietrich-24/points/1379.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key GUVhccyoUSJjf2YExx6eGhaHXLw2d1PcX3EmmBWjvFGRKu57qQ9ajwcBai258Ao3ToiVs269sbEqFFa8",
+        "Authorization": "Api-Key BPrXvmVJHURD38FJ7FtPvJVU9gkA7XvxmXxY14CjxCAFfFyLBT2zgjtQJevkfZDfhztYEnBAJ65rqT8G",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 917,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T01:08:26.326Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/robert-24/points/917.json\",\n      \"pone\": \"/api/v1/pones/robert-24.json\",\n      \"granted_by\": \"/api/v1/pones/tawnya-botsford-25.json\"\n    },\n    \"message\": \"Truffaut iphone quinoa sriracha sustainable chartreuse listicle 8-bit kombucha.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 1379,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T02:21:52.117Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/tracey_dietrich-24/points/1379.json\",\n      \"pone\": \"/api/v1/pones/tracey_dietrich-24.json\",\n      \"granted_by\": \"/api/v1/pones/kaye-25.json\"\n    },\n    \"message\": \"Retro raw denim taxidermy next level portland.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "312"
+        "Content-Length": "288"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/francoise-35.json",
+      "request_path": "/api/v1/pones/rosario-lang-35.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 35rRwW1i16naPMPnrwH9SwCKZHvrmd6vXL3bBUSP1RARCMGJD9riCRoYqwqN9JZFGCaFUFczyjKj4sDQ",
+        "Authorization": "Api-Key KSxbuwKxzu2NnZ7AHpqeiEs7PULeT8dsngUFbRorcTQXwRUkZ4ut4PknkbDHPKUC7f4udVBDvvGJ9ong",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"francoise-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e5128fc3486ad60a307306e6b898025631fb61e1/avatar.png\",\n    \"joined_at\": \"2021-02-11T01:08:26.436Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/francoise-35.json\",\n      \"page\": \"/pones/francoise-35\",\n      \"achievements\": \"/api/v1/pones/francoise-35/achievements.json\",\n      \"points\": \"/api/v1/pones/francoise-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/francoise-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/francoise-35/groups.json\"\n    },\n    \"name\": \"francoise 35\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"rosario-lang-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--814e9497cf395703b8ab00e70d8a02c75a764335/avatar.png\",\n    \"joined_at\": \"2021-02-11T02:21:52.222Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/rosario-lang-35.json\",\n      \"page\": \"/pones/rosario-lang-35\",\n      \"achievements\": \"/api/v1/pones/rosario-lang-35/achievements.json\",\n      \"points\": \"/api/v1/pones/rosario-lang-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/rosario-lang-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/rosario-lang-35/groups.json\"\n    },\n    \"name\": \"rosario.lang 35\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "604"
+        "Content-Length": "628"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

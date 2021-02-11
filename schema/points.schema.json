@@ -14,7 +14,6 @@
           "format": "uri-reference"
         }
       },
-      "additionalProperties": false,
       "required": [
         "pone",
         "give_points"
@@ -22,13 +21,17 @@
     },
     "meta": {
       "type": "object",
-      "properties": {
-        "links": {
-          "$ref": "#/definitions/links"
+      "allOf": [
+        { "$ref": "pagination.schema.json#/definitions/meta" },
+        {
+          "properties": {
+            "links": {
+              "$ref": "#/definitions/links"
+            }
+          },
+          "required": ["links"]
         }
-      },
-      "additionalProperties": false,
-      "required": ["links"]
+      ]
     }
   },
   "properties": {

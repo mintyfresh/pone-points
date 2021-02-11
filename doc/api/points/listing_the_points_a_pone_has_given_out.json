@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/ollie_homenick-19/points/granted.json",
+      "request_path": "/api/v1/pones/ona-lebsack-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key x2Q7a856XkoW4ky3M1JQFKbA2vYE9gieDUSuLYvc5Pfbp7dQWQD8EPZjvDHQWRTF8iTcnf8iV3RhhpRE",
+        "Authorization": "Api-Key 2jSkAv4pi3qaNd5gptm72DKKmYgd6tLsBdvWQ2FFqDB6y1ELAmCN3o7xVYeSK8dA1MgeMtcBNYGomuiD",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 913,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.291Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jackie-okuneva-20/points/913.json\",\n        \"pone\": \"/api/v1/pones/jackie-okuneva-20.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Neutra paleo mlkshk plaid try-hard brooklyn.\"\n    },\n    {\n      \"id\": 914,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.293Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/evelina-volkman-21/points/914.json\",\n        \"pone\": \"/api/v1/pones/evelina-volkman-21.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Listicle shoreditch photo booth flannel cliche gentrify.\"\n    },\n    {\n      \"id\": 915,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.295Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/perla-mayert-22/points/915.json\",\n        \"pone\": \"/api/v1/pones/perla-mayert-22.json\",\n        \"granted_by\": \"/api/v1/pones/ollie_homenick-19.json\"\n      },\n      \"message\": \"Shoreditch whatever literally kinfolk ramps drinking.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/ollie_homenick-19.json\",\n      \"give_points\": \"/api/v1/pones/ollie_homenick-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1375,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T02:21:52.081Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/delcie_wuckert-20/points/1375.json\",\n        \"pone\": \"/api/v1/pones/delcie_wuckert-20.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"Pop-up taxidermy chillwave mixtape next level banh mi kombucha.\"\n    },\n    {\n      \"id\": 1376,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T02:21:52.083Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santo-21/points/1376.json\",\n        \"pone\": \"/api/v1/pones/santo-21.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"+1 art party brooklyn hella beard etsy meggings fashion axe lomo.\"\n    },\n    {\n      \"id\": 1377,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T02:21:52.086Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/benedict-22/points/1377.json\",\n        \"pone\": \"/api/v1/pones/benedict-22.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"Austin kitsch ramps mustache sartorial flexitarian.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/ona-lebsack-19.json\",\n      \"give_points\": \"/api/v1/pones/ona-lebsack-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1010"
+        "Content-Length": "1043"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 11YkUVPNXoRbKtBc9rL3nMBBBFybfyyeyp62dLUGmLaDyEtXrpcRta9hmtzZ5B1PU39H151L7BmYZP7F",
+        "Authorization": "Api-Key 6sHX1S8JWPuMLEfaVGJ2AYf4Me9M2U56Ezpy7s3MPdieE6L2kpR8SbhCeSqLHB5K4fsm9v3cPFxgKxLJ",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"his-dark-materials-1\",\n      \"created_at\": \"2021-02-11T01:08:26.161Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/his-dark-materials-1.json\",\n        \"page\": \"/groups/his-dark-materials-1\",\n        \"owner\": \"/api/v1/pones/ian-3.json\",\n        \"members\": \"/api/v1/groups/his-dark-materials-1/members.json\"\n      },\n      \"name\": \"His Dark Materials 1\"\n    },\n    {\n      \"slug\": \"a-summer-bird-cage-2\",\n      \"created_at\": \"2021-02-11T01:08:26.168Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-summer-bird-cage-2.json\",\n        \"page\": \"/groups/a-summer-bird-cage-2\",\n        \"owner\": \"/api/v1/pones/cecilia-4.json\",\n        \"members\": \"/api/v1/groups/a-summer-bird-cage-2/members.json\"\n      },\n      \"name\": \"A Summer Bird-Cage 2\"\n    },\n    {\n      \"slug\": \"a-passage-to-india-3\",\n      \"created_at\": \"2021-02-11T01:08:26.173Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-passage-to-india-3.json\",\n        \"page\": \"/groups/a-passage-to-india-3\",\n        \"owner\": \"/api/v1/pones/terese-5.json\",\n        \"members\": \"/api/v1/groups/a-passage-to-india-3/members.json\"\n      },\n      \"name\": \"A Passage to India 3\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"noli-me-tangere-1\",\n      \"created_at\": \"2021-02-11T02:21:51.937Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/noli-me-tangere-1.json\",\n        \"page\": \"/groups/noli-me-tangere-1\",\n        \"owner\": \"/api/v1/pones/shaniqua-3.json\",\n        \"members\": \"/api/v1/groups/noli-me-tangere-1/members.json\"\n      },\n      \"name\": \"Noli Me Tangere 1\"\n    },\n    {\n      \"slug\": \"the-last-temptation-2\",\n      \"created_at\": \"2021-02-11T02:21:51.945Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-last-temptation-2.json\",\n        \"page\": \"/groups/the-last-temptation-2\",\n        \"owner\": \"/api/v1/pones/veronika_gleichner-4.json\",\n        \"members\": \"/api/v1/groups/the-last-temptation-2/members.json\"\n      },\n      \"name\": \"The Last Temptation 2\"\n    },\n    {\n      \"slug\": \"the-grapes-of-wrath-3\",\n      \"created_at\": \"2021-02-11T02:21:51.949Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-grapes-of-wrath-3.json\",\n        \"page\": \"/groups/the-grapes-of-wrath-3\",\n        \"owner\": \"/api/v1/pones/victor-5.json\",\n        \"members\": \"/api/v1/groups/the-grapes-of-wrath-3/members.json\"\n      },\n      \"name\": \"The Grapes of Wrath 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "907"
+        "Content-Length": "981"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

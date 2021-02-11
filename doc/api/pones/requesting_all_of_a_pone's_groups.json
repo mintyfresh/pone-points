@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/chong-ziemann-38/groups.json",
+      "request_path": "/api/v1/pones/jarvis-barrows-38/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 7WFyJ96BKsnwy9cGs3yveNQ3uUhbiJxqLQq7UZzPBmg68wEauUVuBT58Qf6zjXTQK7LQSg3RYP32aFEx",
+        "Authorization": "Api-Key 3hDCC47JxVVW2vuWeUNTfsspxDqUHVx6LQf1wFmH6zp62ViRmpjk7jcoJwGmEzYTZ6v8C2fPyTMLQwsD",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"far-from-the-madding-crowd-6\",\n      \"created_at\": \"2021-02-11T01:08:26.479Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/far-from-the-madding-crowd-6.json\",\n        \"page\": \"/groups/far-from-the-madding-crowd-6\",\n        \"owner\": \"/api/v1/pones/lisandra_mitchell-39.json\",\n        \"members\": \"/api/v1/groups/far-from-the-madding-crowd-6/members.json\"\n      },\n      \"name\": \"Far From the Madding Crowd 6\"\n    },\n    {\n      \"slug\": \"for-a-breath-i-tarry-7\",\n      \"created_at\": \"2021-02-11T01:08:26.484Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/for-a-breath-i-tarry-7.json\",\n        \"page\": \"/groups/for-a-breath-i-tarry-7\",\n        \"owner\": \"/api/v1/pones/luciano-kutch-40.json\",\n        \"members\": \"/api/v1/groups/for-a-breath-i-tarry-7/members.json\"\n      },\n      \"name\": \"For a Breath I Tarry 7\"\n    },\n    {\n      \"slug\": \"time-to-murder-and-create-8\",\n      \"created_at\": \"2021-02-11T01:08:26.488Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/time-to-murder-and-create-8.json\",\n        \"page\": \"/groups/time-to-murder-and-create-8\",\n        \"owner\": \"/api/v1/pones/edwardo-41.json\",\n        \"members\": \"/api/v1/groups/time-to-murder-and-create-8/members.json\"\n      },\n      \"name\": \"Time To Murder And Create 8\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-torment-of-others-6\",\n      \"created_at\": \"2021-02-11T02:21:52.279Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-torment-of-others-6.json\",\n        \"page\": \"/groups/the-torment-of-others-6\",\n        \"owner\": \"/api/v1/pones/jamel-39.json\",\n        \"members\": \"/api/v1/groups/the-torment-of-others-6/members.json\"\n      },\n      \"name\": \"The Torment of Others 6\"\n    },\n    {\n      \"slug\": \"the-line-of-beauty-7\",\n      \"created_at\": \"2021-02-11T02:21:52.285Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-line-of-beauty-7.json\",\n        \"page\": \"/groups/the-line-of-beauty-7\",\n        \"owner\": \"/api/v1/pones/francina-40.json\",\n        \"members\": \"/api/v1/groups/the-line-of-beauty-7/members.json\"\n      },\n      \"name\": \"The Line of Beauty 7\"\n    },\n    {\n      \"slug\": \"precious-bane-8\",\n      \"created_at\": \"2021-02-11T02:21:52.289Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/precious-bane-8.json\",\n        \"page\": \"/groups/precious-bane-8\",\n        \"owner\": \"/api/v1/pones/jamel-mckenzie-41.json\",\n        \"members\": \"/api/v1/groups/precious-bane-8/members.json\"\n      },\n      \"name\": \"Precious Bane 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1016"
+        "Content-Length": "974"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

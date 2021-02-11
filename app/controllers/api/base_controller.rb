@@ -4,6 +4,7 @@ module Api
   class BaseController < ActionController::API
     API_KEY_AUTHORIZATION = 'Api-Key'
 
+    include Kaminari::Helpers::UrlHelper
     include Pundit
 
     before_action :verify_api_key

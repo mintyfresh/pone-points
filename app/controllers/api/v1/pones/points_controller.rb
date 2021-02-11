@@ -8,16 +8,20 @@ module Api
 
         def index
           authorize(Point)
-          @points = policy_scope(@pone.points).order(:id).preload(:granted_by)
 
-          render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta)
+          @points = policy_scope(@pone.points).order(:id).preload(:granted_by)
+          @points = @points.page(params[:page]).per(params[:count])
+
+          render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta(@points))
         end
 
         def granted
           authorize(Point, :index?)
-          @points = policy_scope(@pone.granted_points).order(:id).preload(:pone)
 
-          render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta)
+          @points = policy_scope(@pone.granted_points).order(:id).preload(:pone)
+          @points = @points.page(params[:page]).per(params[:count])
+
+          render json: PointBlueprint.render_as_json(@points, root: :points, meta: index_meta(@points))
         end
 
         def show
@@ -50,10 +54,15 @@ module Api
             .merge(pone: @pone, granted_by: api_key.pone)
         end
 
+        # @param relation [ActiveRecord::Relation]
         # @return [Hash]
-        def index_meta
+        def index_meta(relation)
           {
+            count: relation.total_count,
+            pages: relation.total_pages,
             links: {
+              next:        next_page_path(relation),
+              prev:        prev_page_path(relation),
               pone:        api_v1_pone_path(@pone, format: :json),
               give_points: give_api_v1_pone_points_path(@pone, format: :json)
             }

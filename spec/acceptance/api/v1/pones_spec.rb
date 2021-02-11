@@ -15,6 +15,9 @@ RSpec.resource 'Pones', type: :acceptance do
       create_list(:pone, 5)
     end
 
+    parameter :page, 'The page number'
+    parameter :count, 'The number of pones to show per page'
+
     example_request 'Listing pones' do
       expect(response_status).to eq(200)
       expect(response_body).to match_schema(:pones)

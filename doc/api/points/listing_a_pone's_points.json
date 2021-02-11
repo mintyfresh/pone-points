@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/lon_schumm-14/points.json",
+      "request_path": "/api/v1/pones/brianne-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key AzFsXsponXX3CCReuZ1dLKNXL7rABmGU4S9ai9KXdFYakSWMyuZRcvzCcMEpgvb4UodQxUy6mrB9vAjv",
+        "Authorization": "Api-Key 1GEPXyrBzVdBhvrh3i8KbuXfpiqsQ75tSLccfTAuhHGpKL8tvJ5qHMPU24BbwA2MboE8Hs27hJg13Z6A",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 909,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T01:08:26.253Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/909.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/frieda-15.json\"\n      },\n      \"message\": \"Plaid tilde loko vhs you probably haven't heard of them food truck keffiyeh.\"\n    },\n    {\n      \"id\": 910,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.255Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/910.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/lucy-16.json\"\n      },\n      \"message\": \"Kale chips scenester everyday pinterest polaroid franzen.\"\n    },\n    {\n      \"id\": 911,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T01:08:26.258Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lon_schumm-14/points/911.json\",\n        \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n        \"granted_by\": \"/api/v1/pones/melonie-17.json\"\n      },\n      \"message\": \"Banjo williamsburg knausgaard street gluten-free church-key 8-bit.\"\n    }\n  ],\n  \"meta\": {\n    \"links\": {\n      \"pone\": \"/api/v1/pones/lon_schumm-14.json\",\n      \"give_points\": \"/api/v1/pones/lon_schumm-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1371,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T02:21:52.041Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brianne-14/points/1371.json\",\n        \"pone\": \"/api/v1/pones/brianne-14.json\",\n        \"granted_by\": \"/api/v1/pones/sallie_toy-15.json\"\n      },\n      \"message\": \"Helvetica waistcoat 3 wolf moon kitsch.\"\n    },\n    {\n      \"id\": 1372,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T02:21:52.044Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brianne-14/points/1372.json\",\n        \"pone\": \"/api/v1/pones/brianne-14.json\",\n        \"granted_by\": \"/api/v1/pones/louetta-grimes-16.json\"\n      },\n      \"message\": \"Umami tacos chambray flannel yolo poutine keytar sartorial.\"\n    },\n    {\n      \"id\": 1373,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T02:21:52.046Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/brianne-14/points/1373.json\",\n        \"pone\": \"/api/v1/pones/brianne-14.json\",\n        \"granted_by\": \"/api/v1/pones/thanh_corwin-17.json\"\n      },\n      \"message\": \"Pitchfork tilde brooklyn keytar health park yuccie flannel.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/brianne-14.json\",\n      \"give_points\": \"/api/v1/pones/brianne-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1001"
+        "Content-Length": "1004"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

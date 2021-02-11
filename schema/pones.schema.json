@@ -7,10 +7,14 @@
       "items": {
         "$ref": "pone.schema.json#/definitions/pone"
       }
+    },
+    "meta": {
+      "$ref": "pagination.schema.json#/definitions/meta"
     }
   },
   "additionalProperties": false,
   "required": [
-    "pones"
+    "pones",
+    "meta"
   ]
 }
