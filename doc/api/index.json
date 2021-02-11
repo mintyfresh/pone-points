@@ -71,6 +71,13 @@
           "groups": "all",
           "route": "/api/v1/pones/:pone_slug/points/give.json",
           "method": "post"
+        },
+        {
+          "description": "Giving points to a pone [invalid]",
+          "link": "points/giving_points_to_a_pone_[invalid].json",
+          "groups": "all",
+          "route": "/api/v1/pones/:pone_slug/points/give.json",
+          "method": "post"
         }
       ]
     },

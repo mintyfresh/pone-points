@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/giovanni-38/groups.json",
+      "request_path": "/api/v1/pones/carmina-40/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 1WqfUbySPB6SW4G8ueipp5bPNMv1qKyRaBnc84AjUDE1LBkSWzktuq58T83JgUq3Gz5tXwyHiqyQiFxe",
+        "Authorization": "Api-Key HfZ1EKDLjDSD3k6GquV9A8E9upZiVwafBTkNk6iD1Puw7126EdES6iHMQnJH7cyFpVcMx9eYcqpzJQzt",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"a-time-to-kill-6\",\n      \"created_at\": \"2021-02-11T03:21:57.619Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-time-to-kill-6.json\",\n        \"page\": \"/groups/a-time-to-kill-6\",\n        \"owner\": \"/api/v1/pones/linn-hintz-39.json\",\n        \"members\": \"/api/v1/groups/a-time-to-kill-6/members.json\"\n      },\n      \"name\": \"A Time to Kill 6\"\n    },\n    {\n      \"slug\": \"the-monkey-s-raincoat-7\",\n      \"created_at\": \"2021-02-11T03:21:57.625Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-monkey-s-raincoat-7.json\",\n        \"page\": \"/groups/the-monkey-s-raincoat-7\",\n        \"owner\": \"/api/v1/pones/carly-40.json\",\n        \"members\": \"/api/v1/groups/the-monkey-s-raincoat-7/members.json\"\n      },\n      \"name\": \"The Monkey's Raincoat 7\"\n    },\n    {\n      \"slug\": \"tender-is-the-night-8\",\n      \"created_at\": \"2021-02-11T03:21:57.630Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/tender-is-the-night-8.json\",\n        \"page\": \"/groups/tender-is-the-night-8\",\n        \"owner\": \"/api/v1/pones/tony_vandervort-41.json\",\n        \"members\": \"/api/v1/groups/tender-is-the-night-8/members.json\"\n      },\n      \"name\": \"Tender Is the Night 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-man-within-6\",\n      \"created_at\": \"2021-02-11T05:45:36.189Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-man-within-6.json\",\n        \"page\": \"/groups/the-man-within-6\",\n        \"owner\": \"/api/v1/pones/toby-41.json\",\n        \"members\": \"/api/v1/groups/the-man-within-6/members.json\"\n      },\n      \"name\": \"The Man Within 6\"\n    },\n    {\n      \"slug\": \"the-far-distant-oxus-7\",\n      \"created_at\": \"2021-02-11T05:45:36.194Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-far-distant-oxus-7.json\",\n        \"page\": \"/groups/the-far-distant-oxus-7\",\n        \"owner\": \"/api/v1/pones/sulema-42.json\",\n        \"members\": \"/api/v1/groups/the-far-distant-oxus-7/members.json\"\n      },\n      \"name\": \"The Far-Distant Oxus 7\"\n    },\n    {\n      \"slug\": \"noli-me-tangere-8\",\n      \"created_at\": \"2021-02-11T05:45:36.199Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/noli-me-tangere-8.json\",\n        \"page\": \"/groups/noli-me-tangere-8\",\n        \"owner\": \"/api/v1/pones/dave-donnelly-43.json\",\n        \"members\": \"/api/v1/groups/noli-me-tangere-8/members.json\"\n      },\n      \"name\": \"Noli Me Tangere 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "987"
+        "Content-Length": "955"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

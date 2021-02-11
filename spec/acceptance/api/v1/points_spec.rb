@@ -57,7 +57,7 @@ RSpec.resource 'Points', type: :acceptance do
 
   post '/api/v1/pones/:pone_slug/points/give.json' do
     let(:count) { rand(1..3) }
-    let(:message) { 'foo' }
+    let(:message) { Faker::Hipster.sentence }
     let(:pone_slug) { pone.slug }
     let(:pone) { create(:pone) }
 
@@ -79,6 +79,17 @@ RSpec.resource 'Points', type: :acceptance do
             pone:       api_v1_pone_path(pone, format: :json),
             granted_by: api_v1_pone_path(api_key.pone, format: :json)
           }
+        }
+      )
+    end
+
+    example 'Giving points to a pone [invalid]' do
+      do_request point: { count: -1 }
+
+      expect(response_status).to eq(422)
+      expect(response_body).to include_json(
+        errors: {
+          count: ['must be greater than 0']
         }
       )
     end

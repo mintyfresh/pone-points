@@ -3,7 +3,7 @@
   "resource_explanation": null,
   "http_method": "POST",
   "route": "/api/v1/pones/:pone_slug/points/give.json",
-  "description": "Giving points to a pone",
+  "description": "Giving points to a pone [invalid]",
   "explanation": null,
   "parameters": [
     {
@@ -30,21 +30,21 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/nickolas_muller-27/points/give.json",
-      "request_body": "{\"point\":{\"count\":2,\"message\":\"Thundercats roof offal ennui selvage iphone.\"}}",
+      "request_path": "/api/v1/pones/faustina-29/points/give.json",
+      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Tattooed cronut try-hard disrupt wolf chillwave photo booth keffiyeh.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key 5t2vMeRZwPwAvvgkTngXM9tUHESJ4CWb4pZ9qMXRRyK3upT2UpC7qdEb8LBEJFfnx9cGAmE2FTbb6mBx",
+        "Authorization": "Api-Key suZPB57PVGHNbo4QxFd1sddkBN88MzdtqUVV8r666mbyceLehHRUak41p2gejw5Soff6fKgaYz3jdrrZ",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 3594,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T05:45:36.045Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/nickolas_muller-27/points/3594.json\",\n      \"pone\": \"/api/v1/pones/nickolas_muller-27.json\",\n      \"granted_by\": \"/api/v1/pones/mariko_doyle-28.json\"\n    },\n    \"message\": \"Thundercats roof offal ennui selvage iphone.\"\n  }\n}",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"count\": [\n      \"must be greater than 0\"\n    ]\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "294"
+        "Content-Length": "47"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

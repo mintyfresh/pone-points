@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/domenic-14/points.json",
+      "request_path": "/api/v1/pones/jenna-orn-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key AvqYxtMK1iNbUjux7HmRpCRHeWjnHguJrVTW7FUAY16yEZEhs6VU6TmgaZrTkTAJH8X4MTPLEbBPTFsX",
+        "Authorization": "Api-Key fPwXSkcbBZpKYYYGXzFFYTCoLu6dnoRTnbEprKegpg9du6tWFkhYVXXUMWGbzffaQQFdk7V2L6QXS4L4",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1751,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.357Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1751.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/everette-olson-15.json\"\n      },\n      \"message\": \"Kombucha loko small batch fashion axe literally heirloom skateboard.\"\n    },\n    {\n      \"id\": 1752,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:21:57.360Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1752.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/vincenzo_weimann-16.json\"\n      },\n      \"message\": \"Small batch messenger bag mumblecore banh mi venmo tofu everyday readymade.\"\n    },\n    {\n      \"id\": 1753,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.363Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1753.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/vincenzo_beer-17.json\"\n      },\n      \"message\": \"Jean shorts readymade yr mixtape pour-over direct trade tofu blue bottle.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/domenic-14.json\",\n      \"give_points\": \"/api/v1/pones/domenic-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3583,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.929Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3583.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/carolina-15.json\"\n      },\n      \"message\": \"Semiotics hella locavore next level pabst drinking letterpress.\"\n    },\n    {\n      \"id\": 3584,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.931Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3584.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/salvador-16.json\"\n      },\n      \"message\": \"Kale chips semiotics craft beer sriracha irony venmo pbr&b.\"\n    },\n    {\n      \"id\": 3585,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:45:35.934Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3585.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/violeta-17.json\"\n      },\n      \"message\": \"Brunch 90's kitsch wolf cronut.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n      \"give_points\": \"/api/v1/pones/jenna-orn-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1070"
+        "Content-Length": "1008"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

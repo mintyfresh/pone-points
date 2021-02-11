@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key ZWwZ6Q142jkxRDw9ovhc4a5tM7JUQ7ywT2rxSsJvCHhiy6jhanQu1uo9aUecdmGYpjSPFjH77YFM3MT8",
+        "Authorization": "Api-Key aSwkthkTpHYhHzJdvqjZJrnKscuh7pFn8mPX7xCZ8oobKDF4qYZ97AcM11de8oAMqAkHAbsPsTDS2Cme",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"after-many-a-summer-dies-the-swan-1\",\n      \"created_at\": \"2021-02-11T03:21:57.244Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/after-many-a-summer-dies-the-swan-1.json\",\n        \"page\": \"/groups/after-many-a-summer-dies-the-swan-1\",\n        \"owner\": \"/api/v1/pones/johna-funk-3.json\",\n        \"members\": \"/api/v1/groups/after-many-a-summer-dies-the-swan-1/members.json\"\n      },\n      \"name\": \"After Many a Summer Dies the Swan 1\"\n    },\n    {\n      \"slug\": \"the-far-distant-oxus-2\",\n      \"created_at\": \"2021-02-11T03:21:57.252Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-far-distant-oxus-2.json\",\n        \"page\": \"/groups/the-far-distant-oxus-2\",\n        \"owner\": \"/api/v1/pones/brendan_ebert-4.json\",\n        \"members\": \"/api/v1/groups/the-far-distant-oxus-2/members.json\"\n      },\n      \"name\": \"The Far-Distant Oxus 2\"\n    },\n    {\n      \"slug\": \"no-highway-3\",\n      \"created_at\": \"2021-02-11T03:21:57.258Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/no-highway-3.json\",\n        \"page\": \"/groups/no-highway-3\",\n        \"owner\": \"/api/v1/pones/shenika-kertzmann-5.json\",\n        \"members\": \"/api/v1/groups/no-highway-3/members.json\"\n      },\n      \"name\": \"No Highway 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-curious-incident-of-the-dog-in-the-nig-1\",\n      \"created_at\": \"2021-02-11T05:45:35.825Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-curious-incident-of-the-dog-in-the-nig-1.json\",\n        \"page\": \"/groups/the-curious-incident-of-the-dog-in-the-nig-1\",\n        \"owner\": \"/api/v1/pones/lang_cremin-3.json\",\n        \"members\": \"/api/v1/groups/the-curious-incident-of-the-dog-in-the-nig-1/members.json\"\n      },\n      \"name\": \"The Curious Incident of the Dog in the Nig... 1\"\n    },\n    {\n      \"slug\": \"a-scanner-darkly-2\",\n      \"created_at\": \"2021-02-11T05:45:35.833Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-scanner-darkly-2.json\",\n        \"page\": \"/groups/a-scanner-darkly-2\",\n        \"owner\": \"/api/v1/pones/letha_daniel-4.json\",\n        \"members\": \"/api/v1/groups/a-scanner-darkly-2/members.json\"\n      },\n      \"name\": \"A Scanner Darkly 2\"\n    },\n    {\n      \"slug\": \"dying-of-the-light-3\",\n      \"created_at\": \"2021-02-11T05:45:35.838Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/dying-of-the-light-3.json\",\n        \"page\": \"/groups/dying-of-the-light-3\",\n        \"owner\": \"/api/v1/pones/tawanna-schuster-5.json\",\n        \"members\": \"/api/v1/groups/dying-of-the-light-3/members.json\"\n      },\n      \"name\": \"Dying of the Light 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1039"
+        "Content-Length": "1106"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/jerilyn_bahringer-35.json",
+      "request_path": "/api/v1/pones/hyacinth-37.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key S8mKGi12FLJzTTJpiPCYBrjabart8poNE7ZG6TWnPm1RMQ3sARsBJo2XeRaJsyQb7oWBSfZUcEEowQxk",
+        "Authorization": "Api-Key 86tYWsyi3R3cmWjrJLiryRkN9HVxmdWNPX9nKHGZVVVtDkjYUnc5Gh71g4NvAubAKShafYwvfw1Gux5Y",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"jerilyn_bahringer-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--adc5c64301b421478f55ff06cf2b80e776c6b186/avatar.png\",\n    \"joined_at\": \"2021-02-11T03:21:57.554Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/jerilyn_bahringer-35.json\",\n      \"page\": \"/pones/jerilyn_bahringer-35\",\n      \"achievements\": \"/api/v1/pones/jerilyn_bahringer-35/achievements.json\",\n      \"points\": \"/api/v1/pones/jerilyn_bahringer-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/jerilyn_bahringer-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/jerilyn_bahringer-35/groups.json\"\n    },\n    \"name\": \"jerilyn_bahringer 35\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"hyacinth-37\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5ee866b9c1eda25faf853e9998a7b7f27163fd5/avatar.png\",\n    \"joined_at\": \"2021-02-11T05:45:36.142Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/hyacinth-37.json\",\n      \"page\": \"/pones/hyacinth-37\",\n      \"achievements\": \"/api/v1/pones/hyacinth-37/achievements.json\",\n      \"points\": \"/api/v1/pones/hyacinth-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/hyacinth-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/hyacinth-37/groups.json\"\n    },\n    \"name\": \"hyacinth 37\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "668"
+        "Content-Length": "596"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

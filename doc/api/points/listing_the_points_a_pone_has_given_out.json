@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/charita_wilkinson-19/points/granted.json",
+      "request_path": "/api/v1/pones/houston-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key STbiuZ1Yo3zzq9gEq9C3J9YC6p2VRgH6Zf79YXguTyDMidCa8n1FM3j9uy1Br3MPsxjV3qTUPRizBTfM",
+        "Authorization": "Api-Key i9faqAsBfhZbcARXHz5jdStops3h4tkDXrmZsuKse6h9yWy65mSDz5JtajaTWBqMiykYTEMGDBr6bPvT",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1755,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.401Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/cruz-20/points/1755.json\",\n        \"pone\": \"/api/v1/pones/cruz-20.json\",\n        \"granted_by\": \"/api/v1/pones/charita_wilkinson-19.json\"\n      },\n      \"message\": \"Butcher artisan roof whatever 90's normcore lumbersexual swag.\"\n    },\n    {\n      \"id\": 1756,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.403Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/romeo-jones-21/points/1756.json\",\n        \"pone\": \"/api/v1/pones/romeo-jones-21.json\",\n        \"granted_by\": \"/api/v1/pones/charita_wilkinson-19.json\"\n      },\n      \"message\": \"Synth organic everyday narwhal selvage direct trade.\"\n    },\n    {\n      \"id\": 1757,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:21:57.406Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jc-22/points/1757.json\",\n        \"pone\": \"/api/v1/pones/jc-22.json\",\n        \"granted_by\": \"/api/v1/pones/charita_wilkinson-19.json\"\n      },\n      \"message\": \"Polaroid letterpress jean shorts iphone.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/charita_wilkinson-19.json\",\n      \"give_points\": \"/api/v1/pones/charita_wilkinson-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3587,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:45:35.969Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/emmitt-20/points/3587.json\",\n        \"pone\": \"/api/v1/pones/emmitt-20.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"3 wolf moon offal banh mi franzen pop-up yr.\"\n    },\n    {\n      \"id\": 3588,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.972Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/angella-21/points/3588.json\",\n        \"pone\": \"/api/v1/pones/angella-21.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"Letterpress tattooed umami pug.\"\n    },\n    {\n      \"id\": 3589,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.974Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/linnea-22/points/3589.json\",\n        \"pone\": \"/api/v1/pones/linnea-22.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"Vice blog stumptown disrupt tote bag +1 leggings tousled.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/houston-19.json\",\n      \"give_points\": \"/api/v1/pones/houston-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1028"
+        "Content-Length": "960"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

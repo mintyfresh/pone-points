@@ -9,7 +9,7 @@ class CreatePointForm < ApplicationForm
   attribute :count, :integer
   attribute :message, :string
 
-  validates :count, numericality: { greater_than: 0, less_than_or_equal_to: 3 }
+  validates :count, numericality: { greater_than: 0, less_than_or_equal_to: 5 }
   validates :message, presence: true, length: { maximum: 1000 }
 
   # @return [Point]
