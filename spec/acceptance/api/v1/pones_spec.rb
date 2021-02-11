@@ -46,6 +46,7 @@ RSpec.resource 'Pones', type: :acceptance do
     with_options scope: :pone do
       response_field :giftable_points_count, 'The remaining number of points left to give out today'
       response_field :daily_giftable_points_count, 'The total number of points you can give out each day'
+      response_field :bonus_points_count, 'Additional, one-time use points that can be given to pones'
     end
 
     example_request 'Requesting additional information about your own pone' do
@@ -55,7 +56,8 @@ RSpec.resource 'Pones', type: :acceptance do
         pone: {
           slug:                        api_key.pone.slug,
           giftable_points_count:       api_key.pone.giftable_points_count,
-          daily_giftable_points_count: api_key.pone.daily_giftable_points_count
+          daily_giftable_points_count: api_key.pone.daily_giftable_points_count,
+          bonus_points_count:          api_key.pone.bonus_points_count
         }
       )
     end

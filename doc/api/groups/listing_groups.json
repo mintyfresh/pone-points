@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key AQ5KaWLNRUspyD4f1XuBpN2UPVo8VTFHaZrUPmfp4NpYUUdNSLtYFq6FkdoBZFMpG94jKFpz72iZYoq6",
+        "Authorization": "Api-Key ZWwZ6Q142jkxRDw9ovhc4a5tM7JUQ7ywT2rxSsJvCHhiy6jhanQu1uo9aUecdmGYpjSPFjH77YFM3MT8",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-last-enemy-1\",\n      \"created_at\": \"2021-02-11T03:19:03.537Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-last-enemy-1.json\",\n        \"page\": \"/groups/the-last-enemy-1\",\n        \"owner\": \"/api/v1/pones/delinda-3.json\",\n        \"members\": \"/api/v1/groups/the-last-enemy-1/members.json\"\n      },\n      \"name\": \"The Last Enemy 1\"\n    },\n    {\n      \"slug\": \"those-barren-leaves-thrones-dominations-2\",\n      \"created_at\": \"2021-02-11T03:19:03.546Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/those-barren-leaves-thrones-dominations-2.json\",\n        \"page\": \"/groups/those-barren-leaves-thrones-dominations-2\",\n        \"owner\": \"/api/v1/pones/larry-4.json\",\n        \"members\": \"/api/v1/groups/those-barren-leaves-thrones-dominations-2/members.json\"\n      },\n      \"name\": \"Those Barren Leaves, Thrones, Dominations 2\"\n    },\n    {\n      \"slug\": \"to-say-nothing-of-the-dog-3\",\n      \"created_at\": \"2021-02-11T03:19:03.551Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-say-nothing-of-the-dog-3.json\",\n        \"page\": \"/groups/to-say-nothing-of-the-dog-3\",\n        \"owner\": \"/api/v1/pones/jeffrey-5.json\",\n        \"members\": \"/api/v1/groups/to-say-nothing-of-the-dog-3/members.json\"\n      },\n      \"name\": \"To Say Nothing of the Dog 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"after-many-a-summer-dies-the-swan-1\",\n      \"created_at\": \"2021-02-11T03:21:57.244Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/after-many-a-summer-dies-the-swan-1.json\",\n        \"page\": \"/groups/after-many-a-summer-dies-the-swan-1\",\n        \"owner\": \"/api/v1/pones/johna-funk-3.json\",\n        \"members\": \"/api/v1/groups/after-many-a-summer-dies-the-swan-1/members.json\"\n      },\n      \"name\": \"After Many a Summer Dies the Swan 1\"\n    },\n    {\n      \"slug\": \"the-far-distant-oxus-2\",\n      \"created_at\": \"2021-02-11T03:21:57.252Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-far-distant-oxus-2.json\",\n        \"page\": \"/groups/the-far-distant-oxus-2\",\n        \"owner\": \"/api/v1/pones/brendan_ebert-4.json\",\n        \"members\": \"/api/v1/groups/the-far-distant-oxus-2/members.json\"\n      },\n      \"name\": \"The Far-Distant Oxus 2\"\n    },\n    {\n      \"slug\": \"no-highway-3\",\n      \"created_at\": \"2021-02-11T03:21:57.258Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/no-highway-3.json\",\n        \"page\": \"/groups/no-highway-3\",\n        \"owner\": \"/api/v1/pones/shenika-kertzmann-5.json\",\n        \"members\": \"/api/v1/groups/no-highway-3/members.json\"\n      },\n      \"name\": \"No Highway 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1095"
+        "Content-Length": "1039"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

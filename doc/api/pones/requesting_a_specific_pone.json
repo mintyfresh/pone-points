@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/dulce-35.json",
+      "request_path": "/api/v1/pones/jerilyn_bahringer-35.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key BJXqq9UsY6JEi4xR8fzwc1C5s5tZTPa6ACaHZcqt1yXUhFAmAA494ET33pnsahbwQHT8ExQoU8ZX7Tgy",
+        "Authorization": "Api-Key S8mKGi12FLJzTTJpiPCYBrjabart8poNE7ZG6TWnPm1RMQ3sARsBJo2XeRaJsyQb7oWBSfZUcEEowQxk",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"dulce-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0509881d2e8e016be3025df8ca62138a1283607/avatar.png\",\n    \"joined_at\": \"2021-02-11T03:19:03.836Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/dulce-35.json\",\n      \"page\": \"/pones/dulce-35\",\n      \"achievements\": \"/api/v1/pones/dulce-35/achievements.json\",\n      \"points\": \"/api/v1/pones/dulce-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/dulce-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/dulce-35/groups.json\"\n    },\n    \"name\": \"dulce 35\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"jerilyn_bahringer-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--adc5c64301b421478f55ff06cf2b80e776c6b186/avatar.png\",\n    \"joined_at\": \"2021-02-11T03:21:57.554Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/jerilyn_bahringer-35.json\",\n      \"page\": \"/pones/jerilyn_bahringer-35\",\n      \"achievements\": \"/api/v1/pones/jerilyn_bahringer-35/achievements.json\",\n      \"points\": \"/api/v1/pones/jerilyn_bahringer-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/jerilyn_bahringer-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/jerilyn_bahringer-35/groups.json\"\n    },\n    \"name\": \"jerilyn_bahringer 35\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "572"
+        "Content-Length": "668"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

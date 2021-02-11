@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/evelyn-27/points/give.json",
-      "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
+      "request_path": "/api/v1/pones/lane-hoppe-27/points/give.json",
+      "request_body": "{\"point\":{\"count\":3,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key GsZUyfhue85G22gWMwr8dx1hU6gCkSEeAwtAoJtUCkQdthhMFgxEPUE5WNEUo5uAPBYgRXwjNF86HSs1",
+        "Authorization": "Api-Key x7FqAfKfUj2vncUuj4611y6dHxXrFXNAeGpnSyULi65QKfQXbtvQ5FNmQcfkoW2XVJbdcFB9S4KmPdDq",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,7 +41,7 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 1742,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T03:19:03.764Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/evelyn-27/points/1742.json\",\n      \"pone\": \"/api/v1/pones/evelyn-27.json\",\n      \"granted_by\": \"/api/v1/pones/rogelio-carter-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 1762,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-11T03:21:57.482Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/lane-hoppe-27/points/1762.json\",\n      \"pone\": \"/api/v1/pones/lane-hoppe-27.json\",\n      \"granted_by\": \"/api/v1/pones/serina-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Content-Length": "237"

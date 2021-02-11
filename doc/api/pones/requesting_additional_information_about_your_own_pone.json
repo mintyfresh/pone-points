@@ -18,6 +18,11 @@
       "scope": "pone",
       "name": "daily_giftable_points_count",
       "description": "The total number of points you can give out each day"
+    },
+    {
+      "scope": "pone",
+      "name": "bonus_points_count",
+      "description": "Additional, one-time use points that can be given to pones"
     }
   ],
   "requests": [
@@ -26,7 +31,7 @@
       "request_path": "/api/v1/pones/me.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 7p27PbMXEyzEGJSdpPLW7DYxi36aWVzcwCVvgqUKYZGdYdvPSBi4wdZ15dK9CrPabQXjj2YDw9CwC8gR",
+        "Authorization": "Api-Key oNG29eafFqW6pT3Yypq8JsKpVnQmLK7tsQqsDqRJz6Kjyri72Bnm9suSUFnbfG996A1qnjcTnSR7f2ge",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +39,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"madaline-bode-37\",\n    \"avatar_url\": null,\n    \"bonus_points_count\": 0,\n    \"daily_giftable_points_count\": 3,\n    \"giftable_points_count\": 3,\n    \"joined_at\": \"2021-02-11T03:19:03.879Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/madaline-bode-37.json\",\n      \"page\": \"/pones/madaline-bode-37\",\n      \"achievements\": \"/api/v1/pones/madaline-bode-37/achievements.json\",\n      \"points\": \"/api/v1/pones/madaline-bode-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/madaline-bode-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/madaline-bode-37/groups.json\"\n    },\n    \"name\": \"madaline.bode 37\",\n    \"points_count\": 1\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"matha_hauck-37\",\n    \"avatar_url\": null,\n    \"bonus_points_count\": 0,\n    \"daily_giftable_points_count\": 3,\n    \"giftable_points_count\": 3,\n    \"joined_at\": \"2021-02-11T03:21:57.594Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/matha_hauck-37.json\",\n      \"page\": \"/pones/matha_hauck-37\",\n      \"achievements\": \"/api/v1/pones/matha_hauck-37/achievements.json\",\n      \"points\": \"/api/v1/pones/matha_hauck-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/matha_hauck-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/matha_hauck-37/groups.json\"\n    },\n    \"name\": \"matha_hauck 37\",\n    \"points_count\": 1\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "549"
+        "Content-Length": "533"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

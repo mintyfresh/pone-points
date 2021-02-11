@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/clement-dibbert-14/points.json",
+      "request_path": "/api/v1/pones/domenic-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key yxYi6ajqecdnx4MBKP4HabprMQVgsjrQ84ArZGT47RavxDmdNNHbYktsvgF7A1x4WSD4LtXkTjR7YqSj",
+        "Authorization": "Api-Key AvqYxtMK1iNbUjux7HmRpCRHeWjnHguJrVTW7FUAY16yEZEhs6VU6TmgaZrTkTAJH8X4MTPLEbBPTFsX",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1731,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T03:19:03.646Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/clement-dibbert-14/points/1731.json\",\n        \"pone\": \"/api/v1/pones/clement-dibbert-14.json\",\n        \"granted_by\": \"/api/v1/pones/clotilde_abbott-15.json\"\n      },\n      \"message\": \"Kale chips cliche shoreditch wes anderson tofu flexitarian thundercats five dollar toast actually.\"\n    },\n    {\n      \"id\": 1732,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:19:03.649Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/clement-dibbert-14/points/1732.json\",\n        \"pone\": \"/api/v1/pones/clement-dibbert-14.json\",\n        \"granted_by\": \"/api/v1/pones/carlee_conroy-16.json\"\n      },\n      \"message\": \"Pinterest cornhole blog typewriter.\"\n    },\n    {\n      \"id\": 1733,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:19:03.651Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/clement-dibbert-14/points/1733.json\",\n        \"pone\": \"/api/v1/pones/clement-dibbert-14.json\",\n        \"granted_by\": \"/api/v1/pones/gerald-effertz-17.json\"\n      },\n      \"message\": \"Migas cred flannel fingerstache.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/clement-dibbert-14.json\",\n      \"give_points\": \"/api/v1/pones/clement-dibbert-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1751,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.357Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1751.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/everette-olson-15.json\"\n      },\n      \"message\": \"Kombucha loko small batch fashion axe literally heirloom skateboard.\"\n    },\n    {\n      \"id\": 1752,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:21:57.360Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1752.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/vincenzo_weimann-16.json\"\n      },\n      \"message\": \"Small batch messenger bag mumblecore banh mi venmo tofu everyday readymade.\"\n    },\n    {\n      \"id\": 1753,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T03:21:57.363Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/domenic-14/points/1753.json\",\n        \"pone\": \"/api/v1/pones/domenic-14.json\",\n        \"granted_by\": \"/api/v1/pones/vincenzo_beer-17.json\"\n      },\n      \"message\": \"Jean shorts readymade yr mixtape pour-over direct trade tofu blue bottle.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/domenic-14.json\",\n      \"give_points\": \"/api/v1/pones/domenic-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1082"
+        "Content-Length": "1070"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
