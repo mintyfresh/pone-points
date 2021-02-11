@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/groups/recalled-to-life-4.json",
+      "request_path": "/api/v1/groups/of-mice-and-men-4.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 5k4dbJSuJkwS9jC27GJwSAQF78vfyQFLGH9Gu3bnSgRbxGRSuetC2pJJ9s277v4JcG83vwvnCLb6SdzX",
+        "Authorization": "Api-Key jPgYf7wuMHPopqXbJXqiuiUQFKBVdPNxWJQuSthQcg1YYb7zg1a9y2Di2p2LjBaZFzYMxuqbTwMpYibf",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"group\": {\n    \"slug\": \"recalled-to-life-4\",\n    \"created_at\": \"2021-02-11T05:45:35.865Z\",\n    \"description\": \"Heirloom stumptown quinoa taxidermy.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/recalled-to-life-4.json\",\n      \"page\": \"/groups/recalled-to-life-4\",\n      \"owner\": \"/api/v1/pones/enrique-7.json\",\n      \"members\": \"/api/v1/groups/recalled-to-life-4/members.json\"\n    },\n    \"name\": \"Recalled to Life 4\"\n  }\n}",
+      "response_body": "{\n  \"group\": {\n    \"slug\": \"of-mice-and-men-4\",\n    \"created_at\": \"2021-02-11T05:57:27.089Z\",\n    \"description\": \"Farm-to-table direct trade pitchfork goth squid.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/of-mice-and-men-4.json\",\n      \"page\": \"/groups/of-mice-and-men-4\",\n      \"owner\": \"/api/v1/pones/sau-7.json\",\n      \"members\": \"/api/v1/groups/of-mice-and-men-4/members.json\"\n    },\n    \"name\": \"Of Mice and Men 4\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "352"
+        "Content-Length": "355"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

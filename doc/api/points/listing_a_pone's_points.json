@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/jenna-orn-14/points.json",
+      "request_path": "/api/v1/pones/bridget-14/points.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key fPwXSkcbBZpKYYYGXzFFYTCoLu6dnoRTnbEprKegpg9du6tWFkhYVXXUMWGbzffaQQFdk7V2L6QXS4L4",
+        "Authorization": "Api-Key kySRsJW5GgUzGvFxmrTZrE3qkZEfthc5AQKeY8eJxeh6zq9XphAVx1MEmethGYMsfyBMfcU8hUqG6fXG",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3583,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.929Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3583.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/carolina-15.json\"\n      },\n      \"message\": \"Semiotics hella locavore next level pabst drinking letterpress.\"\n    },\n    {\n      \"id\": 3584,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.931Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3584.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/salvador-16.json\"\n      },\n      \"message\": \"Kale chips semiotics craft beer sriracha irony venmo pbr&b.\"\n    },\n    {\n      \"id\": 3585,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:45:35.934Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/jenna-orn-14/points/3585.json\",\n        \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n        \"granted_by\": \"/api/v1/pones/violeta-17.json\"\n      },\n      \"message\": \"Brunch 90's kitsch wolf cronut.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/jenna-orn-14.json\",\n      \"give_points\": \"/api/v1/pones/jenna-orn-14/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3646,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:57:27.155Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/bridget-14/points/3646.json\",\n        \"pone\": \"/api/v1/pones/bridget-14.json\",\n        \"granted_by\": \"/api/v1/pones/palmer-15.json\"\n      },\n      \"message\": \"Small batch narwhal aesthetic etsy vhs listicle.\"\n    },\n    {\n      \"id\": 3647,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:57:27.158Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/bridget-14/points/3647.json\",\n        \"pone\": \"/api/v1/pones/bridget-14.json\",\n        \"granted_by\": \"/api/v1/pones/ava-16.json\"\n      },\n      \"message\": \"Paleo selvage kale chips schlitz chambray kitsch wolf kinfolk lomo.\"\n    },\n    {\n      \"id\": 3648,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T05:57:27.160Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/bridget-14/points/3648.json\",\n        \"pone\": \"/api/v1/pones/bridget-14.json\",\n        \"granted_by\": \"/api/v1/pones/juan-17.json\"\n      },\n      \"message\": \"Waistcoat food truck tacos art party.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/bridget-14.json\",\n      \"give_points\": \"/api/v1/pones/bridget-14/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1008"
+        "Content-Length": "976"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

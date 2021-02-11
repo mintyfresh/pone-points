@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/hyacinth-37.json",
+      "request_path": "/api/v1/pones/marguerite-37.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 86tYWsyi3R3cmWjrJLiryRkN9HVxmdWNPX9nKHGZVVVtDkjYUnc5Gh71g4NvAubAKShafYwvfw1Gux5Y",
+        "Authorization": "Api-Key RCUgK8NvqRSiran2qM3c9temGKUzFCA1qb6ghR1GTu8EHWbtb6qm1KomK9uoLhzAgvurTdFuJTEdHggV",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"hyacinth-37\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5ee866b9c1eda25faf853e9998a7b7f27163fd5/avatar.png\",\n    \"joined_at\": \"2021-02-11T05:45:36.142Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/hyacinth-37.json\",\n      \"page\": \"/pones/hyacinth-37\",\n      \"achievements\": \"/api/v1/pones/hyacinth-37/achievements.json\",\n      \"points\": \"/api/v1/pones/hyacinth-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/hyacinth-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/hyacinth-37/groups.json\"\n    },\n    \"name\": \"hyacinth 37\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"marguerite-37\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99ee487fc520bfebf2ea197a8ca4aff160bc3620/avatar.png\",\n    \"joined_at\": \"2021-02-11T05:57:27.366Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/marguerite-37.json\",\n      \"page\": \"/pones/marguerite-37\",\n      \"achievements\": \"/api/v1/pones/marguerite-37/achievements.json\",\n      \"points\": \"/api/v1/pones/marguerite-37/points.json\",\n      \"granted_points\": \"/api/v1/pones/marguerite-37/points/granted.json\",\n      \"groups\": \"/api/v1/pones/marguerite-37/groups.json\"\n    },\n    \"name\": \"marguerite 37\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "596"
+        "Content-Length": "612"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

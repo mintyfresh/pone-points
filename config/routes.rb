@@ -70,6 +70,7 @@ Rails.application.routes.draw do
       end
 
       get '/schema', to: 'schema#index'
+      get '/schema/open_api', to: 'schema#open_api', constraints: { format: 'json' }
       get '/schema/*file', to: 'schema#show', constraints: { file: /.+\.schema\.json/ }, as: :schema_file
     end
   end

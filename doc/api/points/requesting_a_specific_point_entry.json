@@ -23,10 +23,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/zackary-24/points/3591.json",
+      "request_path": "/api/v1/pones/greg-weimann-24/points/3654.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key LjCB77YuusN3MeAe7QjSstdBbmYMqZKLRuqmafjJpyqpSuHpqygRnpQwjreNKTPRyRREk6annyT6nZNY",
+        "Authorization": "Api-Key HpeG5NdNm8t3f85kk97H51X4LEs8Mnobchs4SDEYsUN9p6wn8RMeHEtA8dFJYY5Kh3S2Ue1ZVqbLctcq",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -34,10 +34,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"point\": {\n    \"id\": 3591,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T05:45:36.005Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/zackary-24/points/3591.json\",\n      \"pone\": \"/api/v1/pones/zackary-24.json\",\n      \"granted_by\": \"/api/v1/pones/ike-friesen-25.json\"\n    },\n    \"message\": \"Crucifix brunch jean shorts trust fund mlkshk.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 3654,\n    \"count\": 3,\n    \"granted_at\": \"2021-02-11T05:57:27.232Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/greg-weimann-24/points/3654.json\",\n      \"pone\": \"/api/v1/pones/greg-weimann-24.json\",\n      \"granted_by\": \"/api/v1/pones/sandi-maggio-25.json\"\n    },\n    \"message\": \"Phlogiston photo booth asymmetrical paleo sartorial drinking.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "279"
+        "Content-Length": "305"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

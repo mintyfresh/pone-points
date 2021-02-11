@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key aSwkthkTpHYhHzJdvqjZJrnKscuh7pFn8mPX7xCZ8oobKDF4qYZ97AcM11de8oAMqAkHAbsPsTDS2Cme",
+        "Authorization": "Api-Key iYmVMSzpYiCuq9FfR7UMUW6Zw4ZwQacc8U5Uor35ugpDK8Wao5UhGBGisvfWyuq3A9U37Xszb8z1bXkm",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-curious-incident-of-the-dog-in-the-nig-1\",\n      \"created_at\": \"2021-02-11T05:45:35.825Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-curious-incident-of-the-dog-in-the-nig-1.json\",\n        \"page\": \"/groups/the-curious-incident-of-the-dog-in-the-nig-1\",\n        \"owner\": \"/api/v1/pones/lang_cremin-3.json\",\n        \"members\": \"/api/v1/groups/the-curious-incident-of-the-dog-in-the-nig-1/members.json\"\n      },\n      \"name\": \"The Curious Incident of the Dog in the Nig... 1\"\n    },\n    {\n      \"slug\": \"a-scanner-darkly-2\",\n      \"created_at\": \"2021-02-11T05:45:35.833Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/a-scanner-darkly-2.json\",\n        \"page\": \"/groups/a-scanner-darkly-2\",\n        \"owner\": \"/api/v1/pones/letha_daniel-4.json\",\n        \"members\": \"/api/v1/groups/a-scanner-darkly-2/members.json\"\n      },\n      \"name\": \"A Scanner Darkly 2\"\n    },\n    {\n      \"slug\": \"dying-of-the-light-3\",\n      \"created_at\": \"2021-02-11T05:45:35.838Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/dying-of-the-light-3.json\",\n        \"page\": \"/groups/dying-of-the-light-3\",\n        \"owner\": \"/api/v1/pones/tawanna-schuster-5.json\",\n        \"members\": \"/api/v1/groups/dying-of-the-light-3/members.json\"\n      },\n      \"name\": \"Dying of the Light 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"o-jerusalem-1\",\n      \"created_at\": \"2021-02-11T05:57:27.047Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/o-jerusalem-1.json\",\n        \"page\": \"/groups/o-jerusalem-1\",\n        \"owner\": \"/api/v1/pones/doreen-conroy-3.json\",\n        \"members\": \"/api/v1/groups/o-jerusalem-1/members.json\"\n      },\n      \"name\": \"O Jerusalem! 1\"\n    },\n    {\n      \"slug\": \"mr-standfast-2\",\n      \"created_at\": \"2021-02-11T05:57:27.055Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/mr-standfast-2.json\",\n        \"page\": \"/groups/mr-standfast-2\",\n        \"owner\": \"/api/v1/pones/nilsa-rodriguez-4.json\",\n        \"members\": \"/api/v1/groups/mr-standfast-2/members.json\"\n      },\n      \"name\": \"Mr Standfast 2\"\n    },\n    {\n      \"slug\": \"number-the-stars-3\",\n      \"created_at\": \"2021-02-11T05:57:27.061Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/number-the-stars-3.json\",\n        \"page\": \"/groups/number-the-stars-3\",\n        \"owner\": \"/api/v1/pones/kelvin-5.json\",\n        \"members\": \"/api/v1/groups/number-the-stars-3/members.json\"\n      },\n      \"name\": \"Number the Stars 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1106"
+        "Content-Length": "914"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

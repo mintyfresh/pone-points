@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/houston-19/points/granted.json",
+      "request_path": "/api/v1/pones/galen_mertz-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key i9faqAsBfhZbcARXHz5jdStops3h4tkDXrmZsuKse6h9yWy65mSDz5JtajaTWBqMiykYTEMGDBr6bPvT",
+        "Authorization": "Api-Key xNdyxRoG2qX4muTrHhK7jfqLiE8kCpUSAoJgtrbk8mLSQ1BNN6EVicrFGT2UtoZcBDsw6nwfEdxXm6Lm",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3587,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:45:35.969Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/emmitt-20/points/3587.json\",\n        \"pone\": \"/api/v1/pones/emmitt-20.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"3 wolf moon offal banh mi franzen pop-up yr.\"\n    },\n    {\n      \"id\": 3588,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.972Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/angella-21/points/3588.json\",\n        \"pone\": \"/api/v1/pones/angella-21.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"Letterpress tattooed umami pug.\"\n    },\n    {\n      \"id\": 3589,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:45:35.974Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/linnea-22/points/3589.json\",\n        \"pone\": \"/api/v1/pones/linnea-22.json\",\n        \"granted_by\": \"/api/v1/pones/houston-19.json\"\n      },\n      \"message\": \"Vice blog stumptown disrupt tote bag +1 leggings tousled.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/houston-19.json\",\n      \"give_points\": \"/api/v1/pones/houston-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 3650,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T05:57:27.195Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/britta-20/points/3650.json\",\n        \"pone\": \"/api/v1/pones/britta-20.json\",\n        \"granted_by\": \"/api/v1/pones/galen_mertz-19.json\"\n      },\n      \"message\": \"Diy waistcoat scenester sriracha shoreditch asymmetrical chambray.\"\n    },\n    {\n      \"id\": 3651,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T05:57:27.198Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/lou-rau-21/points/3651.json\",\n        \"pone\": \"/api/v1/pones/lou-rau-21.json\",\n        \"granted_by\": \"/api/v1/pones/galen_mertz-19.json\"\n      },\n      \"message\": \"Brooklyn cliche synth marfa pbr&b post-ironic tumblr tousled.\"\n    },\n    {\n      \"id\": 3652,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T05:57:27.201Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/casey_renner-22/points/3652.json\",\n        \"pone\": \"/api/v1/pones/casey_renner-22.json\",\n        \"granted_by\": \"/api/v1/pones/galen_mertz-19.json\"\n      },\n      \"message\": \"Vhs banjo typewriter skateboard street hella.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/galen_mertz-19.json\",\n      \"give_points\": \"/api/v1/pones/galen_mertz-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "960"
+        "Content-Length": "1037"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

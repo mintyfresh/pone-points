@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/nickolas_muller-27/points/give.json",
-      "request_body": "{\"point\":{\"count\":2,\"message\":\"Thundercats roof offal ennui selvage iphone.\"}}",
+      "request_path": "/api/v1/pones/romaine_bartell-27/points/give.json",
+      "request_body": "{\"point\":{\"count\":2,\"message\":\"Dreamcatcher wayfarers taxidermy beard lomo.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key 5t2vMeRZwPwAvvgkTngXM9tUHESJ4CWb4pZ9qMXRRyK3upT2UpC7qdEb8LBEJFfnx9cGAmE2FTbb6mBx",
+        "Authorization": "Api-Key U8JV63Gm2dFJAE1e6pyvzBbWnTMGApLvK6Jj16jMZRArccfbmmdVvGY8PKH9LyTW3M88Rcs159baWpQY",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 3594,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T05:45:36.045Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/nickolas_muller-27/points/3594.json\",\n      \"pone\": \"/api/v1/pones/nickolas_muller-27.json\",\n      \"granted_by\": \"/api/v1/pones/mariko_doyle-28.json\"\n    },\n    \"message\": \"Thundercats roof offal ennui selvage iphone.\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 3657,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T05:57:27.271Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/romaine_bartell-27/points/3657.json\",\n      \"pone\": \"/api/v1/pones/romaine_bartell-27.json\",\n      \"granted_by\": \"/api/v1/pones/zachary_rippin-28.json\"\n    },\n    \"message\": \"Dreamcatcher wayfarers taxidermy beard lomo.\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "294"
+        "Content-Length": "296"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

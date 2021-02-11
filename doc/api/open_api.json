@@ -1,0 +1,1308 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OpenAPI Specification",
+    "description": "This is a sample server Petstore server.",
+    "termsOfService": "http://open-api.io/terms/",
+    "contact": {
+      "name": "API Support",
+      "url": "http://www.open-api.io/support",
+      "email": "support@open-api.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "application/xml"
+  ],
+  "produces": [
+    "application/json",
+    "application/xml"
+  ],
+  "paths": {
+    "/api/v1/pones/{pone_slug}/achievements.json": {
+      "get": {
+        "tags": [
+          "Achievements"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pone_slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pone_slug",
+            "in": "query",
+            "description": "The pone's slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listing a pone's achievements",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "400"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "achievements": [
+                  {
+                    "id": 2,
+                    "description": "Receive points from the same pone at least 3 days in a row.",
+                    "name": "Somepone Likes You!"
+                  },
+                  {
+                    "id": 3,
+                    "description": "Give out points at least 3 days in a row.",
+                    "name": "The Regular"
+                  },
+                  {
+                    "id": 4,
+                    "description": "Give a pone a point immediately after you've received one from them.",
+                    "name": "Counterpoint"
+                  }
+                ],
+                "meta": {
+                  "links": {
+                    "pone": "/api/v1/pones/jana_wilderman-1.json"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/groups.json": {
+      "get": {
+        "tags": [
+          "Groups"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "Listing groups",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "914"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "groups": [
+                  {
+                    "slug": "o-jerusalem-1",
+                    "created_at": "2021-02-11T05:57:27.047Z",
+                    "links": {
+                      "self": "/api/v1/groups/o-jerusalem-1.json",
+                      "page": "/groups/o-jerusalem-1",
+                      "owner": "/api/v1/pones/doreen-conroy-3.json",
+                      "members": "/api/v1/groups/o-jerusalem-1/members.json"
+                    },
+                    "name": "O Jerusalem! 1"
+                  },
+                  {
+                    "slug": "mr-standfast-2",
+                    "created_at": "2021-02-11T05:57:27.055Z",
+                    "links": {
+                      "self": "/api/v1/groups/mr-standfast-2.json",
+                      "page": "/groups/mr-standfast-2",
+                      "owner": "/api/v1/pones/nilsa-rodriguez-4.json",
+                      "members": "/api/v1/groups/mr-standfast-2/members.json"
+                    },
+                    "name": "Mr Standfast 2"
+                  },
+                  {
+                    "slug": "number-the-stars-3",
+                    "created_at": "2021-02-11T05:57:27.061Z",
+                    "links": {
+                      "self": "/api/v1/groups/number-the-stars-3.json",
+                      "page": "/groups/number-the-stars-3",
+                      "owner": "/api/v1/pones/kelvin-5.json",
+                      "members": "/api/v1/groups/number-the-stars-3/members.json"
+                    },
+                    "name": "Number the Stars 3"
+                  }
+                ],
+                "meta": {
+                  "count": 3,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/groups/{slug.json}": {
+      "get": {
+        "tags": [
+          "Groups"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "slug",
+            "in": "query",
+            "description": " slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting a specific group",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "355"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "group": {
+                  "slug": "of-mice-and-men-4",
+                  "created_at": "2021-02-11T05:57:27.089Z",
+                  "description": "Farm-to-table direct trade pitchfork goth squid.",
+                  "links": {
+                    "self": "/api/v1/groups/of-mice-and-men-4.json",
+                    "page": "/groups/of-mice-and-men-4",
+                    "owner": "/api/v1/pones/sau-7.json",
+                    "members": "/api/v1/groups/of-mice-and-men-4/members.json"
+                  },
+                  "name": "Of Mice and Men 4"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/groups/{slug}/members.json": {
+      "get": {
+        "tags": [
+          "Groups"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "slug",
+            "in": "query",
+            "description": " slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting all of the members of a group",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "1780"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "members": [
+                  {
+                    "slug": "kelvin-9",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.113Z",
+                    "links": {
+                      "self": "/api/v1/pones/kelvin-9.json",
+                      "page": "/pones/kelvin-9",
+                      "achievements": "/api/v1/pones/kelvin-9/achievements.json",
+                      "points": "/api/v1/pones/kelvin-9/points.json",
+                      "granted_points": "/api/v1/pones/kelvin-9/points/granted.json",
+                      "groups": "/api/v1/pones/kelvin-9/groups.json"
+                    },
+                    "name": "kelvin 9",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "rossana-morar-10",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.115Z",
+                    "links": {
+                      "self": "/api/v1/pones/rossana-morar-10.json",
+                      "page": "/pones/rossana-morar-10",
+                      "achievements": "/api/v1/pones/rossana-morar-10/achievements.json",
+                      "points": "/api/v1/pones/rossana-morar-10/points.json",
+                      "granted_points": "/api/v1/pones/rossana-morar-10/points/granted.json",
+                      "groups": "/api/v1/pones/rossana-morar-10/groups.json"
+                    },
+                    "name": "rossana.morar 10",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "sydney-11",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.117Z",
+                    "links": {
+                      "self": "/api/v1/pones/sydney-11.json",
+                      "page": "/pones/sydney-11",
+                      "achievements": "/api/v1/pones/sydney-11/achievements.json",
+                      "points": "/api/v1/pones/sydney-11/points.json",
+                      "granted_points": "/api/v1/pones/sydney-11/points/granted.json",
+                      "groups": "/api/v1/pones/sydney-11/groups.json"
+                    },
+                    "name": "sydney 11",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "foster-kris-12",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.119Z",
+                    "links": {
+                      "self": "/api/v1/pones/foster-kris-12.json",
+                      "page": "/pones/foster-kris-12",
+                      "achievements": "/api/v1/pones/foster-kris-12/achievements.json",
+                      "points": "/api/v1/pones/foster-kris-12/points.json",
+                      "granted_points": "/api/v1/pones/foster-kris-12/points/granted.json",
+                      "groups": "/api/v1/pones/foster-kris-12/groups.json"
+                    },
+                    "name": "foster.kris 12",
+                    "points_count": 0
+                  }
+                ],
+                "meta": {
+                  "count": 4,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{pone_slug}/points.json": {
+      "get": {
+        "tags": [
+          "Points"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pone_slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pone_slug",
+            "in": "query",
+            "description": "The pone's slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listing a pone's points",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "976"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "points": [
+                  {
+                    "id": 3646,
+                    "count": 3,
+                    "granted_at": "2021-02-11T05:57:27.155Z",
+                    "links": {
+                      "self": "/api/v1/pones/bridget-14/points/3646.json",
+                      "pone": "/api/v1/pones/bridget-14.json",
+                      "granted_by": "/api/v1/pones/palmer-15.json"
+                    },
+                    "message": "Small batch narwhal aesthetic etsy vhs listicle."
+                  },
+                  {
+                    "id": 3647,
+                    "count": 1,
+                    "granted_at": "2021-02-11T05:57:27.158Z",
+                    "links": {
+                      "self": "/api/v1/pones/bridget-14/points/3647.json",
+                      "pone": "/api/v1/pones/bridget-14.json",
+                      "granted_by": "/api/v1/pones/ava-16.json"
+                    },
+                    "message": "Paleo selvage kale chips schlitz chambray kitsch wolf kinfolk lomo."
+                  },
+                  {
+                    "id": 3648,
+                    "count": 2,
+                    "granted_at": "2021-02-11T05:57:27.160Z",
+                    "links": {
+                      "self": "/api/v1/pones/bridget-14/points/3648.json",
+                      "pone": "/api/v1/pones/bridget-14.json",
+                      "granted_by": "/api/v1/pones/juan-17.json"
+                    },
+                    "message": "Waistcoat food truck tacos art party."
+                  }
+                ],
+                "meta": {
+                  "count": 3,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null,
+                    "pone": "/api/v1/pones/bridget-14.json",
+                    "give_points": "/api/v1/pones/bridget-14/points/give.json"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{pone_slug}/points/granted.json": {
+      "get": {
+        "tags": [
+          "Points"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pone_slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pone_slug",
+            "in": "query",
+            "description": "The pone's slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listing the points a pone has given out",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "1037"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "points": [
+                  {
+                    "id": 3650,
+                    "count": 2,
+                    "granted_at": "2021-02-11T05:57:27.195Z",
+                    "links": {
+                      "self": "/api/v1/pones/britta-20/points/3650.json",
+                      "pone": "/api/v1/pones/britta-20.json",
+                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
+                    },
+                    "message": "Diy waistcoat scenester sriracha shoreditch asymmetrical chambray."
+                  },
+                  {
+                    "id": 3651,
+                    "count": 3,
+                    "granted_at": "2021-02-11T05:57:27.198Z",
+                    "links": {
+                      "self": "/api/v1/pones/lou-rau-21/points/3651.json",
+                      "pone": "/api/v1/pones/lou-rau-21.json",
+                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
+                    },
+                    "message": "Brooklyn cliche synth marfa pbr&b post-ironic tumblr tousled."
+                  },
+                  {
+                    "id": 3652,
+                    "count": 1,
+                    "granted_at": "2021-02-11T05:57:27.201Z",
+                    "links": {
+                      "self": "/api/v1/pones/casey_renner-22/points/3652.json",
+                      "pone": "/api/v1/pones/casey_renner-22.json",
+                      "granted_by": "/api/v1/pones/galen_mertz-19.json"
+                    },
+                    "message": "Vhs banjo typewriter skateboard street hella."
+                  }
+                ],
+                "meta": {
+                  "count": 3,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null,
+                    "pone": "/api/v1/pones/galen_mertz-19.json",
+                    "give_points": "/api/v1/pones/galen_mertz-19/points/give.json"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{pone_slug}/points/{id.json}": {
+      "get": {
+        "tags": [
+          "Points"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pone_slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "pone_slug",
+            "in": "query",
+            "description": "The pone's slug",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID of the point record",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting a specific point entry",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "305"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "point": {
+                  "id": 3654,
+                  "count": 3,
+                  "granted_at": "2021-02-11T05:57:27.232Z",
+                  "links": {
+                    "self": "/api/v1/pones/greg-weimann-24/points/3654.json",
+                    "pone": "/api/v1/pones/greg-weimann-24.json",
+                    "granted_by": "/api/v1/pones/sandi-maggio-25.json"
+                  },
+                  "message": "Phlogiston photo booth asymmetrical paleo sartorial drinking."
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{pone_slug}/points/give.json": {
+      "post": {
+        "tags": [
+          "Points"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "pone_slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "required": false,
+            "schema": {
+              "description": "",
+              "required": [
+                "pone_slug"
+              ],
+              "type": "object",
+              "properties": {
+                "pone_slug": {
+                  "type": "string",
+                  "description": "The pone's slug"
+                },
+                "point": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "description": "The number of points to give"
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "A nice message for the pone"
+                    }
+                  },
+                  "required": [
+                    "count"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Giving points to a pone",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "296"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "point": {
+                  "id": 3657,
+                  "count": 2,
+                  "granted_at": "2021-02-11T05:57:27.271Z",
+                  "links": {
+                    "self": "/api/v1/pones/romaine_bartell-27/points/3657.json",
+                    "pone": "/api/v1/pones/romaine_bartell-27.json",
+                    "granted_by": "/api/v1/pones/zachary_rippin-28.json"
+                  },
+                  "message": "Dreamcatcher wayfarers taxidermy beard lomo."
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Giving points to a pone [invalid]",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "47"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "errors": {
+                  "count": [
+                    "must be greater than 0"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones.json": {
+      "get": {
+        "tags": [
+          "Pones"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page number",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of pones to show per page",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Listing pones",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "3294"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "pones": [
+                  {
+                    "slug": "system-pone",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T00:48:05.146Z",
+                    "links": {
+                      "self": "/api/v1/pones/system-pone.json",
+                      "page": "/pones/system-pone",
+                      "achievements": "/api/v1/pones/system-pone/achievements.json",
+                      "points": "/api/v1/pones/system-pone/points.json",
+                      "granted_points": "/api/v1/pones/system-pone/points/granted.json",
+                      "groups": "/api/v1/pones/system-pone/groups.json"
+                    },
+                    "name": "System Pone",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "genoveva-31",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.296Z",
+                    "links": {
+                      "self": "/api/v1/pones/genoveva-31.json",
+                      "page": "/pones/genoveva-31",
+                      "achievements": "/api/v1/pones/genoveva-31/achievements.json",
+                      "points": "/api/v1/pones/genoveva-31/points.json",
+                      "granted_points": "/api/v1/pones/genoveva-31/points/granted.json",
+                      "groups": "/api/v1/pones/genoveva-31/groups.json"
+                    },
+                    "name": "genoveva 31",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "delinda-32",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.297Z",
+                    "links": {
+                      "self": "/api/v1/pones/delinda-32.json",
+                      "page": "/pones/delinda-32",
+                      "achievements": "/api/v1/pones/delinda-32/achievements.json",
+                      "points": "/api/v1/pones/delinda-32/points.json",
+                      "granted_points": "/api/v1/pones/delinda-32/points/granted.json",
+                      "groups": "/api/v1/pones/delinda-32/groups.json"
+                    },
+                    "name": "delinda 32",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "forrest_frami-33",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.298Z",
+                    "links": {
+                      "self": "/api/v1/pones/forrest_frami-33.json",
+                      "page": "/pones/forrest_frami-33",
+                      "achievements": "/api/v1/pones/forrest_frami-33/achievements.json",
+                      "points": "/api/v1/pones/forrest_frami-33/points.json",
+                      "granted_points": "/api/v1/pones/forrest_frami-33/points/granted.json",
+                      "groups": "/api/v1/pones/forrest_frami-33/groups.json"
+                    },
+                    "name": "forrest_frami 33",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "tierra-runolfsdottir-34",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.300Z",
+                    "links": {
+                      "self": "/api/v1/pones/tierra-runolfsdottir-34.json",
+                      "page": "/pones/tierra-runolfsdottir-34",
+                      "achievements": "/api/v1/pones/tierra-runolfsdottir-34/achievements.json",
+                      "points": "/api/v1/pones/tierra-runolfsdottir-34/points.json",
+                      "granted_points": "/api/v1/pones/tierra-runolfsdottir-34/points/granted.json",
+                      "groups": "/api/v1/pones/tierra-runolfsdottir-34/groups.json"
+                    },
+                    "name": "tierra.runolfsdottir 34",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "freddy-abernathy-35",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.301Z",
+                    "links": {
+                      "self": "/api/v1/pones/freddy-abernathy-35.json",
+                      "page": "/pones/freddy-abernathy-35",
+                      "achievements": "/api/v1/pones/freddy-abernathy-35/achievements.json",
+                      "points": "/api/v1/pones/freddy-abernathy-35/points.json",
+                      "granted_points": "/api/v1/pones/freddy-abernathy-35/points/granted.json",
+                      "groups": "/api/v1/pones/freddy-abernathy-35/groups.json"
+                    },
+                    "name": "freddy.abernathy 35",
+                    "points_count": 0
+                  },
+                  {
+                    "slug": "laquanda-macejkovic-36",
+                    "avatar_url": null,
+                    "joined_at": "2021-02-11T05:57:27.303Z",
+                    "links": {
+                      "self": "/api/v1/pones/laquanda-macejkovic-36.json",
+                      "page": "/pones/laquanda-macejkovic-36",
+                      "achievements": "/api/v1/pones/laquanda-macejkovic-36/achievements.json",
+                      "points": "/api/v1/pones/laquanda-macejkovic-36/points.json",
+                      "granted_points": "/api/v1/pones/laquanda-macejkovic-36/points/granted.json",
+                      "groups": "/api/v1/pones/laquanda-macejkovic-36/groups.json"
+                    },
+                    "name": "laquanda.macejkovic 36",
+                    "points_count": 1
+                  }
+                ],
+                "meta": {
+                  "count": 7,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{slug.json}": {
+      "get": {
+        "tags": [
+          "Pones"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "slug",
+            "in": "query",
+            "description": " slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting a specific pone",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "612"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "pone": {
+                  "slug": "marguerite-37",
+                  "avatar_url": "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99ee487fc520bfebf2ea197a8ca4aff160bc3620/avatar.png",
+                  "joined_at": "2021-02-11T05:57:27.366Z",
+                  "links": {
+                    "self": "/api/v1/pones/marguerite-37.json",
+                    "page": "/pones/marguerite-37",
+                    "achievements": "/api/v1/pones/marguerite-37/achievements.json",
+                    "points": "/api/v1/pones/marguerite-37/points.json",
+                    "granted_points": "/api/v1/pones/marguerite-37/points/granted.json",
+                    "groups": "/api/v1/pones/marguerite-37/groups.json"
+                  },
+                  "name": "marguerite 37",
+                  "points_count": 0
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/me.json": {
+      "get": {
+        "tags": [
+          "Pones"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting additional information about your own pone",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+                "pone": {
+                  "type": "object",
+                  "properties": {
+                    "giftable_points_count": {
+                      "type": "string",
+                      "description": "The remaining number of points left to give out today"
+                    },
+                    "daily_giftable_points_count": {
+                      "type": "string",
+                      "description": "The total number of points you can give out each day"
+                    },
+                    "bonus_points_count": {
+                      "type": "string",
+                      "description": "Additional, one-time use points that can be given to pones"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "549"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "pone": {
+                  "slug": "winston_grant-39",
+                  "avatar_url": null,
+                  "bonus_points_count": 0,
+                  "daily_giftable_points_count": 3,
+                  "giftable_points_count": 3,
+                  "joined_at": "2021-02-11T05:57:27.392Z",
+                  "links": {
+                    "self": "/api/v1/pones/winston_grant-39.json",
+                    "page": "/pones/winston_grant-39",
+                    "achievements": "/api/v1/pones/winston_grant-39/achievements.json",
+                    "points": "/api/v1/pones/winston_grant-39/points.json",
+                    "granted_points": "/api/v1/pones/winston_grant-39/points/granted.json",
+                    "groups": "/api/v1/pones/winston_grant-39/groups.json"
+                  },
+                  "name": "winston_grant 39",
+                  "points_count": 1
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    },
+    "/api/v1/pones/{slug}/groups.json": {
+      "get": {
+        "tags": [
+          "Pones"
+        ],
+        "summary": "",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "slug",
+            "in": "query",
+            "description": " slug",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requesting all of a pone's groups",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "properties": {
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "application/json; charset=utf-8"
+              },
+              "Content-Length": {
+                "description": "",
+                "type": "string",
+                "x-example-value": "939"
+              }
+            },
+            "examples": {
+              "application/json": {
+                "groups": [
+                  {
+                    "slug": "cover-her-face-6",
+                    "created_at": "2021-02-11T05:57:27.414Z",
+                    "links": {
+                      "self": "/api/v1/groups/cover-her-face-6.json",
+                      "page": "/groups/cover-her-face-6",
+                      "owner": "/api/v1/pones/ira-41.json",
+                      "members": "/api/v1/groups/cover-her-face-6/members.json"
+                    },
+                    "name": "Cover Her Face 6"
+                  },
+                  {
+                    "slug": "if-not-now-when-7",
+                    "created_at": "2021-02-11T05:57:27.419Z",
+                    "links": {
+                      "self": "/api/v1/groups/if-not-now-when-7.json",
+                      "page": "/groups/if-not-now-when-7",
+                      "owner": "/api/v1/pones/qiana-42.json",
+                      "members": "/api/v1/groups/if-not-now-when-7/members.json"
+                    },
+                    "name": "If Not Now, When? 7"
+                  },
+                  {
+                    "slug": "fear-and-trembling-8",
+                    "created_at": "2021-02-11T05:57:27.424Z",
+                    "links": {
+                      "self": "/api/v1/groups/fear-and-trembling-8.json",
+                      "page": "/groups/fear-and-trembling-8",
+                      "owner": "/api/v1/pones/renaldo-43.json",
+                      "members": "/api/v1/groups/fear-and-trembling-8/members.json"
+                    },
+                    "name": "Fear and Trembling 8"
+                  }
+                ],
+                "meta": {
+                  "count": 3,
+                  "pages": 1,
+                  "links": {
+                    "next": null,
+                    "prev": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [
+
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Achievements",
+      "description": ""
+    },
+    {
+      "name": "Groups",
+      "description": ""
+    },
+    {
+      "name": "Points",
+      "description": ""
+    },
+    {
+      "name": "Pones",
+      "description": ""
+    }
+  ]
+}

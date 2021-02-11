@@ -12,7 +12,7 @@ module RspecApiDocumentation
 end
 
 RspecApiDocumentation.configure do |config|
-  config.format = :json
+  config.format = %i[json open_api]
 
   config.keep_source_order = true
 

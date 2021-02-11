@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/carmina-40/groups.json",
+      "request_path": "/api/v1/pones/ligia-konopelski-40/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key HfZ1EKDLjDSD3k6GquV9A8E9upZiVwafBTkNk6iD1Puw7126EdES6iHMQnJH7cyFpVcMx9eYcqpzJQzt",
+        "Authorization": "Api-Key 4fPX6voj3o9oi7BHH16NJ5dtdHvW9omz9KGGq8yFs4EC5gr6HVpGQDMgRjhCQWFEoinbPxpdoAvfkbyk",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-man-within-6\",\n      \"created_at\": \"2021-02-11T05:45:36.189Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-man-within-6.json\",\n        \"page\": \"/groups/the-man-within-6\",\n        \"owner\": \"/api/v1/pones/toby-41.json\",\n        \"members\": \"/api/v1/groups/the-man-within-6/members.json\"\n      },\n      \"name\": \"The Man Within 6\"\n    },\n    {\n      \"slug\": \"the-far-distant-oxus-7\",\n      \"created_at\": \"2021-02-11T05:45:36.194Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-far-distant-oxus-7.json\",\n        \"page\": \"/groups/the-far-distant-oxus-7\",\n        \"owner\": \"/api/v1/pones/sulema-42.json\",\n        \"members\": \"/api/v1/groups/the-far-distant-oxus-7/members.json\"\n      },\n      \"name\": \"The Far-Distant Oxus 7\"\n    },\n    {\n      \"slug\": \"noli-me-tangere-8\",\n      \"created_at\": \"2021-02-11T05:45:36.199Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/noli-me-tangere-8.json\",\n        \"page\": \"/groups/noli-me-tangere-8\",\n        \"owner\": \"/api/v1/pones/dave-donnelly-43.json\",\n        \"members\": \"/api/v1/groups/noli-me-tangere-8/members.json\"\n      },\n      \"name\": \"Noli Me Tangere 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"cover-her-face-6\",\n      \"created_at\": \"2021-02-11T05:57:27.414Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/cover-her-face-6.json\",\n        \"page\": \"/groups/cover-her-face-6\",\n        \"owner\": \"/api/v1/pones/ira-41.json\",\n        \"members\": \"/api/v1/groups/cover-her-face-6/members.json\"\n      },\n      \"name\": \"Cover Her Face 6\"\n    },\n    {\n      \"slug\": \"if-not-now-when-7\",\n      \"created_at\": \"2021-02-11T05:57:27.419Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/if-not-now-when-7.json\",\n        \"page\": \"/groups/if-not-now-when-7\",\n        \"owner\": \"/api/v1/pones/qiana-42.json\",\n        \"members\": \"/api/v1/groups/if-not-now-when-7/members.json\"\n      },\n      \"name\": \"If Not Now, When? 7\"\n    },\n    {\n      \"slug\": \"fear-and-trembling-8\",\n      \"created_at\": \"2021-02-11T05:57:27.424Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/fear-and-trembling-8.json\",\n        \"page\": \"/groups/fear-and-trembling-8\",\n        \"owner\": \"/api/v1/pones/renaldo-43.json\",\n        \"members\": \"/api/v1/groups/fear-and-trembling-8/members.json\"\n      },\n      \"name\": \"Fear and Trembling 8\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "955"
+        "Content-Length": "939"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

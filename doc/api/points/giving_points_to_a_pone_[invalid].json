@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/faustina-29/points/give.json",
-      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Tattooed cronut try-hard disrupt wolf chillwave photo booth keffiyeh.\"}}",
+      "request_path": "/api/v1/pones/huey-29/points/give.json",
+      "request_body": "{\"point\":{\"count\":-1,\"message\":\"Wayfarers cronut chambray jean shorts direct trade polaroid.\"}}",
       "request_headers": {
-        "Authorization": "Api-Key suZPB57PVGHNbo4QxFd1sddkBN88MzdtqUVV8r666mbyceLehHRUak41p2gejw5Soff6fKgaYz3jdrrZ",
+        "Authorization": "Api-Key AGjvSNV28go5GDoXaJEx8em4u8RWxxB61EbNhTb6ECKWszfvMudzqn3KHNmK349cv38rqszv9cpyShRd",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
