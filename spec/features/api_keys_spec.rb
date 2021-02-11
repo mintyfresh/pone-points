@@ -36,6 +36,23 @@ RSpec.describe 'ApiKeys', type: :feature do
       .and have_field('API Secret', with: api_key.token)
   end
 
+  it 'shows an error message when unable to create an API key' do
+    sign_in_to_pone(owner)
+
+    visit '/account/api_keys'
+    click_on 'Create API Key'
+
+    expect(page).to have_current_path('/account/api_keys/new')
+
+    within '#new_api_key_form' do
+      fill_in 'Name', with: ''
+      click_on 'Create API Key'
+    end
+
+    expect(page).to have_current_path('/account/api_keys')
+      .and have_content("can't be blank")
+  end
+
   it 'hides the API secret when viewing an existing API key' do
     sign_in_to_pone(owner)
     api_key = create(:api_key, pone: owner)
