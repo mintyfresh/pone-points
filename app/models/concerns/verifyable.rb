@@ -23,6 +23,11 @@ module Verifyable
   end
 
   # @return [Boolean]
+  def unverified?
+    verified_at.blank?
+  end
+
+  # @return [Boolean]
   def verified!
     with_lock do
       return true if verified?

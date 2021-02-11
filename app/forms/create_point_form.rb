@@ -27,10 +27,14 @@ private
 
   # @return [void]
   def ensure_sufficient_giftable_points_remaining!
-    remaining = granted_by.giftable_points_count
-    return if remaining >= count
+    remaining_balance = granted_by.giftable_points_count
+    return if remaining_balance >= count
 
-    errors.add(:base, :not_enough_points, remaining: remaining)
+    # Spend bonus points to cover the difference.
+    required_bonus = count - remaining_balance
+    return if granted_by.remove_bonus_points(required_bonus)
+
+    errors.add(:base, :not_enough_points, remaining: remaining_balance)
     throw(:abort)
   end
 end

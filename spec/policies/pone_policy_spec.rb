@@ -5,8 +5,8 @@ require 'rails_helper'
 RSpec.describe PonePolicy, type: :policy do
   subject(:policy) { described_class }
 
-  let(:pone) { build(:pone) }
-  let(:other_pone) { build(:pone) }
+  let(:pone) { build(:pone, :verified) }
+  let(:other_pone) { build(:pone, :verified) }
 
   permissions :index?, :show? do
     it 'permits everyone' do
@@ -17,12 +17,18 @@ RSpec.describe PonePolicy, type: :policy do
   end
 
   permissions :give_points? do
+    let(:unverified_pone) { build(:pone) }
+
     it 'does not permit guests' do
       expect(policy).not_to permit(nil, pone)
     end
 
     it 'does not permit gives points to yourself' do
       expect(policy).not_to permit(pone, pone)
+    end
+
+    it 'does not permit unverified pones' do
+      expect(policy).not_to permit(unverified_pone, pone)
     end
 
     it 'permits giving other pones points' do

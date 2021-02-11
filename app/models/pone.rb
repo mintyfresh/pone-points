@@ -12,6 +12,7 @@
 #  verified_at                 :datetime
 #  created_at                  :datetime         not null
 #  updated_at                  :datetime         not null
+#  bonus_points                :integer          default(0), not null
 #
 # Indexes
 #
@@ -48,6 +49,7 @@ class Pone < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :daily_giftable_points_count, numericality: { greater_than_or_equal_to: 0 }
   validates :avatar, avatar: true
+  validates :bonus_points, numericality: { greater_than_or_equal_to: 0 }
 
   generates_slug_from :name
 
@@ -92,6 +94,25 @@ class Pone < ApplicationRecord
   # @return [Boolean]
   def unlock_achievement(achievement)
     unlocked_achievements.create_or_find_by!(achievement: achievement) && true
+  end
+
+  # @param count [Integer]
+  # @return [self]
+  def add_bonus_points(count)
+    increment!(:bonus_points, count, touch: true) && reload
+  end
+
+  # @param count [Integer]
+  # @return [self, nil]
+  def remove_bonus_points(count)
+    with_lock do
+      return if count > bonus_points
+
+      self.bonus_points -= count
+      save!
+
+      self
+    end
   end
 
 private

@@ -369,7 +369,9 @@ CREATE TABLE public.pones (
     daily_giftable_points_count integer DEFAULT 0 NOT NULL,
     verified_at timestamp without time zone,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    bonus_points integer DEFAULT 0 NOT NULL,
+    CONSTRAINT chk_rails_3769fed490 CHECK ((bonus_points >= 0))
 );
 
 
@@ -965,6 +967,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210209004912'),
 ('20210209005853'),
 ('20210209025300'),
-('20210209045522');
+('20210209045522'),
+('20210210225417');
 
 

@@ -12,7 +12,9 @@ class PonePolicy < ApplicationPolicy
   end
 
   def give_points?
-    show? && current_pone.present? && current_pone != pone
+    return false unless show?
+
+    current_pone.present? && current_pone.verified? && current_pone != pone
   end
 
   def integrations?

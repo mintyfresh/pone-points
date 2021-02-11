@@ -29,6 +29,19 @@ RSpec.describe 'GivePoints', type: :feature do
       .and have_content(input[:message])
   end
 
+  it 'can spend bonus points to give good pones points' do
+    sign_in_to_pone(granted_by)
+    granted_by.add_bonus_points(2)
+    granted_by.update!(daily_giftable_points_count: 1)
+
+    visit give_pone_points_path(pone)
+    fill_in_create_point_form(**input, count: 3)
+
+    expect(page).to have_current_path(pone_path(pone, mode: 'points'))
+      .and have_content("#{granted_by.name} gave #{pone.name} 3 good pone points!")
+      .and have_content(input[:message])
+  end
+
   it 'redirects to the sign in page if not logged in' do
     visit give_pone_points_path(pone)
 

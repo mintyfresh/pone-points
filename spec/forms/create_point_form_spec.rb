@@ -74,6 +74,25 @@ RSpec.describe CreatePointForm, type: :form do
         perform
         expect(form.errors).to be_added(:base, :not_enough_points, remaining: 0)
       end
+
+      context 'when the granting pone has enough bonus points' do
+        before(:each) do
+          granted_by.add_bonus_points(input[:count])
+        end
+
+        it 'creates the point successfully' do
+          expect(perform).to be_truthy
+        end
+
+        it 'spends available bonus points to cover the difference' do
+          expect { perform }.to change { granted_by.bonus_points }.by(-input[:count])
+        end
+
+        it 'only spends as many bonus points as is necessary' do
+          granted_by.update!(daily_giftable_points_count: 1)
+          expect { perform }.to change { granted_by.bonus_points }.by(-(input[:count] - 1))
+        end
+      end
     end
   end
 end
