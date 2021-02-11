@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/groups/this-side-of-paradise-4.json",
+      "request_path": "/api/v1/groups/the-wind-s-twelve-quarters-4.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key xE5QAGCwq6Rk4S7NbFnk3k2Hf5daasuWDNKRh13wzRJ4DfzN7snuutzqtPZLir3vEF8yAk7YWXUXpBFT",
+        "Authorization": "Api-Key cCx9k3FFFgkiPCCxPHF2niACaZLCMjWXE5KGFcAAYpKSVhBfU9rJ6tuCHTfTQyu7ew5qM9mrDQCfa9gJ",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"group\": {\n    \"slug\": \"this-side-of-paradise-4\",\n    \"created_at\": \"2021-02-11T02:21:51.979Z\",\n    \"description\": \"Leggings cred pbr&b put a bird on it ramps williamsburg banjo.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/this-side-of-paradise-4.json\",\n      \"page\": \"/groups/this-side-of-paradise-4\",\n      \"owner\": \"/api/v1/pones/donovan_rohan-7.json\",\n      \"members\": \"/api/v1/groups/this-side-of-paradise-4/members.json\"\n    },\n    \"name\": \"This Side of Paradise 4\"\n  }\n}",
+      "response_body": "{\n  \"group\": {\n    \"slug\": \"the-wind-s-twelve-quarters-4\",\n    \"created_at\": \"2021-02-11T03:19:03.579Z\",\n    \"description\": \"Marfa master craft beer tumblr kale chips scenester biodiesel gastropub.\",\n    \"links\": {\n      \"self\": \"/api/v1/groups/the-wind-s-twelve-quarters-4.json\",\n      \"page\": \"/groups/the-wind-s-twelve-quarters-4\",\n      \"owner\": \"/api/v1/pones/concha_kuphal-7.json\",\n      \"members\": \"/api/v1/groups/the-wind-s-twelve-quarters-4/members.json\"\n    },\n    \"name\": \"The Wind's Twelve Quarters 4\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "414"
+        "Content-Length": "444"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -17,7 +17,7 @@
       "request_path": "/api/v1/groups.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 6sHX1S8JWPuMLEfaVGJ2AYf4Me9M2U56Ezpy7s3MPdieE6L2kpR8SbhCeSqLHB5K4fsm9v3cPFxgKxLJ",
+        "Authorization": "Api-Key AQ5KaWLNRUspyD4f1XuBpN2UPVo8VTFHaZrUPmfp4NpYUUdNSLtYFq6FkdoBZFMpG94jKFpz72iZYoq6",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -25,10 +25,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"noli-me-tangere-1\",\n      \"created_at\": \"2021-02-11T02:21:51.937Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/noli-me-tangere-1.json\",\n        \"page\": \"/groups/noli-me-tangere-1\",\n        \"owner\": \"/api/v1/pones/shaniqua-3.json\",\n        \"members\": \"/api/v1/groups/noli-me-tangere-1/members.json\"\n      },\n      \"name\": \"Noli Me Tangere 1\"\n    },\n    {\n      \"slug\": \"the-last-temptation-2\",\n      \"created_at\": \"2021-02-11T02:21:51.945Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-last-temptation-2.json\",\n        \"page\": \"/groups/the-last-temptation-2\",\n        \"owner\": \"/api/v1/pones/veronika_gleichner-4.json\",\n        \"members\": \"/api/v1/groups/the-last-temptation-2/members.json\"\n      },\n      \"name\": \"The Last Temptation 2\"\n    },\n    {\n      \"slug\": \"the-grapes-of-wrath-3\",\n      \"created_at\": \"2021-02-11T02:21:51.949Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-grapes-of-wrath-3.json\",\n        \"page\": \"/groups/the-grapes-of-wrath-3\",\n        \"owner\": \"/api/v1/pones/victor-5.json\",\n        \"members\": \"/api/v1/groups/the-grapes-of-wrath-3/members.json\"\n      },\n      \"name\": \"The Grapes of Wrath 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
+      "response_body": "{\n  \"groups\": [\n    {\n      \"slug\": \"the-last-enemy-1\",\n      \"created_at\": \"2021-02-11T03:19:03.537Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/the-last-enemy-1.json\",\n        \"page\": \"/groups/the-last-enemy-1\",\n        \"owner\": \"/api/v1/pones/delinda-3.json\",\n        \"members\": \"/api/v1/groups/the-last-enemy-1/members.json\"\n      },\n      \"name\": \"The Last Enemy 1\"\n    },\n    {\n      \"slug\": \"those-barren-leaves-thrones-dominations-2\",\n      \"created_at\": \"2021-02-11T03:19:03.546Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/those-barren-leaves-thrones-dominations-2.json\",\n        \"page\": \"/groups/those-barren-leaves-thrones-dominations-2\",\n        \"owner\": \"/api/v1/pones/larry-4.json\",\n        \"members\": \"/api/v1/groups/those-barren-leaves-thrones-dominations-2/members.json\"\n      },\n      \"name\": \"Those Barren Leaves, Thrones, Dominations 2\"\n    },\n    {\n      \"slug\": \"to-say-nothing-of-the-dog-3\",\n      \"created_at\": \"2021-02-11T03:19:03.551Z\",\n      \"links\": {\n        \"self\": \"/api/v1/groups/to-say-nothing-of-the-dog-3.json\",\n        \"page\": \"/groups/to-say-nothing-of-the-dog-3\",\n        \"owner\": \"/api/v1/pones/jeffrey-5.json\",\n        \"members\": \"/api/v1/groups/to-say-nothing-of-the-dog-3/members.json\"\n      },\n      \"name\": \"To Say Nothing of the Dog 3\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "981"
+        "Content-Length": "1095"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

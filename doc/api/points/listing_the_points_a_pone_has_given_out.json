@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/ona-lebsack-19/points/granted.json",
+      "request_path": "/api/v1/pones/svetlana-19/points/granted.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key 2jSkAv4pi3qaNd5gptm72DKKmYgd6tLsBdvWQ2FFqDB6y1ELAmCN3o7xVYeSK8dA1MgeMtcBNYGomuiD",
+        "Authorization": "Api-Key 5LUEHrh7QtzD864aYr5pMJxpPdAqBXFYhvYuLD3UihfXc1HcyVCrgwYtacdpw6Cb6dGzb6D3vVfEQBZY",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1375,\n      \"count\": 3,\n      \"granted_at\": \"2021-02-11T02:21:52.081Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/delcie_wuckert-20/points/1375.json\",\n        \"pone\": \"/api/v1/pones/delcie_wuckert-20.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"Pop-up taxidermy chillwave mixtape next level banh mi kombucha.\"\n    },\n    {\n      \"id\": 1376,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T02:21:52.083Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/santo-21/points/1376.json\",\n        \"pone\": \"/api/v1/pones/santo-21.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"+1 art party brooklyn hella beard etsy meggings fashion axe lomo.\"\n    },\n    {\n      \"id\": 1377,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T02:21:52.086Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/benedict-22/points/1377.json\",\n        \"pone\": \"/api/v1/pones/benedict-22.json\",\n        \"granted_by\": \"/api/v1/pones/ona-lebsack-19.json\"\n      },\n      \"message\": \"Austin kitsch ramps mustache sartorial flexitarian.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/ona-lebsack-19.json\",\n      \"give_points\": \"/api/v1/pones/ona-lebsack-19/points/give.json\"\n    }\n  }\n}",
+      "response_body": "{\n  \"points\": [\n    {\n      \"id\": 1735,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:19:03.687Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/dustin-waelchi-20/points/1735.json\",\n        \"pone\": \"/api/v1/pones/dustin-waelchi-20.json\",\n        \"granted_by\": \"/api/v1/pones/svetlana-19.json\"\n      },\n      \"message\": \"Heirloom gentrify salvia portland meh shabby chic lo-fi migas marfa.\"\n    },\n    {\n      \"id\": 1736,\n      \"count\": 1,\n      \"granted_at\": \"2021-02-11T03:19:03.690Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/isiah_marquardt-21/points/1736.json\",\n        \"pone\": \"/api/v1/pones/isiah_marquardt-21.json\",\n        \"granted_by\": \"/api/v1/pones/svetlana-19.json\"\n      },\n      \"message\": \"Vinegar food truck mustache polaroid locavore pinterest.\"\n    },\n    {\n      \"id\": 1737,\n      \"count\": 2,\n      \"granted_at\": \"2021-02-11T03:19:03.692Z\",\n      \"links\": {\n        \"self\": \"/api/v1/pones/guy-22/points/1737.json\",\n        \"pone\": \"/api/v1/pones/guy-22.json\",\n        \"granted_by\": \"/api/v1/pones/svetlana-19.json\"\n      },\n      \"message\": \"Tilde small batch lo-fi biodiesel.\"\n    }\n  ],\n  \"meta\": {\n    \"count\": 3,\n    \"pages\": 1,\n    \"links\": {\n      \"next\": null,\n      \"prev\": null,\n      \"pone\": \"/api/v1/pones/svetlana-19.json\",\n      \"give_points\": \"/api/v1/pones/svetlana-19/points/give.json\"\n    }\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "1043"
+        "Content-Length": "1017"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

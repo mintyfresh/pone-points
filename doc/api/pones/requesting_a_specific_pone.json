@@ -18,10 +18,10 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/pones/rosario-lang-35.json",
+      "request_path": "/api/v1/pones/dulce-35.json",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Api-Key KSxbuwKxzu2NnZ7AHpqeiEs7PULeT8dsngUFbRorcTQXwRUkZ4ut4PknkbDHPKUC7f4udVBDvvGJ9ong",
+        "Authorization": "Api-Key BJXqq9UsY6JEi4xR8fzwc1C5s5tZTPa6ACaHZcqt1yXUhFAmAA494ET33pnsahbwQHT8ExQoU8ZX7Tgy",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -29,10 +29,10 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"pone\": {\n    \"slug\": \"rosario-lang-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBJdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--814e9497cf395703b8ab00e70d8a02c75a764335/avatar.png\",\n    \"joined_at\": \"2021-02-11T02:21:52.222Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/rosario-lang-35.json\",\n      \"page\": \"/pones/rosario-lang-35\",\n      \"achievements\": \"/api/v1/pones/rosario-lang-35/achievements.json\",\n      \"points\": \"/api/v1/pones/rosario-lang-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/rosario-lang-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/rosario-lang-35/groups.json\"\n    },\n    \"name\": \"rosario.lang 35\",\n    \"points_count\": 0\n  }\n}",
+      "response_body": "{\n  \"pone\": {\n    \"slug\": \"dulce-35\",\n    \"avatar_url\": \"/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d0509881d2e8e016be3025df8ca62138a1283607/avatar.png\",\n    \"joined_at\": \"2021-02-11T03:19:03.836Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/dulce-35.json\",\n      \"page\": \"/pones/dulce-35\",\n      \"achievements\": \"/api/v1/pones/dulce-35/achievements.json\",\n      \"points\": \"/api/v1/pones/dulce-35/points.json\",\n      \"granted_points\": \"/api/v1/pones/dulce-35/points/granted.json\",\n      \"groups\": \"/api/v1/pones/dulce-35/groups.json\"\n    },\n    \"name\": \"dulce 35\",\n    \"points_count\": 0\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "628"
+        "Content-Length": "572"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

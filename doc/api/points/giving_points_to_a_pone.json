@@ -30,10 +30,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/pones/mei-pollich-27/points/give.json",
-      "request_body": "{\"point\":{\"count\":1,\"message\":\"foo\"}}",
+      "request_path": "/api/v1/pones/evelyn-27/points/give.json",
+      "request_body": "{\"point\":{\"count\":2,\"message\":\"foo\"}}",
       "request_headers": {
-        "Authorization": "Api-Key NVN9dUDQUDWpTcLWZE1LD9V52kBdjzfpXZhakefGPZ8gU6N47sHUhezfFLCujsmzKjQPUUuxvLgqKHyL",
+        "Authorization": "Api-Key GsZUyfhue85G22gWMwr8dx1hU6gCkSEeAwtAoJtUCkQdthhMFgxEPUE5WNEUo5uAPBYgRXwjNF86HSs1",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
@@ -41,10 +41,10 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"point\": {\n    \"id\": 1382,\n    \"count\": 1,\n    \"granted_at\": \"2021-02-11T02:21:52.154Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/mei-pollich-27/points/1382.json\",\n      \"pone\": \"/api/v1/pones/mei-pollich-27.json\",\n      \"granted_by\": \"/api/v1/pones/kaila_ankunding-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
+      "response_body": "{\n  \"point\": {\n    \"id\": 1742,\n    \"count\": 2,\n    \"granted_at\": \"2021-02-11T03:19:03.764Z\",\n    \"links\": {\n      \"self\": \"/api/v1/pones/evelyn-27/points/1742.json\",\n      \"pone\": \"/api/v1/pones/evelyn-27.json\",\n      \"granted_by\": \"/api/v1/pones/rogelio-carter-28.json\"\n    },\n    \"message\": \"foo\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Content-Length": "248"
+        "Content-Length": "237"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
