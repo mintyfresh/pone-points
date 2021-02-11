@@ -52,7 +52,8 @@ class Pone < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   validates :giftable_points_count, :daily_giftable_points_count, :bonus_points_count,
             numericality: { greater_than_or_equal_to: 0 }
-  validates :avatar, avatar: true
+  validates :avatar, content_type: %i[jpg jpeg png], size: { less_than: 5.megabytes },
+                     dimension: { width: { max: 1000 }, height: { max: 1000 } }
 
   generates_slug_from :name
 

@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'active_storage_validations'
 gem 'amazing_print'
 gem 'apitome', github: 'mintyfresh/apitome'
 gem 'argon2'

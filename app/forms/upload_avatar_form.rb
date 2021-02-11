@@ -6,7 +6,7 @@ class UploadAvatarForm < ApplicationForm
   # @return [ActionDispatch::Http::UploadedFile, nil]
   attr_accessor :avatar
 
-  validates :avatar, avatar: true
+  validates :avatar, presence: true
 
   # @return [Pone]
   def perform

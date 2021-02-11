@@ -1,6 +1,6 @@
 <%= render(AccountPanelComponent.new) do %>
   <%= form_with(model: @form, url: account_avatar_path, method: :patch) do |form| %>
-    <% if @form.pone.avatar.representable? %>
+    <% if @form.pone.avatar.representable? && @form.pone.errors[:avatar].none? %>
       <div class="text-center mb-3">
         <%= image_tag(@form.pone.avatar, id: 'account_avatar_form_preview', class: 'img-fluid img-thumbnail', alt: current_pone.name, size: '300x300') %>
       </div>

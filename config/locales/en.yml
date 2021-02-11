@@ -1,8 +1,0 @@
----
-en:
-  errors:
-    messages:
-      too_large: is too large (maximum is 5 megabytes)
-      too_tall: is too tall (maximum is %{maximum} pixels)
-      too_wide: is too wide (maximum is %{maximum} pixels)
-      unsupported: is not a supported file type
