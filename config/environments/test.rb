@@ -59,4 +59,7 @@ Rails.application.configure do
   # Improve performance during testing.
   config.x.argon2.time_cost   = 2
   config.x.argon2.memory_cost = 4
+
+  # Trigger webhook HTTP requests in testing for verification.
+  config.x.webhooks.enable = true
 end

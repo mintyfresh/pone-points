@@ -26,8 +26,9 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
+  # Compress JS and CSS using a preprocessor.
+  config.assets.js_compressor  = :uglifier
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -83,6 +84,9 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+
+  # Deliver webhooks to clients in production.
+  config.x.webhooks.enable = true
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false

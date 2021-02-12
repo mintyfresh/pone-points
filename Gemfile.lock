@@ -122,6 +122,7 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
+    execjs (2.7.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.1.0)
@@ -364,6 +365,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (2.0.0)
     vegas (0.1.11)
       rack (>= 1.0.0)
@@ -439,6 +442,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   turbolinks (~> 5)
+  uglifier
   view_component
   web-console (>= 4.1.0)
   webdrivers (~> 4.0)

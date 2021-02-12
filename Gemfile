@@ -67,4 +67,5 @@ group :production do
   gem 'redis'
   gem 'resque'
   gem 'resque-heroku-signals'
+  gem 'uglifier'
 end
