@@ -16,6 +16,14 @@
   {
     name:        'Counterpoint',
     description: "Give a pone a point immediately after you've received one from them."
+  },
+  {
+    name:        'The Groupie',
+    description: 'Join a group!'
+  },
+  {
+    name:        'Cult Leader',
+    description: 'Create a group and have at least 9 other pones join it.'
   }
 ].each do |attributes|
   name = attributes.delete(:name)

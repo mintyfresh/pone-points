@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe Achievements::CounterpointAchievementSubscriber, type: :subscriber do
   subject(:subscriber) { described_class.new(event, payload) }
 
-  let(:event) { 'app.points.created' }
+  let(:event) { 'app.points.create' }
   let(:payload) { { point: point, occurred_at: Time.current } }
   let(:point) { create(:point) }
   let(:achievement) { subscriber.achievement }
