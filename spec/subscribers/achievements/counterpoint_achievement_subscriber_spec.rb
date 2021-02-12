@@ -5,14 +5,18 @@ require 'rails_helper'
 RSpec.describe Achievements::CounterpointAchievementSubscriber, type: :subscriber do
   subject(:subscriber) { described_class.new(event, payload) }
 
-  let(:event) { 'app.things.happened' }
+  let(:event) { 'app.points.created' }
   let(:payload) { { point: point, occurred_at: Time.current } }
   let(:point) { create(:point) }
+  let(:achievement) { subscriber.achievement }
+
+  it 'grants the "Counterpoint" achievement' do
+    expect(achievement.name).to eq('Counterpoint')
+  end
 
   describe '#perform' do
     subject(:perform) { subscriber.perform }
 
-    let(:achievement) { Achievement.find_by!(name: 'Counterpoint') }
     let!(:countered_point) { create(:point, pone: point.granted_by, granted_by: point.pone, created_at: 5.minutes.ago) }
 
     it 'grants the counterpoint achievement to the granter of the pone' do

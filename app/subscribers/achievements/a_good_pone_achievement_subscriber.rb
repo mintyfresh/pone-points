@@ -1,23 +1,26 @@
 # frozen_string_literal: true
 
 module Achievements
-  class AGoodPoneAchievementSubscriber < ApplicationSubscriber
+  class AGoodPoneAchievementSubscriber < BaseAchievementSubscriber
     subscribe_to 'app.points.create'
-
-    process_in_background
 
     payload_field :point
 
-    # @return [void]
-    def perform
-      point.granted_by.unlock_achievement(achievement)
+  protected
+
+    # @return [String]
+    def achievement_name
+      'A Good Pone'
     end
 
-  private
+    # @return [Pone]
+    def candidate_for_achievement
+      point.granted_by
+    end
 
-    # @return [Achievement]
-    def achievement
-      Achievement.find_by!(name: 'A Good Pone')
+    # @return [Boolean]
+    def conditions_for_achievement_met?
+      true # Giving a point is the only condition.
     end
   end
 end

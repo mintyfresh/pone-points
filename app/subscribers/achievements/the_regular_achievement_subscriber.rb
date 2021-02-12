@@ -1,38 +1,36 @@
 # frozen_string_literal: true
 
 module Achievements
-  class TheRegularAchievementSubscriber < ApplicationSubscriber
+  class TheRegularAchievementSubscriber < BaseAchievementSubscriber
     subscribe_to 'app.points.create'
-
-    process_in_background
 
     payload_field :point
 
-    # @return [void]
-    def perform
-      return if giver.achievement_unlocked?(achievement)
+  protected
 
+    # @return [String]
+    def achievement_name
+      'The Regular'
+    end
+
+    # @return [Pone]
+    def candidate_for_achievement
+      point.granted_by
+    end
+
+    # @return [Boolean]
+    def conditions_for_achievement_met?
       # We already know that points were given today.
-      return unless gave_points_on_day?(point.created_at - 1.day)
-      return unless gave_points_on_day?(point.created_at - 2.days)
-
-      giver.unlock_achievement(achievement)
+      gave_points_on_day?(point.created_at - 1.day) &&
+        gave_points_on_day?(point.created_at - 2.days)
     end
 
   private
 
-    # @return [Pone]
-    def giver = point.granted_by
-
     # @param date [Date]
     # @return [Boolean]
     def gave_points_on_day?(date)
-      giver.granted_points.on_day(date).any?
-    end
-
-    # @return [Achievement]
-    def achievement
-      @achievement ||= Achievement.find_by!(name: 'The Regular')
+      point.granted_by.granted_points.on_day(date).any?
     end
   end
 end

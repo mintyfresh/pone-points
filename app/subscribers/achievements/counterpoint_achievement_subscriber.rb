@@ -1,32 +1,38 @@
 # frozen_string_literal: true
 
 module Achievements
-  class CounterpointAchievementSubscriber < ApplicationSubscriber
+  class CounterpointAchievementSubscriber < BaseAchievementSubscriber
     subscribe_to 'app.points.create'
-
-    process_in_background
 
     payload_field :point
 
-    # @return [void]
-    def perform
-      return if giver.achievement_unlocked?(achievement)
-      return if receiver.granted_points.where(created_at: ..point.created_at).last&.pone != giver
+  protected
 
-      giver.unlock_achievement(achievement)
+    # @return [String]
+    def achievement_name
+      'Counterpoint'
+    end
+
+    # @return [Pone]
+    def candidate_for_achievement
+      point.granted_by
+    end
+
+    # @return [Boolean]
+    def conditions_for_achievement_met?
+      point.granted_by == last_pone_given_points_by_recipient
     end
 
   private
 
-    # @return [Pone]
-    def giver = point.granted_by
+    # @return [Pone, nil]
+    def last_pone_given_points_by_recipient
+      return @last_pone_given_points_by_recipient if defined?(@last_pone_given_points_by_recipient)
 
-    # @return [Pone]
-    def receiver = point.pone
-
-    # @return [Achievement]
-    def achievement
-      @achievement ||= Achievement.find_by!(name: 'Counterpoint')
+      @last_pone_given_points_by_recipient = point.pone.granted_points
+        .where(created_at: ..point.created_at)
+        .order(:created_at, :id)
+        .last&.pone
     end
   end
 end
