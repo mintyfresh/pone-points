@@ -30,6 +30,9 @@ module PonePoints
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # Add middleware to automatically GZip responses (excluding static content).
+    config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
+
     # Disable ActionView's field wrapper divs as they interfere with Bootstrap.
     config.action_view.field_error_proc = proc { |html_tag| html_tag }
 
