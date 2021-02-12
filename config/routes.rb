@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/redirect/confirm', to: 'redirect#confirm'
+
   namespace :account, only: [] do
     resources :api_keys, only: %i[index show new create] do
       post :regenerate, on: :member

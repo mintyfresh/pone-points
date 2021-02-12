@@ -1,0 +1,12 @@
+<%= render(CardFrameComponent.new(title: 'Hold Up!')) do %>
+  <div class="card-title lead">
+    This link is going to: <strong><%= @destination_url.host %></strong>
+  </div>
+  <p>
+    This is an outside link and could potentially take you to a dangerous website.
+    <br />
+    If you recognise the website, you can click continue, otherwise you should go back.
+  </p>
+  <%= link_to('Go Back', :back, class: 'btn btn-outline-success') %>
+  <%= link_to('Continue', @destination_url.to_s, class: 'btn btn-outline-danger float-end') %>
+<% end %>
