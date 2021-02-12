@@ -31,8 +31,7 @@
           placeholder: 'Not a member of any groups yet.'
         )) %>
   <% when 'achievements' %>
-    <%= render(UnlockedAchievementListComponent.new(unlocked_achievements: @pone.unlocked_achievements
-      .order(created_at: :desc, id: :desc).preload(:achievement).first(25))) %>
+    <%= render(AchievementListComponent.new(pone: @pone)) %>
   <% when 'activity' %>
     <%= render(PointListComponent.new(points: @pone.granted_points
       .order(created_at: :desc, id: :desc).preload(:pone).first(25))) %>

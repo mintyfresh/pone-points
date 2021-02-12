@@ -1,0 +1,9 @@
+<% unlocked_achievements.each do |unlocked_achievement| %>
+  <%= render(AchievementListItemComponent.new(
+             achievement: unlocked_achievement.achievement,
+             unlocked_by: unlocked_achievement.pone,
+             unlocked_at: unlocked_achievement.created_at)) %>
+<% end %>
+<% locked_achievements.each do |locked_achievement| %>
+  <%= render(AchievementListItemComponent.new(achievement: locked_achievement)) %>
+<% end %>

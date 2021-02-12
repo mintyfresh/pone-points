@@ -1,0 +1,20 @@
+<div class="card mb-2<%= unlocked? ? ' border-success' : ' text-muted' %>">
+  <div class="card-body">
+    <div class="card-title fs-5">
+      <% if @unlocked_by.present? %>
+        <%= link_to_unless_current(@unlocked_by.name, @unlocked_by) %> unlocked:
+      <% else %>
+        Locked:
+      <% end %>
+      <%= @achievement.name %>
+    </div>
+    <%= @achievement.description %>
+    <% if @unlocked_at.present? %>
+      <div class="text-end w-100">
+        <i class="text-muted small">
+          unlocked <%= time_ago_in_words(@unlocked_at) %> ago
+        </i>
+      </div>
+    <% end %>
+  </div>
+</div>
