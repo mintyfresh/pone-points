@@ -23,6 +23,18 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 class Point < ApplicationRecord
+  MARKDOWN_OPTIONS = {
+    autolink:                     true,
+    disable_indented_code_blocks: true,
+    lax_spacing:                  true,
+    no_intra_emphasis:            true
+  }.freeze
+
+  MARKDOWN_RENDERER_OPTIONS = {
+    escape_html:     true,
+    safe_links_only: true
+  }.freeze
+
   attr_readonly :count
 
   belongs_to :pone, inverse_of: :points
@@ -36,6 +48,16 @@ class Point < ApplicationRecord
 
   scope :today,  -> { on_day(Date.current) }
   scope :on_day, -> (date) { where(created_at: date.beginning_of_day..date.end_of_day) }
+
+  # @return [Redcarpet::Markdown]
+  def self.markdown
+    @markdown ||= Redcarpet::Markdown.new(MessageRenderer.new(MARKDOWN_RENDERER_OPTIONS), MARKDOWN_OPTIONS)
+  end
+
+  # @return [String]
+  def message_html
+    self.class.markdown.render(message)
+  end
 
 private
 

@@ -12,6 +12,9 @@
         "message": {
           "type": "string"
         },
+        "message_html": {
+          "type": "string"
+        },
         "count": {
           "type": "integer",
           "minimum": 0
@@ -47,6 +50,7 @@
       "required": [
         "id",
         "message",
+        "message_html",
         "count",
         "granted_at",
         "links"

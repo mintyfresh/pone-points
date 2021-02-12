@@ -3,7 +3,7 @@
 class PointBlueprint < ApplicationBlueprint
   identifier :id
 
-  fields :message, :count
+  fields :message, :message_html, :count
 
   field :created_at, name: :granted_at
 
