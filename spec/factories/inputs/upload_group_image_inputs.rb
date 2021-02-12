@@ -5,10 +5,15 @@ FactoryBot.define do
     skip_create
     initialize_with { attributes }
 
-    # TODO: Define attributes.
+    group { create(:group) }
+    image { Rack::Test::UploadedFile.new(image_file_path, 'image/png') }
+
+    transient do
+      image_file_path { Rails.root.join('spec', 'support', 'avatar.png') }
+    end
 
     trait :invalid do
-      # TODO: Define invalid input.
+      image { nil }
     end
   end
 end

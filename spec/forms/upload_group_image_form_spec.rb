@@ -11,11 +11,23 @@ RSpec.describe UploadGroupImageForm, type: :form do
     expect(form).to be_valid
   end
 
+  it 'is invalid without an image' do
+    input[:image] = nil
+    expect(form).to be_invalid
+  end
+
   describe '#perform' do
     subject(:perform) { form.perform }
 
-    it 'does something useful' do
-      expect(perform).to be_truthy
+    let(:group) { input[:group] }
+
+    it 'returns the updated group' do
+      expect(perform).to eq(group)
+    end
+
+    it 'uploads the image for the group' do
+      perform
+      expect(group.image).to be_attached
     end
 
     context 'when the input is invalid' do
