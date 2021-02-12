@@ -14,7 +14,7 @@
         You'll receive <%= number_to_human(@current_pone.daily_giftable_points_count) %> more
         <%= 'point'.pluralize(@current_pone.daily_giftable_points_count) %>
         in
-        <%= time_ago_in_words(Date.current.tomorrow.beginning_of_day) %>.
+        <%= time_ago_in_words(daily_points_given_at) %>.
       </i>
     <% end %>
   </div>

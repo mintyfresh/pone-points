@@ -14,4 +14,13 @@ class GivePointsComponent < ApplicationComponent
 
     @giftable_points_count ||= @current_pone.giftable_points_count
   end
+
+  # @return [Time]
+  def daily_points_given_at
+    # TODO: Load timezone and offset from environment config.
+    time  = ActiveSupport::TimeZone['UTC'].now.beginning_of_day + 17.hours
+    time += 1.day if time.past?
+
+    time
+  end
 end
