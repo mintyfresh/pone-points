@@ -41,7 +41,7 @@ class Webhook < ApplicationRecord
 
   before_save :remove_duplicate_events, if: :events_changed?
 
-  scope :where_event, -> (event) { where(%{? = ANY(#{quoted_table_name}."events")}, event) }
+  scope :where_event, -> (event) { where(%(#{quoted_table_name}."events" @> ARRAY[?::character varying]), event) }
 
   # @param event [String]
   # @return [String]

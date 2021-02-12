@@ -5,9 +5,25 @@ class DeliverWebhookJob < ApplicationJob
 
   retry_on Faraday::ConnectionFailed, wait: :exponentially_longer
 
+  # Checks whether environment config has enabled webhook delivery.
+  #
+  # @return [Boolean]
+  def self.enabled?
+    Rails.application.config.x.webhooks.enable
+  end
+
   # @param webhook [Webhook]
   # @param webhook_json [String]
   def perform(webhook, webhook_json)
+    deliver_webhook(webhook, webhook_json) if self.class.enabled?
+  end
+
+private
+
+  # @param webhook [Webhook]
+  # @param webhook_json [String]
+  # @return [void]
+  def deliver_webhook(webhook, webhook_json)
     Faraday.post(webhook.url, webhook_json) do |request|
       request.options.timeout      = 30
       request.options.open_timeout = 15
@@ -17,8 +33,6 @@ class DeliverWebhookJob < ApplicationJob
       request.headers['GPP-Signature'] = compute_signature(webhook, request)
     end
   end
-
-private
 
   # @return [String]
   def request_timestamp
