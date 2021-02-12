@@ -57,6 +57,8 @@ class Pone < ApplicationRecord
 
   generates_slug_from :name
 
+  before_save :set_avatar_file_name, if: -> { attachment_changes['avatar'].present? }
+
   before_verify :set_daily_giftable_points_count
 
   # @parma credential_class [Class<PoneCredential>]
@@ -122,5 +124,11 @@ private
   def set_daily_giftable_points_count
     self.giftable_points_count       = DEFAULT_DAILY_GIFTABLE_POINTS_COUNT
     self.daily_giftable_points_count = DEFAULT_DAILY_GIFTABLE_POINTS_COUNT
+  end
+
+  # @return [void]
+  def set_avatar_file_name
+    avatar          = attachment_changes['avatar'].attachment
+    avatar.filename = "#{slug}.#{avatar.filename.extension}"
   end
 end

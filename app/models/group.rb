@@ -47,6 +47,8 @@ class Group < ApplicationRecord
 
   generates_slug_from :name
 
+  before_save :set_image_file_name, if: -> { attachment_changes['image'].present? }
+
   after_create :add_owner_as_group_member
 
   # @param member [Pone]
@@ -68,6 +70,12 @@ class Group < ApplicationRecord
   end
 
 private
+
+  # @return [void]
+  def set_image_file_name
+    image          = attachment_changes['image'].attachment
+    image.filename = "#{slug}.#{image.filename.extension}"
+  end
 
   # @return [void]
   def add_owner_as_group_member
