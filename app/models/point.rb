@@ -27,7 +27,9 @@ class Point < ApplicationRecord
     autolink:                     true,
     disable_indented_code_blocks: true,
     lax_spacing:                  true,
-    no_intra_emphasis:            true
+    no_intra_emphasis:            true,
+    strikethrough:                true,
+    underline:                    true
   }.freeze
 
   MARKDOWN_RENDERER_OPTIONS = {
