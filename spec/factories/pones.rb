@@ -32,11 +32,14 @@ FactoryBot.define do
     end
 
     trait :with_avatar do
-      after(:build) do |pone|
+      transient do
+        image_file_path { Rails.root.join('spec', 'support', 'avatar.png') }
+      end
+
+      after(:build) do |pone, e|
         pone.avatar.attach(
-          io:           File.open(Rails.root.join('spec', 'support', 'avatar.png')),
-          filename:     'avatar.png',
-          content_type: 'image/png'
+          io:       File.open(e.image_file_path),
+          filename: File.basename(e.image_file_path)
         )
       end
     end

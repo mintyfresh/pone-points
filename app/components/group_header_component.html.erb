@@ -1,0 +1,16 @@
+<div class="row">
+  <% if @group.image.attached? %>
+    <div class="col-12 col-sm-auto">
+      <%= image_tag(scaled_group_image, alt: @group.name, id: "group_#{@group.slug}_image",
+                                        class: 'img-thumbnail', width: '150px', height: '150px') %>
+    </div>
+  <% end %>
+  <div class="col">
+    <h1><%= @group.name %></h1>
+    <% if @group.description.present? %>
+      <p class="mb-0">
+        <%= @group.description %>
+      </p>
+    <% end %>
+  </div>
+</div>

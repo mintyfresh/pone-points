@@ -30,6 +30,21 @@ FactoryBot.define do
     name { generate(:group_name) }
     description { Faker::Hipster.sentence }
 
+    trait :with_image do
+      transient do
+        image_file_path { Rails.root.join('spec', 'support', 'avatar.png') }
+      end
+
+      trait :with_avatar do
+        after(:build) do |group, e|
+          group.image.attach(
+            io:       File.open(e.image_file_path),
+            filename: File.basename(e.image_file_path)
+          )
+        end
+      end
+    end
+
     trait :with_members do
       transient do
         members_count { 3 }

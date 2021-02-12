@@ -35,11 +35,15 @@ class Group < ApplicationRecord
   has_many :memberships, dependent: :destroy, inverse_of: :group
   has_many :members, through: :memberships
 
+  has_one_attached :image
+
   has_unique_attribute :name
   has_unique_attribute :slug
 
   validates :name, presence: true, length: { maximum: NAME_MAX_LENGTH }
   validates :description, length: { maximum: DESCRIPTION_MAX_LENGTH }
+  validates :image, content_type: %i[jpg jpeg png], size: { less_than: 5.megabytes },
+                    dimension: { width: { max: 1000 }, height: { max: 1000 } }
 
   generates_slug_from :name
 

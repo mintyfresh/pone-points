@@ -134,4 +134,22 @@ RSpec.describe 'Groups', type: :feature do
     visit "/groups/#{group.slug}/edit"
     expect(page).to have_current_path('/404.html')
   end
+
+  it 'allows the owner to upload an image for their groups' do
+    sign_in_to_pone(group.owner)
+    visit "/groups/#{group.slug}"
+
+    expect(page).not_to have_css("#group_#{group.slug}_image")
+
+    click_on 'Controls'
+    click_on 'Upload Image'
+
+    within '#edit_group_image_form' do
+      attach_file 'Group Image', Rails.root.join('spec', 'support', 'avatar.png')
+      click_on 'Upload Image'
+    end
+
+    expect(page).to have_current_path("/groups/#{group.slug}")
+      .and have_css("#group_#{group.slug}_image")
+  end
 end

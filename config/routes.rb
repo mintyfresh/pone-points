@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   match '/auth/:provider/callback', to: 'auth#external', via: %i[get post]
 
   resources :groups, only: %i[index show new create edit update], param: :slug do
+    resource :image, only: %i[edit update], controller: 'groups/image' do
+      post :remove
+    end
     resources :webhooks, only: %i[index show new create destroy], controller: 'groups/webhooks' do
       post :regenerate, on: :member
     end

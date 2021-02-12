@@ -3,38 +3,27 @@
   <%= tag.meta(property: 'og:title', content: "#{@group.name} is full of good pones") %>
   <%= tag.meta(property: 'og:description', content: "#{@group.name} has #{number_to_human(@group.members_count)} good #{'pone'.pluralize(@group.members_count)}") %>
   <%= tag.meta(property: 'og:url', content: group_url(@group)) %>
+  <% if @group.image.attached? %>
+    <%= tag.meta(property: 'og:image', content: rails_blob_url(@group.image)) %>
+    <%= tag.meta(property: 'og:image:type', content: @group.image.content_type) %>
+    <%= tag.meta(property: 'og:image:height', content: @group.image.metadata[:height]) %>
+    <%= tag.meta(property: 'og:image:width', content: @group.image.metadata[:width]) %>
+  <% end %>
 <% end %>
 <div class="row">
   <div class="col-auto">
-    <h1><%= @group.name %></h1>
+    <%= render(GroupHeaderComponent.new(group: @group)) %>
   </div>
   <% if Pundit.policy(current_pone, @group).join? %>
-    <div class="col text-end mt-auto">
+    <div class="col text-end">
       <% if @group.member?(current_pone) %>
-        <div class="dropdown" id="group_controls_dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="group_controls_dropdown_button" data-bs-toggle="dropdown" aria-expanded="false">
-            Controls
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="group_controls_dropdown_button">
-            <% if Pundit.policy(current_pone, @group).update? %>
-              <li><%= link_to('Edit Group', edit_group_path(@group), class: 'dropdown-item') %></li>
-            <% end %>
-            <li><%= link_to('Webhooks', group_webhooks_path(@group), class: 'dropdown-item') %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><%= link_to('Leave Group', leave_group_path(@group), class: 'dropdown-item text-danger', method: :post, disabled: @group.owner == current_pone) %></li>
-          </ul>
-        </div>
+        <%= render(GroupControlsDropdownComponent.new(group: @group, current_pone: current_pone)) %>
       <% else %>
         <%= button_to('Join Group', join_group_path(@group), class: 'btn btn-primary', method: :post) %>
       <% end %>
     </div>
   <% end %>
 </div>
-<% if @group.description.present? %>
-  <p>
-    <%= @group.description %>
-  </p>
-<% end %>
 <h2>Members</h2>
 <% @group.members.each do |member| %>
   <div class="card mb-2">

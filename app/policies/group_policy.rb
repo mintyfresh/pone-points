@@ -28,4 +28,8 @@ class GroupPolicy < ApplicationPolicy
   def permitted_attributes_for_update
     %i[description]
   end
+
+  def permitted_attributes_for_update_image
+    %i[image]
+  end
 end

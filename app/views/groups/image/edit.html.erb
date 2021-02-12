@@ -1,0 +1,19 @@
+<h1>Upload Image for <%= @group.name %></h1>
+<%= form_with(model: @form, url: group_image_path(@group), method: :patch, id: 'edit_group_image_form') do |form| %>
+  <% if @group.image.representable? && @group.errors[:image].none? %>
+    <div class="text-center mb-3">
+      <%= image_tag(@group.image, id: 'group_image_preview', class: 'img-fluid img-thumbnail', alt: @group.name, size: '300x300') %>
+    </div>
+  <% end %>
+  <div class="mb-3">
+    <%= form.label(:image, 'Group Image', class: 'form-label') %>
+    <%= form.file_field(:image, class: 'form-control') %>
+    <%= render(FormControlErrorsComponent.new(key: :image, errors: @form.errors)) %>
+  </div>
+  <div class="text-end">
+    <% if @group.image.attached? %>
+      <%= link_to('Remove Current Image', remove_group_image_path(@group), class: 'btn btn-outline-danger float-start', method: :post) %>
+    <% end %>
+    <%= form.submit('Upload Image', class: 'btn btn-primary') %>
+  </div>
+<% end %>
