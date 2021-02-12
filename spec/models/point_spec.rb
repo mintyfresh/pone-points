@@ -7,7 +7,7 @@
 #  id            :bigint           not null, primary key
 #  pone_id       :bigint           not null
 #  granted_by_id :bigint           not null
-#  message       :string
+#  message       :string           not null
 #  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
@@ -29,5 +29,44 @@ RSpec.describe Point, type: :model do
 
   it 'has a valid factory' do
     expect(point).to be_valid
+  end
+
+  it 'is invalid without a pone' do
+    point.pone = nil
+    expect(point).to be_invalid
+  end
+
+  it 'is invalid without a granting pone' do
+    point.granted_by = nil
+    expect(point).to be_invalid
+  end
+
+  it 'is invalid without a count' do
+    point.count = nil
+    expect(point).to be_invalid
+  end
+
+  it 'is invalid when the count is zero' do
+    point.count = 0
+    expect(point).to be_invalid
+  end
+
+  it 'is invalid without a message' do
+    point.message = nil
+    expect(point).to be_invalid
+  end
+
+  it 'is invalid when the message is too long' do
+    point.message = 'a' * 1001
+    expect(point).to be_invalid
+  end
+
+  it "increases the pone's total point count by the count when created" do
+    expect { point.save! }.to change { point.pone.points_count }.by(point.count)
+  end
+
+  it "decreases the pone's total point count by the count when destroyed" do
+    point.save!
+    expect { point.destroy! }.to change { point.pone.points_count }.by(-point.count)
   end
 end

@@ -7,7 +7,7 @@
 #  id            :bigint           not null, primary key
 #  pone_id       :bigint           not null
 #  granted_by_id :bigint           not null
-#  message       :string
+#  message       :string           not null
 #  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
@@ -42,7 +42,7 @@ class Point < ApplicationRecord
   belongs_to :pone, inverse_of: :points
   belongs_to :granted_by, class_name: 'Pone', inverse_of: :granted_points
 
-  validates :message, length: { maximum: 1000 }
+  validates :message, length: { maximum: 1000 }, presence: true
   validates :count, numericality: { other_than: 0 }
 
   after_create :increment_pone_points_count

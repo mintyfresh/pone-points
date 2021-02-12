@@ -29,4 +29,14 @@ RSpec.describe UnlockedAchievement, type: :model do
   it 'has a valid factory' do
     expect(unlocked_achievement).to be_valid
   end
+
+  it 'is invalid without a pone' do
+    unlocked_achievement.pone = nil
+    expect(unlocked_achievement).to be_invalid
+  end
+
+  it 'is invalid without an achievement' do
+    unlocked_achievement.achievement = nil
+    expect(unlocked_achievement).to be_invalid
+  end
 end

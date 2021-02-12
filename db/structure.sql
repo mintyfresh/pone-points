@@ -297,7 +297,7 @@ CREATE TABLE public.points (
     id bigint NOT NULL,
     pone_id bigint NOT NULL,
     granted_by_id bigint NOT NULL,
-    message character varying,
+    message character varying NOT NULL,
     count integer NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
@@ -973,6 +973,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210209025300'),
 ('20210209045522'),
 ('20210210225417'),
-('20210211003542');
+('20210211003542'),
+('20210212040323');
 
 

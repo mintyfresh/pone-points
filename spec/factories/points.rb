@@ -7,7 +7,7 @@
 #  id            :bigint           not null, primary key
 #  pone_id       :bigint           not null
 #  granted_by_id :bigint           not null
-#  message       :string
+#  message       :string           not null
 #  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
