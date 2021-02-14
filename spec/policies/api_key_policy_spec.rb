@@ -29,7 +29,7 @@ RSpec.describe ApiKeyPolicy, type: :policy do
     end
 
     it 'does not permit banned pones' do
-      pone.banned = true
+      pone.add_role(Roles::BANNED)
       expect(policy).not_to permit(pone, ApiKey)
     end
   end

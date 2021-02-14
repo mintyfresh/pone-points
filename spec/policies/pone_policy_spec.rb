@@ -36,7 +36,7 @@ RSpec.describe PonePolicy, type: :policy do
     end
 
     it 'does not permit banned pones' do
-      pone.banned = true
+      pone.add_role(Roles::BANNED)
       expect(policy).not_to permit(pone, other_pone)
     end
   end
@@ -69,7 +69,7 @@ RSpec.describe PonePolicy, type: :policy do
     end
 
     it 'does not permit banned pones' do
-      pone.banned = true
+      pone.add_role(Roles::BANNED)
       expect(policy).not_to permit(pone, pone)
     end
   end

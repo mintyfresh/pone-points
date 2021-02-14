@@ -14,7 +14,7 @@
 #  updated_at                  :datetime         not null
 #  bonus_points_count          :integer          default(0), not null
 #  giftable_points_count       :integer          default(0), not null
-#  banned                      :boolean          default(FALSE), not null
+#  roles                       :string           default([]), not null, is an Array
 #
 # Indexes
 #
@@ -24,6 +24,7 @@
 class Pone < ApplicationRecord
   DEFAULT_DAILY_GIFTABLE_POINTS_COUNT = 3
 
+  include RoleAuthorizable
   include Sluggable
   include Verifyable
   include Webhookable

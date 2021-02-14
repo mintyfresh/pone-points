@@ -53,18 +53,18 @@ RSpec.describe Ban, type: :model do
   end
 
   it 'marks the pone as banned when created' do
-    expect { ban.save! }.to change { ban.pone.banned? }.to(true)
+    expect { ban.save! }.to change { ban.pone.role?(Roles::BANNED) }.to(true)
   end
 
   it 'marks the pone as unbanned when revoked' do
     ban.save!
-    expect { ban.revoked! }.to change { ban.pone.banned? }.to(false)
+    expect { ban.revoked! }.to change { ban.pone.role?(Roles::BANNED) }.to(false)
   end
 
   it "doesn't mark the pone as unbanned when revoked if they have other active bans" do
     ban.save!
     create(:ban, pone: ban.pone)
-    expect { ban.revoked! }.not_to change { ban.pone.banned? }
+    expect { ban.revoked! }.not_to change { ban.pone.role?(Roles::BANNED) }
   end
 
   it 'publishes a ban revoked message when revoked' do

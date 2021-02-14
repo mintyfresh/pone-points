@@ -26,7 +26,7 @@ RSpec.describe GroupPolicy, type: :policy do
     end
 
     it 'does not permit banned pones' do
-      pone.banned = true
+      pone.add_role(Roles::BANNED)
       expect(policy).not_to permit(pone, group)
     end
   end
@@ -45,7 +45,7 @@ RSpec.describe GroupPolicy, type: :policy do
     end
 
     it 'does not permit the owner if they are banned' do
-      owner.banned = true
+      owner.add_role(Roles::BANNED)
       expect(policy).not_to permit(owner, group)
     end
   end

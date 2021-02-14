@@ -16,7 +16,7 @@
           <%= nav_link('Sign In', sign_in_path) %>
           <%= nav_link('Sign Up', sign_up_path) %>
         <% else %>
-          <%= nav_link('Banned', bans_path, class: 'text-danger text-decoration-underline') if @current_pone.banned? %>
+          <%= nav_link('Banned', bans_path, class: 'text-danger text-decoration-underline') if @current_pone.role?(Roles::BANNED) %>
           <%= render(NavbarAccountDropdownComponent.new) %>
         <% end %>
       </ul>

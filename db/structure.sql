@@ -407,7 +407,7 @@ CREATE TABLE public.pones (
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     bonus_points_count integer DEFAULT 0 NOT NULL,
     giftable_points_count integer DEFAULT 0 NOT NULL,
-    banned boolean DEFAULT false NOT NULL,
+    roles character varying[] DEFAULT '{}'::character varying[] NOT NULL,
     CONSTRAINT chk_rails_3769fed490 CHECK ((bonus_points_count >= 0)),
     CONSTRAINT chk_rails_c7e7da4fe4 CHECK ((points_count >= 0)),
     CONSTRAINT chk_rails_d45d00b7ca CHECK ((giftable_points_count >= 0)),
@@ -1057,6 +1057,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210211003542'),
 ('20210212040323'),
 ('20210214140807'),
-('20210214141858');
+('20210214141858'),
+('20210214160810'),
+('20210214162654');
 
 

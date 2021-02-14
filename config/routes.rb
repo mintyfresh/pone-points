@@ -90,7 +90,7 @@ Rails.application.routes.draw do
 
       result   = request.session[:pone_id]
       result &&= Pone.find_by(id: result)
-      result &&= result.name == 'Minty Fresh' # TODO
+      result &&= result.role?(Roles::RESQUE)
 
       result
     }

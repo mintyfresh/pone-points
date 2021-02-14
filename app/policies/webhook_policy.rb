@@ -39,7 +39,7 @@ private
 
   # @return [Boolean]
   def banned?
-    current_pone.present? && current_pone.banned?
+    current_pone.present? && current_pone.role?(Roles::BANNED)
   end
 
   # @return [Boolean]

@@ -76,13 +76,13 @@ private
 
   # @return [void]
   def mark_pone_as_banned
-    pone.update!(banned: true) if active?
+    pone.add_role!(Roles::BANNED) if active?
   end
 
   # @return [void]
   def mark_pone_as_unbanned
     pone.with_lock do
-      pone.update!(banned: false) if pone.bans.active.none?
+      pone.remove_role!(Roles::BANNED) if pone.bans.active.none?
     end
   end
 

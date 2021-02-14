@@ -29,7 +29,7 @@ RSpec.describe WebhookPolicy, type: :policy do
     end
 
     it 'does not permit banned pones' do
-      other_pone.banned = true
+      other_pone.add_role(Roles::BANNED)
       expect(policy).not_to permit(other_pone, Webhook)
     end
   end
