@@ -8,19 +8,19 @@ class WebhookPolicy < ApplicationPolicy
   end
 
   def show?
-    current_pone.present? && current_pone == webhook.owner
+    owner?
   end
 
   def create?
-    current_pone.present?
+    current_pone.present? && !banned?
   end
 
   def regenerate?
-    current_pone.present? && current_pone == webhook.owner
+    owner?
   end
 
   def destroy?
-    current_pone.present? && current_pone == webhook.owner
+    owner?
   end
 
   def permitted_attributes_for_create
@@ -33,5 +33,17 @@ class WebhookPolicy < ApplicationPolicy
 
       scope.where(owner: current_pone)
     end
+  end
+
+private
+
+  # @return [Boolean]
+  def banned?
+    current_pone.present? && current_pone.banned?
+  end
+
+  # @return [Boolean]
+  def owner?
+    current_pone.present? && current_pone == webhook.owner
   end
 end

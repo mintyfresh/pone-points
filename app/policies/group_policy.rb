@@ -12,17 +12,17 @@ class GroupPolicy < ApplicationPolicy
   end
 
   def create?
-    current_pone.present?
+    current_pone.present? && !banned?
   end
 
   def join?
-    current_pone.present?
+    current_pone.present? && !banned?
   end
 
   alias leave? join?
 
   def update?
-    current_pone.present? && current_pone == group.owner
+    owner? && !banned?
   end
 
   def permitted_attributes_for_update
@@ -31,5 +31,17 @@ class GroupPolicy < ApplicationPolicy
 
   def permitted_attributes_for_update_image
     %i[image]
+  end
+
+private
+
+  # @return [Boolean]
+  def banned?
+    current_pone.present? && current_pone.banned?
+  end
+
+  # @return [Boolean]
+  def owner?
+    current_pone.present? && current_pone == group.owner
   end
 end

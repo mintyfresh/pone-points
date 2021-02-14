@@ -9,13 +9,28 @@ RSpec.describe ApiKeyPolicy, type: :policy do
   let(:pone) { api_key.pone }
   let(:other_pone) { build(:pone) }
 
-  permissions :index?, :create? do
+  permissions :index? do
     it 'does not permit guests' do
       expect(policy).not_to permit(nil, ApiKey)
     end
 
     it 'permits authenticated pones' do
       expect(policy).to permit(pone, ApiKey)
+    end
+  end
+
+  permissions :create? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(nil, ApiKey)
+    end
+
+    it 'permits authenticated pones' do
+      expect(policy).to permit(pone, ApiKey)
+    end
+
+    it 'does not permit banned pones' do
+      pone.banned = true
+      expect(policy).not_to permit(pone, ApiKey)
     end
   end
 

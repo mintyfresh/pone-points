@@ -9,13 +9,28 @@ RSpec.describe WebhookPolicy, type: :policy do
   let(:owner) { webhook.owner }
   let(:other_pone) { build(:pone) }
 
-  permissions :index?, :create? do
+  permissions :index? do
     it 'does not permit guests' do
       expect(policy).not_to permit(nil, Webhook)
     end
 
     it 'permits authenticated pones' do
       expect(policy).to permit(other_pone, Webhook)
+    end
+  end
+
+  permissions :create? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(nil, Webhook)
+    end
+
+    it 'permits authenticated pones' do
+      expect(policy).to permit(other_pone, Webhook)
+    end
+
+    it 'does not permit banned pones' do
+      other_pone.banned = true
+      expect(policy).not_to permit(other_pone, Webhook)
     end
   end
 

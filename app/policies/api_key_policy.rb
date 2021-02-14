@@ -8,19 +8,19 @@ class ApiKeyPolicy < ApplicationPolicy
   end
 
   def show?
-    current_pone.present? && current_pone == api_key.pone
+    owner?
   end
 
   def create?
-    current_pone.present?
+    current_pone.present? && !banned?
   end
 
   def regenerate?
-    current_pone.present? && current_pone == api_key.pone
+    owner?
   end
 
   def revoke?
-    current_pone.present? && current_pone == api_key.pone
+    owner?
   end
 
   # @return [Array]
@@ -34,5 +34,17 @@ class ApiKeyPolicy < ApplicationPolicy
 
       scope.where(pone: current_pone)
     end
+  end
+
+private
+
+  # @return [Boolean]
+  def banned?
+    current_pone.present? && current_pone.banned?
+  end
+
+  # @return [Boolean]
+  def owner?
+    current_pone.present? && current_pone == api_key.pone
   end
 end

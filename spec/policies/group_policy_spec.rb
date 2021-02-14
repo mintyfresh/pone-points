@@ -24,6 +24,11 @@ RSpec.describe GroupPolicy, type: :policy do
     it 'permits authenticated pones' do
       expect(policy).to permit(pone, group)
     end
+
+    it 'does not permit banned pones' do
+      pone.banned = true
+      expect(policy).not_to permit(pone, group)
+    end
   end
 
   permissions :edit?, :update? do
@@ -37,6 +42,11 @@ RSpec.describe GroupPolicy, type: :policy do
 
     it 'does not permit other pones' do
       expect(policy).not_to permit(pone, group)
+    end
+
+    it 'does not permit the owner if they are banned' do
+      owner.banned = true
+      expect(policy).not_to permit(owner, group)
     end
   end
 end
