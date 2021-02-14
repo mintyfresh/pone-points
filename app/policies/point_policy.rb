@@ -8,7 +8,7 @@ class PointPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    !point.deleted?
   end
 
   class Scope < Scope

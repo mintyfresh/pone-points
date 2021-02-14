@@ -11,6 +11,7 @@
 #  count         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  deleted_at    :datetime
 #
 # Indexes
 #
@@ -23,19 +24,7 @@
 #  fk_rails_...  (pone_id => pones.id)
 #
 class Point < ApplicationRecord
-  MARKDOWN_OPTIONS = {
-    autolink:                     true,
-    disable_indented_code_blocks: true,
-    lax_spacing:                  true,
-    no_intra_emphasis:            true,
-    strikethrough:                true,
-    underline:                    true
-  }.freeze
-
-  MARKDOWN_RENDERER_OPTIONS = {
-    escape_html:     true,
-    safe_links_only: true
-  }.freeze
+  include SoftDeletable
 
   attr_readonly :count
 
@@ -46,19 +35,14 @@ class Point < ApplicationRecord
   validates :count, numericality: { other_than: 0 }
 
   after_create :increment_pone_points_count
-  after_destroy :decrement_pone_points_count
+  after_delete :decrement_pone_points_count
 
   scope :today,  -> { on_day(Date.current) }
   scope :on_day, -> (date) { where(created_at: date.beginning_of_day..date.end_of_day) }
 
-  # @return [Redcarpet::Markdown]
-  def self.markdown
-    @markdown ||= Redcarpet::Markdown.new(MessageRenderer.new(MARKDOWN_RENDERER_OPTIONS), MARKDOWN_OPTIONS)
-  end
-
   # @return [String]
   def message_html
-    self.class.markdown.render(message)
+    MarkdownService.new.render(message)
   end
 
 private

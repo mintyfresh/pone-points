@@ -335,7 +335,8 @@ CREATE TABLE public.points (
     message character varying NOT NULL,
     count integer NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    deleted_at timestamp without time zone
 );
 
 
@@ -1059,6 +1060,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210214140807'),
 ('20210214141858'),
 ('20210214160810'),
-('20210214162654');
+('20210214162654'),
+('20210214163637');
 
 
