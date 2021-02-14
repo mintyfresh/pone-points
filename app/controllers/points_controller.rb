@@ -9,7 +9,7 @@ class PointsController < ApplicationController
 
   def destroy
     @point = Point.find(params[:id])
-    authorize(@point).destroy!
+    authorize(@point).destroy!(deleted_by: current_pone)
 
     redirect_back(fallback_location: @point.pone)
   end

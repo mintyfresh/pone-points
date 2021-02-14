@@ -4,7 +4,11 @@ module SoftDeletable
   extend ActiveSupport::Concern
 
   included do
+    belongs_to :deleted_by, class_name: 'Pone', inverse_of: false, optional: true
+
     default_scope -> { where(deleted_at: nil) }
+
+    after_commit :publish_record_deleted, if: -> { saved_change_to_deleted?(to: true) }
   end
 
   class_methods do
@@ -55,14 +59,16 @@ module SoftDeletable
     true
   end
 
+  # @param deleted_by [Pone, nil]
   # @return [Boolean]
-  def destroy
-    update(deleted_at: Time.current)
+  def destroy(deleted_by: nil)
+    update(deleted_at: Time.current, deleted_by: deleted_by)
   end
 
+  # @param deleted_by [Pone, nil]
   # @return [Boolean]
-  def destroy!
-    update!(deleted_at: Time.current)
+  def destroy!(deleted_by: nil)
+    update!(deleted_at: Time.current, deleted_by: deleted_by)
   end
 
   # @return [void]
@@ -73,5 +79,12 @@ module SoftDeletable
   # @return [Boolean]
   def marked_for_destruction?
     deleted_at.present? && deleted_at_changed?
+  end
+
+private
+
+  # @return [void]
+  def publish_record_deleted
+    publish(:delete, deleted_by: deleted_by)
   end
 end

@@ -336,7 +336,8 @@ CREATE TABLE public.points (
     count integer NOT NULL,
     created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
-    deleted_at timestamp without time zone
+    deleted_at timestamp without time zone,
+    deleted_by_id bigint
 );
 
 
@@ -838,6 +839,13 @@ CREATE INDEX index_memberships_on_member_id ON public.memberships USING btree (m
 
 
 --
+-- Name: index_points_on_deleted_by_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_points_on_deleted_by_id ON public.points USING btree (deleted_by_id);
+
+
+--
 -- Name: index_points_on_granted_by_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -1010,6 +1018,14 @@ ALTER TABLE ONLY public.active_storage_attachments
 
 
 --
+-- Name: points fk_rails_c972c56d71; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.points
+    ADD CONSTRAINT fk_rails_c972c56d71 FOREIGN KEY (deleted_by_id) REFERENCES public.pones(id);
+
+
+--
 -- Name: unlocked_achievements fk_rails_cf533a56c3; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -1061,6 +1077,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210214141858'),
 ('20210214160810'),
 ('20210214162654'),
-('20210214163637');
+('20210214163637'),
+('20210214171057');
 
 

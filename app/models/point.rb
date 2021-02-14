@@ -12,14 +12,17 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  deleted_at    :datetime
+#  deleted_by_id :bigint
 #
 # Indexes
 #
+#  index_points_on_deleted_by_id  (deleted_by_id)
 #  index_points_on_granted_by_id  (granted_by_id)
 #  index_points_on_pone_id        (pone_id)
 #
 # Foreign Keys
 #
+#  fk_rails_...  (deleted_by_id => pones.id)
 #  fk_rails_...  (granted_by_id => pones.id)
 #  fk_rails_...  (pone_id => pones.id)
 #
