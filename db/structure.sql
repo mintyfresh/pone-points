@@ -223,6 +223,41 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
+-- Name: bans; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.bans (
+    id bigint NOT NULL,
+    pone_id bigint NOT NULL,
+    issuer_id bigint NOT NULL,
+    reason character varying NOT NULL,
+    expires_at timestamp without time zone,
+    revoked_at timestamp without time zone,
+    created_at timestamp(6) without time zone DEFAULT now() NOT NULL,
+    updated_at timestamp(6) without time zone DEFAULT now() NOT NULL
+);
+
+
+--
+-- Name: bans_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.bans_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: bans_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.bans_id_seq OWNED BY public.bans.id;
+
+
+--
 -- Name: groups; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -372,6 +407,7 @@ CREATE TABLE public.pones (
     updated_at timestamp(6) without time zone DEFAULT now() NOT NULL,
     bonus_points_count integer DEFAULT 0 NOT NULL,
     giftable_points_count integer DEFAULT 0 NOT NULL,
+    banned boolean DEFAULT false NOT NULL,
     CONSTRAINT chk_rails_3769fed490 CHECK ((bonus_points_count >= 0)),
     CONSTRAINT chk_rails_c7e7da4fe4 CHECK ((points_count >= 0)),
     CONSTRAINT chk_rails_d45d00b7ca CHECK ((giftable_points_count >= 0)),
@@ -513,6 +549,13 @@ ALTER TABLE ONLY public.api_keys ALTER COLUMN id SET DEFAULT nextval('public.api
 
 
 --
+-- Name: bans id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bans ALTER COLUMN id SET DEFAULT nextval('public.bans_id_seq'::regclass);
+
+
+--
 -- Name: groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -607,6 +650,14 @@ ALTER TABLE ONLY public.api_keys
 
 ALTER TABLE ONLY public.ar_internal_metadata
     ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
+-- Name: bans bans_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bans
+    ADD CONSTRAINT bans_pkey PRIMARY KEY (id);
 
 
 --
@@ -727,6 +778,20 @@ CREATE UNIQUE INDEX index_api_keys_on_token ON public.api_keys USING btree (toke
 --
 
 CREATE INDEX index_api_keys_on_token_hexdigest ON public.api_keys USING hash (encode(public.digest((token)::text, 'sha256'::text), 'hex'::text));
+
+
+--
+-- Name: index_bans_on_issuer_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_bans_on_issuer_id ON public.bans USING btree (issuer_id);
+
+
+--
+-- Name: index_bans_on_pone_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_bans_on_pone_id ON public.bans USING btree (pone_id);
 
 
 --
@@ -864,6 +929,14 @@ ALTER TABLE ONLY public.pone_credentials
 
 
 --
+-- Name: bans fk_rails_31aadb9786; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bans
+    ADD CONSTRAINT fk_rails_31aadb9786 FOREIGN KEY (pone_id) REFERENCES public.pones(id);
+
+
+--
 -- Name: groups fk_rails_5447bdb9c5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -952,6 +1025,14 @@ ALTER TABLE ONLY public.memberships
 
 
 --
+-- Name: bans fk_rails_e9853ae478; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.bans
+    ADD CONSTRAINT fk_rails_e9853ae478 FOREIGN KEY (issuer_id) REFERENCES public.pones(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -974,6 +1055,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20210209045522'),
 ('20210210225417'),
 ('20210211003542'),
-('20210212040323');
+('20210212040323'),
+('20210214140807'),
+('20210214141858');
 
 

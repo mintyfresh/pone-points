@@ -14,6 +14,7 @@
 #  updated_at                  :datetime         not null
 #  bonus_points_count          :integer          default(0), not null
 #  giftable_points_count       :integer          default(0), not null
+#  banned                      :boolean          default(FALSE), not null
 #
 # Indexes
 #

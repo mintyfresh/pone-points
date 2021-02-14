@@ -14,6 +14,7 @@
 #  updated_at                  :datetime         not null
 #  bonus_points_count          :integer          default(0), not null
 #  giftable_points_count       :integer          default(0), not null
+#  banned                      :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -32,6 +33,10 @@ class Pone < ApplicationRecord
   has_many :api_keys, dependent: :destroy, inverse_of: :pone
   has_many :credentials, class_name: 'PoneCredential', dependent: :destroy, inverse_of: :pone
   has_many :owned_webhooks, class_name: 'Webhook', dependent: :destroy, foreign_key: :owner_id, inverse_of: :owner
+
+  has_many :bans, dependent: :destroy, inverse_of: :pone
+  has_many :issued_bans, class_name: 'Ban', dependent: :restrict_with_error,
+                         foreign_key: :issuer_id, inverse_of: :issuer
 
   has_many :owned_groups, class_name: 'Group', dependent: :restrict_with_error,
                           foreign_key: :owner_id, inverse_of: :owner
