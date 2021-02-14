@@ -26,14 +26,19 @@
 class Ban < ApplicationRecord
   REASON_MAX_LENGTH = 1000
 
+  define_model_callbacks :revoke
+
   belongs_to :pone, inverse_of: :bans
   belongs_to :issuer, class_name: 'Pone', inverse_of: :issued_bans
 
   validates :reason, presence: true, length: { maximum: REASON_MAX_LENGTH }
 
+  after_create :mark_pone_as_banned
+  after_revoke :mark_pone_as_unbanned
+
   after_commit :publish_ban_revoked, if: :saved_change_to_revoked_at?
 
-  scope :active,  -> { where.not(revoked_at: nil) }
+  scope :active,  -> { where(revoked_at: nil) }
   scope :expired, -> { where(expires_at: ...Time.current) }
 
   # @return [Boolean]
@@ -61,11 +66,25 @@ class Ban < ApplicationRecord
     with_lock do
       return true if revoked?
 
-      update!(revoked_at: Time.current)
+      run_callbacks(:revoke) do
+        update!(revoked_at: Time.current)
+      end
     end
   end
 
 private
+
+  # @return [void]
+  def mark_pone_as_banned
+    pone.update!(banned: true) if active?
+  end
+
+  # @return [void]
+  def mark_pone_as_unbanned
+    pone.with_lock do
+      pone.update!(banned: false) if pone.bans.active.none?
+    end
+  end
 
   # @return [void]
   def publish_ban_revoked
