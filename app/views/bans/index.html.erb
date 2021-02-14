@@ -1,0 +1,23 @@
+<% @bans.each do |ban| %>
+  <div class="card border-danger mb-3">
+    <div class="card-header bg-danger border-danger text-white">
+      Banned
+    </div>
+    <div class="card-body">
+      <p><%= ban.reason %></p>
+      <hr>
+      <p class="mb-0">
+        <% if ban.permanent? %>
+          This ban is permanent
+        <% else %>
+          This ban expires in <%= time_ago_in_words(ban.expires_at) %>.
+          <% if !ban.expired? %>
+            <span class="d-block small text-muted">
+              (It may take up to 10 minutes for the system to clear this ban.)
+            </span>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+<% end %>
