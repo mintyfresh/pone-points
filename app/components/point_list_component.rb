@@ -2,7 +2,9 @@
 
 class PointListComponent < ApplicationComponent
   # @param points [Array<Point>]
-  def initialize(points:)
-    @points = points
+  # @param current_pone [Pone, nil]
+  def initialize(points:, current_pone:)
+    @points       = points
+    @current_pone = current_pone
   end
 end

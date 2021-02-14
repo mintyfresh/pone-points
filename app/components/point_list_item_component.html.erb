@@ -1,0 +1,26 @@
+<div class="card mb-2">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="card-title fs-5">
+          <%= link_to_unless_current(@point.granted_by.name, @point.granted_by) %> gave
+          <%= link_to_unless_current(@point.pone.name, @point.pone) %> <%= number_to_human(@point.count) %> good pone <%= 'point'.pluralize(@point.count) %>!
+        </div>
+      </div>
+      <% if Pundit.policy!(@current_pone, @point).destroy? %>
+        <div class="col-auto text-end">
+          <%= link_to('Delete', @point,
+                      class:  'btn btn-sm btn-outline-danger',
+                      data:   { confirm: 'Are you sure you want to delete this point?' },
+                      method: :delete) %>
+        </div>
+      <% end %>
+    </div>
+    <%== @point.message_html %>
+    <div class="text-end w-100">
+      <i class="text-muted small">
+        <%= time_ago_in_words(@point.created_at) %> ago
+      </i>
+    </div>
+  </div>
+</div>

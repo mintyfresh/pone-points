@@ -11,6 +11,10 @@ class PointPolicy < ApplicationPolicy
     !point.deleted?
   end
 
+  def destroy?
+    show? && role?(Roles::MODERATOR)
+  end
+
   class Scope < Scope
     def resolve
       scope.all

@@ -58,4 +58,12 @@ class ApplicationPolicy
       scope.all
     end
   end
+
+protected
+
+  # @param name [String]
+  # @return [Boolean]
+  def role?(name)
+    current_pone.present? && current_pone.role?(name)
+  end
 end

@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     post :leave, on: :member
   end
 
-  resources :points, only: [] do
+  resources :points, only: :destroy do
     get :recent, on: :collection
   end
 

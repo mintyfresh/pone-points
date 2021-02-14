@@ -33,10 +33,14 @@
   <% when 'achievements' %>
     <%= render(AchievementListComponent.new(pone: @pone)) %>
   <% when 'activity' %>
-    <%= render(PointListComponent.new(points: @pone.granted_points
-      .order(created_at: :desc, id: :desc).preload(:pone).first(25))) %>
+    <%= render(PointListComponent.new(
+      current_pone: current_pone,
+      points:       @pone.granted_points.order(created_at: :desc, id: :desc).preload(:pone).first(25)
+    )) %>
   <% else %>
-    <%= render(PointListComponent.new(points: @pone.points
-      .order(created_at: :desc, id: :desc).preload(:granted_by).first(25))) %>
+    <%= render(PointListComponent.new(
+      current_pone: current_pone,
+      points:       @pone.points.order(created_at: :desc, id: :desc).preload(:granted_by).first(25)
+    )) %>
   <% end %>
 </div>

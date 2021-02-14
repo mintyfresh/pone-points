@@ -27,4 +27,26 @@ RSpec.describe PointPolicy, type: :policy do
         .and not_permit(pone, point)
     end
   end
+
+  permissions :destroy? do
+    it 'does not permit guests' do
+      expect(policy).not_to permit(pone, point)
+    end
+
+    it 'does not permit pones' do
+      expect(policy).to not_permit(pone, point)
+        .and not_permit(point.granted_by, point)
+    end
+
+    it 'permits moderators' do
+      pone.add_role(Roles::MODERATOR)
+      expect(policy).to permit(pone, point)
+    end
+
+    it 'does not permit for deleted points' do
+      point.deleted = true
+      pone.add_role(Roles::MODERATOR)
+      expect(policy).not_to permit(pone, point)
+    end
+  end
 end

@@ -1,16 +1,3 @@
 <% @points.each do |point| %>
-  <div class="card mb-2">
-    <div class="card-body">
-      <div class="card-title fs-5">
-        <%= link_to_unless_current(point.granted_by.name, point.granted_by) %> gave
-        <%= link_to_unless_current(point.pone.name, point.pone) %> <%= number_to_human(point.count) %> good pone <%= 'point'.pluralize(point.count) %>!
-      </div>
-      <%== point.message_html %>
-      <div class="text-end w-100">
-        <i class="text-muted small">
-          <%= time_ago_in_words(point.created_at) %> ago
-        </i>
-      </div>
-    </div>
-  </div>
+  <%= render(PointListItemComponent.new(point: point, current_pone: @current_pone)) %>
 <% end %>
