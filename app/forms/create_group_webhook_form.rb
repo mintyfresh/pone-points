@@ -4,7 +4,9 @@ class CreateGroupWebhookForm < CreateWebhookForm
   MAX_WEBHOOKS_PER_GROUP = 25
 
   validates :event_source, type: { name: 'Group' }
-  validate  :maximum_webhook_count_is_not_exceeded
+
+  validate :webhook_owner_is_member_of_group
+  validate :maximum_webhook_count_is_not_exceeded
 
   # @return [Class<Webhook>]
   def webhook_class
@@ -12,6 +14,13 @@ class CreateGroupWebhookForm < CreateWebhookForm
   end
 
 private
+
+  # @return [void]
+  def webhook_owner_is_member_of_group
+    return if event_source.member?(owner)
+
+    errors.add(:base, :must_be_member_of_group)
+  end
 
   # @return [void]
   def maximum_webhook_count_is_not_exceeded

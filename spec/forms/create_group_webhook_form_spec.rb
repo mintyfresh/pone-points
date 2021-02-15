@@ -10,6 +10,10 @@ RSpec.describe CreateGroupWebhookForm, type: :form do
   let(:event_source) { create(:group) }
   let(:owner) { create(:pone) }
 
+  before(:each) do
+    event_source.add_member(owner)
+  end
+
   it 'has a valid input factory' do
     expect(form).to be_valid
   end
@@ -18,6 +22,11 @@ RSpec.describe CreateGroupWebhookForm, type: :form do
 
   it 'is invalid when the group has too many webhooks' do
     create_list(:group_webhook, described_class::MAX_WEBHOOKS_PER_GROUP, event_source: event_source)
+    expect(form).to be_invalid
+  end
+
+  it 'is invalid when the owner is not a member of the group' do
+    event_source.remove_member(owner)
     expect(form).to be_invalid
   end
 
